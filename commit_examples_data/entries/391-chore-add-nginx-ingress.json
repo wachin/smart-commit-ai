@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Nginx ingress controller",
+  "original_text": "Added Nginx ingress controller for Kubernetes. Implemented ingress rules configuration. Added SSL termination. Implemented ingress controller monitoring. Added ingress controller scaling. Result: Nginx ingress controller operational.",
+  "expected_subject": "chore(k8s): add Nginx ingress controller",
+  "expected_body_lines": [
+    "- Implement ingress rules configuration",
+    "- Add SSL termination",
+    "- Implement ingress controller monitoring",
+    "- Add ingress controller scaling",
+    "- Validation: Nginx ingress controller operational"
+  ],
+  "expected_command": "git commit -m \"chore(k8s): add Nginx ingress controller\""
+}

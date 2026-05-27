@@ -1,0 +1,13 @@
+{
+  "title": "Fix: XSS vulnerability in web UI",
+  "original_text": "Fixed XSS vulnerability in web UI. Implemented input sanitization. Added output encoding. Implemented CSP headers. Added XSS detection. Result: XSS vulnerability fixed.",
+  "expected_subject": "fix(security): fix XSS vulnerability in web UI",
+  "expected_body_lines": [
+    "- Implement input sanitization",
+    "- Add output encoding",
+    "- Implement CSP headers",
+    "- Add XSS detection",
+    "- Validation: XSS vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix XSS vulnerability in web UI\""
+}

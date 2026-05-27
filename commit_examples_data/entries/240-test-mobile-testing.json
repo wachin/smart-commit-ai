@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add mobile testing",
+  "original_text": "Added mobile testing with Appium. Implemented mobile tests for iOS and Android. Added mobile tests for responsive design. Implemented mobile tests for device-specific features. Added mobile test reporting. Result: mobile tests pass.",
+  "expected_subject": "test(mobile): add mobile testing with Appium",
+  "expected_body_lines": [
+    "- Implement mobile tests for iOS and Android",
+    "- Add mobile tests for responsive design",
+    "- Implement mobile tests for device-specific features",
+    "- Add mobile test reporting",
+    "- Validation: mobile tests pass"
+  ],
+  "expected_command": "git commit -m \"test(mobile): add mobile testing with Appium\""
+}

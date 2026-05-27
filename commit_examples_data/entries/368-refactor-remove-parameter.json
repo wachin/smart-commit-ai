@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Remove unused parameter",
+  "original_text": "Refactored to remove unused parameter. Identified unused parameters in methods. Removed unused parameters. Updated method signatures. Simplified method calls. Result: unused parameters removed.",
+  "expected_subject": "refactor(cleanup): remove unused parameter",
+  "expected_body_lines": [
+    "- Identify unused parameters in methods",
+    "- Remove unused parameters",
+    "- Update method signatures",
+    "- Simplify method calls",
+    "- Validation: unused parameters removed"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): remove unused parameter\""
+}

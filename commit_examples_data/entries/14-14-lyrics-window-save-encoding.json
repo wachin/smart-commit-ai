@@ -1,0 +1,15 @@
+{
+  "title": "14. Lyrics Window: Save & Encoding",
+  "original_text": "We pushed the Lyrics window a little further into “actually useful.” In [app.py]..., the dialog now has: an `Encoding` selector with `UTF-8`, `Latin-1`, and `CP1252`, a `Save` button that writes exactly the current filtered text to a file... I covered that in [test_app_playlist.py]... with checks for: saving the current filtered lyrics text... honoring a non-default encoding... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 138 tests OK...",
+  "expected_subject": "feat(ui): add encoding selector and save to Lyrics window",
+  "expected_body_lines": [
+    "- Add Encoding dropdown (UTF-8, Latin-1, CP1252) for text display",
+    "- Implement Save button to export filtered text with selected encoding",
+    "- Emit textSaved signal for status bar confirmation feedback",
+    "- Update user guides (EN/ES) with new export documentation",
+    "- Add tests for saving, encoding handling, and UI feedback",
+    "- Update Roadmap.md to mark lyrics export item complete",
+    "- Validation: compileall OK, 138 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add encoding selector and save to Lyrics window\" \\\n  -m \"- Add Encoding dropdown (UTF-8, Latin-1, CP1252) for text display\" \\\n  -m \"- Implement Save button to export filtered text with selected encoding\" \\\n  -m \"- Emit textSaved signal for status bar confirmation feedback\" \\\n  -m \"- Update user guides (EN/ES) with new export documentation\" \\\n  -m \"- Add tests for saving, encoding handling, and UI feedback\" \\\n  -m \"- Update Roadmap.md to mark lyrics export item complete\" \\\n  -m \"- Validation: compileall OK, 138 tests pass, offscreen verified\""
+}

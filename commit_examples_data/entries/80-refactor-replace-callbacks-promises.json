@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace callback pattern with promises",
+  "original_text": "Refactored the async code to replace callback patterns with promises. This improves code readability and makes error handling more consistent. Updated all async functions in services/api.py to use async/await syntax. Added proper error propagation and try-catch blocks. Updated tests to handle promise rejections. Result: 38 tests pass.",
+  "expected_subject": "refactor(api): replace callbacks with async/await promises",
+  "expected_body_lines": [
+    "- Replace callback patterns with async/await syntax",
+    "- Improve code readability and error handling",
+    "- Update services/api.py with promise-based async",
+    "- Add proper error propagation and try-catch blocks",
+    "- Validation: 38 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(api): replace callbacks with async/await promises\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement server-side rendering",
+  "original_text": "Refactored to server-side rendering. Implemented Next.js for SSR. Added server-side data fetching. Implemented static site generation for static pages. Added incremental static regeneration. Improved SEO and initial load performance. Result: SSR implemented.",
+  "expected_subject": "refactor(perf): implement server-side rendering",
+  "expected_body_lines": [
+    "- Implement Next.js for SSR",
+    "- Add server-side data fetching",
+    "- Implement static site generation",
+    "- Add incremental static regeneration",
+    "- Improve SEO and initial load performance",
+    "- Validation: SSR implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(perf): implement server-side rendering\""
+}

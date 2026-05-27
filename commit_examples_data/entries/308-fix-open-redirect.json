@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Open redirect vulnerability",
+  "original_text": "Fixed open redirect vulnerability in URL redirection. Implemented URL whitelist for redirects. Added URL validation and sanitization. Implemented redirect token validation. Added redirect audit logging. Result: open redirect vulnerability fixed.",
+  "expected_subject": "fix(security): fix open redirect vulnerability",
+  "expected_body_lines": [
+    "- Implement URL whitelist for redirects",
+    "- Add URL validation and sanitization",
+    "- Implement redirect token validation",
+    "- Add redirect audit logging",
+    "- Validation: open redirect vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix open redirect vulnerability\""
+}

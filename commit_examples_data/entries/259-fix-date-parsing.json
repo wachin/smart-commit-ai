@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Date parsing bug",
+  "original_text": "Fixed date parsing bug for timezones. Dates were being incorrectly parsed for different timezones. Implemented timezone-aware date parsing. Added date format validation. Implemented DST handling. Added date parsing tests. Result: date parsing bug fixed.",
+  "expected_subject": "fix(core): fix date parsing bug for timezones",
+  "expected_body_lines": [
+    "- Fix dates incorrectly parsed for timezones",
+    "- Implement timezone-aware date parsing",
+    "- Add date format validation",
+    "- Implement DST handling",
+    "- Validation: date parsing bug fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix date parsing bug for timezones\""
+}

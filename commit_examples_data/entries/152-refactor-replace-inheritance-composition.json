@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Replace inheritance with composition",
+  "original_text": "Refactored to use composition instead of inheritance. Replaced deep inheritance hierarchies with composition patterns. Implemented strategy pattern for interchangeable behaviors. Added dependency injection for composed objects. This makes the code more flexible and easier to maintain. Updated all classes to use composition. Added tests for new composition patterns. Result: 52 tests pass.",
+  "expected_subject": "refactor(design): replace inheritance with composition patterns",
+  "expected_body_lines": [
+    "- Replace deep inheritance hierarchies with composition",
+    "- Implement strategy pattern for interchangeable behaviors",
+    "- Add dependency injection for composed objects",
+    "- Improve flexibility and maintainability",
+    "- Add tests for composition patterns",
+    "- Validation: 52 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(design): replace inheritance with composition patterns\""
+}

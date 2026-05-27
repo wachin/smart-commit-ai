@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Jaeger tracing",
+  "original_text": "Added Jaeger for distributed tracing. Implemented tracing instrumentation. Added span propagation. Implemented trace sampling. Added trace analysis. Result: Jaeger tracing operational.",
+  "expected_subject": "chore(tracing): add Jaeger tracing",
+  "expected_body_lines": [
+    "- Implement tracing instrumentation",
+    "- Add span propagation",
+    "- Implement trace sampling",
+    "- Add trace analysis",
+    "- Validation: Jaeger tracing operational"
+  ],
+  "expected_command": "git commit -m \"chore(tracing): add Jaeger tracing\""
+}

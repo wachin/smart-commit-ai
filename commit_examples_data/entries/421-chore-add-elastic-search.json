@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Elasticsearch integration",
+  "original_text": "Added Elasticsearch for search. Implemented Elasticsearch indexing. Added search query optimization. Implemented Elasticsearch cluster configuration. Added search analytics. Result: Elasticsearch integration operational.",
+  "expected_subject": "chore(search): add Elasticsearch integration",
+  "expected_body_lines": [
+    "- Implement Elasticsearch indexing",
+    "- Add search query optimization",
+    "- Implement Elasticsearch cluster configuration",
+    "- Add search analytics",
+    "- Validation: Elasticsearch integration operational"
+  ],
+  "expected_command": "git commit -m \"chore(search): add Elasticsearch integration\""
+}

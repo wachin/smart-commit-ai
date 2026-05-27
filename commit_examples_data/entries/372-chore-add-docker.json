@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Docker containerization setup",
+  "original_text": "Added Docker for containerization. Implemented Dockerfile for application. Added Docker Compose for development. Implemented Docker registry configuration. Added container orchestration. Result: Docker containerization operational.",
+  "expected_subject": "chore(container): add Docker containerization",
+  "expected_body_lines": [
+    "- Implement Dockerfile for application",
+    "- Add Docker Compose for development",
+    "- Implement Docker registry configuration",
+    "- Add container orchestration",
+    "- Validation: Docker containerization operational"
+  ],
+  "expected_command": "git commit -m \"chore(container): add Docker containerization\""
+}

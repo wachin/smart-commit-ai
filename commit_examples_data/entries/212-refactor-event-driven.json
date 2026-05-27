@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement event-driven architecture",
+  "original_text": "Refactored to event-driven architecture. Implemented message broker with RabbitMQ. Added event producers and consumers. Implemented event sourcing pattern. Added event replay capability. Implemented saga pattern for distributed transactions. Result: event-driven architecture operational.",
+  "expected_subject": "refactor(arch): implement event-driven architecture",
+  "expected_body_lines": [
+    "- Implement message broker with RabbitMQ",
+    "- Add event producers and consumers",
+    "- Implement event sourcing pattern",
+    "- Add event replay capability",
+    "- Implement saga pattern for distributed transactions",
+    "- Validation: event-driven architecture operational"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): implement event-driven architecture\""
+}

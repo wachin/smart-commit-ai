@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add mutation testing",
+  "original_text": "Added mutation testing using mutmut. Configured mutation testing for critical modules. Implemented mutation score thresholds. Added mutation testing in CI/CD pipeline. Implemented mutation test reporting. Added mutation test optimization for faster execution. Result: mutation score 85%.",
+  "expected_subject": "test(quality): add mutation testing with mutmut",
+  "expected_body_lines": [
+    "- Configure mutation testing for critical modules",
+    "- Implement mutation score thresholds",
+    "- Add mutation testing in CI/CD pipeline",
+    "- Implement mutation test reporting",
+    "- Add mutation test optimization",
+    "- Validation: mutation score 85%"
+  ],
+  "expected_command": "git commit -m \"test(quality): add mutation testing with mutmut\""
+}

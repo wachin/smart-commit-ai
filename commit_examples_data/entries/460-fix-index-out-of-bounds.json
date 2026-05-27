@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Index out of bounds in array access",
+  "original_text": "Fixed index out of bounds in array access. Implemented bounds checking. Added array size validation. Implemented safe array access. Added index validation. Result: index out of bounds fixed.",
+  "expected_subject": "fix(runtime): fix index out of bounds in array access",
+  "expected_body_lines": [
+    "- Implement bounds checking",
+    "- Add array size validation",
+    "- Implement safe array access",
+    "- Add index validation",
+    "- Validation: index out of bounds fixed"
+  ],
+  "expected_command": "git commit -m \"fix(runtime): fix index out of bounds in array access\""
+}

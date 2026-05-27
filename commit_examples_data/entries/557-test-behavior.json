@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add behavior-driven development tests",
+  "original_text": "Added behavior-driven development tests. Implemented Gherkin scenarios. Added step definitions. Implemented feature files. Added test reports. Result: BDD tests pass.",
+  "expected_subject": "test(bdd): add behavior-driven development tests",
+  "expected_body_lines": [
+    "- Implement Gherkin scenarios",
+    "- Add step definitions",
+    "- Implement feature files",
+    "- Add test reports",
+    "- Validation: BDD tests pass"
+  ],
+  "expected_command": "git commit -m \"test(bdd): add behavior-driven development tests\""
+}

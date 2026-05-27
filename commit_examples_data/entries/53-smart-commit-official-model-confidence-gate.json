@@ -1,0 +1,13 @@
+{
+  "title": "Smart Commit: Official model artifacts and confidence gate",
+  "original_text": "Continued development now that sklearn is installed, and this unlocked a real milestone. I generated the official distributed ML artifacts: ml/commit_model.pkl, ml/vectorizer.pkl, and ml/model_metadata.json. Training used 63 examples after I added a new real chore(ml) dataset entry for distributed model artifacts. The predictor now reports model artifacts are ready, and it correctly predicts the core examples: fixed crash -> fix, MIDI karaoke support -> feat, installation instructions -> docs, deprecated code -> refactor, predictor tests -> test, and local ML model artifacts -> chore. The first full suite run with artifacts exposed a good integration bug: low-confidence ML predictions were overriding stronger heuristic decisions. I fixed that in smart_commit_nltk.py with a conservative confidence gate and added a regression in tests/test_smart_commit_nltk.py. Verification now passes fully: 59 tests ran, 59 passed, git diff --check passed, and tracked __pycache__ remains clean.",
+  "expected_subject": "feat(ml): generate official model artifacts and fix confidence gating",
+  "expected_body_lines": [
+    "- Train and distribute commit_model.pkl, vectorizer.pkl, and metadata",
+    "- Expand training set to 63 examples including chore(ml) case",
+    "- Implement conservative confidence gate to protect heuristic decisions",
+    "- Add regression test for ML/heuristic integration logic",
+    "- Validation: all 59 tests pass, git diff --check clean"
+  ],
+  "expected_command": "git commit -m \"feat(ml): generate official model artifacts and fix confidence gating\""
+}

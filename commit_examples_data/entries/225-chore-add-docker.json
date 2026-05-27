@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add Docker containerization",
+  "original_text": "Added Docker containerization. Created Dockerfile for application. Implemented multi-stage build for optimization. Added docker-compose for local development. Implemented container orchestration with Kubernetes. Added container security scanning. Result: containerization complete.",
+  "expected_subject": "chore(deploy): add Docker containerization",
+  "expected_body_lines": [
+    "- Create Dockerfile for application",
+    "- Implement multi-stage build for optimization",
+    "- Add docker-compose for local development",
+    "- Implement container orchestration with Kubernetes",
+    "- Add container security scanning",
+    "- Validation: containerization complete"
+  ],
+  "expected_command": "git commit -m \"chore(deploy): add Docker containerization\""
+}

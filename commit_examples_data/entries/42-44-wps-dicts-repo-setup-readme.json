@@ -1,0 +1,14 @@
+{
+  "title": "44. WPS Dicts: Repo Setup & README",
+  "original_text": "Listo. Hice dos cambios: Creé [.gitignore]... ignorando cachés de Python... pero manteniendo versionable `build/wps-libreoffice-dicts`. Actualicé [README.md]... eliminé `# Tutorial en construcción...`, corregí la instalación para usar: `sudo cp -r build/wps-libreoffice-dicts/* /opt/kingsoft/wps-office/office6/dicts/spellcheck/`... y añadí al final la explicación de la herramienta PyQt6...",
+  "expected_subject": "docs(repo): add .gitignore and update README with install steps",
+  "expected_body_lines": [
+    "- Create .gitignore to exclude caches, venvs, and temp files",
+    "- Explicitly keep build/wps-libreoffice-dicts versioned",
+    "- Remove 'under construction' notice from README.md",
+    "- Add sudo cp installation command for WPS spellcheck dicts",
+    "- Document PyQt6 converter tool usage and validation logic",
+    "- Clarify side-by-side comparison and error-blocking behavior"
+  ],
+  "expected_command": "git commit -m \"docs(repo): add .gitignore and update README with install steps\" \\\n  -m \"- Create .gitignore to exclude caches, venvs, and temp files\" \\\n  -m \"- Explicitly keep build/wps-libreoffice-dicts versioned\" \\\n  -m \"- Remove 'under construction' notice from README.md\" \\\n  -m \"- Add sudo cp installation command for WPS spellcheck dicts\" \\\n  -m \"- Document PyQt6 converter tool usage and validation logic\" \\\n  -m \"- Clarify side-by-side comparison and error-blocking behavior\""
+}

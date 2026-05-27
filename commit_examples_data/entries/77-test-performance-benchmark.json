@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add performance benchmark tests",
+  "original_text": "Added performance benchmark tests to measure response times under load. Created benchmarks for database queries, API endpoints, and data processing pipelines. Tests measure latency, throughput, and memory usage. Added baseline measurements and regression detection. Updated tests/test_performance.py. Result: 18 benchmarks pass, performance within acceptable limits.",
+  "expected_subject": "test(perf): add performance benchmark tests",
+  "expected_body_lines": [
+    "- Create benchmarks for database queries and API endpoints",
+    "- Measure latency, throughput, and memory usage",
+    "- Add baseline measurements and regression detection",
+    "- Test data processing pipeline performance",
+    "- Validation: 18 benchmarks pass, performance acceptable"
+  ],
+  "expected_command": "git commit -m \"test(perf): add performance benchmark tests\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add license documentation",
+  "original_text": "Added license documentation and usage guidelines. Documented license terms and conditions. Added third-party license attributions. Implemented license compliance checklist. Added license header templates. Result: license documentation complete.",
+  "expected_subject": "docs(legal): add license documentation",
+  "expected_body_lines": [
+    "- Document license terms and conditions",
+    "- Add third-party license attributions",
+    "- Implement license compliance checklist",
+    "- Add license header templates",
+    "- Validation: license documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(legal): add license documentation\""
+}

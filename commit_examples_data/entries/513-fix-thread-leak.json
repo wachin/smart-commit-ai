@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Thread leak in thread pool",
+  "original_text": "Fixed thread leak in thread pool. Implemented proper thread cleanup. Added thread timeout. Implemented thread tracking. Added thread monitoring. Result: thread leak fixed.",
+  "expected_subject": "fix(concurrency): fix thread leak in thread pool",
+  "expected_body_lines": [
+    "- Implement proper thread cleanup",
+    "- Add thread timeout",
+    "- Implement thread tracking",
+    "- Add thread monitoring",
+    "- Validation: thread leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(concurrency): fix thread leak in thread pool\""
+}

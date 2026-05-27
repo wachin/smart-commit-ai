@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add verification reporting",
+  "original_text": "Added verification reporting system. Implemented test report generation. Added test history tracking. Implemented test failure analysis. Added test improvement recommendations. Result: verification reporting operational.",
+  "expected_subject": "test(reporting): add verification reporting",
+  "expected_body_lines": [
+    "- Implement test report generation",
+    "- Add test history tracking",
+    "- Implement test failure analysis",
+    "- Add test improvement recommendations",
+    "- Validation: verification reporting operational"
+  ],
+  "expected_command": "git commit -m \"test(reporting): add verification reporting\""
+}

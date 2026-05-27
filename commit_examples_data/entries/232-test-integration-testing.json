@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add integration tests",
+  "original_text": "Added integration tests for service interactions. Implemented tests for database integration. Added integration tests for external API calls. Implemented integration tests for message queues. Added integration test environment setup. Result: integration tests pass.",
+  "expected_subject": "test(integration): add integration tests",
+  "expected_body_lines": [
+    "- Implement tests for database integration",
+    "- Add integration tests for external API calls",
+    "- Implement integration tests for message queues",
+    "- Add integration test environment setup",
+    "- Validation: integration tests pass"
+  ],
+  "expected_command": "git commit -m \"test(integration): add integration tests\""
+}

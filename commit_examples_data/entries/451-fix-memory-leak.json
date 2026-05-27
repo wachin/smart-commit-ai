@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Memory leak in event handler",
+  "original_text": "Fixed memory leak in event handler. Implemented proper event listener cleanup. Added event listener tracking. Implemented memory leak detection. Added memory profiling. Result: memory leak fixed.",
+  "expected_subject": "fix(performance): fix memory leak in event handler",
+  "expected_body_lines": [
+    "- Implement proper event listener cleanup",
+    "- Add event listener tracking",
+    "- Implement memory leak detection",
+    "- Add memory profiling",
+    "- Validation: memory leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(performance): fix memory leak in event handler\""
+}

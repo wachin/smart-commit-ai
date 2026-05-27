@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API throttling guide",
+  "original_text": "Added API throttling guide. Documented throttling strategies. Added rate limiting patterns. Implemented throttling examples. Added throttling best practices. Result: throttling guide complete.",
+  "expected_subject": "docs(api): add API throttling guide",
+  "expected_body_lines": [
+    "- Document throttling strategies",
+    "- Add rate limiting patterns",
+    "- Implement throttling examples",
+    "- Add throttling best practices",
+    "- Validation: throttling guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API throttling guide\""
+}

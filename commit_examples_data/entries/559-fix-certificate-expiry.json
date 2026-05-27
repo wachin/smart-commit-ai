@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Certificate expiry handling",
+  "original_text": "Fixed certificate expiry handling. Implemented certificate renewal. Added expiry monitoring. Implemented automatic rotation. Added certificate warnings. Result: certificate expiry handled.",
+  "expected_subject": "fix(security): fix certificate expiry handling",
+  "expected_body_lines": [
+    "- Implement certificate renewal",
+    "- Add expiry monitoring",
+    "- Implement automatic rotation",
+    "- Add certificate warnings",
+    "- Validation: certificate expiry handled"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix certificate expiry handling\""
+}

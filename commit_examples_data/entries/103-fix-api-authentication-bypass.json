@@ -1,0 +1,14 @@
+{
+  "title": "Fix API authentication bypass",
+  "original_text": "Fixed an authentication bypass vulnerability in the API. The API was not properly validating JWT tokens on certain endpoints. Added proper token validation middleware. Implemented token expiration checking. Added token revocation support. Fixed permission checks on protected endpoints. Added audit logging for authentication failures. Added security tests for authentication flows. Result: 43 tests pass.",
+  "expected_subject": "fix(security): fix API authentication bypass vulnerability",
+  "expected_body_lines": [
+    "- Add proper token validation middleware",
+    "- Implement token expiration checking",
+    "- Add token revocation support",
+    "- Fix permission checks on protected endpoints",
+    "- Add audit logging for authentication failures",
+    "- Validation: 43 tests pass"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix API authentication bypass vulnerability\""
+}

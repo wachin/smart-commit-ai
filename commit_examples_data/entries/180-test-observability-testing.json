@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add observability testing",
+  "original_text": "Added observability testing for monitoring. Implemented metrics testing and validation. Added logging testing and verification. Implemented tracing testing for distributed systems. Added alerting testing and validation. Implemented observability test reporting. Result: observability verified.",
+  "expected_subject": "test(observability): add observability testing",
+  "expected_body_lines": [
+    "- Implement metrics testing and validation",
+    "- Add logging testing and verification",
+    "- Implement tracing testing for distributed systems",
+    "- Add alerting testing and validation",
+    "- Implement observability test reporting",
+    "- Validation: observability verified"
+  ],
+  "expected_command": "git commit -m \"test(observability): add observability testing\""
+}

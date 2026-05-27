@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add libFuzzer fuzz testing",
+  "original_text": "Added fuzz testing with libFuzzer. Implemented fuzz test harnesses. Added fuzz test corpus. Implemented fuzz test sanitizers. Added fuzz test coverage. Result: fuzz tests pass.",
+  "expected_subject": "test(fuzz): add fuzz testing with libFuzzer",
+  "expected_body_lines": [
+    "- Implement fuzz test harnesses",
+    "- Add fuzz test corpus",
+    "- Implement fuzz test sanitizers",
+    "- Add fuzz test coverage",
+    "- Validation: fuzz tests pass"
+  ],
+  "expected_command": "git commit -m \"test(fuzz): add fuzz testing with libFuzzer\""
+}

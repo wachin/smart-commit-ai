@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement visitor pattern",
+  "original_text": "Refactored to implement visitor pattern. Added visitor interface for operations on elements. Implemented concrete visitors for different operations. Added element interface for accepting visitors. Implemented element classes with accept methods. Result: visitor pattern implemented.",
+  "expected_subject": "refactor(pattern): implement visitor pattern",
+  "expected_body_lines": [
+    "- Add visitor interface for operations on elements",
+    "- Implement concrete visitors for different operations",
+    "- Add element interface for accepting visitors",
+    "- Implement element classes with accept methods",
+    "- Validation: visitor pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement visitor pattern\""
+}

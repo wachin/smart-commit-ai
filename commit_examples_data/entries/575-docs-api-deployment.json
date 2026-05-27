@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API deployment guide",
+  "original_text": "Added API deployment guide. Documented deployment strategies. Added CI/CD integration. Implemented deployment automation. Added rollback procedures. Result: deployment guide complete.",
+  "expected_subject": "docs(api): add API deployment guide",
+  "expected_body_lines": [
+    "- Document deployment strategies",
+    "- Add CI/CD integration",
+    "- Implement deployment automation",
+    "- Add rollback procedures",
+    "- Validation: deployment guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API deployment guide\""
+}

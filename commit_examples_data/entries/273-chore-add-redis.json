@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Redis caching",
+  "original_text": "Added Redis caching layer. Implemented cache for frequently accessed data. Added cache invalidation strategy. Implemented Redis session storage. Added cache monitoring and metrics. Result: Redis caching operational.",
+  "expected_subject": "chore(cache): add Redis caching layer",
+  "expected_body_lines": [
+    "- Implement cache for frequently accessed data",
+    "- Add cache invalidation strategy",
+    "- Implement Redis session storage",
+    "- Add cache monitoring and metrics",
+    "- Validation: Redis caching operational"
+  ],
+  "expected_command": "git commit -m \"chore(cache): add Redis caching layer\""
+}

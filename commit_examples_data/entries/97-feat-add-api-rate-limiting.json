@@ -1,0 +1,14 @@
+{
+  "title": "Add API rate limiting",
+  "original_text": "Implemented API rate limiting to prevent abuse. Added token bucket algorithm for rate limiting. Implemented per-user and per-IP rate limits. Added rate limit headers in API responses. Implemented rate limit exceeded responses with retry-after. Added rate limit analytics and monitoring. Implemented rate limit bypass for admin users. Added tests for rate limiting. Result: 29 tests pass.",
+  "expected_subject": "feat(api): add rate limiting to prevent abuse",
+  "expected_body_lines": [
+    "- Implement token bucket algorithm for rate limiting",
+    "- Add per-user and per-IP rate limits",
+    "- Add rate limit headers in API responses",
+    "- Implement rate limit exceeded responses",
+    "- Add rate limit analytics and admin bypass",
+    "- Validation: 29 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(api): add rate limiting to prevent abuse\""
+}

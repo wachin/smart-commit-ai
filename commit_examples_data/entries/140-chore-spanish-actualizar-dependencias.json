@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Actualizar dependencias en español",
+  "original_text": "Actualicé las dependencias del proyecto a sus últimas versiones estables. Actualicé pytest de 7.0.0 a 7.4.0, requests de 2.28.0 a 2.31.0, y numpy de 1.23.0 a 1.26.0. También actualicé dependencias de desarrollo incluyendo black, flake8 y mypy. Ejecuté la suite completa de pruebas para asegurar compatibilidad. Actualicé requirements.txt y requirements-dev.txt. Resultado: 71 pruebas pasan.",
+  "expected_subject": "chore(deps): actualizar dependencias a últimas versiones estables",
+  "expected_body_lines": [
+    "- Actualizar pytest, requests, numpy a últimas versiones",
+    "- Actualizar dependencias de desarrollo: black, flake8, mypy",
+    "- Actualizar requirements.txt y requirements-dev.txt",
+    "- Verificar compatibilidad con suite completa de pruebas",
+    "- Validación: 71 pruebas pasan"
+  ],
+  "expected_command": "git commit -m \"chore(deps): actualizar dependencias a últimas versiones estables\""
+}

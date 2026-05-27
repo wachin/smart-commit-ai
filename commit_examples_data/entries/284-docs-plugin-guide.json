@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add plugin development guide",
+  "original_text": "Added plugin development guide. Documented plugin architecture and lifecycle. Added plugin API reference. Implemented plugin examples and templates. Added plugin testing guidelines. Result: plugin development guide complete.",
+  "expected_subject": "docs(plugin): add plugin development guide",
+  "expected_body_lines": [
+    "- Document plugin architecture and lifecycle",
+    "- Add plugin API reference",
+    "- Implement plugin examples and templates",
+    "- Add plugin testing guidelines",
+    "- Validation: plugin development guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(plugin): add plugin development guide\""
+}

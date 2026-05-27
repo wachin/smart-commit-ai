@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Corregir error de validación en español",
+  "original_text": "Corregí un error de validación que ocurría cuando el usuario ingresaba texto con caracteres especiales en español. El validador no aceptaba tildes y la letra ñ. Actualicé el regex en utils/validator.py para aceptar caracteres UTF-8. También actualicé los mensajes de error para que sean más claros en español. Añadí tests en tests/test_validator.py. Resultado: 33 pruebas pasan.",
+  "expected_subject": "fix(validador): aceptar caracteres especiales en español",
+  "expected_body_lines": [
+    "- Actualizar regex para aceptar UTF-8 y caracteres españoles",
+    "- Permitir tildes y la letra ñ en la validación",
+    "- Mejorar mensajes de error en español",
+    "- Añadir tests de regresión para caracteres especiales",
+    "- Validación: 33 pruebas pasan"
+  ],
+  "expected_command": "git commit -m \"fix(validador): aceptar caracteres especiales en español\""
+}

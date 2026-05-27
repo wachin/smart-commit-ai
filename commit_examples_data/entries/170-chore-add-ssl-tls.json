@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add SSL/TLS configuration",
+  "original_text": "Added SSL/TLS configuration for secure connections. Implemented HTTPS enforcement. Configured SSL certificates. Implemented TLS 1.3 support. Added HSTS headers. Implemented certificate rotation. Added SSL monitoring. Result: SSL/TLS configured.",
+  "expected_subject": "chore(security): add SSL/TLS configuration",
+  "expected_body_lines": [
+    "- Implement HTTPS enforcement",
+    "- Configure SSL certificates",
+    "- Implement TLS 1.3 support",
+    "- Add HSTS headers",
+    "- Implement certificate rotation and monitoring",
+    "- Validation: SSL/TLS configured"
+  ],
+  "expected_command": "git commit -m \"chore(security): add SSL/TLS configuration\""
+}

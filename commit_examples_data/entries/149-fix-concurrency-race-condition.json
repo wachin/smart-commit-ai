@@ -1,0 +1,14 @@
+{
+  "title": "Fix race condition in concurrent updates",
+  "original_text": "Fixed race condition in concurrent data updates. Multiple users could overwrite each other's changes. Implemented optimistic locking with version numbers. Added conflict detection and resolution. Implemented last-write-wins with merge strategy. Added conflict resolution UI. Added audit trail for conflicts. Result: concurrent updates handled correctly.",
+  "expected_subject": "fix(concurrency): add optimistic locking for concurrent updates",
+  "expected_body_lines": [
+    "- Implement optimistic locking with version numbers",
+    "- Add conflict detection and resolution",
+    "- Implement last-write-wins with merge strategy",
+    "- Add conflict resolution UI",
+    "- Add audit trail for conflicts",
+    "- Validation: concurrent updates handled correctly"
+  ],
+  "expected_command": "git commit -m \"fix(concurrency): add optimistic locking for concurrent updates\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add integration guide",
+  "original_text": "Added integration guide for third-party systems. Documented integration patterns and best practices. Added integration code examples. Implemented webhook documentation. Added integration troubleshooting. Result: integration guide complete.",
+  "expected_subject": "docs(integration): add integration guide",
+  "expected_body_lines": [
+    "- Document integration patterns and best practices",
+    "- Add integration code examples",
+    "- Implement webhook documentation",
+    "- Add integration troubleshooting",
+    "- Validation: integration guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(integration): add integration guide\""
+}

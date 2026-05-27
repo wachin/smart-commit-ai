@@ -1,0 +1,12 @@
+{
+  "title": "Fix null pointer exception in file loader",
+  "original_text": "Fixed a null pointer exception that occurred when loading files with empty paths. The issue was in the file loader where we didn't check if the path was null before attempting to open it. Added a null check at the beginning of the load_file() function. Now it returns an error message instead of crashing. Updated tests/test_file_loader.py to cover this edge case. Result: 42 tests pass.",
+  "expected_subject": "fix(loader): handle null paths gracefully",
+  "expected_body_lines": [
+    "- Add null check at the start of load_file() function",
+    "- Return error message instead of crashing on null paths",
+    "- Add regression test for empty path edge case",
+    "- Validation: 42 tests pass"
+  ],
+  "expected_command": "git commit -m \"fix(loader): handle null paths gracefully\""
+}

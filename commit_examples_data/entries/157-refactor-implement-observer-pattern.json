@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement observer pattern for events",
+  "original_text": "Refactored to use observer pattern for event handling. Created observable subjects and observer interfaces. Implemented event bus for decoupled communication. Added event listeners for business events. This reduces coupling between components. Added tests for observer pattern. Result: 38 tests pass.",
+  "expected_subject": "refactor(pattern): implement observer pattern for events",
+  "expected_body_lines": [
+    "- Create observable subjects and observer interfaces",
+    "- Implement event bus for decoupled communication",
+    "- Add event listeners for business events",
+    "- Reduce coupling between components",
+    "- Add tests for observer pattern",
+    "- Validation: 38 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement observer pattern for events\""
+}

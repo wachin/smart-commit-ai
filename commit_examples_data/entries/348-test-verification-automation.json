@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add automated verification",
+  "original_text": "Added automated verification pipeline. Implemented automated test execution. Added automated result reporting. Implemented automated failure notification. Added automated test scheduling. Result: automated verification operational.",
+  "expected_subject": "test(automation): add automated verification",
+  "expected_body_lines": [
+    "- Implement automated test execution",
+    "- Add automated result reporting",
+    "- Implement automated failure notification",
+    "- Add automated test scheduling",
+    "- Validation: automated verification operational"
+  ],
+  "expected_command": "git commit -m \"test(automation): add automated verification\""
+}

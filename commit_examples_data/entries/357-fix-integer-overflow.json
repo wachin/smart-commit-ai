@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Integer overflow vulnerability",
+  "original_text": "Fixed integer overflow vulnerability in calculations. Implemented bounds checking for integer operations. Added safe integer arithmetic. Implemented overflow detection. Added safe type conversions. Result: integer overflow vulnerability fixed.",
+  "expected_subject": "fix(security): fix integer overflow vulnerability",
+  "expected_body_lines": [
+    "- Implement bounds checking for integer operations",
+    "- Add safe integer arithmetic",
+    "- Implement overflow detection",
+    "- Add safe type conversions",
+    "- Validation: integer overflow vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix integer overflow vulnerability\""
+}

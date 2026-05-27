@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Cloudflare CDN",
+  "original_text": "Added Cloudflare CDN integration. Implemented CDN configuration for static assets. Added cache invalidation rules. Implemented SSL/TLS configuration. Added CDN analytics. Result: Cloudflare CDN operational.",
+  "expected_subject": "chore(cdn): add Cloudflare CDN",
+  "expected_body_lines": [
+    "- Implement CDN configuration for static assets",
+    "- Add cache invalidation rules",
+    "- Implement SSL/TLS configuration",
+    "- Add CDN analytics",
+    "- Validation: Cloudflare CDN operational"
+  ],
+  "expected_command": "git commit -m \"chore(cdn): add Cloudflare CDN\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Implement workflow automation",
+  "original_text": "Implemented workflow automation system. Added visual workflow designer. Implemented workflow execution engine. Added workflow templates for common tasks. Implemented workflow scheduling and triggers. Added workflow monitoring and alerting. Implemented workflow versioning. Added workflow analytics and reporting. Result: workflow automation operational.",
+  "expected_subject": "feat(workflow): implement workflow automation system",
+  "expected_body_lines": [
+    "- Add visual workflow designer",
+    "- Implement workflow execution engine",
+    "- Add workflow templates for common tasks",
+    "- Implement workflow scheduling and triggers",
+    "- Add workflow monitoring and versioning",
+    "- Validation: workflow automation operational"
+  ],
+  "expected_command": "git commit -m \"feat(workflow): implement workflow automation system\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API authentication guide",
+  "original_text": "Added API authentication guide. Documented authentication methods. Added OAuth2 implementation guide. Implemented API key management. Added token refresh documentation. Result: API authentication guide complete.",
+  "expected_subject": "docs(api): add API authentication guide",
+  "expected_body_lines": [
+    "- Document authentication methods",
+    "- Add OAuth2 implementation guide",
+    "- Implement API key management",
+    "- Add token refresh documentation",
+    "- Validation: API authentication guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API authentication guide\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Datadog monitoring",
+  "original_text": "Added Datadog monitoring integration. Implemented APM for application performance. Added infrastructure monitoring. Implemented log aggregation with Datadog. Added custom metrics and dashboards. Result: Datadog monitoring operational.",
+  "expected_subject": "chore(monitoring): add Datadog monitoring",
+  "expected_body_lines": [
+    "- Implement APM for application performance",
+    "- Add infrastructure monitoring",
+    "- Implement log aggregation with Datadog",
+    "- Add custom metrics and dashboards",
+    "- Validation: Datadog monitoring operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Datadog monitoring\""
+}

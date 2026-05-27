@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add database schema documentation",
+  "original_text": "Added database schema documentation. Documented all tables and relationships. Added entity-relationship diagrams. Implemented data flow documentation. Added indexing strategy documentation. Added migration history and versioning. Result: database schema documentation complete.",
+  "expected_subject": "docs(db): add database schema documentation",
+  "expected_body_lines": [
+    "- Document all tables and relationships",
+    "- Add entity-relationship diagrams",
+    "- Implement data flow documentation",
+    "- Add indexing strategy documentation",
+    "- Add migration history and versioning",
+    "- Validation: database schema documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(db): add database schema documentation\""
+}

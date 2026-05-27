@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Apache Kafka messaging",
+  "original_text": "Added Apache Kafka messaging. Implemented Kafka producers. Added Kafka consumers. Implemented topic management. Added message serialization. Result: Kafka messaging operational.",
+  "expected_subject": "chore(messaging): add Apache Kafka messaging",
+  "expected_body_lines": [
+    "- Implement Kafka producers",
+    "- Add Kafka consumers",
+    "- Implement topic management",
+    "- Add message serialization",
+    "- Validation: Kafka messaging operational"
+  ],
+  "expected_command": "git commit -m \"chore(messaging): add Apache Kafka messaging\""
+}

@@ -1,0 +1,15 @@
+{
+  "title": "27. Piano Player: Visibility Controls",
+  "original_text": "We moved the Pianola window forward in a pretty useful way. In [app.py]..., the `Piano Player` dialog now has real per-track visibility controls: each track row gets a `Show` checkbox, `Show All` / `Hide All` buttons... hidden rows collapse just the keyboard area... While I was there, I also cleaned up a duplicate Pianola clear in slider seeking... I added coverage in [test_app_playlist.py]... I also updated [Roadmap.md]... and the user guides... Verification is clean: ... 157 tests OK...",
+  "expected_subject": "feat(ui): add per-track visibility controls to Pianola",
+  "expected_body_lines": [
+    "- Add Show checkbox per track row with keyboard area collapsing",
+    "- Implement Show All / Hide All buttons for bulk visibility toggling",
+    "- Report visibility changes in main window status bar",
+    "- Fix duplicate Pianola clear on seek and ensure stop/pause cleanup",
+    "- Update user guides (EN/ES) and Roadmap.md with new control docs",
+    "- Add tests for individual/bulk toggling and activity clearing",
+    "- Validation: compileall OK, 157 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add per-track visibility controls to Pianola\" \\\n  -m \"- Add Show checkbox per track row with keyboard area collapsing\" \\\n  -m \"- Implement Show All / Hide All buttons for bulk visibility toggling\" \\\n  -m \"- Report visibility changes in main window status bar\" \\\n  -m \"- Fix duplicate Pianola clear on seek and ensure stop/pause cleanup\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new control docs\" \\\n  -m \"- Add tests for individual/bulk toggling and activity clearing\" \\\n  -m \"- Validation: compileall OK, 157 tests pass\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply CQRS pattern to domain",
+  "original_text": "Refactored to implement CQRS pattern. Separated command and query models. Implemented command handlers. Added query handlers. Implemented event sourcing integration. Result: CQRS pattern implemented.",
+  "expected_subject": "refactor(pattern): implement CQRS pattern",
+  "expected_body_lines": [
+    "- Separate command and query models",
+    "- Implement command handlers",
+    "- Add query handlers",
+    "- Implement event sourcing integration",
+    "- Validation: CQRS pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement CQRS pattern\""
+}

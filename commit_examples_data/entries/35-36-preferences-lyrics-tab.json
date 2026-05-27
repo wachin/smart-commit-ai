@@ -1,0 +1,15 @@
+{
+  "title": "36. Preferences: Lyrics Tab",
+  "original_text": "We pushed the preferences work further and landed a real `Lyrics` tab. In [settings.py]..., I added persisted Lyrics preferences for: font family, font size, future text color, past text color... In [app.py]..., the `Preferences` dialog now has a `Lyrics` tab with controls for those values... I also updated `LyricsDialog` so its highlighted HTML uses configurable past/future colors... Tests were expanded in: [test_settings.py], [test_app_playlist.py]... I updated [Roadmap.md]... And I refreshed the user guides... Verification is clean: ... 176 tests OK...",
+  "expected_subject": "feat(app): add Lyrics preferences tab",
+  "expected_body_lines": [
+    "- Persist font family, size, and past/future text colors",
+    "- Add Lyrics tab to PreferencesDialog with Restore Defaults support",
+    "- Apply settings live to open Lyrics windows and new instances",
+    "- Update LyricsDialog HTML rendering to use configurable colors",
+    "- Update user guides (EN/ES) and Roadmap.md with new preference docs",
+    "- Add tests for persistence, clamping, and live application",
+    "- Validation: compileall OK, 176 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(app): add Lyrics preferences tab\" \\\n  -m \"- Persist font family, size, and past/future text colors\" \\\n  -m \"- Add Lyrics tab to PreferencesDialog with Restore Defaults support\" \\\n  -m \"- Apply settings live to open Lyrics windows and new instances\" \\\n  -m \"- Update LyricsDialog HTML rendering to use configurable colors\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new preference docs\" \\\n  -m \"- Add tests for persistence, clamping, and live application\" \\\n  -m \"- Validation: compileall OK, 176 tests pass\""
+}

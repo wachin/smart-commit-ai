@@ -1,0 +1,14 @@
+{
+  "title": "Tag Markdown: i18n and drag-and-drop support",
+  "original_text": "Let me read both files completely first: Good. Now I have a complete picture of both files. I'll rewrite tag_markdown_gui.py with all three improvements, create the .ts files for all languages, compile them, and create the launcher. All in parallel where possible: Now create all 10 translation .ts files in parallel: French was missed. Writing the remaining 4 files now: Now compile all 10 .ts files and create the launcher simultaneously: All 34 strings compiled in all 10 languages. Now create the launcher: Now verify everything works: All clean. Here's a full summary of everything done: tag_markdown_gui.py — fully rewritten with: - All strings in English with tr() wrapping, context TagMarkdownApp - DropZoneWidget — same pattern as html_blogger_fixer_gui.py, with Drag and drop .md file / or / Browse .md file button - setAcceptDrops(True) on the main window + dragEnterEvent / dragMoveEvent / dropEvent / open_dropped_file — validates .md / .markdown extension - Drop sets the file path in the display field; the user still chooses the tag and clicks Process — this is the right UX since the tag choice is needed before processing - create_app_icon() — same shared SVG from assets/ - _load_app_translation() — reads LANGUAGE env var first, then system locale, loads tag_markdown_XX.qm - _load_qt_translation() — Qt built-in dialogs in system language - All Spanish function/variable names renamed to English tag_markdown_gui.sh — identical pattern to html_blogger_fixer_gui.sh, exports QT_QPA_PLATFORMTHEME=gtk3 Translations — 10 languages × 34 strings each, all .ts + .qm compiled: en, es, ru, ja, ko, fr, de, zh_CN, zh_TW, pt_BR",
+  "expected_subject": "feat(i18n): add i18n and drag-and-drop to Tag Markdown GUI",
+  "expected_body_lines": [
+    "- Wrap all UI strings in tr() for 10-language support",
+    "- Implement DropZoneWidget with .md/.markdown file validation",
+    "- Add tag_markdown_gui.sh launcher with GTK theme integration",
+    "- Support LANGUAGE env var for locale-based translation loading",
+    "- Rename internal functions and variables to English standards",
+    "- Compile 34 strings across en, es, ru, ja, ko, fr, de, zh, pt"
+  ],
+  "expected_command": "git commit -m \"feat(i18n): add i18n and drag-and-drop to Tag Markdown GUI\""
+}

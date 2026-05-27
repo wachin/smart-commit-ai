@@ -1,0 +1,14 @@
+{
+  "title": "38. Preferences: Single Highlight Color",
+  "original_text": "We kept the port moving and finished another real `Player Piano` preferences item: single highlight color. In [settings.py]..., I added a persisted `pianola/single_color` setting with a default blue highlight. In [app.py]..., the `Preferences -> Player Piano` tab now includes `Single highlight color`... I also updated the related docs in [Roadmap.md], [EN guide], and [ES guide], and extended tests... Verification is clean: ... 176 tests OK...",
+  "expected_subject": "feat(app): add single highlight color to Pianola prefs",
+  "expected_body_lines": [
+    "- Persist pianola/single_color setting with default blue highlight",
+    "- Add Single highlight color control to Preferences Player Piano tab",
+    "- Apply custom color live when Highlight colors is set to Single color",
+    "- Update user guides (EN/ES) and Roadmap.md with new color docs",
+    "- Add tests for persistence, defaults, and live application",
+    "- Validation: compileall OK, 176 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add single highlight color to Pianola prefs\" \\\n  -m \"- Persist pianola/single_color setting with default blue highlight\" \\\n  -m \"- Add Single highlight color control to Preferences Player Piano tab\" \\\n  -m \"- Apply custom color live when Highlight colors is set to Single color\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new color docs\" \\\n  -m \"- Add tests for persistence, defaults, and live application\" \\\n  -m \"- Validation: compileall OK, 176 tests pass, offscreen verified\""
+}

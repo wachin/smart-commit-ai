@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Upgrade Node.js version",
+  "original_text": "Upgraded Node.js from version 16 to version 18. Updated package.json engines field. Updated CI/CD pipelines to use Node 18. Updated Docker images to use Node 18. Tested all dependencies for compatibility. Fixed deprecated API usage. Updated documentation with Node 18 requirements. Result: all tests pass on Node 18.",
+  "expected_subject": "chore(runtime): upgrade Node.js from v16 to v18",
+  "expected_body_lines": [
+    "- Update package.json engines field",
+    "- Update CI/CD pipelines for Node 18",
+    "- Update Docker images for Node 18",
+    "- Fix deprecated API usage",
+    "- Update documentation with Node 18 requirements",
+    "- Validation: all tests pass on Node 18"
+  ],
+  "expected_command": "git commit -m \"chore(runtime): upgrade Node.js from v16 to v18\""
+}

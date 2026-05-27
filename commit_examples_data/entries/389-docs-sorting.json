@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add sorting guide",
+  "original_text": "Added sorting guide. Documented sort parameters. Added multi-field sorting. Implemented sort direction handling. Added sort validation documentation. Result: sorting guide complete.",
+  "expected_subject": "docs(api): add sorting guide",
+  "expected_body_lines": [
+    "- Document sort parameters",
+    "- Add multi-field sorting",
+    "- Implement sort direction handling",
+    "- Add sort validation documentation",
+    "- Validation: sorting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add sorting guide\""
+}

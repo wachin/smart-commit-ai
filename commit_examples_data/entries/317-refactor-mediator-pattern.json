@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement mediator pattern",
+  "original_text": "Refactored to implement mediator pattern. Added mediator interface for coordinating objects. Implemented concrete mediator for communication. Added colleague classes for interacting objects. Implemented loose coupling between colleagues. Result: mediator pattern implemented.",
+  "expected_subject": "refactor(pattern): implement mediator pattern",
+  "expected_body_lines": [
+    "- Add mediator interface for coordinating objects",
+    "- Implement concrete mediator for communication",
+    "- Add colleague classes for interacting objects",
+    "- Implement loose coupling between colleagues",
+    "- Validation: mediator pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement mediator pattern\""
+}

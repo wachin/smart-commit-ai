@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Authentication bypass vulnerability",
+  "original_text": "Fixed authentication bypass vulnerability. Session tokens were not being properly validated. Implemented secure session management. Added token expiration and refresh. Implemented multi-factor authentication. Added authentication audit logging. Result: authentication bypass fixed.",
+  "expected_subject": "fix(security): fix authentication bypass vulnerability",
+  "expected_body_lines": [
+    "- Fix session tokens not being properly validated",
+    "- Implement secure session management",
+    "- Add token expiration and refresh",
+    "- Implement multi-factor authentication",
+    "- Validation: authentication bypass fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix authentication bypass vulnerability\""
+}

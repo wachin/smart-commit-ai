@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add release process documentation",
+  "original_text": "Added release process documentation. Documented release workflow. Added versioning strategy. Implemented release checklist. Added release announcement template. Result: release process documentation complete.",
+  "expected_subject": "docs(release): add release process documentation",
+  "expected_body_lines": [
+    "- Document release workflow",
+    "- Add versioning strategy",
+    "- Implement release checklist",
+    "- Add release announcement template",
+    "- Validation: release process documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(release): add release process documentation\""
+}

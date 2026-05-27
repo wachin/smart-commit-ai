@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Command pattern to actions",
+  "original_text": "Refactored to implement Command pattern. Implemented command interface. Added concrete commands. Implemented command invoker. Added undo/redo support. Result: Command pattern implemented.",
+  "expected_subject": "refactor(pattern): implement Command pattern",
+  "expected_body_lines": [
+    "- Implement command interface",
+    "- Add concrete commands",
+    "- Implement command invoker",
+    "- Add undo/redo support",
+    "- Validation: Command pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement Command pattern\""
+}

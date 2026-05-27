@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Prometheus operator",
+  "original_text": "Added Prometheus operator for monitoring. Implemented Prometheus CRDs. Added service monitors. Implemented alert manager configuration. Added Prometheus recording rules. Result: Prometheus operator operational.",
+  "expected_subject": "chore(monitoring): add Prometheus operator",
+  "expected_body_lines": [
+    "- Implement Prometheus CRDs",
+    "- Add service monitors",
+    "- Implement alert manager configuration",
+    "- Add Prometheus recording rules",
+    "- Validation: Prometheus operator operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Prometheus operator\""
+}

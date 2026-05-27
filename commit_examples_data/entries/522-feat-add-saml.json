@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add SAML SSO authentication",
+  "original_text": "Added SAML SSO authentication. Implemented SAML provider integration. Added SAML assertion validation. Implemented user attribute mapping. Added SLO support. Result: SAML SSO operational.",
+  "expected_subject": "feat(auth): add SAML SSO authentication",
+  "expected_body_lines": [
+    "- Implement SAML provider integration",
+    "- Add SAML assertion validation",
+    "- Implement user attribute mapping",
+    "- Add SLO support",
+    "- Validation: SAML SSO operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add SAML SSO authentication\""
+}

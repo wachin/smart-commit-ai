@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Concurrency bug in cache",
+  "original_text": "Fixed concurrency bug in cache implementation. Added proper locking for shared resources. Implemented thread-safe data structures. Added atomic operations for cache updates. Implemented concurrent access testing. Result: concurrency bug fixed.",
+  "expected_subject": "fix(core): fix concurrency bug in cache",
+  "expected_body_lines": [
+    "- Add proper locking for shared resources",
+    "- Implement thread-safe data structures",
+    "- Add atomic operations for cache updates",
+    "- Implement concurrent access testing",
+    "- Validation: concurrency bug fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix concurrency bug in cache\""
+}

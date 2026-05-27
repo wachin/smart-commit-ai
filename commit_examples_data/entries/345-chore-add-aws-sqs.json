@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add AWS SQS message queue",
+  "original_text": "Added AWS SQS message queue. Implemented queue creation and management. Added message producers and consumers. Implemented dead letter queue. Added queue monitoring. Result: AWS SQS message queue operational.",
+  "expected_subject": "chore(messaging): add AWS SQS message queue",
+  "expected_body_lines": [
+    "- Implement queue creation and management",
+    "- Add message producers and consumers",
+    "- Implement dead letter queue",
+    "- Add queue monitoring",
+    "- Validation: AWS SQS message queue operational"
+  ],
+  "expected_command": "git commit -m \"chore(messaging): add AWS SQS message queue\""
+}

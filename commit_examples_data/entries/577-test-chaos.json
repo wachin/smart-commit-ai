@@ -1,0 +1,13 @@
+{
+  "title": "Test: Implement chaos testing with Gremlin",
+  "original_text": "Added chaos engineering tests. Implemented fault injection. Added failure scenarios. Implemented resilience testing. Added chaos metrics. Result: chaos tests pass.",
+  "expected_subject": "test(chaos): add chaos engineering tests",
+  "expected_body_lines": [
+    "- Implement fault injection",
+    "- Add failure scenarios",
+    "- Implement resilience testing",
+    "- Add chaos metrics",
+    "- Validation: chaos tests pass"
+  ],
+  "expected_command": "git commit -m \"test(chaos): add chaos engineering tests\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add alerting guide",
+  "original_text": "Added alerting guide. Documented alert configuration. Added alert routing. Implemented alert escalation. Added alert best practices. Result: alerting guide complete.",
+  "expected_subject": "docs(ops): add alerting guide",
+  "expected_body_lines": [
+    "- Document alert configuration",
+    "- Add alert routing",
+    "- Implement alert escalation",
+    "- Add alert best practices",
+    "- Validation: alerting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(ops): add alerting guide\""
+}

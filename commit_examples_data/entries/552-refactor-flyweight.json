@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Flyweight pattern to objects",
+  "original_text": "Refactored to apply Flyweight pattern to objects. Implemented flyweight factory. Added intrinsic state. Implemented extrinsic state. Added flyweight pool. Result: Flyweight pattern applied.",
+  "expected_subject": "refactor(pattern): apply Flyweight pattern to objects",
+  "expected_body_lines": [
+    "- Implement flyweight factory",
+    "- Add intrinsic state",
+    "- Implement extrinsic state",
+    "- Add flyweight pool",
+    "- Validation: Flyweight pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Flyweight pattern to objects\""
+}

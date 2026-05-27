@@ -1,0 +1,14 @@
+{
+  "title": "Add developer onboarding guide",
+  "original_text": "Added comprehensive developer onboarding guide. Documented development environment setup. Added architecture overview documentation. Documented coding standards and conventions. Added contribution guidelines. Documented testing practices. Added deployment process documentation. Added troubleshooting guide. Result: onboarding guide complete.",
+  "expected_subject": "docs(dev): add developer onboarding guide",
+  "expected_body_lines": [
+    "- Document development environment setup",
+    "- Add architecture overview documentation",
+    "- Document coding standards and conventions",
+    "- Add contribution and testing guidelines",
+    "- Add deployment and troubleshooting documentation",
+    "- Validation: onboarding guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(dev): add developer onboarding guide\""
+}

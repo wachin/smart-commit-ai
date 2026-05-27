@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add CI/CD pipeline configuration",
+  "original_text": "Added a CI/CD pipeline using GitHub Actions. Created .github/workflows/ci.yml that runs tests on every push and pull request. The pipeline runs on Ubuntu, macOS, and Windows to ensure cross-platform compatibility. Added automated dependency caching to speed up builds. Configured automatic deployment to staging environment on main branch merges. Updated documentation with CI/CD workflow. Result: pipeline runs successfully.",
+  "expected_subject": "chore(ci): add GitHub Actions CI/CD pipeline",
+  "expected_body_lines": [
+    "- Create .github/workflows/ci.yml for automated testing",
+    "- Run tests on Ubuntu, macOS, and Windows",
+    "- Add dependency caching for faster builds",
+    "- Configure automatic deployment to staging",
+    "- Validation: pipeline runs successfully"
+  ],
+  "expected_command": "git commit -m \"chore(ci): add GitHub Actions CI/CD pipeline\""
+}

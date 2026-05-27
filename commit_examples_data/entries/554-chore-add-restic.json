@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Restic backup tool",
+  "original_text": "Added Restic backup tool. Implemented backup repositories. Added encryption support. Implemented deduplication. Added backup pruning. Result: Restic backup operational.",
+  "expected_subject": "chore(backup): add Restic backup tool",
+  "expected_body_lines": [
+    "- Implement backup repositories",
+    "- Add encryption support",
+    "- Implement deduplication",
+    "- Add backup pruning",
+    "- Validation: Restic backup operational"
+  ],
+  "expected_command": "git commit -m \"chore(backup): add Restic backup tool\""
+}

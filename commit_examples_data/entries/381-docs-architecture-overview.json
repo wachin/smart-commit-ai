@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add architecture overview",
+  "original_text": "Added architecture overview documentation. Documented system architecture and components. Added architecture diagrams. Implemented component interaction documentation. Added technology stack overview. Result: architecture overview complete.",
+  "expected_subject": "docs(architecture): add architecture overview",
+  "expected_body_lines": [
+    "- Document system architecture and components",
+    "- Add architecture diagrams",
+    "- Implement component interaction documentation",
+    "- Add technology stack overview",
+    "- Validation: architecture overview complete"
+  ],
+  "expected_command": "git commit -m \"docs(architecture): add architecture overview\""
+}

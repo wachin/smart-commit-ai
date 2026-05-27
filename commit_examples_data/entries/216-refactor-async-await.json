@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Migrate to async/await",
+  "original_text": "Refactored callback-based code to async/await. Replaced callback hell with async functions. Implemented proper error handling with try/catch. Added Promise.all for parallel operations. Improved code readability and maintainability. Result: async/await migration complete.",
+  "expected_subject": "refactor(async): migrate callbacks to async/await",
+  "expected_body_lines": [
+    "- Replace callback hell with async functions",
+    "- Implement proper error handling with try/catch",
+    "- Add Promise.all for parallel operations",
+    "- Improve code readability and maintainability",
+    "- Validation: async/await migration complete"
+  ],
+  "expected_command": "git commit -m \"refactor(async): migrate callbacks to async/await\""
+}

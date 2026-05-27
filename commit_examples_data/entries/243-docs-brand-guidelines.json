@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add brand guidelines",
+  "original_text": "Added brand guidelines documentation. Documented logo usage and brand colors. Added typography guidelines and font usage. Implemented brand voice and tone guidelines. Added asset library and templates. Result: brand guidelines complete.",
+  "expected_subject": "docs(brand): add brand guidelines",
+  "expected_body_lines": [
+    "- Document logo usage and brand colors",
+    "- Add typography guidelines and font usage",
+    "- Implement brand voice and tone guidelines",
+    "- Add asset library and templates",
+    "- Validation: brand guidelines complete"
+  ],
+  "expected_command": "git commit -m \"docs(brand): add brand guidelines\""
+}

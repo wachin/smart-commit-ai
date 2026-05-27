@@ -1,0 +1,14 @@
+{
+  "title": "Fix SQL injection vulnerability",
+  "original_text": "Fixed SQL injection vulnerability in database queries. Several queries were using string concatenation instead of parameterized queries. Replaced all raw SQL with parameterized queries using prepared statements. Added ORM layer to prevent direct SQL access. Implemented query builder for complex queries. Added input validation for all database parameters. Added tests for SQL injection prevention. Result: 47 tests pass.",
+  "expected_subject": "fix(security): use parameterized queries to prevent SQL injection",
+  "expected_body_lines": [
+    "- Replace raw SQL with parameterized queries",
+    "- Add ORM layer to prevent direct SQL access",
+    "- Implement query builder for complex queries",
+    "- Add input validation for database parameters",
+    "- Add tests for SQL injection prevention",
+    "- Validation: 47 tests pass"
+  ],
+  "expected_command": "git commit -m \"fix(security): use parameterized queries to prevent SQL injection\""
+}

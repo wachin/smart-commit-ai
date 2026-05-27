@@ -1,0 +1,14 @@
+{
+  "title": "Add ML feature store",
+  "original_text": "Implemented feature store for ML models. Added feature computation and storage. Implemented feature serving for real-time inference. Added feature versioning and lineage. Implemented feature monitoring for data quality. Added feature access control. Added feature discovery and catalog. Added tests for feature store. Result: feature store operational.",
+  "expected_subject": "feat(ml): add feature store for ML models",
+  "expected_body_lines": [
+    "- Add feature computation and storage",
+    "- Implement feature serving for real-time inference",
+    "- Add feature versioning and lineage",
+    "- Implement feature monitoring for data quality",
+    "- Add feature access control and catalog",
+    "- Validation: feature store operational"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add feature store for ML models\""
+}

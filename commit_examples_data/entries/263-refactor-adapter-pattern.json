@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement adapter pattern",
+  "original_text": "Refactored to implement adapter pattern. Added adapters for incompatible interfaces. Implemented adapter for third-party APIs. Added adapter for legacy code integration. Improved system integration. Result: adapter pattern implemented.",
+  "expected_subject": "refactor(pattern): implement adapter pattern",
+  "expected_body_lines": [
+    "- Add adapters for incompatible interfaces",
+    "- Implement adapter for third-party APIs",
+    "- Add adapter for legacy code integration",
+    "- Improve system integration",
+    "- Validation: adapter pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement adapter pattern\""
+}

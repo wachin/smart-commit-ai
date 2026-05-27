@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add HashiCorp Vault for secrets",
+  "original_text": "Added Vault for secret management. Implemented secret storage. Added secret rotation. Implemented secret injection. Added secret auditing. Result: Vault secret management operational.",
+  "expected_subject": "chore(security): add Vault secret management",
+  "expected_body_lines": [
+    "- Implement secret storage",
+    "- Add secret rotation",
+    "- Implement secret injection",
+    "- Add secret auditing",
+    "- Validation: Vault secret management operational"
+  ],
+  "expected_command": "git commit -m \"chore(security): add Vault secret management\""
+}

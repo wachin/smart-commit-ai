@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement state pattern",
+  "original_text": "Refactored to implement state pattern. Added state classes for object states. Implemented state transition logic. Added state context manager. Improved state management complexity. Result: state pattern implemented.",
+  "expected_subject": "refactor(pattern): implement state pattern",
+  "expected_body_lines": [
+    "- Add state classes for object states",
+    "- Implement state transition logic",
+    "- Add state context manager",
+    "- Improve state management complexity",
+    "- Validation: state pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement state pattern\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add mocking framework",
+  "original_text": "Added mocking framework with Mockito. Implemented mocks for external dependencies. Added stubs for database operations. Implemented spy for partial mocking. Added mock verification. Result: mocking framework operational.",
+  "expected_subject": "test(mocking): add mocking framework with Mockito",
+  "expected_body_lines": [
+    "- Implement mocks for external dependencies",
+    "- Add stubs for database operations",
+    "- Implement spy for partial mocking",
+    "- Add mock verification",
+    "- Validation: mocking framework operational"
+  ],
+  "expected_command": "git commit -m \"test(mocking): add mocking framework with Mockito\""
+}

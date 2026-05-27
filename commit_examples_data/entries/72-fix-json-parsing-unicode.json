@@ -1,0 +1,13 @@
+{
+  "title": "Fix JSON parsing error with Unicode characters",
+  "original_text": "Fixed a JSON parsing error when handling Unicode characters in user input. The parser was using ASCII encoding instead of UTF-8. Updated the JSON decoder to use encoding='utf-8' and added error handling for malformed JSON. This fixes the issue where non-ASCII characters would cause a crash. Modified utils/json_parser.py and added tests for Unicode input. Result: 15 tests pass.",
+  "expected_subject": "fix(json): use UTF-8 encoding for Unicode support",
+  "expected_body_lines": [
+    "- Update JSON decoder to use UTF-8 encoding",
+    "- Add error handling for malformed JSON",
+    "- Fix crash on non-ASCII characters",
+    "- Add regression tests for Unicode input",
+    "- Validation: 15 tests pass"
+  ],
+  "expected_command": "git commit -m \"fix(json): use UTF-8 encoding for Unicode support\""
+}

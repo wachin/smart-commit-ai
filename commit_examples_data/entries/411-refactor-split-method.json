@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Split method for clarity",
+  "original_text": "Refactored to split method for clarity. Split long method into smaller methods. Added method for specific responsibilities. Improved code readability. Added method documentation. Result: method splitting complete.",
+  "expected_subject": "refactor(cleanup): split method for clarity",
+  "expected_body_lines": [
+    "- Split long method into smaller methods",
+    "- Add method for specific responsibilities",
+    "- Improve code readability",
+    "- Add method documentation",
+    "- Validation: method splitting complete"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): split method for clarity\""
+}

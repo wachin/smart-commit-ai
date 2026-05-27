@@ -1,0 +1,13 @@
+{
+  "title": "21. Pianola Tab Architecture Definition",
+  "original_text": "Done. I added your tab rule directly to the `Player Piano / Pianola` section in [Roadmap.md]... - first tab opens by default - maximum 8 MIDI tracks per tab - tracks 9-16 go to a second tab - tracks beyond 16 go to a third tab - the user must be able to click the tab they need to view the relevant instruments/tracks",
+  "expected_subject": "docs(roadmap): define tab architecture for Pianola view",
+  "expected_body_lines": [
+    "- Specify default first tab and max 8 tracks per tab rule",
+    "- Define overflow logic: tracks 9-16 to tab 2, 17+ to tab 3",
+    "- Require clickable tabs for easy navigation of instruments",
+    "- Establish build contract before implementing Pianola window",
+    "- No code changes; documentation and architectural planning only"
+  ],
+  "expected_command": "git commit -m \"docs(roadmap): define tab architecture for Pianola view\" \\\n  -m \"- Specify default first tab and max 8 tracks per tab rule\" \\\n  -m \"- Define overflow logic: tracks 9-16 to tab 2, 17+ to tab 3\" \\\n  -m \"- Require clickable tabs for easy navigation of instruments\" \\\n  -m \"- Establish build contract before implementing Pianola window\" \\\n  -m \"- No code changes; documentation and architectural planning only\""
+}

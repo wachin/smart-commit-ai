@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Improve error monitoring",
+  "original_text": "Improved error monitoring with Sentry integration. Added error tracking for all environments. Implemented error grouping and deduplication. Added user context to error reports. Implemented error alerting with Slack integration. Added error performance monitoring. Added error rate limiting. Added error dashboard for visualization. Result: error visibility improved.",
+  "expected_subject": "chore(monitoring): improve error monitoring with Sentry",
+  "expected_body_lines": [
+    "- Add error tracking for all environments",
+    "- Implement error grouping and deduplication",
+    "- Add user context to error reports",
+    "- Implement error alerting with Slack integration",
+    "- Add error performance monitoring and dashboard",
+    "- Validation: error visibility improved"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): improve error monitoring with Sentry\""
+}

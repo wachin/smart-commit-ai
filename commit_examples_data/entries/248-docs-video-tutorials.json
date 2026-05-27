@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add video tutorials",
+  "original_text": "Added video tutorials for key features. Documented tutorial scripts and transcripts. Added video embedding in documentation. Implemented tutorial progress tracking. Added tutorial feedback mechanism. Result: video tutorials complete.",
+  "expected_subject": "docs(tutorial): add video tutorials",
+  "expected_body_lines": [
+    "- Document tutorial scripts and transcripts",
+    "- Add video embedding in documentation",
+    "- Implement tutorial progress tracking",
+    "- Add tutorial feedback mechanism",
+    "- Validation: video tutorials complete"
+  ],
+  "expected_command": "git commit -m \"docs(tutorial): add video tutorials\""
+}

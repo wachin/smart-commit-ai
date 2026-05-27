@@ -1,0 +1,14 @@
+{
+  "title": "15. Lyrics Window: Fullscreen",
+  "original_text": "We finished another tidy Lyrics-window slice: fullscreen mode. In [app.py]..., the dialog now has a `Fullscreen` button that toggles between normal and fullscreen display, and `Esc` exits fullscreen cleanly... I added coverage in [test_app_playlist.py]... updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 140 tests OK...",
+  "expected_subject": "feat(ui): add fullscreen mode to Lyrics window",
+  "expected_body_lines": [
+    "- Add Fullscreen/Window toggle button with dynamic label",
+    "- Support Esc key to exit fullscreen cleanly",
+    "- Update user guides (EN/ES) with new fullscreen documentation",
+    "- Add tests for toggle behavior and Esc exit path",
+    "- Update Roadmap.md to mark fullscreen item complete",
+    "- Validation: compileall OK, 140 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add fullscreen mode to Lyrics window\" \\\n  -m \"- Add Fullscreen/Window toggle button with dynamic label\" \\\n  -m \"- Support Esc key to exit fullscreen cleanly\" \\\n  -m \"- Update user guides (EN/ES) with new fullscreen documentation\" \\\n  -m \"- Add tests for toggle behavior and Esc exit path\" \\\n  -m \"- Update Roadmap.md to mark fullscreen item complete\" \\\n  -m \"- Validation: compileall OK, 140 tests pass, offscreen verified\""
+}

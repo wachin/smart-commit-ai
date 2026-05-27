@@ -1,0 +1,14 @@
+{
+  "title": "Refactor REST API to GraphQL",
+  "original_text": "Refactored REST API to GraphQL. Defined GraphQL schema for all resources. Implemented GraphQL resolvers. Added query batching and caching. Implemented subscriptions for real-time updates. Added GraphQL playground for testing. Migrated frontend to use GraphQL queries. Added tests for GraphQL endpoints. Result: 54 tests pass.",
+  "expected_subject": "refactor(api): migrate REST API to GraphQL",
+  "expected_body_lines": [
+    "- Define GraphQL schema for all resources",
+    "- Implement GraphQL resolvers",
+    "- Add query batching and caching",
+    "- Implement subscriptions for real-time updates",
+    "- Add GraphQL playground and migrate frontend",
+    "- Validation: 54 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(api): migrate REST API to GraphQL\""
+}

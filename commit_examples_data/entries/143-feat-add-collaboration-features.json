@@ -1,0 +1,14 @@
+{
+  "title": "Add collaboration features",
+  "original_text": "Implemented real-time collaboration features. Added real-time document editing with operational transformation. Implemented presence indicators for collaborators. Added comment threads and mentions. Implemented document version history. Added sharing and permission management. Implemented activity feed and notifications. Result: collaboration features working.",
+  "expected_subject": "feat(collab): add real-time collaboration features",
+  "expected_body_lines": [
+    "- Add real-time document editing with OT",
+    "- Implement presence indicators for collaborators",
+    "- Add comment threads and mentions",
+    "- Implement document version history",
+    "- Add sharing and permission management",
+    "- Validation: collaboration features working"
+  ],
+  "expected_command": "git commit -m \"feat(collab): add real-time collaboration features\""
+}

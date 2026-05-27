@@ -1,0 +1,14 @@
+{
+  "title": "Smart Commit: Documentation for shipped artifacts and metrics",
+  "original_text": "Continued by updating the documentation to match the current ML state. I updated README.md and ml/README.md to document the shipped artifacts: ml/commit_model.pkl, ml/vectorizer.pkl, ml/model_metadata.json; the current 63-example distributed model; the conservative ML confidence gate; per-label evaluator metrics; the new comparison report type/scope/text diagnostics; and Debian apt sklearn validation as current rather than pending. I also added matching progress notes to Roadmap.md. Verification passed: QT_QPA_PLATFORM=offscreen python3 -m unittest discover -s tests -v. Result: 61 tests ran, 61 passed. git diff --check passed, and tracked __pycache__ remains clean.",
+  "expected_subject": "docs(ml): update documentation for shipped artifacts and metrics",
+  "expected_body_lines": [
+    "- Document distributed model files and 63-example training set",
+    "- Explain conservative confidence gate and fallback logic",
+    "- Add per-label evaluator metrics and comparison diagnostics",
+    "- Update Debian sklearn validation status to complete",
+    "- Sync Roadmap.md with current ML progress and test coverage",
+    "- Validation: all 61 tests pass, git diff --check clean"
+  ],
+  "expected_command": "git commit -m \"docs(ml): update documentation for shipped artifacts and metrics\""
+}

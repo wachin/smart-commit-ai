@@ -1,0 +1,11 @@
+{
+  "title": "Smart Commit: Document startup window geometry",
+  "original_text": "Updated README.md with instructions for changing the startup window position and size. Documented DEFAULT_WINDOW_GEOMETRY, MINIMUM_WINDOW_SIZE, the x/y/width/height order, and an example for opening the app wider and lower.",
+  "expected_subject": "docs(readme): document startup window geometry",
+  "expected_body_lines": [
+    "- Explain DEFAULT_WINDOW_GEOMETRY and MINIMUM_WINDOW_SIZE",
+    "- Document x position, y position, width, and height order",
+    "- Add example geometry for a wider startup window"
+  ],
+  "expected_command": "git commit -m \"docs(readme): document startup window geometry\""
+}

@@ -1,0 +1,15 @@
+{
+  "title": "34. Piano Player: Manual Input",
+  "original_text": "We pushed the Pianola work into real interaction: the keyboards can now be played. In [widgets.py]..., `PianoKeyboard` now supports: mouse note playing, computer-keyboard note playing, `notePressed` / `noteReleased` signals... In [app.py]..., I wired those signals into real outgoing MIDI: the main keyboard sends manual notes on channel 1, each Pianola track keyboard sends notes on that track’s primary MIDI channel... I added coverage in: [test_widgets.py], [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 172 tests OK...",
+  "expected_subject": "feat(ui): enable manual note playing on Pianola keyboards",
+  "expected_body_lines": [
+    "- Add mouse and QWERTY keyboard input support to PianoKeyboard widget",
+    "- Implement notePressed/noteReleased signals with hit-testing",
+    "- Wire main keyboard to channel 1 and track keyboards to their channels",
+    "- Update level meters and event labels for manual note activity",
+    "- Update user guides (EN/ES) and Roadmap.md with new interaction docs",
+    "- Add tests for key mapping, signal emission, and MIDI routing",
+    "- Validation: compileall OK, 172 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): enable manual note playing on Pianola keyboards\" \\\n  -m \"- Add mouse and QWERTY keyboard input support to PianoKeyboard widget\" \\\n  -m \"- Implement notePressed/noteReleased signals with hit-testing\" \\\n  -m \"- Wire main keyboard to channel 1 and track keyboards to their channels\" \\\n  -m \"- Update level meters and event labels for manual note activity\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new interaction docs\" \\\n  -m \"- Add tests for key mapping, signal emission, and MIDI routing\" \\\n  -m \"- Validation: compileall OK, 172 tests pass\""
+}

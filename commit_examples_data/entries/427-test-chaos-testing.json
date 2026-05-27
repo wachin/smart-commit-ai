@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add Chaos Monkey chaos testing",
+  "original_text": "Added chaos testing with Chaos Monkey. Implemented fault injection scenarios. Added chaos experiment execution. Implemented resilience monitoring. Added chaos test analysis. Result: chaos tests pass.",
+  "expected_subject": "test(chaos): add chaos testing",
+  "expected_body_lines": [
+    "- Implement fault injection scenarios",
+    "- Add chaos experiment execution",
+    "- Implement resilience monitoring",
+    "- Add chaos test analysis",
+    "- Validation: chaos tests pass"
+  ],
+  "expected_command": "git commit -m \"test(chaos): add chaos testing\""
+}

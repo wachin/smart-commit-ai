@@ -1,0 +1,14 @@
+{
+  "title": "Add security penetration tests",
+  "original_text": "Added security penetration testing using OWASP ZAP. Implemented automated security scanning for vulnerabilities. Added tests for SQL injection, XSS, and CSRF. Implemented authentication bypass testing. Added authorization testing for all endpoints. Implemented sensitive data exposure testing. Added security test reporting. Result: no critical vulnerabilities found.",
+  "expected_subject": "test(security): add penetration testing with OWASP ZAP",
+  "expected_body_lines": [
+    "- Implement automated security scanning",
+    "- Add tests for SQL injection, XSS, and CSRF",
+    "- Implement authentication bypass testing",
+    "- Add authorization testing for all endpoints",
+    "- Add sensitive data exposure testing",
+    "- Validation: no critical vulnerabilities found"
+  ],
+  "expected_command": "git commit -m \"test(security): add penetration testing with OWASP ZAP\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement CQRS pattern",
+  "original_text": "Refactored to CQRS pattern. Separated command and query operations. Implemented separate read and write models. Added event sourcing for write model. Implemented materialized views for read model. Added eventual consistency handling. Result: CQRS pattern implemented.",
+  "expected_subject": "refactor(pattern): implement CQRS pattern",
+  "expected_body_lines": [
+    "- Separate command and query operations",
+    "- Implement separate read and write models",
+    "- Add event sourcing for write model",
+    "- Implement materialized views for read model",
+    "- Add eventual consistency handling",
+    "- Validation: CQRS pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement CQRS pattern\""
+}

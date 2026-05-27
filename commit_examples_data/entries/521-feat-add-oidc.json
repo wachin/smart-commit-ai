@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add OpenID Connect authentication",
+  "original_text": "Added OpenID Connect authentication. Implemented OIDC provider integration. Added token validation. Implemented user profile mapping. Added session management. Result: OIDC authentication operational.",
+  "expected_subject": "feat(auth): add OpenID Connect authentication",
+  "expected_body_lines": [
+    "- Implement OIDC provider integration",
+    "- Add token validation",
+    "- Implement user profile mapping",
+    "- Add session management",
+    "- Validation: OIDC authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add OpenID Connect authentication\""
+}

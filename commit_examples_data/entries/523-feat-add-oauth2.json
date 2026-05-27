@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add OAuth2 authorization",
+  "original_text": "Added OAuth2 authorization. Implemented OAuth2 provider. Added token issuance. Implemented token refresh. Added scope management. Result: OAuth2 authorization operational.",
+  "expected_subject": "feat(auth): add OAuth2 authorization",
+  "expected_body_lines": [
+    "- Implement OAuth2 provider",
+    "- Add token issuance",
+    "- Implement token refresh",
+    "- Add scope management",
+    "- Validation: OAuth2 authorization operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add OAuth2 authorization\""
+}

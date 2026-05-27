@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add MFA authentication",
+  "original_text": "Added MFA authentication support. Implemented multi-factor authentication. Added TOTP support. Implemented SMS verification. Added backup codes. Result: MFA authentication operational.",
+  "expected_subject": "feat(auth): add MFA authentication",
+  "expected_body_lines": [
+    "- Implement multi-factor authentication",
+    "- Add TOTP support",
+    "- Implement SMS verification",
+    "- Add backup codes",
+    "- Validation: MFA authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add MFA authentication\""
+}

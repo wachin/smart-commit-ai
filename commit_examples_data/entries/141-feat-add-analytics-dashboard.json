@@ -1,0 +1,14 @@
+{
+  "title": "Add analytics dashboard",
+  "original_text": "Implemented comprehensive analytics dashboard. Added real-time metrics visualization. Implemented custom report builder. Added data export functionality (CSV, PDF, Excel). Implemented drill-down capabilities for detailed analysis. Added scheduled report generation. Added role-based access to analytics. Added performance optimization for large datasets. Result: dashboard operational.",
+  "expected_subject": "feat(analytics): add comprehensive analytics dashboard",
+  "expected_body_lines": [
+    "- Add real-time metrics visualization",
+    "- Implement custom report builder",
+    "- Add data export functionality (CSV, PDF, Excel)",
+    "- Implement drill-down capabilities",
+    "- Add scheduled report generation and RBAC",
+    "- Validation: dashboard operational"
+  ],
+  "expected_command": "git commit -m \"feat(analytics): add comprehensive analytics dashboard\""
+}

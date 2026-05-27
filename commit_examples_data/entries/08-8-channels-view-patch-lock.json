@@ -1,0 +1,15 @@
+{
+  "title": "8. Channels View: Patch Lock",
+  "original_text": "We carried the Channels view one step further and added patch lock. In [player.py]..., I added per-channel lock state. Locked channels now suppress file-sent `program_change` events... In [app.py]..., the `Channels` window now has a `Lock` checkbox column beside `Program`... Tests were expanded... They now cover: locked channel suppressing file program changes... lock checkbox wiring... I also updated the user guides... And [Roadmap.md]... now marks patch lock complete. Verification is clean: ... 128 tests OK...",
+  "expected_subject": "feat(app): add patch lock to Channels view",
+  "expected_body_lines": [
+    "- Implement per-channel lock state in player.py",
+    "- Suppress file program changes for locked channels",
+    "- Add Lock checkbox column to ChannelsDialog",
+    "- Update user guides (EN/ES) with new lock control docs",
+    "- Add tests for lock behavior and UI wiring",
+    "- Update Roadmap.md to mark patch lock item complete",
+    "- Validation: compileall OK, 128 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add patch lock to Channels view\" \\\n  -m \"- Implement per-channel lock state in player.py\" \\\n  -m \"- Suppress file program changes for locked channels\" \\\n  -m \"- Add Lock checkbox column to ChannelsDialog\" \\\n  -m \"- Update user guides (EN/ES) with new lock control docs\" \\\n  -m \"- Add tests for lock behavior and UI wiring\" \\\n  -m \"- Update Roadmap.md to mark patch lock item complete\" \\\n  -m \"- Validation: compileall OK, 128 tests pass, offscreen verified\""
+}

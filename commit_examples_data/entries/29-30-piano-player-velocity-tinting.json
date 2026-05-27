@@ -1,0 +1,14 @@
+{
+  "title": "30. Piano Player: Velocity Tinting",
+  "original_text": "We kept the Pianola work moving and landed velocity tinting. In [widgets.py]..., `PianoKeyboard` now tracks per-note velocity for active notes and uses that to tint active keys... In [app.py]..., playback note events now pass velocity through to both: the main keyboard, the Pianola per-track keyboards... I added coverage in: [test_widgets.py], [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 162 tests OK...",
+  "expected_subject": "feat(ui): add velocity tinting to Piano keyboards",
+  "expected_body_lines": [
+    "- Track per-note velocity in PianoKeyboard for active notes",
+    "- Tint active keys based on intensity instead of uniform color",
+    "- Pass velocity from playback events to main and Pianola keyboards",
+    "- Update user guides (EN/ES) and Roadmap.md with new visual docs",
+    "- Add tests for velocity storage, clearing, and color variation",
+    "- Validation: compileall OK, 162 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add velocity tinting to Piano keyboards\" \\\n  -m \"- Track per-note velocity in PianoKeyboard for active notes\" \\\n  -m \"- Tint active keys based on intensity instead of uniform color\" \\\n  -m \"- Pass velocity from playback events to main and Pianola keyboards\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new visual docs\" \\\n  -m \"- Add tests for velocity storage, clearing, and color variation\" \\\n  -m \"- Validation: compileall OK, 162 tests pass\""
+}

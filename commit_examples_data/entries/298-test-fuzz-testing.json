@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add AFL fuzz testing for input validation",
+  "original_text": "Added fuzz testing with AFL. Implemented fuzz testing for input validation. Added fuzz test corpus. Implemented fuzz test configuration. Added fuzz test crash detection. Result: fuzz tests operational.",
+  "expected_subject": "test(fuzz): add fuzz testing with AFL",
+  "expected_body_lines": [
+    "- Implement fuzz testing for input validation",
+    "- Add fuzz test corpus",
+    "- Implement fuzz test configuration",
+    "- Add fuzz test crash detection",
+    "- Validation: fuzz tests operational"
+  ],
+  "expected_command": "git commit -m \"test(fuzz): add fuzz testing with AFL\""
+}

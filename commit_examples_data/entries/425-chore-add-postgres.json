@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add PostgreSQL database setup",
+  "original_text": "Added PostgreSQL database. Implemented database schema. Added database migrations. Implemented database connection pooling. Added database backup. Result: PostgreSQL database operational.",
+  "expected_subject": "chore(database): add PostgreSQL database",
+  "expected_body_lines": [
+    "- Implement database schema",
+    "- Add database migrations",
+    "- Implement database connection pooling",
+    "- Add database backup",
+    "- Validation: PostgreSQL database operational"
+  ],
+  "expected_command": "git commit -m \"chore(database): add PostgreSQL database\""
+}

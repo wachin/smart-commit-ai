@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Extract service layer from controllers",
+  "original_text": "Refactored the codebase by extracting business logic from controllers into a dedicated service layer. Created services/ directory with UserService, OrderService, and ProductService. Controllers now delegate to services for business operations. This improves testability and separation of concerns. Added unit tests for all service classes. Updated dependency injection to use services. Result: 58 tests pass.",
+  "expected_subject": "refactor(arch): extract service layer from controllers",
+  "expected_body_lines": [
+    "- Create services/ directory with UserService, OrderService, ProductService",
+    "- Delegate business logic from controllers to services",
+    "- Improve testability and separation of concerns",
+    "- Add unit tests for all service classes",
+    "- Update dependency injection for services",
+    "- Validation: 58 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): extract service layer from controllers\""
+}

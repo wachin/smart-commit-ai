@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add integration tests with TestContainers framework",
+  "original_text": "Added integration tests with TestContainers. Implemented container setup. Added database containers. Implemented service containers. Added test cleanup. Result: integration tests pass.",
+  "expected_subject": "test(integration): add integration tests with TestContainers",
+  "expected_body_lines": [
+    "- Implement container setup",
+    "- Add database containers",
+    "- Implement service containers",
+    "- Add test cleanup",
+    "- Validation: integration tests pass"
+  ],
+  "expected_command": "git commit -m \"test(integration): add integration tests with TestContainers\""
+}

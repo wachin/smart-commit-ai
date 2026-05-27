@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add centralized logging infrastructure",
+  "original_text": "Added centralized logging infrastructure with ELK stack. Implemented log aggregation from all services. Added log parsing and indexing. Implemented log search and filtering. Added log visualization dashboards. Implemented log alerting based on patterns. Added log retention policies. Added log access control. Result: logging infrastructure operational.",
+  "expected_subject": "chore(logging): add centralized logging with ELK stack",
+  "expected_body_lines": [
+    "- Implement log aggregation from all services",
+    "- Add log parsing and indexing",
+    "- Implement log search and filtering",
+    "- Add log visualization dashboards",
+    "- Add log alerting and retention policies",
+    "- Validation: logging infrastructure operational"
+  ],
+  "expected_command": "git commit -m \"chore(logging): add centralized logging with ELK stack\""
+}

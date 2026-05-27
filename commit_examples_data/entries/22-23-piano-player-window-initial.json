@@ -1,0 +1,17 @@
+{
+  "title": "23. Piano Player Window (Initial)",
+  "original_text": "We landed the first real `Piano Player` window slice, and it follows the tab rule you asked for. In [sequence.py]..., I added `midi_tracks()` so the app can ask for only the tracks that actually contain MIDI channel events. Then in [app.py]..., I added: a new `View -> Piano Player` action, a `PianolaDialog`, tab splitting at 8 MIDI-bearing tracks per tab... So right now: only tracks that really contain MIDI are shown... first tab opens by default... I also updated [Roadmap.md]... and documented it in the user guides... Tests were expanded in [test_app_playlist.py]... Verification is clean: ... 151 tests OK...",
+  "expected_subject": "feat(ui): add Piano Player window with tabbed tracks",
+  "expected_body_lines": [
+    "- Add View > Piano Player action and PianolaDialog class",
+    "- Implement midi_tracks() in sequence.py to filter active tracks",
+    "- Split tracks into tabs of 8 (1-8, 9-16, 17+) per roadmap rules",
+    "- Display per-track rows with labels and live PianoKeyboard widgets",
+    "- Route playback note updates to relevant track keyboards",
+    "- Clear state on stop/seek/load transitions for consistency",
+    "- Update user guides (EN/ES) and Roadmap.md with new view docs",
+    "- Add tests for action, track filtering, tab splitting, and activity",
+    "- Validation: compileall OK, 151 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add Piano Player window with tabbed tracks\" \\\n  -m \"- Add View > Piano Player action and PianolaDialog class\" \\\n  -m \"- Implement midi_tracks() in sequence.py to filter active tracks\" \\\n  -m \"- Split tracks into tabs of 8 (1-8, 9-16, 17+) per roadmap rules\" \\\n  -m \"- Display per-track rows with labels and live PianoKeyboard widgets\" \\\n  -m \"- Route playback note updates to relevant track keyboards\" \\\n  -m \"- Clear state on stop/seek/load transitions for consistency\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new view docs\" \\\n  -m \"- Add tests for action, track filtering, tab splitting, and activity\" \\\n  -m \"- Validation: compileall OK, 151 tests pass, offscreen verified\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add etcd distributed key-value store",
+  "original_text": "Added etcd for distributed configuration. Implemented key-value storage. Added watch mechanism. Implemented distributed locking. Added etcd cluster. Result: etcd operational.",
+  "expected_subject": "chore(config): add etcd distributed key-value store",
+  "expected_body_lines": [
+    "- Implement key-value storage",
+    "- Add watch mechanism",
+    "- Implement distributed locking",
+    "- Add etcd cluster",
+    "- Validation: etcd operational"
+  ],
+  "expected_command": "git commit -m \"chore(config): add etcd distributed key-value store\""
+}

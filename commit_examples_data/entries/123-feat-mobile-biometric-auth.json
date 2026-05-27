@@ -1,0 +1,14 @@
+{
+  "title": "Add biometric authentication for mobile",
+  "original_text": "Implemented biometric authentication for mobile app. Added Touch ID support for iOS. Added fingerprint authentication for Android. Added Face ID support for iOS devices. Implemented biometric fallback to PIN. Added biometric enrollment flow. Implemented biometric session timeout. Added security tests for biometric flows. Result: biometric authentication working securely.",
+  "expected_subject": "feat(mobile): add biometric authentication",
+  "expected_body_lines": [
+    "- Add Touch ID and Face ID for iOS",
+    "- Add fingerprint authentication for Android",
+    "- Implement biometric fallback to PIN",
+    "- Add biometric enrollment flow",
+    "- Add biometric session timeout",
+    "- Validation: biometric authentication working securely"
+  ],
+  "expected_command": "git commit -m \"feat(mobile): add biometric authentication\""
+}

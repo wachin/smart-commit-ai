@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Bridge pattern to abstractions",
+  "original_text": "Refactored to apply Bridge pattern to abstractions. Implemented abstraction interface. Added concrete implementations. Implemented refined abstractions. Added decoupling. Result: Bridge pattern applied.",
+  "expected_subject": "refactor(pattern): apply Bridge pattern to abstractions",
+  "expected_body_lines": [
+    "- Implement abstraction interface",
+    "- Add concrete implementations",
+    "- Implement refined abstractions",
+    "- Add decoupling",
+    "- Validation: Bridge pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Bridge pattern to abstractions\""
+}

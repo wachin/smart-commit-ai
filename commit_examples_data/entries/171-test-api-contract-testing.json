@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add API contract testing",
+  "original_text": "Added API contract testing using Pact. Created consumer contracts for all API endpoints. Implemented contract verification in CI/CD pipeline. Added contract versioning and breaking change detection. Implemented contract testing for microservices communication. Added contract documentation and examples. Result: all contracts verified.",
+  "expected_subject": "test(api): add API contract testing with Pact",
+  "expected_body_lines": [
+    "- Create consumer contracts for all API endpoints",
+    "- Implement contract verification in CI/CD pipeline",
+    "- Add contract versioning and breaking change detection",
+    "- Implement contract testing for microservices",
+    "- Add contract documentation and examples",
+    "- Validation: all contracts verified"
+  ],
+  "expected_command": "git commit -m \"test(api): add API contract testing with Pact\""
+}

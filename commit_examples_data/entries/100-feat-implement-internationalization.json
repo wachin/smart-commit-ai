@@ -1,0 +1,14 @@
+{
+  "title": "Implement internationalization (i18n)",
+  "original_text": "Implemented full internationalization support. Added translation files for English, Spanish, French, German, and Japanese. Implemented locale detection and switching. Added date/time formatting per locale. Implemented number and currency formatting per locale. Added RTL (right-to-left) support for Arabic. Implemented translation management system. Added tests for i18n functionality. Result: 61 tests pass.",
+  "expected_subject": "feat(i18n): implement full internationalization support",
+  "expected_body_lines": [
+    "- Add translation files for 5 languages",
+    "- Implement locale detection and switching",
+    "- Add date/time formatting per locale",
+    "- Implement number and currency formatting",
+    "- Add RTL support for Arabic",
+    "- Validation: 61 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(i18n): implement full internationalization support\""
+}

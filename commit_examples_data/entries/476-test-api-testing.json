@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API testing with Postman",
+  "original_text": "Added API testing with Postman. Implemented API test collections. Added API test automation. Implemented API performance testing. Added API contract testing. Result: API tests pass.",
+  "expected_subject": "test(api): add API testing with Postman",
+  "expected_body_lines": [
+    "- Implement API test collections",
+    "- Add API test automation",
+    "- Implement API performance testing",
+    "- Add API contract testing",
+    "- Validation: API tests pass"
+  ],
+  "expected_command": "git commit -m \"test(api): add API testing with Postman\""
+}

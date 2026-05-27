@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add smoke tests",
+  "original_text": "Added smoke tests. Implemented critical path testing. Added quick validation. Implemented smoke test suite. Added smoke test reporting. Result: smoke tests pass.",
+  "expected_subject": "test(smoke): add smoke tests",
+  "expected_body_lines": [
+    "- Implement critical path testing",
+    "- Add quick validation",
+    "- Implement smoke test suite",
+    "- Add smoke test reporting",
+    "- Validation: smoke tests pass"
+  ],
+  "expected_command": "git commit -m \"test(smoke): add smoke tests\""
+}

@@ -1,0 +1,12 @@
+{
+  "title": "45. WPS Dicts: Enriched Configs (Batch 1)",
+  "original_text": "Listo. Enriquecí los 20 `dict.conf` nuevos de `build/wps-libreoffice-dicts` para que tengan el mismo estilo de los originales de WPS: [Dictionary] DisplayName=... DisplayName[zh_CN]=... etc. También actualicé [tools/wps_libreoffice_dict_converter.py] para que, en futuras conversiones, genere esos `dict.conf` enriquecidos automáticamente. Verifiqué: 20 dict.conf nuevos actualizados, 8 DisplayName por archivo...",
+  "expected_subject": "feat(dict): enrich dict.conf with localized display names",
+  "expected_body_lines": [
+    "- Add DisplayName entries for zh_CN, en_US, es_ES, and other locales",
+    "- Update converter tool to auto-generate enriched configs",
+    "- Apply changes to 20 new regional variant folders",
+    "- Verify compilation and mapping integrity (71 mappings, 0 errors)"
+  ],
+  "expected_command": "git commit -m \"feat(dict): enrich dict.conf with localized display names\" \\\n  -m \"- Add DisplayName entries for zh_CN, en_US, es_ES, and other locales\" \\\n  -m \"- Update converter tool to auto-generate enriched configs\" \\\n  -m \"- Apply changes to 20 new regional variant folders\" \\\n  -m \"- Verify compilation and mapping integrity (71 mappings, 0 errors)\""
+}

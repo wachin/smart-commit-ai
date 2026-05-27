@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add end-to-end tests",
+  "original_text": "Added end-to-end tests with Playwright. Implemented E2E tests for critical user flows. Added E2E tests for authentication and authorization. Implemented E2E tests for checkout process. Added E2E test reporting and screenshots. Result: E2E tests pass.",
+  "expected_subject": "test(e2e): add end-to-end tests with Playwright",
+  "expected_body_lines": [
+    "- Implement E2E tests for critical user flows",
+    "- Add E2E tests for authentication and authorization",
+    "- Implement E2E tests for checkout process",
+    "- Add E2E test reporting and screenshots",
+    "- Validation: E2E tests pass"
+  ],
+  "expected_command": "git commit -m \"test(e2e): add end-to-end tests with Playwright\""
+}

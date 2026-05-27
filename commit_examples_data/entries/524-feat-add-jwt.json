@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add JWT token authentication",
+  "original_text": "Added JWT token authentication. Implemented JWT token generation. Added token validation. Implemented token refresh. Added token revocation. Result: JWT authentication operational.",
+  "expected_subject": "feat(auth): add JWT token authentication",
+  "expected_body_lines": [
+    "- Implement JWT token generation",
+    "- Add token validation",
+    "- Implement token refresh",
+    "- Add token revocation",
+    "- Validation: JWT authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add JWT token authentication\""
+}

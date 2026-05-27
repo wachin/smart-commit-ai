@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add chaos engineering",
+  "original_text": "Added chaos engineering with Chaos Mesh. Implemented fault injection experiments. Added latency injection tests. Implemented pod failure simulation. Added chaos experiment dashboards. Result: chaos engineering operational.",
+  "expected_subject": "test(chaos): add chaos engineering with Chaos Mesh",
+  "expected_body_lines": [
+    "- Implement fault injection experiments",
+    "- Add latency injection tests",
+    "- Implement pod failure simulation",
+    "- Add chaos experiment dashboards",
+    "- Validation: chaos engineering operational"
+  ],
+  "expected_command": "git commit -m \"test(chaos): add chaos engineering with Chaos Mesh\""
+}

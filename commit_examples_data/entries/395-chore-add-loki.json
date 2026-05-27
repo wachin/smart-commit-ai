@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Loki logging",
+  "original_text": "Added Loki for log aggregation. Implemented Loki configuration. Added log shipping. Implemented Loki query interface. Added log retention policies. Result: Loki logging operational.",
+  "expected_subject": "chore(logging): add Loki logging",
+  "expected_body_lines": [
+    "- Implement Loki configuration",
+    "- Add log shipping",
+    "- Implement Loki query interface",
+    "- Add log retention policies",
+    "- Validation: Loki logging operational"
+  ],
+  "expected_command": "git commit -m \"chore(logging): add Loki logging\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Add event sourcing",
+  "original_text": "Refactored to add event sourcing. Implemented event store. Added event serialization. Implemented event replay. Added event versioning. Result: event sourcing added.",
+  "expected_subject": "refactor(pattern): add event sourcing",
+  "expected_body_lines": [
+    "- Implement event store",
+    "- Add event serialization",
+    "- Implement event replay",
+    "- Add event versioning",
+    "- Validation: event sourcing added"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): add event sourcing\""
+}

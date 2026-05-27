@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Consolidate duplicate code",
+  "original_text": "Refactored to consolidate duplicate code. Identified duplicate code blocks. Consolidated into shared utility functions. Added parameterization for variations. Removed code duplication. Result: code consolidation complete.",
+  "expected_subject": "refactor(cleanup): consolidate duplicate code",
+  "expected_body_lines": [
+    "- Identify duplicate code blocks",
+    "- Consolidate into shared utility functions",
+    "- Add parameterization for variations",
+    "- Remove code duplication",
+    "- Validation: code consolidation complete"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): consolidate duplicate code\""
+}

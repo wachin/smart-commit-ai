@@ -1,0 +1,14 @@
+{
+  "title": "Add visual regression testing",
+  "original_text": "Added visual regression testing using Percy. Implemented screenshot comparison for all pages. Added visual testing for responsive breakpoints. Implemented visual testing for different themes (light/dark). Added visual testing for different user states (logged in/out). Added visual diff reporting. Added CI integration for automated visual tests. Result: 89 visual tests pass.",
+  "expected_subject": "test(visual): add visual regression testing with Percy",
+  "expected_body_lines": [
+    "- Implement screenshot comparison for all pages",
+    "- Add visual testing for responsive breakpoints",
+    "- Add visual testing for light/dark themes",
+    "- Add visual testing for user states",
+    "- Add visual diff reporting and CI integration",
+    "- Validation: 89 visual tests pass"
+  ],
+  "expected_command": "git commit -m \"test(visual): add visual regression testing with Percy\""
+}

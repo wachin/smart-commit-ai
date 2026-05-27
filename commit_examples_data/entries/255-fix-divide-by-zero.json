@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Divide by zero error",
+  "original_text": "Fixed divide by zero error in calculation module. Added zero division checks before arithmetic operations. Implemented error handling for division operations. Added unit tests for edge cases. Added input validation for denominators. Result: divide by zero error fixed.",
+  "expected_subject": "fix(core): fix divide by zero error",
+  "expected_body_lines": [
+    "- Add zero division checks before arithmetic operations",
+    "- Implement error handling for division operations",
+    "- Add unit tests for edge cases",
+    "- Add input validation for denominators",
+    "- Validation: divide by zero error fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix divide by zero error\""
+}

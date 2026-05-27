@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add SaltStack configuration management",
+  "original_text": "Added SaltStack configuration management. Implemented Salt states. Added configuration automation. Implemented remote execution. Added configuration orchestration. Result: SaltStack configuration operational.",
+  "expected_subject": "chore(config): add SaltStack configuration management",
+  "expected_body_lines": [
+    "- Implement Salt states",
+    "- Add configuration automation",
+    "- Implement remote execution",
+    "- Add configuration orchestration",
+    "- Validation: SaltStack configuration operational"
+  ],
+  "expected_command": "git commit -m \"chore(config): add SaltStack configuration management\""
+}

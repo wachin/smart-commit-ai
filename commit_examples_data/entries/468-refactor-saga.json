@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement Saga pattern",
+  "original_text": "Refactored to implement Saga pattern. Implemented saga orchestration. Added saga compensation. Implemented saga state management. Added saga monitoring. Result: Saga pattern implemented.",
+  "expected_subject": "refactor(pattern): implement Saga pattern",
+  "expected_body_lines": [
+    "- Implement saga orchestration",
+    "- Add saga compensation",
+    "- Implement saga state management",
+    "- Add saga monitoring",
+    "- Validation: Saga pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement Saga pattern\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Format string vulnerability",
+  "original_text": "Fixed format string vulnerability in logging. Implemented safe string formatting. Added input validation for format strings. Implemented format string escaping. Added format string detection. Result: format string vulnerability fixed.",
+  "expected_subject": "fix(security): fix format string vulnerability",
+  "expected_body_lines": [
+    "- Implement safe string formatting",
+    "- Add input validation for format strings",
+    "- Implement format string escaping",
+    "- Add format string detection",
+    "- Validation: format string vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix format string vulnerability\""
+}

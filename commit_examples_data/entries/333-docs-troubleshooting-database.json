@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add database troubleshooting guide",
+  "original_text": "Added database troubleshooting guide. Documented common database issues. Added database performance tuning. Implemented database connection troubleshooting. Added database recovery procedures. Result: database troubleshooting guide complete.",
+  "expected_subject": "docs(db): add database troubleshooting guide",
+  "expected_body_lines": [
+    "- Document common database issues",
+    "- Add database performance tuning",
+    "- Implement database connection troubleshooting",
+    "- Add database recovery procedures",
+    "- Validation: database troubleshooting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(db): add database troubleshooting guide\""
+}

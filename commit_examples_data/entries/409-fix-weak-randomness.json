@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Weak randomness vulnerability",
+  "original_text": "Fixed weak randomness vulnerability. Implemented cryptographically secure random number generation. Added entropy collection. Implemented random seed management. Added randomness quality verification. Result: weak randomness vulnerability fixed.",
+  "expected_subject": "fix(security): fix weak randomness vulnerability",
+  "expected_body_lines": [
+    "- Implement cryptographically secure random number generation",
+    "- Add entropy collection",
+    "- Implement random seed management",
+    "- Add randomness quality verification",
+    "- Validation: weak randomness vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix weak randomness vulnerability\""
+}

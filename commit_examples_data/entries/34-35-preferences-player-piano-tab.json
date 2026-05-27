@@ -1,0 +1,14 @@
+{
+  "title": "35. Preferences: Player Piano Tab",
+  "original_text": "We moved a solid preferences slice forward: the `Player Piano` tab is now real and persisted. In [settings.py]..., I added stored Pianola preferences for: color mode, note-name display mode, octave designation... In [app.py]..., the `Preferences` dialog now has a `Player Piano` tab with controls for those three options... I updated the fake settings and tests in: [test_settings.py], [test_app_playlist.py]... I also updated [Roadmap.md]... And I refreshed the user guides... Verification is clean: ... 174 tests OK...",
+  "expected_subject": "feat(app): add Player Piano preferences tab",
+  "expected_body_lines": [
+    "- Persist color mode, note labels, and octave designation settings",
+    "- Add Player Piano tab to PreferencesDialog with Restore Defaults",
+    "- Apply settings live to open Pianola windows and new instances",
+    "- Update user guides (EN/ES) and Roadmap.md with new preference docs",
+    "- Add tests for persistence, validation, and live application",
+    "- Validation: compileall OK, 174 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(app): add Player Piano preferences tab\" \\\n  -m \"- Persist color mode, note labels, and octave designation settings\" \\\n  -m \"- Add Player Piano tab to PreferencesDialog with Restore Defaults\" \\\n  -m \"- Apply settings live to open Pianola windows and new instances\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new preference docs\" \\\n  -m \"- Add tests for persistence, validation, and live application\" \\\n  -m \"- Validation: compileall OK, 174 tests pass\""
+}

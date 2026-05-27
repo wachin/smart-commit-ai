@@ -1,0 +1,15 @@
+{
+  "title": "9. Channels View: GM Names",
+  "original_text": "We made the channel patch selector much nicer to use. In [app.py]..., I replaced the raw numeric `Program` spinbox with a `QComboBox` showing General MIDI instrument names... I added a small General MIDI name table plus `gm_program_label()`... Tests in [test_app_playlist.py]... were updated to verify: the program cell is now a combo box... I also updated: [Roadmap.md]... [dmidiplayer/docs/en/pyqt6-user-guide.md]... Verification is clean: ... 128 tests OK...",
+  "expected_subject": "feat(ui): use GM names for channel program selector",
+  "expected_body_lines": [
+    "- Replace numeric spinbox with QComboBox showing GM instrument names",
+    "- Add internal GM name table and gm_program_label() helper",
+    "- Maintain 0-127 program value mapping underneath UI labels",
+    "- Update tests to verify combo box behavior and display text",
+    "- Update user guides (EN/ES) to reflect new selector UI",
+    "- Update Roadmap.md to mark GM name selector complete",
+    "- Validation: compileall OK, 128 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): use GM names for channel program selector\" \\\n  -m \"- Replace numeric spinbox with QComboBox showing GM instrument names\" \\\n  -m \"- Add internal GM name table and gm_program_label() helper\" \\\n  -m \"- Maintain 0-127 program value mapping underneath UI labels\" \\\n  -m \"- Update tests to verify combo box behavior and display text\" \\\n  -m \"- Update user guides (EN/ES) to reflect new selector UI\" \\\n  -m \"- Update Roadmap.md to mark GM name selector complete\" \\\n  -m \"- Validation: compileall OK, 128 tests pass, offscreen verified\""
+}

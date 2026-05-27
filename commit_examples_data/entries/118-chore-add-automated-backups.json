@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add automated backup system",
+  "original_text": "Added automated backup system for database and files. Implemented daily incremental backups. Implemented weekly full backups. Added backup retention policy (keep 30 daily, 12 weekly). Implemented backup encryption. Added backup integrity verification. Implemented backup restoration testing. Added backup monitoring and alerting. Result: backups running successfully.",
+  "expected_subject": "chore(ops): add automated backup system",
+  "expected_body_lines": [
+    "- Implement daily incremental backups",
+    "- Implement weekly full backups",
+    "- Add backup retention policy",
+    "- Implement backup encryption and integrity verification",
+    "- Add backup monitoring and alerting",
+    "- Validation: backups running successfully"
+  ],
+  "expected_command": "git commit -m \"chore(ops): add automated backup system\""
+}

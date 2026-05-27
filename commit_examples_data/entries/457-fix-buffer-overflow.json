@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Buffer overflow in string handling",
+  "original_text": "Fixed buffer overflow in string handling. Implemented bounds checking. Added safe string functions. Implemented buffer size validation. Added buffer overflow detection. Result: buffer overflow fixed.",
+  "expected_subject": "fix(security): fix buffer overflow in string handling",
+  "expected_body_lines": [
+    "- Implement bounds checking",
+    "- Add safe string functions",
+    "- Implement buffer size validation",
+    "- Add buffer overflow detection",
+    "- Validation: buffer overflow fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix buffer overflow in string handling\""
+}

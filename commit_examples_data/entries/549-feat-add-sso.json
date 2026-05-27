@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add SSO authentication",
+  "original_text": "Added SSO authentication support. Implemented SSO provider integration. Added single sign-on flow. Implemented session management. Added SSO logout. Result: SSO authentication operational.",
+  "expected_subject": "feat(auth): add SSO authentication",
+  "expected_body_lines": [
+    "- Implement SSO provider integration",
+    "- Add single sign-on flow",
+    "- Implement session management",
+    "- Add SSO logout",
+    "- Validation: SSO authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add SSO authentication\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement factory pattern for object creation",
+  "original_text": "Refactored object creation to use factory pattern. Created factories for complex object creation. Implemented abstract factory for families of related objects. Added factory methods for configurable object instantiation. This centralizes creation logic and reduces coupling. Added tests for factory classes. Result: 39 tests pass.",
+  "expected_subject": "refactor(pattern): implement factory pattern for object creation",
+  "expected_body_lines": [
+    "- Create factories for complex object creation",
+    "- Implement abstract factory for related object families",
+    "- Add factory methods for configurable instantiation",
+    "- Centralize creation logic and reduce coupling",
+    "- Add tests for factory classes",
+    "- Validation: 39 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement factory pattern for object creation\""
+}

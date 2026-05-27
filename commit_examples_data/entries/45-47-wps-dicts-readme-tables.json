@@ -1,0 +1,12 @@
+{
+  "title": "47. WPS Dicts: README Tables",
+  "original_text": "Listo. Añadí en [README.md]... una sección **Diccionarios disponibles** con una tabla de los 71 diccionarios... Debajo agregué otra tabla titulada **Diccionarios añadidos desde otras fuentes**, destacando: hr_HR, km_KH, qu_EC... También añadí una nota explicando que esos tres usan el mismo formato final de WPS... y que sus `dict.conf` incluyen nombres localizados...",
+  "expected_subject": "docs(readme): add available dictionaries tables",
+  "expected_body_lines": [
+    "- List all 71 dictionaries in build/wps-libreoffice-dicts",
+    "- Highlight hr_HR, km_KH, and qu_EC as added from other sources",
+    "- Note localized dict.conf support for improved UI display",
+    "- Clarify consistent WPS format (conf/aff/dic) across all entries"
+  ],
+  "expected_command": "git commit -m \"docs(readme): add available dictionaries tables\" \\\n  -m \"- List all 71 dictionaries in build/wps-libreoffice-dicts\" \\\n  -m \"- Highlight hr_HR, km_KH, and qu_EC as added from other sources\" \\\n  -m \"- Note localized dict.conf support for improved UI display\" \\\n  -m \"- Clarify consistent WPS format (conf/aff/dic) across all entries\""
+}

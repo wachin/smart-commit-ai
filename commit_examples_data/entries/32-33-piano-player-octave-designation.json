@@ -1,0 +1,14 @@
+{
+  "title": "33. Piano Player: Octave Designation",
+  "original_text": "We kept the Pianola work moving and finished configurable octave designation. In [widgets.py]..., `PianoKeyboard` now supports an octave offset for note labels... In [app.py]..., the `Piano Player` dialog now has an `Octaves` selector with: `Scientific`, `Yamaha`... I added coverage in: [test_widgets.py], [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 168 tests OK...",
+  "expected_subject": "feat(ui): add configurable octave designation to Pianola",
+  "expected_body_lines": [
+    "- Support octave offset in PianoKeyboard for Scientific/Yamaha modes",
+    "- Add Octaves selector to PianolaDialog with live label updates",
+    "- Report octave mode changes in main window status bar",
+    "- Update user guides (EN/ES) and Roadmap.md with new notation docs",
+    "- Add tests for label shifting and UI wiring behavior",
+    "- Validation: compileall OK, 168 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add configurable octave designation to Pianola\" \\\n  -m \"- Support octave offset in PianoKeyboard for Scientific/Yamaha modes\" \\\n  -m \"- Add Octaves selector to PianolaDialog with live label updates\" \\\n  -m \"- Report octave mode changes in main window status bar\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new notation docs\" \\\n  -m \"- Add tests for label shifting and UI wiring behavior\" \\\n  -m \"- Validation: compileall OK, 168 tests pass\""
+}

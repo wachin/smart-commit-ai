@@ -1,0 +1,14 @@
+{
+  "title": "Refactor to server-side rendering",
+  "original_text": "Refactored client-side rendering to server-side rendering for SEO. Implemented Next.js for SSR. Added server-side data fetching. Implemented static page generation for marketing pages. Added incremental static regeneration. Implemented streaming SSR for faster initial load. Added SEO metadata management. Added tests for SSR functionality. Result: 49 tests pass.",
+  "expected_subject": "refactor(frontend): migrate to server-side rendering",
+  "expected_body_lines": [
+    "- Implement Next.js for SSR",
+    "- Add server-side data fetching",
+    "- Implement static page generation",
+    "- Add incremental static regeneration",
+    "- Add streaming SSR and SEO metadata",
+    "- Validation: 49 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(frontend): migrate to server-side rendering\""
+}

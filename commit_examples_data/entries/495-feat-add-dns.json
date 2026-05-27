@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add DNS resolution",
+  "original_text": "Added DNS resolution support. Implemented DNS client. Added DNS caching. Implemented DNSSEC validation. Added DNS over HTTPS. Result: DNS resolution operational.",
+  "expected_subject": "feat(network): add DNS resolution",
+  "expected_body_lines": [
+    "- Implement DNS client",
+    "- Add DNS caching",
+    "- Implement DNSSEC validation",
+    "- Add DNS over HTTPS",
+    "- Validation: DNS resolution operational"
+  ],
+  "expected_command": "git commit -m \"feat(network): add DNS resolution\""
+}

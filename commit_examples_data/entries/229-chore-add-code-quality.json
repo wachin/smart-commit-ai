@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add code quality gate",
+  "original_text": "Added code quality gate with SonarQube. Configured quality rules and thresholds. Implemented quality gate in CI/CD. Added code smell detection. Implemented technical debt tracking. Result: code quality gate operational.",
+  "expected_subject": "chore(quality): add code quality gate with SonarQube",
+  "expected_body_lines": [
+    "- Configure quality rules and thresholds",
+    "- Implement quality gate in CI/CD",
+    "- Add code smell detection",
+    "- Implement technical debt tracking",
+    "- Validation: code quality gate operational"
+  ],
+  "expected_command": "git commit -m \"chore(quality): add code quality gate with SonarQube\""
+}

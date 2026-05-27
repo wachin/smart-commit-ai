@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add CoAP protocol",
+  "original_text": "Added CoAP protocol support. Implemented CoAP server. Added CoAP client. Implemented CoAP observe notifications. Added CoAP block-wise transfer. Result: CoAP protocol operational.",
+  "expected_subject": "feat(protocol): add CoAP protocol",
+  "expected_body_lines": [
+    "- Implement CoAP server",
+    "- Add CoAP client",
+    "- Implement CoAP observe notifications",
+    "- Add CoAP block-wise transfer",
+    "- Validation: CoAP protocol operational"
+  ],
+  "expected_command": "git commit -m \"feat(protocol): add CoAP protocol\""
+}

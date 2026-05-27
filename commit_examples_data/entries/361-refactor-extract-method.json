@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Extract method for code reuse",
+  "original_text": "Refactored to extract method for code reuse. Extracted duplicate code into reusable methods. Added method for common operations. Implemented method parameterization. Improved code maintainability. Result: method extraction complete.",
+  "expected_subject": "refactor(cleanup): extract method for code reuse",
+  "expected_body_lines": [
+    "- Extract duplicate code into reusable methods",
+    "- Add method for common operations",
+    "- Implement method parameterization",
+    "- Improve code maintainability",
+    "- Validation: method extraction complete"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): extract method for code reuse\""
+}

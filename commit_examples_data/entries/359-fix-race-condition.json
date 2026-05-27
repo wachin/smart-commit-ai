@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Race condition vulnerability",
+  "original_text": "Fixed race condition vulnerability in file operations. Implemented atomic file operations. Added file locking mechanisms. Implemented thread-safe file handling. Added race condition detection. Result: race condition vulnerability fixed.",
+  "expected_subject": "fix(concurrency): fix race condition vulnerability",
+  "expected_body_lines": [
+    "- Implement atomic file operations",
+    "- Add file locking mechanisms",
+    "- Implement thread-safe file handling",
+    "- Add race condition detection",
+    "- Validation: race condition vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(concurrency): fix race condition vulnerability\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement memento pattern",
+  "original_text": "Refactored to implement memento pattern. Added memento for state management. Implemented caretaker for memento storage. Added undo/redo functionality. Improved state management. Result: memento pattern implemented.",
+  "expected_subject": "refactor(pattern): implement memento pattern",
+  "expected_body_lines": [
+    "- Add memento for state management",
+    "- Implement caretaker for memento storage",
+    "- Add undo/redo functionality",
+    "- Improve state management",
+    "- Validation: memento pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement memento pattern\""
+}

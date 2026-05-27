@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add project glossary",
+  "original_text": "Added project glossary with technical terms. Documented domain-specific terminology. Added acronym definitions and abbreviations. Implemented glossary cross-references. Added glossary maintenance guidelines. Result: project glossary complete.",
+  "expected_subject": "docs(reference): add project glossary",
+  "expected_body_lines": [
+    "- Document domain-specific terminology",
+    "- Add acronym definitions and abbreviations",
+    "- Implement glossary cross-references",
+    "- Add glossary maintenance guidelines",
+    "- Validation: project glossary complete"
+  ],
+  "expected_command": "git commit -m \"docs(reference): add project glossary\""
+}

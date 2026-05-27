@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Integer overflow in calculation",
+  "original_text": "Fixed integer overflow in calculation. Implemented overflow checking. Added safe arithmetic operations. Implemented big integer support. Added overflow detection. Result: integer overflow fixed.",
+  "expected_subject": "fix(security): fix integer overflow in calculation",
+  "expected_body_lines": [
+    "- Implement overflow checking",
+    "- Add safe arithmetic operations",
+    "- Implement big integer support",
+    "- Add overflow detection",
+    "- Validation: integer overflow fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix integer overflow in calculation\""
+}

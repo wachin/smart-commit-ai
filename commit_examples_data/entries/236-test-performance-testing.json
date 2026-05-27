@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add performance testing",
+  "original_text": "Added performance testing with Lighthouse. Implemented performance tests for page load times. Added performance tests for API response times. Implemented performance tests for memory usage. Added performance test baselines. Result: performance scores 90+.",
+  "expected_subject": "test(perf): add performance testing with Lighthouse",
+  "expected_body_lines": [
+    "- Implement performance tests for page load times",
+    "- Add performance tests for API response times",
+    "- Implement performance tests for memory usage",
+    "- Add performance test baselines",
+    "- Validation: performance scores 90+"
+  ],
+  "expected_command": "git commit -m \"test(perf): add performance testing with Lighthouse\""
+}

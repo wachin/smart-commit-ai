@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Introduce proxy pattern",
+  "original_text": "Refactored to introduce proxy pattern. Identified objects needing proxy. Added proxy class for controlled access. Implemented proxy methods. Added lazy initialization. Result: proxy pattern introduced.",
+  "expected_subject": "refactor(pattern): introduce proxy pattern",
+  "expected_body_lines": [
+    "- Identify objects needing proxy",
+    "- Add proxy class for controlled access",
+    "- Implement proxy methods",
+    "- Add lazy initialization",
+    "- Validation: proxy pattern introduced"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): introduce proxy pattern\""
+}

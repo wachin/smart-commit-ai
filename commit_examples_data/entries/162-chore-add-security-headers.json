@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add security headers",
+  "original_text": "Added security headers to all HTTP responses. Implemented Content-Security-Policy to prevent XSS. Added X-Frame-Options to prevent clickjacking. Added X-Content-Type-Options to prevent MIME sniffing. Added Strict-Transport-Security for HTTPS enforcement. Added Referrer-Policy for privacy. Updated web server configuration. Result: security headers deployed.",
+  "expected_subject": "chore(security): add security headers to HTTP responses",
+  "expected_body_lines": [
+    "- Implement Content-Security-Policy to prevent XSS",
+    "- Add X-Frame-Options to prevent clickjacking",
+    "- Add X-Content-Type-Options to prevent MIME sniffing",
+    "- Add Strict-Transport-Security for HTTPS enforcement",
+    "- Add Referrer-Policy for privacy",
+    "- Validation: security headers deployed"
+  ],
+  "expected_command": "git commit -m \"chore(security): add security headers to HTTP responses\""
+}

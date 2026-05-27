@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Consul service discovery",
+  "original_text": "Added Consul for service discovery. Implemented service registration. Added health checking for services. Implemented service discovery for microservices. Added key-value store for configuration. Result: Consul service discovery operational.",
+  "expected_subject": "chore(discovery): add Consul service discovery",
+  "expected_body_lines": [
+    "- Implement service registration",
+    "- Add health checking for services",
+    "- Implement service discovery for microservices",
+    "- Add key-value store for configuration",
+    "- Validation: Consul service discovery operational"
+  ],
+  "expected_command": "git commit -m \"chore(discovery): add Consul service discovery\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add AMQP messaging",
+  "original_text": "Added AMQP messaging support. Implemented AMQP broker connection. Added AMQP exchanges and queues. Implemented AMQP message routing. Added AMQP transaction support. Result: AMQP messaging operational.",
+  "expected_subject": "feat(messaging): add AMQP messaging",
+  "expected_body_lines": [
+    "- Implement AMQP broker connection",
+    "- Add AMQP exchanges and queues",
+    "- Implement AMQP message routing",
+    "- Add AMQP transaction support",
+    "- Validation: AMQP messaging operational"
+  ],
+  "expected_command": "git commit -m \"feat(messaging): add AMQP messaging\""
+}

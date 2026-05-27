@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API field selection documentation",
+  "original_text": "Added API field selection documentation. Documented field parameters. Added field selection examples. Implemented sparse fieldsets. Added nested field selection. Result: field selection documentation complete.",
+  "expected_subject": "docs(api): add API field selection documentation",
+  "expected_body_lines": [
+    "- Document field parameters",
+    "- Add field selection examples",
+    "- Implement sparse fieldsets",
+    "- Add nested field selection",
+    "- Validation: field selection documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API field selection documentation\""
+}

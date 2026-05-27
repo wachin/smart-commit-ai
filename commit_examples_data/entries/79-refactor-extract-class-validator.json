@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Extract validator class from controller",
+  "original_text": "Refactored the codebase by extracting the validation logic from the controller into a separate Validator class. This improves separation of concerns and makes the validation logic reusable across different controllers. The new Validator class is in utils/validator.py. Updated all controllers to use the new class. Added unit tests for the Validator. Result: 50 tests pass.",
+  "expected_subject": "refactor(utils): extract Validator class from controller",
+  "expected_body_lines": [
+    "- Create utils/validator.py with extracted validation logic",
+    "- Update controllers to use new Validator class",
+    "- Improve separation of concerns and reusability",
+    "- Add unit tests for Validator class",
+    "- Validation: 50 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(utils): extract Validator class from controller\""
+}

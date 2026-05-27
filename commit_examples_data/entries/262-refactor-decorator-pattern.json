@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement decorator pattern",
+  "original_text": "Refactored to implement decorator pattern. Added decorators for cross-cutting concerns. Implemented decorator composition. Added decorator for logging and caching. Improved code modularity. Result: decorator pattern implemented.",
+  "expected_subject": "refactor(pattern): implement decorator pattern",
+  "expected_body_lines": [
+    "- Add decorators for cross-cutting concerns",
+    "- Implement decorator composition",
+    "- Add decorator for logging and caching",
+    "- Improve code modularity",
+    "- Validation: decorator pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement decorator pattern\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: HTTP header injection vulnerability",
+  "original_text": "Fixed HTTP header injection vulnerability. Implemented header sanitization for user input. Added header validation and encoding. Implemented secure header generation. Added header injection detection. Result: HTTP header injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix HTTP header injection vulnerability",
+  "expected_body_lines": [
+    "- Implement header sanitization for user input",
+    "- Add header validation and encoding",
+    "- Implement secure header generation",
+    "- Add header injection detection",
+    "- Validation: HTTP header injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix HTTP header injection vulnerability\""
+}

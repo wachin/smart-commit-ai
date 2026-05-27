@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add StatsD metrics",
+  "original_text": "Added StatsD metrics collection. Implemented StatsD client. Added metric types. Implemented metric sampling. Added metric buffering. Result: StatsD metrics operational.",
+  "expected_subject": "chore(monitoring): add StatsD metrics",
+  "expected_body_lines": [
+    "- Implement StatsD client",
+    "- Add metric types",
+    "- Implement metric sampling",
+    "- Add metric buffering",
+    "- Validation: StatsD metrics operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add StatsD metrics\""
+}

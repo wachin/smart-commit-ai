@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add performance tests with k6",
+  "original_text": "Added performance tests with k6. Implemented load testing scenarios. Added performance thresholds. Implemented test ramping. Added performance reporting. Result: performance tests pass.",
+  "expected_subject": "test(performance): add performance tests with k6",
+  "expected_body_lines": [
+    "- Implement load testing scenarios",
+    "- Add performance thresholds",
+    "- Implement test ramping",
+    "- Add performance reporting",
+    "- Validation: performance tests pass"
+  ],
+  "expected_command": "git commit -m \"test(performance): add performance tests with k6\""
+}

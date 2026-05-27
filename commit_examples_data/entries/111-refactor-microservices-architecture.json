@@ -1,0 +1,14 @@
+{
+  "title": "Refactor to microservices architecture",
+  "original_text": "Refactored monolithic application to microservices architecture. Split application into user service, order service, and product service. Implemented API gateway for routing. Added service discovery with Consul. Implemented inter-service communication with gRPC. Added distributed tracing with Jaeger. Implemented centralized configuration. Added tests for microservices. Result: 78 tests pass.",
+  "expected_subject": "refactor(arch): migrate to microservices architecture",
+  "expected_body_lines": [
+    "- Split application into user, order, product services",
+    "- Implement API gateway for routing",
+    "- Add service discovery with Consul",
+    "- Implement inter-service communication with gRPC",
+    "- Add distributed tracing and centralized config",
+    "- Validation: 78 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): migrate to microservices architecture\""
+}

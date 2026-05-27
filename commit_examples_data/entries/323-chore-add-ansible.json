@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Ansible automation",
+  "original_text": "Added Ansible playbooks for automation. Implemented playbooks for server provisioning. Added playbooks for configuration management. Implemented Ansible roles for reusability. Added inventory management. Result: Ansible automation operational.",
+  "expected_subject": "chore(automation): add Ansible playbooks",
+  "expected_body_lines": [
+    "- Implement playbooks for server provisioning",
+    "- Add playbooks for configuration management",
+    "- Implement Ansible roles for reusability",
+    "- Add inventory management",
+    "- Validation: Ansible automation operational"
+  ],
+  "expected_command": "git commit -m \"chore(automation): add Ansible playbooks\""
+}

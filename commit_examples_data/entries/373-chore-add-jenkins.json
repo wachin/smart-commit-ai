@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Jenkins CI/CD",
+  "original_text": "Added Jenkins for CI/CD. Implemented Jenkins pipeline configuration. Added Jenkins job automation. Implemented Jenkins agent configuration. Added Jenkins notification integration. Result: Jenkins CI/CD operational.",
+  "expected_subject": "chore(ci): add Jenkins CI/CD",
+  "expected_body_lines": [
+    "- Implement Jenkins pipeline configuration",
+    "- Add Jenkins job automation",
+    "- Implement Jenkins agent configuration",
+    "- Add Jenkins notification integration",
+    "- Validation: Jenkins CI/CD operational"
+  ],
+  "expected_command": "git commit -m \"chore(ci): add Jenkins CI/CD\""
+}

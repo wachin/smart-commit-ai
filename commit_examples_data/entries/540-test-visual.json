@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add visual regression testing with Percy",
+  "original_text": "Added visual regression testing with Percy. Implemented screenshot capture. Added visual comparison. Implemented baseline management. Added visual diff reporting. Result: visual tests pass.",
+  "expected_subject": "test(visual): add visual regression testing with Percy",
+  "expected_body_lines": [
+    "- Implement screenshot capture",
+    "- Add visual comparison",
+    "- Implement baseline management",
+    "- Add visual diff reporting",
+    "- Validation: visual tests pass"
+  ],
+  "expected_command": "git commit -m \"test(visual): add visual regression testing with Percy\""
+}

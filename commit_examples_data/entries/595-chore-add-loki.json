@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Loki log aggregation",
+  "original_text": "Added Loki log aggregation. Implemented log ingestion. Added log querying. Implemented log retention policies. Added log alerting. Result: Loki log aggregation operational.",
+  "expected_subject": "chore(monitoring): add Loki log aggregation",
+  "expected_body_lines": [
+    "- Implement log ingestion",
+    "- Add log querying",
+    "- Implement log retention policies",
+    "- Add log alerting",
+    "- Validation: Loki log aggregation operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Loki log aggregation\""
+}

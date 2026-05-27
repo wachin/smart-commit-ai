@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add MQTT messaging",
+  "original_text": "Added MQTT messaging support. Implemented MQTT broker connection. Added MQTT publish/subscribe. Implemented MQTT QoS levels. Added MQTT retained messages. Result: MQTT messaging operational.",
+  "expected_subject": "feat(messaging): add MQTT messaging",
+  "expected_body_lines": [
+    "- Implement MQTT broker connection",
+    "- Add MQTT publish/subscribe",
+    "- Implement MQTT QoS levels",
+    "- Add MQTT retained messages",
+    "- Validation: MQTT messaging operational"
+  ],
+  "expected_command": "git commit -m \"feat(messaging): add MQTT messaging\""
+}

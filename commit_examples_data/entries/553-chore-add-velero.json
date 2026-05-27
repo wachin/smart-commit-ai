@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Velero backup solution",
+  "original_text": "Added Velero backup solution. Implemented backup schedules. Added disaster recovery. Implemented backup verification. Added restore testing. Result: Velero backup operational.",
+  "expected_subject": "chore(backup): add Velero backup solution",
+  "expected_body_lines": [
+    "- Implement backup schedules",
+    "- Add disaster recovery",
+    "- Implement backup verification",
+    "- Add restore testing",
+    "- Validation: Velero backup operational"
+  ],
+  "expected_command": "git commit -m \"chore(backup): add Velero backup solution\""
+}

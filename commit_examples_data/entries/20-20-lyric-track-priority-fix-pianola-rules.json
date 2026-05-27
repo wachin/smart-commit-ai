@@ -1,0 +1,14 @@
+{
+  "title": "20. Lyric Track Priority Fix & Pianola Rules",
+  "original_text": "Done, and this was a good correction. What changed: In [app.py]..., the `Lyrics` window now prefers the track that actually contains lyric meta events (`0x05`) when a file has lyrics. If there is no dedicated lyrics track, it still falls back to the track with the most text events. I added a regression test in [test_app_playlist.py]... I also updated [Roadmap.md]... so these rules are explicit: `Channels` should show only channels present... `Player Piano / Pianola` should show only tracks/channels that are actually present... `Lyrics And Karaoke` should prefer the lyrics track... And I updated the user guides... Verification is clean: ... 147 tests OK...",
+  "expected_subject": "fix(app): prioritize lyric tracks in Lyrics window",
+  "expected_body_lines": [
+    "- Prefer track with lyric meta events (0x05) over generic text",
+    "- Fallback to most text-heavy track if no dedicated lyrics exist",
+    "- Add regression test to lock in correct track selection logic",
+    "- Update Roadmap.md with explicit visibility rules for all views",
+    "- Update user guides (EN/ES) to clarify lyrics track priority",
+    "- Validation: compileall OK, 147 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"fix(app): prioritize lyric tracks in Lyrics window\" \\\n  -m \"- Prefer track with lyric meta events (0x05) over generic text\" \\\n  -m \"- Fallback to most text-heavy track if no dedicated lyrics exist\" \\\n  -m \"- Add regression test to lock in correct track selection logic\" \\\n  -m \"- Update Roadmap.md with explicit visibility rules for all views\" \\\n  -m \"- Update user guides (EN/ES) to clarify lyrics track priority\" \\\n  -m \"- Validation: compileall OK, 147 tests pass, offscreen verified\""
+}

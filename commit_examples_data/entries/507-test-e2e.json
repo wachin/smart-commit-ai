@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add end-to-end tests with Cypress",
+  "original_text": "Added end-to-end tests with Cypress. Implemented E2E test suite. Added page object models. Implemented test fixtures. Added test reporting. Result: E2E tests pass.",
+  "expected_subject": "test(e2e): add end-to-end tests with Cypress",
+  "expected_body_lines": [
+    "- Implement E2E test suite",
+    "- Add page object models",
+    "- Implement test fixtures",
+    "- Add test reporting",
+    "- Validation: E2E tests pass"
+  ],
+  "expected_command": "git commit -m \"test(e2e): add end-to-end tests with Cypress\""
+}

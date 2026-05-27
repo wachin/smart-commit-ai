@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add release notes template",
+  "original_text": "Added release notes template and process. Documented release note format and sections. Implemented automated release note generation. Added release note review process. Added versioning guidelines. Result: release notes template complete.",
+  "expected_subject": "docs(release): add release notes template",
+  "expected_body_lines": [
+    "- Document release note format and sections",
+    "- Implement automated release note generation",
+    "- Add release note review process",
+    "- Add versioning guidelines",
+    "- Validation: release notes template complete"
+  ],
+  "expected_command": "git commit -m \"docs(release): add release notes template\""
+}

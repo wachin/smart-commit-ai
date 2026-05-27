@@ -1,0 +1,14 @@
+{
+  "title": "Implement data pipeline",
+  "original_text": "Implemented ETL data pipeline. Added data ingestion from multiple sources. Implemented data transformation and cleaning. Added data validation and quality checks. Implemented data warehousing with Snowflake. Added data orchestration with Airflow. Implemented data lineage tracking. Added pipeline monitoring and alerting. Result: data pipeline operational.",
+  "expected_subject": "feat(data): implement ETL data pipeline",
+  "expected_body_lines": [
+    "- Add data ingestion from multiple sources",
+    "- Implement data transformation and cleaning",
+    "- Add data validation and quality checks",
+    "- Implement data warehousing with Snowflake",
+    "- Add orchestration with Airflow and lineage tracking",
+    "- Validation: data pipeline operational"
+  ],
+  "expected_command": "git commit -m \"feat(data): implement ETL data pipeline\""
+}

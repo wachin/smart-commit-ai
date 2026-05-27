@@ -1,0 +1,14 @@
+{
+  "title": "Fix data corruption bug",
+  "original_text": "Fixed data corruption bug in file upload handler. Files were being corrupted during processing due to incorrect encoding. Added proper binary file handling. Implemented file integrity verification with checksums. Added rollback on corruption detection. Added error logging for corrupted files. Added tests for file integrity. Result: no more data corruption.",
+  "expected_subject": "fix(storage): add file integrity verification to prevent corruption",
+  "expected_body_lines": [
+    "- Add proper binary file handling",
+    "- Implement file integrity verification with checksums",
+    "- Add rollback on corruption detection",
+    "- Add error logging for corrupted files",
+    "- Add tests for file integrity",
+    "- Validation: no more data corruption"
+  ],
+  "expected_command": "git commit -m \"fix(storage): add file integrity verification to prevent corruption\""
+}

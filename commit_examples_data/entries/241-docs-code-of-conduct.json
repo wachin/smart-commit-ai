@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add code of conduct",
+  "original_text": "Added code of conduct for the project. Documented community guidelines and expectations. Added reporting procedures for violations. Implemented enforcement guidelines. Added diversity and inclusion statement. Result: code of conduct complete.",
+  "expected_subject": "docs(governance): add code of conduct",
+  "expected_body_lines": [
+    "- Document community guidelines and expectations",
+    "- Add reporting procedures for violations",
+    "- Implement enforcement guidelines",
+    "- Add diversity and inclusion statement",
+    "- Validation: code of conduct complete"
+  ],
+  "expected_command": "git commit -m \"docs(governance): add code of conduct\""
+}

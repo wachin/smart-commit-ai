@@ -1,0 +1,14 @@
+{
+  "title": "Implement caching with Redis",
+  "original_text": "Implemented Redis caching layer for performance optimization. Added cache for frequently accessed database queries. Implemented cache invalidation strategies. Added cache warming for critical data. Implemented distributed caching for multi-server setups. Added cache metrics and monitoring. Implemented cache fallback to database on failures. Added tests for cache behavior. Result: 36 tests pass.",
+  "expected_subject": "feat(cache): implement Redis caching layer",
+  "expected_body_lines": [
+    "- Add cache for frequently accessed database queries",
+    "- Implement cache invalidation strategies",
+    "- Add cache warming for critical data",
+    "- Implement distributed caching for multi-server",
+    "- Add cache metrics and monitoring",
+    "- Validation: 36 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(cache): implement Redis caching layer\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add accessibility tests with Axe",
+  "original_text": "Added accessibility tests with Axe. Implemented accessibility scanning. Added WCAG compliance checks. Implemented accessibility reporting. Added accessibility fixes. Result: accessibility tests pass.",
+  "expected_subject": "test(a11y): add accessibility tests with Axe",
+  "expected_body_lines": [
+    "- Implement accessibility scanning",
+    "- Add WCAG compliance checks",
+    "- Implement accessibility reporting",
+    "- Add accessibility fixes",
+    "- Validation: accessibility tests pass"
+  ],
+  "expected_command": "git commit -m \"test(a11y): add accessibility tests with Axe\""
+}

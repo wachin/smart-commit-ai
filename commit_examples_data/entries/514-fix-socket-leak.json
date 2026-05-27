@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Socket leak in network client",
+  "original_text": "Fixed socket leak in network client. Implemented proper socket cleanup. Added socket timeout. Implemented socket tracking. Added socket monitoring. Result: socket leak fixed.",
+  "expected_subject": "fix(network): fix socket leak in network client",
+  "expected_body_lines": [
+    "- Implement proper socket cleanup",
+    "- Add socket timeout",
+    "- Implement socket tracking",
+    "- Add socket monitoring",
+    "- Validation: socket leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(network): fix socket leak in network client\""
+}

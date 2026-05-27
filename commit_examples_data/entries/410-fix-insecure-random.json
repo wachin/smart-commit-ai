@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Insecure random number generation",
+  "original_text": "Fixed insecure random number generation. Implemented secure random number generator. Added CSPRNG for sensitive operations. Implemented random number validation. Added entropy monitoring. Result: insecure random generation fixed.",
+  "expected_subject": "fix(security): fix insecure random number generation",
+  "expected_body_lines": [
+    "- Implement secure random number generator",
+    "- Add CSPRNG for sensitive operations",
+    "- Implement random number validation",
+    "- Add entropy monitoring",
+    "- Validation: insecure random generation fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix insecure random number generation\""
+}

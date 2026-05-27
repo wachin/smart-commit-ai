@@ -1,0 +1,14 @@
+{
+  "title": "25. Piano Player: Auto-Range Keyboards",
+  "original_text": "We kept the Pianola window moving in a useful direction: each track keyboard now narrows itself to the notes that track actually uses. What changed: In [widgets.py]..., `PianoKeyboard` now supports a configurable note range. In [sequence.py]..., `midi_track_infos()` now includes per-track `min_note` and `max_note`. In [app.py]..., the Pianola row keyboards pick up that range... I also updated: [Roadmap.md]... [EN guide]... [ES guide]... Tests were expanded in [test_app_playlist.py]... Verification is clean: ... 152 tests OK...",
+  "expected_subject": "feat(ui): auto-range Pianola keyboards to used notes",
+  "expected_body_lines": [
+    "- Add configurable note range support to PianoKeyboard widget",
+    "- Expose min/max note per track via midi_track_infos() in sequence.py",
+    "- Initialize each Pianola row keyboard with its specific note range",
+    "- Update user guides (EN/ES) and Roadmap.md with new behavior docs",
+    "- Add tests for per-track note range calculation and application",
+    "- Validation: compileall OK, 152 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): auto-range Pianola keyboards to used notes\" \\\n  -m \"- Add configurable note range support to PianoKeyboard widget\" \\\n  -m \"- Expose min/max note per track via midi_track_infos() in sequence.py\" \\\n  -m \"- Initialize each Pianola row keyboard with its specific note range\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new behavior docs\" \\\n  -m \"- Add tests for per-track note range calculation and application\" \\\n  -m \"- Validation: compileall OK, 152 tests pass, offscreen verified\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement clean architecture",
+  "original_text": "Refactored to clean architecture principles. Separated business logic from infrastructure. Implemented dependency inversion. Added domain layer with business rules. Implemented use cases layer. Added infrastructure layer for external dependencies. Result: clean architecture implemented.",
+  "expected_subject": "refactor(arch): implement clean architecture",
+  "expected_body_lines": [
+    "- Separate business logic from infrastructure",
+    "- Implement dependency inversion",
+    "- Add domain layer with business rules",
+    "- Implement use cases layer",
+    "- Add infrastructure layer for external dependencies",
+    "- Validation: clean architecture implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): implement clean architecture\""
+}

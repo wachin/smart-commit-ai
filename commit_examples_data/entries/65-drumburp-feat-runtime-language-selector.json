@@ -1,0 +1,13 @@
+{
+  "title": "DrumBurp: Runtime language selector to Help menu",
+  "original_text": "Let me check what's actually left to do: Phases 0–5 are all done. The only remaining automated work is Phase 6 — runtime language switching. The manual test (Phase 3) requires you to run the program. Let me implement Phase 6 now — a language selector in the Preferences area: Now I understand the full picture. The language selector needs to: 1. Be a menu action under &Help or &View — a submenu Language with one item per available .qm file 2. Save the chosen language to QSettings 3. Show a restart-required message (changing language mid-session is complex; saving + restart is the standard Qt approach) 4. Load the saved language at startup in DrumBurp.py before the UI is created. Let me implement this cleanly: Good. The language submenu goes under &View or &Help. I'll add it to &Help since it's a user preference. The implementation goes in DBMainwindow.py — build the submenu dynamically from available .qm files, save/load from QSettings: Now add the _buildLanguageMenu method and the on_actionSelectLanguage_triggered handler. Find a good place — after _finishLilyExport: Now add QActionGroup to the imports: Now update DrumBurp.py to read the saved language from QSettings before the UI is created:",
+  "expected_subject": "feat(i18n): add runtime language selector to Help menu",
+  "expected_body_lines": [
+    "- Implement dynamic submenu for available .qm translation files",
+    "- Persist user language preference via QSettings",
+    "- Load selected locale at startup before UI initialization",
+    "- Prompt user to restart application after language change",
+    "- Ensure seamless switching between English and Spanish"
+  ],
+  "expected_command": "git commit -m \"feat(i18n): add runtime language selector to Help menu\""
+}

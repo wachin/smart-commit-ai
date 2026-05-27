@@ -1,0 +1,13 @@
+{
+  "title": "Test: Añadir pruebas unitarias para API en español",
+  "original_text": "Añadí pruebas unitarias completas para la API. Creé tests/test_api.py con casos de prueba para todos los endpoints. Las pruebas verifican códigos de estado, respuestas JSON y manejo de errores. Mockeé las llamadas a la base de datos para que las pruebas sean rápidas y no dependan de datos externos. Añadí fixtures para datos de prueba. Resultado: 45 pruebas pasan, cobertura 82%.",
+  "expected_subject": "test(api): añadir pruebas unitarias completas para endpoints",
+  "expected_body_lines": [
+    "- Crear tests/test_api.py con casos para todos los endpoints",
+    "- Verificar códigos de estado y respuestas JSON",
+    "- Mockear base de datos para pruebas rápidas",
+    "- Añadir fixtures para datos de prueba",
+    "- Validación: 45 pruebas pasan, cobertura 82%"
+  ],
+  "expected_command": "git commit -m \"test(api): añadir pruebas unitarias completas para endpoints\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add webhook support",
+  "original_text": "Added webhook support. Implemented webhook endpoints. Added webhook authentication. Implemented event payload processing. Added webhook retry logic. Result: webhook support operational.",
+  "expected_subject": "feat(integration): add webhook support",
+  "expected_body_lines": [
+    "- Implement webhook endpoints",
+    "- Add webhook authentication",
+    "- Implement event payload processing",
+    "- Add webhook retry logic",
+    "- Validation: webhook support operational"
+  ],
+  "expected_command": "git commit -m \"feat(integration): add webhook support\""
+}

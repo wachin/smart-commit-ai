@@ -1,0 +1,14 @@
+{
+  "title": "Add ML model training pipeline",
+  "original_text": "Implemented ML model training pipeline. Added data preprocessing and feature engineering. Implemented model training with hyperparameter tuning. Added model evaluation with cross-validation. Implemented model versioning and registry. Added model deployment pipeline. Added model monitoring for drift detection. Added A/B testing for model comparison. Result: training pipeline operational.",
+  "expected_subject": "feat(ml): add model training pipeline",
+  "expected_body_lines": [
+    "- Add data preprocessing and feature engineering",
+    "- Implement model training with hyperparameter tuning",
+    "- Add model evaluation with cross-validation",
+    "- Implement model versioning and registry",
+    "- Add model deployment and monitoring",
+    "- Validation: training pipeline operational"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add model training pipeline\""
+}

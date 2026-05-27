@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add chaos engineering framework",
+  "original_text": "Added chaos engineering framework. Implemented failure mode testing. Added resilience testing. Implemented chaos experiment scheduling. Added chaos metrics collection. Result: chaos engineering operational.",
+  "expected_subject": "test(chaos): add chaos engineering framework",
+  "expected_body_lines": [
+    "- Implement failure mode testing",
+    "- Add resilience testing",
+    "- Implement chaos experiment scheduling",
+    "- Add chaos metrics collection",
+    "- Validation: chaos engineering operational"
+  ],
+  "expected_command": "git commit -m \"test(chaos): add chaos engineering framework\""
+}

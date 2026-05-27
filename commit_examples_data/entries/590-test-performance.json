@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add performance tests with JMeter",
+  "original_text": "Added performance tests with JMeter. Implemented load testing scenarios. Added stress testing. Implemented performance monitoring. Added performance benchmarks. Result: performance tests pass.",
+  "expected_subject": "test(performance): add performance tests with JMeter",
+  "expected_body_lines": [
+    "- Implement load testing scenarios",
+    "- Add stress testing",
+    "- Implement performance monitoring",
+    "- Add performance benchmarks",
+    "- Validation: performance tests pass"
+  ],
+  "expected_command": "git commit -m \"test(performance): add performance tests with JMeter\""
+}

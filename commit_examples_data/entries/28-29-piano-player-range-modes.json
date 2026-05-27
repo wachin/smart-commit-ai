@@ -1,0 +1,15 @@
+{
+  "title": "29. Piano Player: Range Modes",
+  "original_text": "We kept the Pianola window moving and finished another roadmap item: range mode. In [app.py]..., the `Piano Player` dialog now has a `Range` selector with: `Exact`, `Used octaves`... `Exact` keeps the current tight per-track note span. `Used octaves` expands each track to full octave boundaries... I added coverage in [test_app_playlist.py]... I updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 160 tests OK...",
+  "expected_subject": "feat(ui): add range modes to Piano Player window",
+  "expected_body_lines": [
+    "- Add Range selector with Exact and Used octaves options",
+    "- Expand keyboards to full octave boundaries in Used octaves mode",
+    "- Keep Exact mode as default for tight per-track note spans",
+    "- Show status bar confirmation when range mode changes",
+    "- Update user guides (EN/ES) and Roadmap.md with new docs",
+    "- Add tests for range expansion logic and UI feedback",
+    "- Validation: compileall OK, 160 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add range modes to Piano Player window\" \\\n  -m \"- Add Range selector with Exact and Used octaves options\" \\\n  -m \"- Expand keyboards to full octave boundaries in Used octaves mode\" \\\n  -m \"- Keep Exact mode as default for tight per-track note spans\" \\\n  -m \"- Show status bar confirmation when range mode changes\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new docs\" \\\n  -m \"- Add tests for range expansion logic and UI feedback\" \\\n  -m \"- Validation: compileall OK, 160 tests pass\""
+}

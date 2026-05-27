@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Introduce adapter pattern",
+  "original_text": "Refactored to introduce adapter pattern. Identified incompatible interfaces. Added adapter class for interface compatibility. Implemented adapter methods. Integrated incompatible components. Result: adapter pattern introduced.",
+  "expected_subject": "refactor(pattern): introduce adapter pattern",
+  "expected_body_lines": [
+    "- Identify incompatible interfaces",
+    "- Add adapter class for interface compatibility",
+    "- Implement adapter methods",
+    "- Integrate incompatible components",
+    "- Validation: adapter pattern introduced"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): introduce adapter pattern\""
+}

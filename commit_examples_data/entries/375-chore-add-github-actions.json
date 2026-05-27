@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add GitHub Actions",
+  "original_text": "Added GitHub Actions for CI/CD. Implemented GitHub Actions workflow. Added GitHub Actions secrets. Implemented GitHub Actions caching. Added GitHub Actions deployment. Result: GitHub Actions operational.",
+  "expected_subject": "chore(ci): add GitHub Actions",
+  "expected_body_lines": [
+    "- Implement GitHub Actions workflow",
+    "- Add GitHub Actions secrets",
+    "- Implement GitHub Actions caching",
+    "- Add GitHub Actions deployment",
+    "- Validation: GitHub Actions operational"
+  ],
+  "expected_command": "git commit -m \"chore(ci): add GitHub Actions\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add configuration reference",
+  "original_text": "Added configuration reference. Documented all configuration options. Added configuration examples. Implemented configuration validation. Added configuration migration. Result: configuration reference complete.",
+  "expected_subject": "docs(config): add configuration reference",
+  "expected_body_lines": [
+    "- Document all configuration options",
+    "- Add configuration examples",
+    "- Implement configuration validation",
+    "- Add configuration migration",
+    "- Validation: configuration reference complete"
+  ],
+  "expected_command": "git commit -m \"docs(config): add configuration reference\""
+}

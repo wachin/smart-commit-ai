@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement builder pattern",
+  "original_text": "Refactored to implement builder pattern. Added builder for complex object construction. Implemented fluent builder interface. Added builder validation. Improved object creation readability. Result: builder pattern implemented.",
+  "expected_subject": "refactor(pattern): implement builder pattern",
+  "expected_body_lines": [
+    "- Add builder for complex object construction",
+    "- Implement fluent builder interface",
+    "- Add builder validation",
+    "- Improve object creation readability",
+    "- Validation: builder pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement builder pattern\""
+}

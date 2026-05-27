@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Side-channel attack in encryption",
+  "original_text": "Fixed side-channel attack in encryption. Implemented constant-time operations. Added cache attack mitigation. Implemented power analysis protection. Added side-channel detection. Result: side-channel attack fixed.",
+  "expected_subject": "fix(security): fix side-channel attack in encryption",
+  "expected_body_lines": [
+    "- Implement constant-time operations",
+    "- Add cache attack mitigation",
+    "- Implement power analysis protection",
+    "- Add side-channel detection",
+    "- Validation: side-channel attack fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix side-channel attack in encryption\""
+}

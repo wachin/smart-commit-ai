@@ -1,0 +1,14 @@
+{
+  "title": "Fix network timeout and retry logic",
+  "original_text": "Fixed network timeout issues in API client. The client was not retrying failed requests. Implemented exponential backoff for retries. Added timeout configuration per endpoint. Implemented circuit breaker pattern. Added request queuing and throttling. Added network error logging. Result: API calls more reliable under poor network conditions.",
+  "expected_subject": "fix(network): add retry logic with exponential backoff",
+  "expected_body_lines": [
+    "- Implement exponential backoff for retries",
+    "- Add timeout configuration per endpoint",
+    "- Implement circuit breaker pattern",
+    "- Add request queuing and throttling",
+    "- Add network error logging",
+    "- Validation: API calls reliable under poor network"
+  ],
+  "expected_command": "git commit -m \"fix(network): add retry logic with exponential backoff\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Host header injection vulnerability",
+  "original_text": "Fixed Host header injection vulnerability. Implemented Host header validation. Added whitelist for allowed hosts. Implemented canonical URL generation. Added Host header sanitization. Result: Host header injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix Host header injection vulnerability",
+  "expected_body_lines": [
+    "- Implement Host header validation",
+    "- Add whitelist for allowed hosts",
+    "- Implement canonical URL generation",
+    "- Add Host header sanitization",
+    "- Validation: Host header injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix Host header injection vulnerability\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Template Method pattern to workflows",
+  "original_text": "Refactored to implement Template Method pattern. Implemented template method. Added abstract steps. Implemented concrete steps. Added hook methods. Result: Template Method pattern implemented.",
+  "expected_subject": "refactor(pattern): implement Template Method pattern",
+  "expected_body_lines": [
+    "- Implement template method",
+    "- Add abstract steps",
+    "- Implement concrete steps",
+    "- Add hook methods",
+    "- Validation: Template Method pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement Template Method pattern\""
+}

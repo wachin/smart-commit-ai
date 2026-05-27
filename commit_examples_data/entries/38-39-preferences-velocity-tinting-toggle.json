@@ -1,0 +1,15 @@
+{
+  "title": "39. Preferences: Velocity Tinting Toggle",
+  "original_text": "We kept the port moving and finished another `Preferences -> Player Piano` item: velocity tinting is now a real saved option. In [drumstick/drumstick_py/widgets.py]..., `PianoKeyboard` now has a `set_velocity_tinting_enabled()` switch... In [settings.py]..., I added persisted `pianola/velocity_tinting` with a default of `True`. In [app.py]..., the `Player Piano` tab now includes `Use note velocity for highlight strength`... Tests were expanded in [test_widgets.py], [test_settings.py], and [test_app_playlist.py]... Verification is clean: ... 178 tests OK...",
+  "expected_subject": "feat(app): add velocity tinting toggle to Pianola prefs",
+  "expected_body_lines": [
+    "- Implement set_velocity_tinting_enabled() in PianoKeyboard widget",
+    "- Persist pianola/velocity_tinting setting with default True",
+    "- Add checkbox to Preferences Player Piano tab for live control",
+    "- Apply preference immediately to open and new Pianola windows",
+    "- Update user guides (EN/ES) and Roadmap.md with new option docs",
+    "- Add tests for widget toggle, persistence, and live application",
+    "- Validation: compileall OK, 178 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add velocity tinting toggle to Pianola prefs\" \\\n  -m \"- Implement set_velocity_tinting_enabled() in PianoKeyboard widget\" \\\n  -m \"- Persist pianola/velocity_tinting setting with default True\" \\\n  -m \"- Add checkbox to Preferences Player Piano tab for live control\" \\\n  -m \"- Apply preference immediately to open and new Pianola windows\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new option docs\" \\\n  -m \"- Add tests for widget toggle, persistence, and live application\" \\\n  -m \"- Validation: compileall OK, 178 tests pass, offscreen verified\""
+}

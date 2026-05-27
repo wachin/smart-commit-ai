@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Side-channel attack vulnerability",
+  "original_text": "Fixed side-channel attack vulnerability. Implemented constant-time operations. Added cache timing protection. Implemented power analysis protection. Added side-channel detection. Result: side-channel vulnerability fixed.",
+  "expected_subject": "fix(security): fix side-channel attack vulnerability",
+  "expected_body_lines": [
+    "- Implement constant-time operations",
+    "- Add cache timing protection",
+    "- Implement power analysis protection",
+    "- Add side-channel detection",
+    "- Validation: side-channel vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix side-channel attack vulnerability\""
+}

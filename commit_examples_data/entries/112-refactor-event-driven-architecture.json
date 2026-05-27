@@ -1,0 +1,14 @@
+{
+  "title": "Refactor to event-driven architecture",
+  "original_text": "Refactored to event-driven architecture using message queues. Implemented event bus with RabbitMQ. Added event producers and consumers. Implemented event sourcing for audit trail. Added event replay for debugging. Implemented dead letter queue for failed events. Added event monitoring and alerting. Added tests for event flows. Result: 62 tests pass.",
+  "expected_subject": "refactor(arch): migrate to event-driven architecture",
+  "expected_body_lines": [
+    "- Implement event bus with RabbitMQ",
+    "- Add event producers and consumers",
+    "- Implement event sourcing for audit trail",
+    "- Add event replay for debugging",
+    "- Add dead letter queue and monitoring",
+    "- Validation: 62 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): migrate to event-driven architecture\""
+}

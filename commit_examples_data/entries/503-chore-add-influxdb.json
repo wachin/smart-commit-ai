@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add InfluxDB time-series database",
+  "original_text": "Added InfluxDB time-series database. Implemented InfluxDB client. Added time-series data storage. Implemented data retention policies. Added continuous queries. Result: InfluxDB operational.",
+  "expected_subject": "chore(database): add InfluxDB time-series database",
+  "expected_body_lines": [
+    "- Implement InfluxDB client",
+    "- Add time-series data storage",
+    "- Implement data retention policies",
+    "- Add continuous queries",
+    "- Validation: InfluxDB operational"
+  ],
+  "expected_command": "git commit -m \"chore(database): add InfluxDB time-series database\""
+}

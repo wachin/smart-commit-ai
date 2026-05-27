@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add load testing with JMeter",
+  "original_text": "Added load testing with JMeter. Implemented load test scenarios. Added load test execution. Implemented load test reporting. Added load test analysis. Result: load tests pass.",
+  "expected_subject": "test(load): add load testing with JMeter",
+  "expected_body_lines": [
+    "- Implement load test scenarios",
+    "- Add load test execution",
+    "- Implement load test reporting",
+    "- Add load test analysis",
+    "- Validation: load tests pass"
+  ],
+  "expected_command": "git commit -m \"test(load): add load testing with JMeter\""
+}

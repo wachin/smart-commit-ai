@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API sandbox guide",
+  "original_text": "Added API sandbox guide. Documented sandbox environment. Added sandbox authentication. Implemented sandbox testing. Added sandbox limitations. Result: sandbox guide complete.",
+  "expected_subject": "docs(api): add API sandbox guide",
+  "expected_body_lines": [
+    "- Document sandbox environment",
+    "- Add sandbox authentication",
+    "- Implement sandbox testing",
+    "- Add sandbox limitations",
+    "- Validation: sandbox guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API sandbox guide\""
+}

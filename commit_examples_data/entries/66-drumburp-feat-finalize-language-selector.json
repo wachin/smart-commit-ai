@@ -1,0 +1,13 @@
+{
+  "title": "DrumBurp: Finalize language selector strings and update docs",
+  "original_text": "Let me check the current state first: Good. Now let me add the two new strings from the language menu to the .ts files and wrap them, then update the roadmap and do a final audit: Good — all three new strings are wrapped. Now regenerate the .ts files to pick them up, add their Spanish translations, and recompile:",
+  "expected_subject": "feat(i18n): finalize language selector strings and update docs",
+  "expected_body_lines": [
+    "- Wrap new UI labels for language selection with self.tr()",
+    "- Regenerate .ts files and add Spanish translations for new entries",
+    "- Compile updated .qm binaries to include latest changes",
+    "- Update ROADMAP_i18n.md to reflect completion of Phase 6",
+    "- Perform final audit to ensure all user-facing text is localized"
+  ],
+  "expected_command": "git commit -m \"feat(i18n): finalize language selector strings and update docs\""
+}

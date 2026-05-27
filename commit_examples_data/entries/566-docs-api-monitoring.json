@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API monitoring guide",
+  "original_text": "Added API monitoring guide. Documented monitoring strategies. Added alerting examples. Implemented health checks. Added performance metrics. Result: API monitoring guide complete.",
+  "expected_subject": "docs(api): add API monitoring guide",
+  "expected_body_lines": [
+    "- Document monitoring strategies",
+    "- Add alerting examples",
+    "- Implement health checks",
+    "- Add performance metrics",
+    "- Validation: API monitoring guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API monitoring guide\""
+}

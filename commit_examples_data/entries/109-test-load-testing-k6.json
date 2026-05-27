@@ -1,0 +1,14 @@
+{
+  "title": "Add load testing with k6",
+  "original_text": "Added load testing using k6. Created load test scenarios for API endpoints. Implemented stress testing for peak traffic. Implemented soak testing for long-running stability. Added spike testing for sudden traffic increases. Implemented load test reporting with metrics. Added CI integration for automated load tests. Result: load tests meet performance targets.",
+  "expected_subject": "test(perf): add load testing with k6",
+  "expected_body_lines": [
+    "- Create load test scenarios for API endpoints",
+    "- Implement stress testing for peak traffic",
+    "- Implement soak testing for long-running stability",
+    "- Add spike testing for sudden traffic increases",
+    "- Add load test reporting and CI integration",
+    "- Validation: load tests meet performance targets"
+  ],
+  "expected_command": "git commit -m \"test(perf): add load testing with k6\""
+}

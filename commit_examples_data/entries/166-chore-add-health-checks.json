@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add health checks",
+  "original_text": "Added health check endpoints for monitoring. Implemented database health check. Added external service health checks. Implemented cache health check. Added health check dashboard. Implemented health check alerting. Added health check documentation. Result: health checks operational.",
+  "expected_subject": "chore(monitoring): add health check endpoints",
+  "expected_body_lines": [
+    "- Implement database health check",
+    "- Add external service health checks",
+    "- Implement cache health check",
+    "- Add health check dashboard and alerting",
+    "- Add health check documentation",
+    "- Validation: health checks operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add health check endpoints\""
+}

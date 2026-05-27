@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add changelog",
+  "original_text": "Added comprehensive changelog. Documented all major releases and features. Added breaking changes and migration guides. Implemented version history with dates. Added contributor acknowledgments. Added upgrade instructions between versions. Result: changelog complete.",
+  "expected_subject": "docs(release): add comprehensive changelog",
+  "expected_body_lines": [
+    "- Document all major releases and features",
+    "- Add breaking changes and migration guides",
+    "- Implement version history with dates",
+    "- Add contributor acknowledgments",
+    "- Add upgrade instructions between versions",
+    "- Validation: changelog complete"
+  ],
+  "expected_command": "git commit -m \"docs(release): add comprehensive changelog\""
+}

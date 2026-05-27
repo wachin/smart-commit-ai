@@ -1,0 +1,12 @@
+{
+  "title": "DrumBurp: Translate dynamic LilyPond preview strings",
+  "original_text": "These three strings are set dynamically in Python code, not from the .ui file. Let me find them: All three strings are in QLilypondPreview.py. The class is a QGraphicsScene subclass — same issue as before, self.tr() may not work. Let me check: QGraphicsScene inherits from QObject so self.tr() works. But QCoreApplication is not imported. The safest approach is to add QCoreApplication to the import and use it directly — consistent with the fix we already applied: Now wrap the three strings: Now regenerate .ts, translate, compile: All three work. Run the program again: LANGUAGE=es ./run-drumburp.sh. The Lilypond tab should now show Sin vista previa, the button Vista previa, and after clicking it Actualizar. If you spot any other untranslated strings, just tell me the text and I'll track down the source and fix it the same way.",
+  "expected_subject": "fix(i18n): translate dynamic LilyPond preview strings",
+  "expected_body_lines": [
+    "- Wrap runtime-generated text in QLilypondPreview.py",
+    "- Use QCoreApplication.translate() for consistent localization",
+    "- Update .ts sources and compile Spanish translations",
+    "- Ensure 'No preview', 'Preview', and 'Update' are localized"
+  ],
+  "expected_command": "git commit -m \"fix(i18n): translate dynamic LilyPond preview strings\""
+}

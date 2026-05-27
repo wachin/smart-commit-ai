@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement chain of responsibility pattern",
+  "original_text": "Refactored to implement chain of responsibility pattern. Added handler chain for request processing. Implemented handler composition. Added chain termination logic. Improved request processing flexibility. Result: chain of responsibility pattern implemented.",
+  "expected_subject": "refactor(pattern): implement chain of responsibility pattern",
+  "expected_body_lines": [
+    "- Add handler chain for request processing",
+    "- Implement handler composition",
+    "- Add chain termination logic",
+    "- Improve request processing flexibility",
+    "- Validation: chain of responsibility pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement chain of responsibility pattern\""
+}

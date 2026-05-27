@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Dependabot for dependency updates",
+  "original_text": "Added Dependabot for automated dependency updates. Configured Dependabot for npm and pip dependencies. Added automated pull requests for security updates. Implemented dependency review process. Added dependency version pinning. Result: Dependabot operational.",
+  "expected_subject": "chore(deps): add Dependabot for dependency updates",
+  "expected_body_lines": [
+    "- Configure Dependabot for npm and pip dependencies",
+    "- Add automated pull requests for security updates",
+    "- Implement dependency review process",
+    "- Add dependency version pinning",
+    "- Validation: Dependabot operational"
+  ],
+  "expected_command": "git commit -m \"chore(deps): add Dependabot for dependency updates\""
+}

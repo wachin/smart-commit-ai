@@ -1,0 +1,14 @@
+{
+  "title": "Add architecture decision records",
+  "original_text": "Added architecture decision records (ADRs) for major technical decisions. Created ADR template for consistency. Documented decision to use microservices architecture. Documented decision to use event-driven architecture. Documented database technology choices. Documented API design decisions. Added ADR index and review process. Result: 12 ADRs documented.",
+  "expected_subject": "docs(arch): add architecture decision records",
+  "expected_body_lines": [
+    "- Create ADR template for consistency",
+    "- Document microservices architecture decision",
+    "- Document event-driven architecture decision",
+    "- Document database and API design decisions",
+    "- Add ADR index and review process",
+    "- Validation: 12 ADRs documented"
+  ],
+  "expected_command": "git commit -m \"docs(arch): add architecture decision records\""
+}

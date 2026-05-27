@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Split large class into smaller classes",
+  "original_text": "Refactored a large 2000-line class into smaller focused classes. Identified responsibilities and extracted separate classes. Created ValidationHelper, FormattingHelper, and DataProcessor classes. Main class now coordinates these helpers. This improves readability and maintainability. Added tests for all extracted classes. Result: 44 tests pass.",
+  "expected_subject": "refactor(cleanup): split large class into smaller focused classes",
+  "expected_body_lines": [
+    "- Extract ValidationHelper, FormattingHelper, DataProcessor",
+    "- Identify and separate class responsibilities",
+    "- Make main class coordinate helper classes",
+    "- Improve readability and maintainability",
+    "- Add tests for all extracted classes",
+    "- Validation: 44 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): split large class into smaller focused classes\""
+}

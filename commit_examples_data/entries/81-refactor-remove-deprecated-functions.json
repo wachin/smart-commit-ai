@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Remove deprecated utility functions",
+  "original_text": "Removed deprecated utility functions that were marked for removal in the previous release. Deleted old_format_date(), legacy_parse(), and deprecated_helper() from utils/. Updated all call sites to use the new replacement functions. Updated documentation to reflect the removal. Added deprecation warnings in the previous release, so this is a breaking change as planned. Result: 45 tests pass.",
+  "expected_subject": "refactor(utils): remove deprecated utility functions",
+  "expected_body_lines": [
+    "- Delete old_format_date(), legacy_parse(), deprecated_helper()",
+    "- Update call sites to use replacement functions",
+    "- Update documentation to reflect removal",
+    "- Execute planned breaking change from previous release",
+    "- Validation: 45 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(utils): remove deprecated utility functions\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API authorization guide",
+  "original_text": "Added API authorization guide. Documented permission models. Added role-based access. Implemented scope management. Added permission examples. Result: authorization guide complete.",
+  "expected_subject": "docs(api): add API authorization guide",
+  "expected_body_lines": [
+    "- Document permission models",
+    "- Add role-based access",
+    "- Implement scope management",
+    "- Add permission examples",
+    "- Validation: authorization guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API authorization guide\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "HTML Fixer: Drag-and-drop DropZoneWidget",
+  "original_text": "Changes made:\n\nAdded imports — QDragEnterEvent, QDropEvent, Qt, QHBoxLayout, and QFrame from the correct PyQt 6 modules. os was also added because it is now used directly in open_dropped_file.\n\nNew class: DropZoneWidget — A QFrame with a gray dotted border, light background, text \"Drag and drop files\", \"or\", and an Upload button with a teal gradient. It has setAcceptDrops(False) to prevent it from intercepting drop events.\n\nsetAcceptDrops(True) in HtmlFixerApp.__init__ so that the main window captures drops.\n\nLogic refactored — The processing logic was moved to _process_path(filepath). Both the Upload button and the drag and drop function call this same method without duplicating code.\n\nThe drag and drop methods dragEnterEvent, dragMoveEvent, dropEvent, and open_dropped_file have been added to HtmlFixerApp. The latter validates that the file exists and is .html/.htm, displaying QMessageBox.warning if it is invalid and QMessageBox.critical if an error occurs while processing it.",
+  "expected_subject": "feat(ui): add drag-and-drop support with DropZoneWidget",
+  "expected_body_lines": [
+    "- Implement DropZoneWidget with dashed border and gradient button",
+    "- Enable window-level drag-and-drop via setAcceptDrops(True)",
+    "- Refactor processing logic into shared _process_path() method",
+    "- Add validation for .html/.htm files with error feedback dialogs",
+    "- Import required PyQt6 modules for drag-and-drop support"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add drag-and-drop support with DropZoneWidget\""
+}

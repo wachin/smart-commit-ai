@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add automated canary deployment testing",
+  "original_text": "Added canary testing for deployments. Implemented canary deployment strategy. Added automated canary analysis. Implemented gradual rollout with monitoring. Added canary rollback automation. Result: canary testing operational.",
+  "expected_subject": "test(deployment): add canary testing",
+  "expected_body_lines": [
+    "- Implement canary deployment strategy",
+    "- Add automated canary analysis",
+    "- Implement gradual rollout with monitoring",
+    "- Add canary rollback automation",
+    "- Validation: canary testing operational"
+  ],
+  "expected_command": "git commit -m \"test(deployment): add canary testing\""
+}

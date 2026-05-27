@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add STOMP messaging",
+  "original_text": "Added STOMP messaging support. Implemented STOMP broker connection. Added STOMP frame handling. Implemented STOMP subscriptions. Added STOMP heartbeats. Result: STOMP messaging operational.",
+  "expected_subject": "feat(messaging): add STOMP messaging",
+  "expected_body_lines": [
+    "- Implement STOMP broker connection",
+    "- Add STOMP frame handling",
+    "- Implement STOMP subscriptions",
+    "- Add STOMP heartbeats",
+    "- Validation: STOMP messaging operational"
+  ],
+  "expected_command": "git commit -m \"feat(messaging): add STOMP messaging\""
+}

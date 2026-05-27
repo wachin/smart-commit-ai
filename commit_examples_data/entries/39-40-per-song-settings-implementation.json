@@ -1,0 +1,15 @@
+{
+  "title": "40. Per-Song Settings Implementation",
+  "original_text": "We pushed a bigger piece through this time: the first real per-song settings implementation is now in the PyQt6 port. In [app.py]..., I added: `File -> Song Settings -> Load`, `File -> Song Settings -> Save`, a new `General` preference: `Automatically load and save song settings`... Song settings are now stored in `$HOME/.dmidiplayer` using the loaded song filename plus `.cfg`, and they currently save/load: lyrics/text encoding, MIDI file path, transpose, tempo, global volume, per-channel volume, editable channel label, program, solo, mute, lock... In [settings.py]..., the new persisted preference is `general/auto_song_settings`... Tests were expanded in: [test_settings.py], [test_app_playlist.py]... Verification is clean: ... 180 tests OK...",
+  "expected_subject": "feat(app): implement per-song settings persistence",
+  "expected_body_lines": [
+    "- Add File > Song Settings Load/Save actions and auto-load pref",
+    "- Persist channel state (vol, label, program, mute/solo/lock) per song",
+    "- Save lyrics encoding, transpose, tempo, and volume in .cfg files",
+    "- Unify channel label state across Channels window instances",
+    "- Update user guides (EN/ES) and Roadmap.md with new feature docs",
+    "- Add tests for cfg I/O, auto-loading, and preference persistence",
+    "- Validation: compileall OK, 180 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): implement per-song settings persistence\" \\\n  -m \"- Add File > Song Settings Load/Save actions and auto-load pref\" \\\n  -m \"- Persist channel state (vol, label, program, mute/solo/lock) per song\" \\\n  -m \"- Save lyrics encoding, transpose, tempo, and volume in .cfg files\" \\\n  -m \"- Unify channel label state across Channels window instances\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new feature docs\" \\\n  -m \"- Add tests for cfg I/O, auto-loading, and preference persistence\" \\\n  -m \"- Validation: compileall OK, 180 tests pass, offscreen verified\""
+}

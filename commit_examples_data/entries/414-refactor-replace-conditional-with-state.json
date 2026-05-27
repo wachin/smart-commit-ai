@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace conditional with state pattern",
+  "original_text": "Refactored to replace conditional with state pattern. Identified state-based conditionals. Added state classes. Implemented state transitions. Removed conditional logic. Result: conditional replaced with state pattern.",
+  "expected_subject": "refactor(pattern): replace conditional with state pattern",
+  "expected_body_lines": [
+    "- Identify state-based conditionals",
+    "- Add state classes",
+    "- Implement state transitions",
+    "- Remove conditional logic",
+    "- Validation: conditional replaced with state pattern"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): replace conditional with state pattern\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Smart Commit: Dataset validation for training entries",
+  "original_text": "Continué con calidad del dataset de entrenamiento. Añadí validación liviana de entries en ml/dataset_loader.py. Ahora se puede verificar que cada JSON en commit_examples_data/entries/ tenga: title, original_text, expected_subject, expected_body_lines, un tipo Conventional Commit soportado en expected_subject, y líneas de body no vacías. También añadí el test en tests/test_ml_training.py, así que si un ejemplo futuro viene incompleto o con un tipo no soportado, la suite lo detecta. Actualicé README.md, ml/README.md y Roadmap.md para documentar esta validación. Verificación pasada: QT_QPA_PLATFORM=offscreen python3 -m unittest discover -s tests -v. Resultado: 65 tests, 65 passed. git diff --check pasó y __pycache__ sigue limpio.",
+  "expected_subject": "feat(ml): add dataset validation for training entries",
+  "expected_body_lines": [
+    "- Verify required fields (title, text, subject, body) in JSON entries",
+    "- Validate Conventional Commit types and non-empty body lines",
+    "- Add test_ml_training.py check to catch incomplete examples early",
+    "- Update READMEs and Roadmap.md to document data quality rules",
+    "- Validation: all 65 tests pass, git diff --check clean"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add dataset validation for training entries\""
+}

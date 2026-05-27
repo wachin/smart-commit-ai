@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Introduce repository pattern",
+  "original_text": "Refactored data access layer to use repository pattern. Created UserRepository, OrderRepository, and ProductRepository interfaces. Implemented repository classes with CRUD operations. Abstraction allows easy switching between data sources. Added unit tests for repositories. Updated services to use repositories. Result: 47 tests pass.",
+  "expected_subject": "refactor(data): introduce repository pattern for data access",
+  "expected_body_lines": [
+    "- Create repository interfaces and implementations",
+    "- Implement CRUD operations in repository classes",
+    "- Abstract data source for easy switching",
+    "- Add unit tests for repositories",
+    "- Update services to use repository pattern",
+    "- Validation: 47 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(data): introduce repository pattern for data access\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API webhooks documentation",
+  "original_text": "Added API webhooks documentation. Documented webhook events. Added webhook signature verification. Implemented webhook payload examples. Added webhook retry policy. Result: webhooks documentation complete.",
+  "expected_subject": "docs(api): add API webhooks documentation",
+  "expected_body_lines": [
+    "- Document webhook events",
+    "- Add webhook signature verification",
+    "- Implement webhook payload examples",
+    "- Add webhook retry policy",
+    "- Validation: webhooks documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API webhooks documentation\""
+}

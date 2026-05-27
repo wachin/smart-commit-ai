@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Observer pattern to event system",
+  "original_text": "Refactored to implement Observer pattern. Implemented subject interface. Added observer interface. Implemented concrete observers. Added event notification. Result: Observer pattern implemented.",
+  "expected_subject": "refactor(pattern): implement Observer pattern",
+  "expected_body_lines": [
+    "- Implement subject interface",
+    "- Add observer interface",
+    "- Implement concrete observers",
+    "- Add event notification",
+    "- Validation: Observer pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement Observer pattern\""
+}

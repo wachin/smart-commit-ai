@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API changelog",
+  "original_text": "Added API changelog documentation. Documented API version history. Added breaking changes documentation. Implemented API deprecation notices. Added API migration guides. Result: API changelog complete.",
+  "expected_subject": "docs(api): add API changelog",
+  "expected_body_lines": [
+    "- Document API version history",
+    "- Add breaking changes documentation",
+    "- Implement API deprecation notices",
+    "- Add API migration guides",
+    "- Validation: API changelog complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API changelog\""
+}

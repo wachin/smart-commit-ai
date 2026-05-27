@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API pagination documentation",
+  "original_text": "Added API pagination documentation. Documented pagination parameters. Added pagination examples. Implemented cursor-based pagination. Added offset-based pagination. Result: pagination documentation complete.",
+  "expected_subject": "docs(api): add API pagination documentation",
+  "expected_body_lines": [
+    "- Document pagination parameters",
+    "- Add pagination examples",
+    "- Implement cursor-based pagination",
+    "- Add offset-based pagination",
+    "- Validation: pagination documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API pagination documentation\""
+}

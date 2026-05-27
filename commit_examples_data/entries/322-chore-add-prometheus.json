@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Prometheus metrics",
+  "original_text": "Added Prometheus metrics collection. Implemented custom metrics for application. Added metrics exporters for services. Implemented Prometheus service discovery. Added metrics aggregation. Result: Prometheus metrics operational.",
+  "expected_subject": "chore(monitoring): add Prometheus metrics",
+  "expected_body_lines": [
+    "- Implement custom metrics for application",
+    "- Add metrics exporters for services",
+    "- Implement Prometheus service discovery",
+    "- Add metrics aggregation",
+    "- Validation: Prometheus metrics operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Prometheus metrics\""
+}

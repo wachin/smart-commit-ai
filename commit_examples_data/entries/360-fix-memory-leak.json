@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Memory leak in caching",
+  "original_text": "Fixed memory leak in caching layer. Implemented cache eviction policy. Added memory monitoring for cache. Implemented cache size limits. Added cache leak detection. Result: memory leak fixed.",
+  "expected_subject": "fix(performance): fix memory leak in caching",
+  "expected_body_lines": [
+    "- Implement cache eviction policy",
+    "- Add memory monitoring for cache",
+    "- Implement cache size limits",
+    "- Add cache leak detection",
+    "- Validation: memory leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(performance): fix memory leak in caching\""
+}

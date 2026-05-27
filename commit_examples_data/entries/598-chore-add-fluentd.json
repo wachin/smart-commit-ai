@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Fluentd log collector",
+  "original_text": "Added Fluentd log collector. Implemented log parsing. Added log forwarding. Implemented log filtering. Added log buffering. Result: Fluentd log collector operational.",
+  "expected_subject": "chore(monitoring): add Fluentd log collector",
+  "expected_body_lines": [
+    "- Implement log parsing",
+    "- Add log forwarding",
+    "- Implement log filtering",
+    "- Add log buffering",
+    "- Validation: Fluentd log collector operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Fluentd log collector\""
+}

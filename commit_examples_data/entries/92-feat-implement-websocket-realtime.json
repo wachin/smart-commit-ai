@@ -1,0 +1,14 @@
+{
+  "title": "Implement WebSocket for real-time updates",
+  "original_text": "Implemented WebSocket support for real-time updates. Added WebSocket server using Socket.IO. Created real-time notification system for user events. Implemented live chat functionality. Added presence tracking to show online users. Implemented reconnection logic for network interruptions. Added message queuing for offline delivery. Updated frontend to handle WebSocket events. Added tests for WebSocket connections. Result: 42 tests pass.",
+  "expected_subject": "feat(realtime): implement WebSocket for real-time updates",
+  "expected_body_lines": [
+    "- Add WebSocket server using Socket.IO",
+    "- Create real-time notification system",
+    "- Implement live chat functionality",
+    "- Add presence tracking for online users",
+    "- Implement reconnection logic and message queuing",
+    "- Validation: 42 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(realtime): implement WebSocket for real-time updates\""
+}

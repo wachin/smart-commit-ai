@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Introduce dependency injection",
+  "original_text": "Refactored to use dependency injection. Created DI container for managing dependencies. Injected dependencies through constructors. Implemented service locator pattern. This makes testing easier and reduces coupling. Added DI configuration file. Updated all classes to use DI. Added tests for DI setup. Result: 53 tests pass.",
+  "expected_subject": "refactor(arch): introduce dependency injection",
+  "expected_body_lines": [
+    "- Create DI container for managing dependencies",
+    "- Inject dependencies through constructors",
+    "- Implement service locator pattern",
+    "- Improve testability and reduce coupling",
+    "- Add DI configuration and tests",
+    "- Validation: 53 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): introduce dependency injection\""
+}

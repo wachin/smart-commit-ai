@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add MongoDB database",
+  "original_text": "Added MongoDB database configuration. Implemented MongoDB schema design. Added MongoDB indexing strategy. Implemented MongoDB aggregation pipelines. Added MongoDB backup and restore. Result: MongoDB database operational.",
+  "expected_subject": "chore(db): add MongoDB database",
+  "expected_body_lines": [
+    "- Implement MongoDB schema design",
+    "- Add MongoDB indexing strategy",
+    "- Implement MongoDB aggregation pipelines",
+    "- Add MongoDB backup and restore",
+    "- Validation: MongoDB database operational"
+  ],
+  "expected_command": "git commit -m \"chore(db): add MongoDB database\""
+}

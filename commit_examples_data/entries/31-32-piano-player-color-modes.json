@@ -1,0 +1,15 @@
+{
+  "title": "32. Piano Player: Color Modes",
+  "original_text": "We kept the Pianola window moving and finished the color-control item. In [widgets.py]..., `PianoKeyboard` now supports configurable active-color palettes... In [app.py]..., the `Piano Player` dialog now has a `Colors` selector with: `Blue`, `By channel`... I added coverage in: [test_widgets.py], [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 166 tests OK...",
+  "expected_subject": "feat(ui): add per-channel color modes to Piano Player",
+  "expected_body_lines": [
+    "- Support configurable active-color palettes in PianoKeyboard widget",
+    "- Add Colors selector with Blue and By channel options",
+    "- Assign color families based on primary MIDI channel for distinction",
+    "- Maintain velocity tinting compatibility with new palettes",
+    "- Update user guides (EN/ES) and Roadmap.md with new color docs",
+    "- Add tests for palette overrides and channel-based coloring",
+    "- Validation: compileall OK, 166 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add per-channel color modes to Piano Player\" \\\n  -m \"- Support configurable active-color palettes in PianoKeyboard widget\" \\\n  -m \"- Add Colors selector with Blue and By channel options\" \\\n  -m \"- Assign color families based on primary MIDI channel for distinction\" \\\n  -m \"- Maintain velocity tinting compatibility with new palettes\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new color docs\" \\\n  -m \"- Add tests for palette overrides and channel-based coloring\" \\\n  -m \"- Validation: compileall OK, 166 tests pass\""
+}

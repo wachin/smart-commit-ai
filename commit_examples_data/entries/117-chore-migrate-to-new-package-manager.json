@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Migrate to new package manager",
+  "original_text": "Migrated from npm to pnpm for faster installs and better disk space usage. Updated CI/CD pipelines to use pnpm. Updated Docker images to use pnpm. Migrated lock files from package-lock.json to pnpm-lock.yaml. Updated documentation with pnpm commands. Added pnpm scripts for common tasks. Result: build and install times reduced by 40%.",
+  "expected_subject": "chore(deps): migrate from npm to pnpm",
+  "expected_body_lines": [
+    "- Update CI/CD pipelines to use pnpm",
+    "- Update Docker images for pnpm",
+    "- Migrate lock files to pnpm-lock.yaml",
+    "- Update documentation with pnpm commands",
+    "- Add pnpm scripts for common tasks",
+    "- Validation: build/install times reduced by 40%"
+  ],
+  "expected_command": "git commit -m \"chore(deps): migrate from npm to pnpm\""
+}

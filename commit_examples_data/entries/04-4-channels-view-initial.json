@@ -1,0 +1,16 @@
+{
+  "title": "4. Channels View (Initial)",
+  "original_text": "We moved the first real Channels view into the PyQt6 app. In [app.py]..., I added a `View -> Channels` action and a new non-modal `ChannelsDialog` that shows one row per used MIDI channel with: channel number, editable label, live level meter... In [sequence.py]..., I added `used_channels()` so the UI can ask the sequence model which MIDI channels are actually present... I also updated the user guide files... Tests in [test_app_playlist.py]... now cover: `Channels` action existence, opening the Channels dialog, listing used channels... And [Roadmap.md]... is now updated to mark these done... Verification is clean: ... 114 tests OK...",
+  "expected_subject": "feat(ui): add Channels view with live level meters",
+  "expected_body_lines": [
+    "- Add View > Channels action and non-modal ChannelsDialog",
+    "- Display used channels with editable labels and activity meters",
+    "- Sync meter updates with playback events; clear on stop/seek",
+    "- Implement used_channels() in sequence.py for UI queries",
+    "- Update user guides (EN/ES) to document the new Channels window",
+    "- Add tests for dialog lifecycle, listing, and meter updates",
+    "- Update Roadmap.md to mark Channels view items complete",
+    "- Validation: compileall OK, 114 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add Channels view with live level meters\" \\\n  -m \"- Add View > Channels action and non-modal ChannelsDialog\" \\\n  -m \"- Display used channels with editable labels and activity meters\" \\\n  -m \"- Sync meter updates with playback events; clear on stop/seek\" \\\n  -m \"- Implement used_channels() in sequence.py for UI queries\" \\\n  -m \"- Update user guides (EN/ES) to document the new Channels window\" \\\n  -m \"- Add tests for dialog lifecycle, listing, and meter updates\" \\\n  -m \"- Update Roadmap.md to mark Channels view items complete\" \\\n  -m \"- Validation: compileall OK, 114 tests pass, offscreen verified\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add OWASP ZAP security testing",
+  "original_text": "Added security testing with OWASP ZAP. Implemented security vulnerability scanning. Added security dependency scanning. Implemented security compliance checks. Added security reporting. Result: security tests pass.",
+  "expected_subject": "test(security): add security testing",
+  "expected_body_lines": [
+    "- Implement security vulnerability scanning",
+    "- Add security dependency scanning",
+    "- Implement security compliance checks",
+    "- Add security reporting",
+    "- Validation: security tests pass"
+  ],
+  "expected_command": "git commit -m \"test(security): add security testing\""
+}

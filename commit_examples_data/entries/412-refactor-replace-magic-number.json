@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace magic numbers with constants",
+  "original_text": "Refactored to replace magic numbers with constants. Identified magic numbers in code. Added named constants for values. Replaced magic numbers with constants. Improved code maintainability. Result: magic numbers replaced.",
+  "expected_subject": "refactor(cleanup): replace magic numbers with constants",
+  "expected_body_lines": [
+    "- Identify magic numbers in code",
+    "- Add named constants for values",
+    "- Replace magic numbers with constants",
+    "- Improve code maintainability",
+    "- Validation: magic numbers replaced"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): replace magic numbers with constants\""
+}

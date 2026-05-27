@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add AWS S3 integration",
+  "original_text": "Added AWS S3 integration for storage. Implemented S3 bucket creation and management. Added S3 file upload and download. Implemented S3 lifecycle policies. Added S3 access control. Result: AWS S3 integration operational.",
+  "expected_subject": "chore(storage): add AWS S3 integration",
+  "expected_body_lines": [
+    "- Implement S3 bucket creation and management",
+    "- Add S3 file upload and download",
+    "- Implement S3 lifecycle policies",
+    "- Add S3 access control",
+    "- Validation: AWS S3 integration operational"
+  ],
+  "expected_command": "git commit -m \"chore(storage): add AWS S3 integration\""
+}

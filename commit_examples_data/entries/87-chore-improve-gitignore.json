@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Improve .gitignore for cleaner repository",
+  "original_text": "Improved the .gitignore file to exclude more unnecessary files from version control. Added patterns for IDE files (.vscode/, .idea/), OS files (.DS_Store, Thumbs.db), build artifacts (dist/, build/), and temporary files (*.tmp, *.swp). Also added patterns for Python bytecode, node_modules, and log files. This keeps the repository cleaner and reduces noise in git status. Result: git status shows only tracked files.",
+  "expected_subject": "chore(repo): improve .gitignore for cleaner repository",
+  "expected_body_lines": [
+    "- Add IDE file patterns (.vscode/, .idea/)",
+    "- Add OS file patterns (.DS_Store, Thumbs.db)",
+    "- Exclude build artifacts and temporary files",
+    "- Add Python, Node, and log file patterns",
+    "- Validation: git status shows only tracked files"
+  ],
+  "expected_command": "git commit -m \"chore(repo): improve .gitignore for cleaner repository\""
+}

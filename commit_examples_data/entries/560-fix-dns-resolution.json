@@ -1,0 +1,13 @@
+{
+  "title": "Fix: DNS resolution failure",
+  "original_text": "Fixed DNS resolution failure. Implemented DNS fallback. Added DNS caching. Implemented DNS retry logic. Added DNS timeout handling. Result: DNS resolution fixed.",
+  "expected_subject": "fix(network): fix DNS resolution failure",
+  "expected_body_lines": [
+    "- Implement DNS fallback",
+    "- Add DNS caching",
+    "- Implement DNS retry logic",
+    "- Add DNS timeout handling",
+    "- Validation: DNS resolution fixed"
+  ],
+  "expected_command": "git commit -m \"fix(network): fix DNS resolution failure\""
+}

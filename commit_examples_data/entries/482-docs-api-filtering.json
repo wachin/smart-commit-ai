@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API filtering documentation",
+  "original_text": "Added API filtering documentation. Documented filter parameters. Added filter examples. Implemented complex filtering. Added filter operators. Result: filtering documentation complete.",
+  "expected_subject": "docs(api): add API filtering documentation",
+  "expected_body_lines": [
+    "- Document filter parameters",
+    "- Add filter examples",
+    "- Implement complex filtering",
+    "- Add filter operators",
+    "- Validation: filtering documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API filtering documentation\""
+}

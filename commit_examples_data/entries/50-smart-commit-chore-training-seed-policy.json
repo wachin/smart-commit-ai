@@ -1,0 +1,12 @@
+{
+  "title": "Smart Commit: Training seed policy",
+  "original_text": "Updated the local ML training maintenance workflow. train_model.py now records whether built-in seed examples were included, supports --no-seed for dataset-only experiments, and the documentation explains when to regenerate commit_model.pkl, vectorizer.pkl, and model_metadata.json.",
+  "expected_subject": "chore(ml): document training seed policy",
+  "expected_body_lines": [
+    "- Record whether seed examples were included in metadata",
+    "- Add --no-seed for dataset-only training experiments",
+    "- Document when to regenerate model artifacts",
+    "- Keep built-in seed examples as temporary support data"
+  ],
+  "expected_command": "git commit -m \"chore(ml): document training seed policy\""
+}

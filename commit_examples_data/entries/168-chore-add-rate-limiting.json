@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add rate limiting",
+  "original_text": "Added rate limiting to API endpoints. Implemented token bucket algorithm. Added per-user rate limits. Added per-IP rate limits. Implemented rate limit headers. Added rate limit exceeded responses. Added rate limit monitoring. Result: rate limiting operational.",
+  "expected_subject": "chore(api): add rate limiting to API endpoints",
+  "expected_body_lines": [
+    "- Implement token bucket algorithm",
+    "- Add per-user and per-IP rate limits",
+    "- Add rate limit headers",
+    "- Implement rate limit exceeded responses",
+    "- Add rate limit monitoring",
+    "- Validation: rate limiting operational"
+  ],
+  "expected_command": "git commit -m \"chore(api): add rate limiting to API endpoints\""
+}
