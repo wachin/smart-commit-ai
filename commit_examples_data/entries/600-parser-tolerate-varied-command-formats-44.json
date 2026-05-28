@@ -1,0 +1,11 @@
+{
+  "title": "Fix: Parser - Tolerate Varied Command Formats` (44",
+  "original_text": "I made the parser much more tolerant, which should fix that Gemini failure.\n\n  It now accepts:\n\n  - fenced or unfenced git commit commands\n  - single quotes: -m '...'\n  - smart quotes: -m “...”\n  - multiline shell continuations with \\\n  - extra prose before the command\n  - escaped shell characters like \\$\n\n  I also changed the error message so if Gemini still returns something unusable, the popup includes\n  a short raw response excerpt. That will show what Gemini actually sent back.\n\n  Changed:\n\n  - smart_commit_ai/commit_message.py:160\n  - smart_commit_ai/gemini_client.py:148\n  - tests/test_smart_commit.py:80\n\n  Verification passed:\n\n  - 14 tests OK\n  - compileall passed\n\n  Please try Gemini again. If it still fails, send me the new popup’s “Raw response excerpt”; that\n  will be enough to handle the exact remaining format.",
+  "expected_subject": "fix(parser): tolerate varied command formats` (44",
+  "expected_body_lines": [],
+  "expected_command": "git commit -m \"fix(parser): tolerate varied command formats\\` (44\"",
+  "source": "gemini",
+  "model": "gemini-3.5-flash",
+  "created_at": "2026-05-28T05:06:46.439612+00:00",
+  "content_hash": "cfc592212e19bedcb91557784f635674a91b6183d49ea676d4f3de9075bba6b5"
+}

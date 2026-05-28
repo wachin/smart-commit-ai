@@ -45,6 +45,8 @@ def detect_type(text: str) -> str:
     lower = text.lower()
     if is_api_key_persistence_summary(lower):
         return "feat"
+    if is_prompt_example_filter_summary(lower):
+        return "fix"
     if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
         return "feat"
 
@@ -131,6 +133,8 @@ def detect_scope(text: str, commit_type: str) -> str:
     lower = text.lower()
     if is_api_key_persistence_summary(lower):
         return "config"
+    if is_prompt_example_filter_summary(lower):
+        return "prompt"
 
     scopes = [
         (
@@ -156,6 +160,7 @@ def detect_scope(text: str, commit_type: str) -> str:
         ("ci", ["ci", "pipeline", "github actions", "gitlab ci"]),
         ("test", ["test", "coverage", "unittest", "pytest"]),
         ("docs", ["readme", "documentation", "docs", "roadmap", "guide"]),
+        ("prompt", ["prompt", "examples", "few-shot", "quality", "gemini"]),
         ("db", ["database", "postgres", "mysql", "sqlite", "redis", "mongodb"]),
         (
             "config",
@@ -193,6 +198,8 @@ def build_subject_phrase(text: str, commit_type: str, scope: str) -> str:
     lower = text.lower()
     if is_api_key_persistence_summary(lower):
         return "persist Gemini API key"
+    if is_prompt_example_filter_summary(lower):
+        return "skip low-quality prompt examples"
     if "cakewalk" in lower and "wrk" in lower:
         return "detect Cakewalk WRK files"
     if "wrk" in lower and ("parser" in lower or "loader" in lower):
@@ -287,6 +294,8 @@ def clean_subject_object(value: str) -> str:
 def build_body_lines(text: str, commit_type: str, scope: str) -> list[str]:
     if is_api_key_persistence_summary(text.lower()):
         return api_key_persistence_body_lines(text)
+    if is_prompt_example_filter_summary(text.lower()):
+        return prompt_example_filter_body_lines(text)
 
     if "cakewalk" in text.lower() and "wrk" in text.lower():
         return wrk_body_lines(text)
@@ -331,6 +340,27 @@ def is_api_key_persistence_summary(lower: str) -> bool:
         and ("api key" in lower or "gemini_api_key" in lower)
         and (".env.local" in lower or "saved locally" in lower or "save" in lower)
     )
+
+
+def is_prompt_example_filter_summary(lower: str) -> bool:
+    return (
+        ("low-quality" in lower or "low quality" in lower)
+        and ("example" in lower or "examples" in lower or "json" in lower)
+        and ("prompt" in lower or "few-shot" in lower or "gemini" in lower)
+    )
+
+
+def prompt_example_filter_body_lines(text: str) -> list[str]:
+    lines = [
+        "- Filter low-quality examples out of Gemini prompt context",
+        "- Prevent weak saved JSON entries from shaping future responses",
+        "- Keep bodyless or vague examples out of few-shot data",
+    ]
+    referenced_entries = re.findall(r"\b\d{3,}\b", text)
+    if referenced_entries:
+        entries = ", ".join(dict.fromkeys(referenced_entries))
+        lines.append(f"- Exclude referenced weak entries such as {entries}")
+    return unique_limited_body(lines)
 
 
 def api_key_persistence_body_lines(text: str) -> list[str]:

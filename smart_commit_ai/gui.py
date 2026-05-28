@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import threading
 import tkinter as tk
-from tkinter import messagebox, ttk
+from tkinter import ttk
 
 from .config import LOCAL_ENV_PATH, load_api_key, save_api_key
 from .service import SmartCommitService
@@ -122,7 +122,7 @@ class SmartCommitApp(tk.Tk):
                 save_api_key(api_key)
                 key_saved = True
             except OSError as exc:
-                messagebox.showerror("Smart Commit AI", f"Could not save API key to {LOCAL_ENV_PATH}: {exc}")
+                self.show_message("Smart Commit AI", f"Could not save API key to {LOCAL_ENV_PATH}: {exc}")
                 return
 
         self.set_status("Generating commit message...")
@@ -178,7 +178,7 @@ class SmartCommitApp(tk.Tk):
     def _generation_failed(self, message: str) -> None:
         self.create_button.configure(state=tk.NORMAL)
         self.set_status("Generation failed")
-        messagebox.showerror("Smart Commit AI", message)
+        self.show_message("Smart Commit AI", message)
 
     def copy_output(self) -> None:
         command = self.output_text.get("1.0", tk.END).strip()
@@ -193,25 +193,76 @@ class SmartCommitApp(tk.Tk):
         original = self.input_text.get("1.0", tk.END).strip()
         output = self.output_text.get("1.0", tk.END).strip()
         if not original or not output:
-            messagebox.showwarning("Smart Commit AI", "Input and output are required.")
+            self.show_message("Smart Commit AI", "Input and output are required.")
             return
         if self.last_generation_source != "gemini":
-            messagebox.showwarning("Smart Commit AI", "Only Gemini-generated commits can be saved.")
+            self.show_message("Smart Commit AI", "Only Gemini-generated commits can be saved.")
             return
         if output != self.last_generated_command or original != self.last_original_text:
-            messagebox.showwarning("Smart Commit AI", "Only the unchanged Gemini-generated result can be saved.")
+            self.show_message("Smart Commit AI", "Only the unchanged Gemini-generated result can be saved.")
             return
         from .commit_message import parse_git_commit_command
 
         message = parse_git_commit_command(output)
         if message is None:
-            messagebox.showerror("Smart Commit AI", "Output must be a git commit command.")
+            self.show_message("Smart Commit AI", "Output must be a git commit command.")
             return
         path = self.service.store.save(original, message, source="gemini", model=self.last_generation_model)
         self.set_status(f"Saved {path}")
 
     def set_status(self, value: str) -> None:
         self.status.set(value)
+
+    def show_message(self, title: str, message: str) -> None:
+        dialog = SelectableMessageDialog(self, title=title, message=message)
+        self.wait_window(dialog)
+
+
+class SelectableMessageDialog(tk.Toplevel):
+    def __init__(self, parent: tk.Tk, title: str, message: str) -> None:
+        super().__init__(parent)
+        self.title(title)
+        self.transient(parent)
+        self.resizable(True, True)
+        self.geometry("760x320")
+
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
+
+        container = ttk.Frame(self, padding=12)
+        container.grid(row=0, column=0, sticky="nsew")
+        container.columnconfigure(0, weight=1)
+        container.rowconfigure(1, weight=1)
+
+        ttk.Label(container, text=title).grid(row=0, column=0, sticky="w", pady=(0, 8))
+
+        text_frame = ttk.Frame(container)
+        text_frame.grid(row=1, column=0, sticky="nsew")
+        text_frame.columnconfigure(0, weight=1)
+        text_frame.rowconfigure(0, weight=1)
+
+        text = tk.Text(text_frame, wrap="word", height=10)
+        text.grid(row=0, column=0, sticky="nsew")
+        scrollbar = ttk.Scrollbar(text_frame, command=text.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        text.configure(yscrollcommand=scrollbar.set)
+        text.insert("1.0", message)
+        text.configure(state="disabled")
+
+        buttons = ttk.Frame(container)
+        buttons.grid(row=2, column=0, sticky="e", pady=(10, 0))
+
+        def copy_message() -> None:
+            parent.clipboard_clear()
+            parent.clipboard_append(message)
+            parent.update_idletasks()
+
+        ttk.Button(buttons, text="Copy", command=copy_message).pack(side=tk.LEFT, padx=(0, 8))
+        ttk.Button(buttons, text="Close", command=self.destroy).pack(side=tk.LEFT)
+
+        self.bind("<Escape>", lambda _event: self.destroy())
+        self.protocol("WM_DELETE_WINDOW", self.destroy)
+        self.grab_set()
 
 
 def main() -> None:

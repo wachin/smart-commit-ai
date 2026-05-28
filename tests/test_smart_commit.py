@@ -12,7 +12,9 @@ from smart_commit_ai.commit_message import (
 )
 from smart_commit_ai.examples import ExampleStore
 from smart_commit_ai.gemini_client import GeminiError
+from smart_commit_ai.gemini_client import GeminiCommitGenerator
 from smart_commit_ai.gemini_client import parse_model_response
+from smart_commit_ai.gemini_client import quality_issues
 from smart_commit_ai.local_generator import LocalCommitGenerator
 from smart_commit_ai.service import SmartCommitService
 
@@ -61,6 +63,9 @@ I verified:
 """
 
 
+SKIP_LOW_QUALITY_SUMMARY = "Skip low-quality examples from prompt data, e.g., 599 and 600 JSONS"
+
+
 class CommitFormattingTests(unittest.TestCase):
     def test_format_and_parse_command(self):
         command = format_git_commit_command(
@@ -75,6 +80,33 @@ class CommitFormattingTests(unittest.TestCase):
         self.assertIsNotNone(parsed)
         self.assertEqual(parsed.subject, 'feat(parser): detect "WRK" files')
         self.assertEqual(parsed.body_lines[0], "- Recognize $WRK input")
+
+    def test_parse_single_quoted_commit_command(self):
+        command = """Here is the commit:
+```bash
+git commit -m 'feat(config): persist Gemini API key' \\
+  -m '- Save GEMINI_API_KEY to ignored .env.local' \\
+  -m '- Validation: 4 tests pass, compileall OK'
+```
+"""
+
+        parsed = parse_git_commit_command(command)
+
+        self.assertIsNotNone(parsed)
+        self.assertEqual(parsed.subject, "feat(config): persist Gemini API key")
+        self.assertEqual(parsed.body_lines[-1], "- Validation: 4 tests pass, compileall OK")
+
+    def test_parse_smart_quoted_commit_command(self):
+        command = """git commit -m “feat(save): restrict saved examples” \\
+  -m “- Save only Gemini-generated commit messages” \\
+  -m “- Validation: 10 tests pass, compileall OK”
+"""
+
+        parsed = parse_git_commit_command(command)
+
+        self.assertIsNotNone(parsed)
+        self.assertEqual(parsed.subject, "feat(save): restrict saved examples")
+        self.assertEqual(parsed.body_lines[0], "- Save only Gemini-generated commit messages")
 
 
 class LocalGeneratorTests(unittest.TestCase):
@@ -100,8 +132,74 @@ class LocalGeneratorTests(unittest.TestCase):
         self.assertTrue(any("compileall OK" in line for line in message.body_lines))
         self.assertTrue(all(len(line) <= MAX_BODY_LINE_LENGTH for line in message.body_lines))
 
+    def test_generates_prompt_example_filter_commit_from_terse_summary(self):
+        message = LocalCommitGenerator().generate(SKIP_LOW_QUALITY_SUMMARY)
+
+        self.assertEqual(message.subject, "fix(prompt): skip low-quality prompt examples")
+        self.assertIn("- Filter low-quality examples out of Gemini prompt context", message.body_lines)
+        self.assertIn("- Prevent weak saved JSON entries from shaping future responses", message.body_lines)
+        self.assertIn("- Keep bodyless or vague examples out of few-shot data", message.body_lines)
+        self.assertIn("- Exclude referenced weak entries such as 599, 600", message.body_lines)
+        self.assertTrue(all(len(line) <= MAX_BODY_LINE_LENGTH for line in message.body_lines))
+
 
 class GeminiParserTests(unittest.TestCase):
+    def test_gemini_prompt_requests_raw_bash_commit_command(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = ExampleStore(Path(directory))
+            store.save(
+                "Added API key persistence and tests.",
+                CommitMessage(
+                    subject="feat(config): persist Gemini API key",
+                    body_lines=[
+                        "- Save GEMINI_API_KEY to ignored .env.local",
+                        "- Load saved Gemini key when the app window opens",
+                        "- Add .env.local ignore coverage to prevent key commits",
+                        "- Validation: 4 tests pass, compileall OK",
+                    ],
+                    source="gemini",
+                    model="gemini-test",
+                ),
+                source="gemini",
+                model="gemini-test",
+            )
+
+            prompt = GeminiCommitGenerator(store)._build_prompt(
+                API_KEY_SUMMARY,
+                LocalCommitGenerator().generate(API_KEY_SUMMARY),
+            )
+
+        self.assertIn("Provide ONLY the raw git commit command", prompt)
+        self.assertIn("Do not return JSON", prompt)
+        self.assertIn("Minimum quality requirements", prompt)
+        self.assertIn("Local quality floor", prompt)
+        self.assertIn("```bash", prompt)
+        self.assertIn('git commit -m "feat(config): persist Gemini API key"', prompt)
+        self.assertIn("New development summary:", prompt)
+
+    def test_gemini_prompt_skips_low_quality_examples(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = ExampleStore(Path(directory))
+            store.save(
+                "Implemented save policy with tests.",
+                CommitMessage(
+                    subject="feat(save): restrict saved",
+                    body_lines=[],
+                    source="gemini",
+                    model="gemini-test",
+                ),
+                source="gemini",
+                model="gemini-test",
+            )
+
+            prompt = GeminiCommitGenerator(store)._build_prompt(
+                "Implemented save policy with tests.",
+                LocalCommitGenerator().generate(API_KEY_SUMMARY),
+            )
+
+        self.assertNotIn('git commit -m "feat(save): restrict saved"', prompt)
+        self.assertIn('git commit -m "feat(config): persist Gemini API key"', prompt)
+
     def test_parses_json_wrapped_in_markdown(self):
         message = parse_model_response(
             """Here is the result:
@@ -132,6 +230,84 @@ git commit -m "feat(config): persist Gemini API key" \\
 
         self.assertEqual(message.subject, "feat(config): persist Gemini API key")
         self.assertEqual(message.body_lines[-1], "- Validation: 4 tests pass, compileall OK")
+
+    def test_error_includes_raw_response_excerpt(self):
+        with self.assertRaisesRegex(GeminiError, "Raw response excerpt"):
+            parse_model_response("I cannot create that command from the provided text.")
+
+    def test_quality_gate_rejects_bodyless_gemini_commits(self):
+        message = CommitMessage(subject="feat(save): restrict saved", body_lines=[])
+
+        issues = quality_issues(
+            message,
+            "Implemented Gemini-only saving. Verification passed: 10 tests OK.",
+        )
+
+        self.assertIn("body must include at least 3 bullet lines", issues)
+        self.assertIn("subject is too vague or too short", issues)
+        self.assertIn("validation/test result from summary is missing", issues)
+
+    def test_generate_repairs_low_quality_gemini_response(self):
+        with tempfile.TemporaryDirectory() as directory:
+            class SequenceGemini(GeminiCommitGenerator):
+                def __init__(self):
+                    super().__init__(ExampleStore(Path(directory)), model="gemini-test")
+                    self.prompts = []
+                    self.responses = [
+                        'git commit -m "feat(save): restrict saved"',
+                        """```bash
+git commit -m "feat(config): persist Gemini API key" \\
+  -m "- Save GEMINI_API_KEY to ignored .env.local" \\
+  -m "- Load saved Gemini key when the app window opens" \\
+  -m "- Add .env.local ignore coverage to prevent key commits" \\
+  -m "- Validation: 4 tests pass, compileall OK"
+```""",
+                    ]
+
+                def _request(self, prompt, api_key):
+                    self.prompts.append(prompt)
+                    return self.responses.pop(0)
+
+            generator = SequenceGemini()
+
+            message = generator.generate(API_KEY_SUMMARY, api_key="test")
+
+        self.assertEqual(message.subject, "feat(config): persist Gemini API key")
+        self.assertEqual(len(message.body_lines), 4)
+        self.assertEqual(message.source, "gemini")
+        self.assertEqual(message.model, "gemini-test")
+        self.assertEqual(len(generator.prompts), 2)
+        self.assertIn("previous answer was rejected", generator.prompts[1])
+
+    def test_generate_repairs_invalid_gemini_response(self):
+        with tempfile.TemporaryDirectory() as directory:
+            class SequenceGemini(GeminiCommitGenerator):
+                def __init__(self):
+                    super().__init__(ExampleStore(Path(directory)), model="gemini-test")
+                    self.prompts = []
+                    self.responses = [
+                        '"Skip low-quality examples from promt data, e.g., 599 and 600 JSONS"',
+                        """```bash
+git commit -m "fix(prompt): skip low-quality prompt examples" \\
+  -m "- Filter low-quality examples out of Gemini prompt context" \\
+  -m "- Prevent weak saved JSON entries from shaping future responses" \\
+  -m "- Keep bodyless or vague examples out of few-shot data" \\
+  -m "- Exclude referenced weak entries such as 599, 600"
+```""",
+                    ]
+
+                def _request(self, prompt, api_key):
+                    self.prompts.append(prompt)
+                    return self.responses.pop(0)
+
+            generator = SequenceGemini()
+
+            message = generator.generate(SKIP_LOW_QUALITY_SUMMARY, api_key="test")
+
+        self.assertEqual(message.subject, "fix(prompt): skip low-quality prompt examples")
+        self.assertEqual(len(message.body_lines), 4)
+        self.assertEqual(len(generator.prompts), 2)
+        self.assertIn("response was not a raw git commit command", generator.prompts[1])
 
 
 class FakeGenerator:

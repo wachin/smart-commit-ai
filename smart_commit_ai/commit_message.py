@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 import re
+import shlex
 import textwrap
 
 
@@ -160,12 +161,95 @@ def format_git_commit_command(subject: str, body_lines: list[str] | tuple[str, .
 def parse_git_commit_command(command: str) -> CommitMessage | None:
     """Best-effort parser for existing dataset commands."""
 
-    matches = re.findall(r"-m\s+\"((?:[^\"\\]|\\.)*)\"", command)
+    for candidate in command_candidates(command):
+        message = parse_git_commit_args(candidate)
+        if message is not None:
+            return message.normalized()
+
+    matches = quoted_message_matches(command)
     if not matches:
         return None
 
-    decoded = [decode_shell_double_quoted(item) for item in matches]
+    decoded = [decode_shell_quoted(item) for item in matches]
     return CommitMessage(subject=decoded[0], body_lines=decoded[1:]).normalized()
+
+
+def command_candidates(command: str) -> list[str]:
+    normalized = normalize_shell_command_text(command)
+    candidates = [normalized]
+
+    for match in re.finditer(r"```(?:bash|sh|shell)?\s*(.*?)```", command, flags=re.I | re.S):
+        candidates.append(normalize_shell_command_text(match.group(1)))
+
+    git_commit_index = normalized.find("git commit")
+    if git_commit_index != -1:
+        candidates.append(normalized[git_commit_index:])
+
+    unique: list[str] = []
+    for candidate in candidates:
+        candidate = candidate.strip("` \n\t")
+        if candidate and candidate not in unique:
+            unique.append(candidate)
+    return unique
+
+
+def normalize_shell_command_text(command: str) -> str:
+    value = command.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+    value = re.sub(r"```(?:bash|sh|shell)?", "", value, flags=re.I)
+    value = value.replace("```", "")
+    value = re.sub(r"\\\s*\n\s*", " ", value)
+    return value.strip()
+
+
+def parse_git_commit_args(command: str) -> CommitMessage | None:
+    try:
+        args = shlex.split(command, posix=True)
+    except ValueError:
+        return None
+
+    if len(args) < 4:
+        return None
+
+    try:
+        git_index = next(
+            index
+            for index in range(len(args) - 1)
+            if args[index] == "git" and args[index + 1] == "commit"
+        )
+    except StopIteration:
+        return None
+
+    messages: list[str] = []
+    index = git_index + 2
+    while index < len(args):
+        arg = args[index]
+        if arg in {"-m", "--message"} and index + 1 < len(args):
+            messages.append(decode_shell_quoted(args[index + 1]))
+            index += 2
+            continue
+        if arg.startswith("--message="):
+            messages.append(decode_shell_quoted(arg.split("=", 1)[1]))
+        index += 1
+
+    if not messages:
+        return None
+    return CommitMessage(subject=messages[0], body_lines=messages[1:])
+
+
+def quoted_message_matches(command: str) -> list[str]:
+    normalized = normalize_shell_command_text(command)
+    patterns = [
+        r"-m\s+\"((?:[^\"\\]|\\.)*)\"",
+        r"-m\s+'((?:[^'\\]|\\.)*)'",
+    ]
+    matches: list[str] = []
+    for pattern in patterns:
+        matches.extend(re.findall(pattern, normalized))
+    return matches
+
+
+def decode_shell_quoted(value: str) -> str:
+    return decode_shell_double_quoted(value)
 
 
 def decode_shell_double_quoted(value: str) -> str:
