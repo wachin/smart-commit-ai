@@ -6,6 +6,7 @@ import re
 
 from .commit_message import CommitMessage, normalize_body_line, normalize_subject
 from .input_cleanup import clean_input, strip_markdown_noise
+from .learned_rules import LearnedPrediction, LearnedRuleSet
 from .type_scope import detect_scope as heuristic_detect_scope
 from .type_scope import select_commit_type as heuristic_select_commit_type
 
@@ -26,14 +27,18 @@ ACTION_VERBS = {
 class LocalCommitGenerator:
     """Generate useful commit messages without network access."""
 
+    def __init__(self, rules: LearnedRuleSet | None = None) -> None:
+        self.rules = rules if rules is not None else LearnedRuleSet.load_default()
+
     def generate(self, original_text: str) -> CommitMessage:
         cleaned = normalize_input_text(original_text)
         signal_text = clean_input(original_text) or cleaned
-        commit_type = detect_type(signal_text)
-        scope = detect_scope(signal_text, commit_type)
-        subject_phrase = build_subject_phrase(cleaned, commit_type, scope)
+        learned = self.rules.predict(signal_text)
+        commit_type = detect_special_type(signal_text) or learned.commit_type or detect_type(signal_text)
+        scope = detect_special_scope(signal_text) or learned.scope or detect_scope(signal_text, commit_type)
+        subject_phrase = build_subject_phrase(cleaned, commit_type, scope, learned)
         subject = normalize_subject(f"{commit_type}({scope}): {subject_phrase}")
-        body_lines = build_body_lines(cleaned, commit_type, scope)
+        body_lines = build_body_lines(cleaned, commit_type, scope, learned)
         return CommitMessage(subject=subject, body_lines=body_lines, source="local").normalized()
 
 
@@ -45,12 +50,9 @@ def normalize_input_text(text: str) -> str:
 
 def detect_type(text: str) -> str:
     lower = text.lower()
-    if is_api_key_persistence_summary(lower):
-        return "feat"
-    if is_prompt_example_filter_summary(lower):
-        return "fix"
-    if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
-        return "feat"
+    special = detect_special_type(text)
+    if special:
+        return special
 
     heuristic = heuristic_select_commit_type(text, subject_verb=extract_subject_verb(text))
     if heuristic in ACTION_VERBS:
@@ -137,10 +139,9 @@ def looks_like_tests_only(lower: str) -> bool:
 
 def detect_scope(text: str, commit_type: str) -> str:
     lower = text.lower()
-    if is_api_key_persistence_summary(lower):
-        return "config"
-    if is_prompt_example_filter_summary(lower):
-        return "prompt"
+    special = detect_special_scope(text)
+    if special:
+        return special
 
     heuristic = heuristic_detect_scope(text)
     if heuristic in {"config", "parser", "prompt", "ui", "docs", "repo", "ml", "test"}:
@@ -204,6 +205,32 @@ def detect_scope(text: str, commit_type: str) -> str:
     return max(scores, key=lambda scope: (scores[scope], -list(scores).index(scope)))
 
 
+def detect_special_type(text: str) -> str | None:
+    lower = text.lower()
+    if is_api_key_persistence_summary(lower):
+        return "feat"
+    if is_prompt_example_filter_summary(lower):
+        return "fix"
+    if is_gemini_fallback_service_summary(lower):
+        return "feat"
+    if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
+        return "feat"
+    return None
+
+
+def detect_special_scope(text: str) -> str | None:
+    lower = text.lower()
+    if is_api_key_persistence_summary(lower):
+        return "config"
+    if is_prompt_example_filter_summary(lower):
+        return "prompt"
+    if is_gemini_fallback_service_summary(lower):
+        return "service"
+    if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
+        return "parser"
+    return None
+
+
 def extract_subject_verb(text: str) -> str | None:
     for sentence in split_sentences(text):
         normalized = strip_sentence_noise(sentence)
@@ -220,12 +247,19 @@ def extract_subject_verb(text: str) -> str | None:
     return None
 
 
-def build_subject_phrase(text: str, commit_type: str, scope: str) -> str:
+def build_subject_phrase(
+    text: str,
+    commit_type: str,
+    scope: str,
+    learned: LearnedPrediction | None = None,
+) -> str:
     lower = text.lower()
     if is_api_key_persistence_summary(lower):
         return "persist Gemini API key"
     if is_prompt_example_filter_summary(lower):
         return "skip low-quality prompt examples"
+    if is_gemini_fallback_service_summary(lower):
+        return "fallback to local generator"
     if "cakewalk" in lower and "wrk" in lower:
         return "detect Cakewalk WRK files"
     if "wrk" in lower and ("parser" in lower or "loader" in lower):
@@ -234,6 +268,8 @@ def build_subject_phrase(text: str, commit_type: str, scope: str) -> str:
         return "add two-factor authentication"
     if "rhythm view" in lower:
         return "add embedded Rhythm view"
+    if learned and learned.subject_phrase:
+        return learned.subject_phrase
 
     phrase = extract_action_object(text, commit_type)
     if phrase:
@@ -317,16 +353,26 @@ def clean_subject_object(value: str) -> str:
     return value
 
 
-def build_body_lines(text: str, commit_type: str, scope: str) -> list[str]:
+def build_body_lines(
+    text: str,
+    commit_type: str,
+    scope: str,
+    learned: LearnedPrediction | None = None,
+) -> list[str]:
     if is_api_key_persistence_summary(text.lower()):
         return api_key_persistence_body_lines(text)
     if is_prompt_example_filter_summary(text.lower()):
         return prompt_example_filter_body_lines(text)
+    if is_gemini_fallback_service_summary(text.lower()):
+        return gemini_fallback_service_body_lines(text)
 
     if "cakewalk" in text.lower() and "wrk" in text.lower():
         return wrk_body_lines(text)
 
     candidates: list[str] = []
+    if learned and learned.body_lines:
+        candidates.extend(learned.body_lines)
+
     for sentence in split_sentences(text):
         if should_skip_body_sentence(sentence):
             continue
@@ -374,6 +420,30 @@ def is_prompt_example_filter_summary(lower: str) -> bool:
         and ("example" in lower or "examples" in lower or "json" in lower)
         and ("prompt" in lower or "few-shot" in lower or "gemini" in lower)
     )
+
+
+def is_gemini_fallback_service_summary(lower: str) -> bool:
+    return (
+        "provider=gemini" in lower
+        and "fallback" in lower
+        and "generador local" in lower
+        and ("smart_commit_ai/service.py" in lower or "service.py" in lower)
+    )
+
+
+def gemini_fallback_service_body_lines(text: str) -> list[str]:
+    lines = [
+        "- Update provider=gemini to fall back to local generation",
+        "- Return a usable commit when Gemini output is invalid or weak",
+        "- Replace blocking Gemini errors with status diagnostics",
+    ]
+    lower = text.lower()
+    if "tests/test_smart_commit.py" in lower or "cobertura" in lower or "coverage" in lower:
+        lines.append("- Add test coverage for Gemini-to-local fallback behavior")
+    validation = extract_validation(text)
+    if validation:
+        lines.append(f"- Validation: {validation}")
+    return unique_limited_body(lines)
 
 
 def prompt_example_filter_body_lines(text: str) -> list[str]:

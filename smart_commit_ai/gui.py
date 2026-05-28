@@ -6,7 +6,14 @@ import threading
 import tkinter as tk
 from tkinter import ttk
 
-from .config import LOCAL_ENV_PATH, load_api_key, save_api_key
+from .config import (
+    USER_ENV_PATH,
+    load_api_key,
+    load_provider,
+    save_api_key,
+    save_gemini_model,
+    save_provider,
+)
 from .service import SmartCommitService
 
 
@@ -21,6 +28,7 @@ class SmartCommitApp(tk.Tk):
         self.last_generation_model = None
         self.last_generated_command = ""
         self.last_original_text = ""
+        self.last_warning = ""
         self._build_ui()
 
     def _build_ui(self) -> None:
@@ -30,27 +38,33 @@ class SmartCommitApp(tk.Tk):
         header = ttk.Frame(self, padding=(14, 12, 14, 8))
         header.grid(row=0, column=0, sticky="ew")
         header.columnconfigure(1, weight=1)
+        header.columnconfigure(3, weight=1)
 
-        ttk.Label(header, text="Provider").grid(row=0, column=0, padx=(0, 8), sticky="w")
-        self.provider = tk.StringVar(value="auto")
-        provider_box = ttk.Combobox(
-            header,
-            textvariable=self.provider,
-            values=("auto", "gemini", "local"),
-            width=10,
-            state="readonly",
-        )
-        provider_box.grid(row=0, column=1, sticky="w")
+        ttk.Label(header, text="Mode").grid(row=0, column=0, padx=(0, 8), sticky="w")
+        self.provider = tk.StringVar(value=load_provider())
+        provider_buttons = ttk.Frame(header)
+        provider_buttons.grid(row=0, column=1, sticky="w")
+        for value in ("local", "gemini", "auto"):
+            ttk.Radiobutton(
+                provider_buttons,
+                text=value,
+                variable=self.provider,
+                value=value,
+                command=self.provider_changed,
+            ).pack(side=tk.LEFT, padx=(0, 8))
 
         ttk.Label(header, text="Gemini API key").grid(row=0, column=2, padx=(20, 8), sticky="e")
         self.api_key = tk.StringVar(value=load_api_key())
         self.api_key_entry = ttk.Entry(header, textvariable=self.api_key, show="*", width=38)
         self.api_key_entry.grid(row=0, column=3, sticky="ew")
 
+        self.check_api_button = ttk.Button(header, text="Check API", command=self.check_gemini_api)
+        self.check_api_button.grid(row=0, column=4, padx=(8, 0), sticky="e")
+
         self.save_examples = tk.BooleanVar(value=True)
         ttk.Checkbutton(header, text="Save training example", variable=self.save_examples).grid(
             row=0,
-            column=4,
+            column=5,
             padx=(16, 0),
             sticky="e",
         )
@@ -90,6 +104,7 @@ class SmartCommitApp(tk.Tk):
             side=tk.LEFT,
             padx=(8, 0),
         )
+        ttk.Button(output_buttons, text="Details", command=self.show_last_details).pack(side=tk.LEFT, padx=(8, 0))
 
         main.add(input_frame, weight=1)
         main.add(output_frame, weight=1)
@@ -111,9 +126,54 @@ class SmartCommitApp(tk.Tk):
         self.input_text.delete("1.0", tk.END)
         self.set_status("Input cleared")
 
+    def check_gemini_api(self) -> None:
+        api_key = self.api_key.get().strip() or None
+        if not api_key:
+            self.show_message("Smart Commit AI", "Enter a Gemini API key before checking the API.")
+            return
+
+        try:
+            save_api_key(api_key)
+        except OSError as exc:
+            self.show_message("Smart Commit AI", f"Could not save API key to {USER_ENV_PATH}: {exc}")
+            return
+        self.save_current_provider()
+
+        self.set_status("Checking Gemini API...")
+        self.check_api_button.configure(state=tk.DISABLED)
+        self.update_idletasks()
+
+        worker = threading.Thread(
+            target=self._check_api_in_background,
+            args=(api_key,),
+            daemon=True,
+        )
+        worker.start()
+
+    def _check_api_in_background(self, api_key: str) -> None:
+        status = self.service.gemini.check_api(api_key)
+        self.after(0, lambda: self._api_check_finished(status))
+
+    def _api_check_finished(self, status) -> None:
+        self.check_api_button.configure(state=tk.NORMAL)
+        detail = format_api_status(status)
+        self.last_warning = detail
+        if status.ok:
+            if status.model:
+                try:
+                    save_gemini_model(status.model)
+                except OSError as exc:
+                    detail = f"{detail}\n\nCould not save selected Gemini model: {exc}"
+                    self.last_warning = detail
+            self.set_status(f"Gemini API active; using {status.model}.")
+        else:
+            self.set_status("Gemini API check failed; open Details.")
+        self.show_message("Smart Commit AI", detail)
+
     def create_commit(self) -> None:
         original = self.input_text.get("1.0", tk.END).strip()
         provider = self.provider.get()
+        self.save_current_provider()
         api_key = self.api_key.get().strip() or None
         save = self.save_examples.get()
         key_saved = False
@@ -122,7 +182,7 @@ class SmartCommitApp(tk.Tk):
                 save_api_key(api_key)
                 key_saved = True
             except OSError as exc:
-                self.show_message("Smart Commit AI", f"Could not save API key to {LOCAL_ENV_PATH}: {exc}")
+                self.show_message("Smart Commit AI", f"Could not save API key to {USER_ENV_PATH}: {exc}")
                 return
 
         self.set_status("Generating commit message...")
@@ -165,9 +225,10 @@ class SmartCommitApp(tk.Tk):
         self.last_generation_model = result.message.model
         self.last_generated_command = result.command
         self.last_original_text = original
-        key_note = f" API key saved to {LOCAL_ENV_PATH}." if key_saved else ""
+        self.last_warning = result.warning or ""
+        key_note = f" API key saved to {USER_ENV_PATH}." if key_saved else ""
         if result.warning:
-            self.set_status(result.warning + key_note)
+            self.set_status(f"Generated with {result.message.source}; Gemini diagnostics available in Details.{key_note}")
         elif result.saved_path:
             self.set_status(f"Generated with {result.message.source}; saved {result.saved_path}.{key_note}")
         elif result.message.source != "gemini" and self.save_examples.get():
@@ -210,8 +271,24 @@ class SmartCommitApp(tk.Tk):
         path = self.service.store.save(original, message, source="gemini", model=self.last_generation_model)
         self.set_status(f"Saved {path}")
 
+    def show_last_details(self) -> None:
+        if self.last_warning:
+            self.show_message("Smart Commit AI", self.last_warning)
+            return
+        self.show_message("Smart Commit AI", self.status.get() or "No diagnostics available.")
+
     def set_status(self, value: str) -> None:
         self.status.set(value)
+
+    def provider_changed(self) -> None:
+        self.save_current_provider()
+        self.set_status(f"Mode set to {self.provider.get()}")
+
+    def save_current_provider(self) -> None:
+        try:
+            save_provider(self.provider.get())
+        except OSError as exc:
+            self.last_warning = f"Could not save settings: {exc}"
 
     def show_message(self, title: str, message: str) -> None:
         dialog = SelectableMessageDialog(self, title=title, message=message)
@@ -263,6 +340,20 @@ class SelectableMessageDialog(tk.Toplevel):
         self.bind("<Escape>", lambda _event: self.destroy())
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         self.grab_set()
+
+
+def format_api_status(status) -> str:
+    lines = [status.detail]
+    if status.model:
+        lines.append(f"Selected model: {status.model}")
+    if status.available_models:
+        lines.append("")
+        lines.append("Available generateContent models:")
+        for model in status.available_models[:20]:
+            lines.append(f"- {model}")
+        if len(status.available_models) > 20:
+            lines.append(f"- ... {len(status.available_models) - 20} more")
+    return "\n".join(lines)
 
 
 def main() -> None:

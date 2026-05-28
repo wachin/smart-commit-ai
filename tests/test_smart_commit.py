@@ -2,7 +2,14 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from smart_commit_ai.config import load_api_key, save_api_key
+from smart_commit_ai.config import (
+    load_api_key,
+    load_gemini_model,
+    load_provider,
+    save_api_key,
+    save_gemini_model,
+    save_provider,
+)
 from smart_commit_ai.commit_message import (
     MAX_BODY_LINE_LENGTH,
     MAX_HEADER_LENGTH,
@@ -15,8 +22,12 @@ from smart_commit_ai.input_cleanup import clean_input, detect_input_noise_warnin
 from smart_commit_ai.language import detect_language
 from smart_commit_ai.gemini_client import GeminiError
 from smart_commit_ai.gemini_client import GeminiCommitGenerator
+from smart_commit_ai.gemini_client import GeminiHTTPError
+from smart_commit_ai.gemini_client import extract_response_text
+from smart_commit_ai.gemini_client import extract_generate_content_models
 from smart_commit_ai.gemini_client import parse_model_response
 from smart_commit_ai.gemini_client import quality_issues
+from smart_commit_ai.learned_rules import train_from_entries
 from smart_commit_ai.local_generator import LocalCommitGenerator
 from smart_commit_ai.service import SmartCommitService
 from smart_commit_ai.type_scope import detect_scope as heuristic_detect_scope
@@ -68,6 +79,27 @@ I verified:
 
 
 SKIP_LOW_QUALITY_SUMMARY = "Skip low-quality examples from prompt data, e.g., 599 and 600 JSONS"
+
+
+GEMINI_FALLBACK_SUMMARY = """Ese caso ya no debería abrir un error bloqueante.
+
+Cambié el flujo para que provider=gemini también haga fallback al generador local si Gemini
+devuelve texto inválido o de mala calidad. Así, en lugar de mostrar:
+
+Gemini response was not valid JSON or a git commit command...
+
+la app te devuelve un commit usable y deja la advertencia en el estado, no en un popup.
+
+Cambios:
+
+- smart_commit_ai/service.py:27: provider=gemini ahora cae a local si Gemini falla.
+- tests/test_smart_commit.py:194: añadí cobertura para ese fallback.
+
+Verificación:
+
+- 20 tests OK
+- compileall OK
+"""
 
 
 class CommitFormattingTests(unittest.TestCase):
@@ -146,6 +178,16 @@ class LocalGeneratorTests(unittest.TestCase):
         self.assertIn("- Exclude referenced weak entries such as 599, 600", message.body_lines)
         self.assertTrue(all(len(line) <= MAX_BODY_LINE_LENGTH for line in message.body_lines))
 
+    def test_generates_gemini_fallback_service_commit(self):
+        message = LocalCommitGenerator().generate(GEMINI_FALLBACK_SUMMARY)
+
+        self.assertEqual(message.subject, "feat(service): fallback to local generator")
+        self.assertIn("- Update provider=gemini to fall back to local generation", message.body_lines)
+        self.assertIn("- Return a usable commit when Gemini output is invalid or weak", message.body_lines)
+        self.assertIn("- Add test coverage for Gemini-to-local fallback behavior", message.body_lines)
+        self.assertTrue(any("20 tests pass" in line for line in message.body_lines))
+        self.assertTrue(any("compileall OK" in line for line in message.body_lines))
+
 
 class CleanupAndHeuristicTests(unittest.TestCase):
     def test_input_cleanup_filters_pasted_command_noise(self):
@@ -171,6 +213,38 @@ I updated it so the Gemini key is saved locally in .env.local.
 
         self.assertEqual(heuristic_detect_scope(text), "prompt")
         self.assertEqual(heuristic_select_commit_type(text, subject_verb="skip"), "fix")
+
+
+class LearnedRuleTests(unittest.TestCase):
+    def test_local_generator_uses_learned_similar_examples(self):
+        with tempfile.TemporaryDirectory() as directory:
+            entry = ExampleStore(Path(directory)).save(
+                """Changed provider=gemini so it falls back to the local generator
+                when Gemini returns invalid or low-quality text. Added tests in
+                smart_commit_ai/service.py and tests/test_smart_commit.py.""",
+                CommitMessage(
+                    subject="feat(service): fallback to local generator",
+                    body_lines=[
+                        "- Update provider=gemini to fall back on local generation",
+                        "- Replace blocking Gemini failures with status warnings",
+                        "- Add tests for Gemini-to-local fallback behavior",
+                    ],
+                ),
+                source="gemini",
+                model="gemini-test",
+            )
+            store = ExampleStore(entry.parent)
+            rules = train_from_entries(store.load())
+
+            message = LocalCommitGenerator(rules).generate(
+                """provider=gemini now falls back to the local generator if Gemini
+                returns invalid or low-quality text. The warning is shown in status
+                instead of a blocking popup. tests/test_smart_commit.py covers it."""
+            )
+
+        self.assertEqual(message.subject, "feat(service): fallback to local generator")
+        self.assertIn("- Update provider=gemini to fall back on local generation", message.body_lines)
+        self.assertIn("- Add tests for Gemini-to-local fallback behavior", message.body_lines)
 
 
 class GeminiParserTests(unittest.TestCase):
@@ -202,7 +276,8 @@ class GeminiParserTests(unittest.TestCase):
         self.assertIn("Provide ONLY the raw git commit command", prompt)
         self.assertIn("Do not return JSON", prompt)
         self.assertIn("Minimum quality requirements", prompt)
-        self.assertIn("Local quality floor", prompt)
+        self.assertIn("Local fallback draft", prompt)
+        self.assertIn('If smart_commit_ai/service.py is the primary changed file', prompt)
         self.assertIn("```bash", prompt)
         self.assertIn('git commit -m "feat(config): persist Gemini API key"', prompt)
         self.assertIn("New development summary:", prompt)
@@ -339,6 +414,117 @@ git commit -m "fix(prompt): skip low-quality prompt examples" \\
         self.assertEqual(len(generator.prompts), 2)
         self.assertIn("response was not a raw git commit command", generator.prompts[1])
 
+    def test_request_falls_back_when_model_is_unavailable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            class FallbackGemini(GeminiCommitGenerator):
+                def __init__(self):
+                    super().__init__(ExampleStore(Path(directory)), model="missing-model")
+                    self.tried_models = []
+
+                def _request_model(self, prompt, api_key, model):
+                    self.tried_models.append(model)
+                    if model == "missing-model":
+                        raise GeminiHTTPError(404, "model not found", model)
+                    return """```bash
+git commit -m "feat(config): persist Gemini API key" \\
+  -m "- Save GEMINI_API_KEY to ignored .env.local" \\
+  -m "- Load saved Gemini key when the app window opens" \\
+  -m "- Add .env.local ignore coverage to prevent key commits" \\
+  -m "- Validation: 4 tests pass, compileall OK"
+```"""
+
+            generator = FallbackGemini()
+
+            message = generator.generate(API_KEY_SUMMARY, api_key="test")
+
+        self.assertEqual(message.subject, "feat(config): persist Gemini API key")
+        self.assertEqual(message.model, "gemini-2.5-flash")
+        self.assertEqual(generator.tried_models[:2], ["missing-model", "gemini-2.5-flash"])
+
+    def test_extract_response_text_reports_finish_reason(self):
+        with self.assertRaisesRegex(GeminiError, "finishReason=SAFETY"):
+            extract_response_text({"candidates": [{"finishReason": "SAFETY", "content": {"parts": []}}]})
+
+    def test_extracts_generate_content_models(self):
+        models = extract_generate_content_models(
+            {
+                "models": [
+                    {
+                        "name": "models/gemini-2.0-flash",
+                        "baseModelId": "gemini-2.0-flash",
+                        "supportedGenerationMethods": ["generateContent"],
+                    },
+                    {
+                        "name": "models/text-embedding-004",
+                        "supportedGenerationMethods": ["embedContent"],
+                    },
+                ]
+            }
+        )
+
+        self.assertEqual(models, ["gemini-2.0-flash"])
+
+    def test_check_api_reports_active_model(self):
+        class CheckGemini(GeminiCommitGenerator):
+            def _list_models(self, api_key):
+                return {
+                    "models": [
+                        {
+                            "name": "models/gemini-2.5-flash",
+                            "supportedGenerationMethods": ["generateContent"],
+                        }
+                    ]
+                }
+
+            def _request_model(self, prompt, api_key, model):
+                return "OK"
+
+        status = CheckGemini(model="gemini-3.5-flash").check_api("test")
+
+        self.assertTrue(status.ok)
+        self.assertEqual(status.model, "gemini-2.5-flash")
+        self.assertIn("active", status.detail)
+        self.assertIn("generateContent test returned: OK", status.detail)
+
+    def test_check_api_reports_generation_failure(self):
+        class CheckGemini(GeminiCommitGenerator):
+            def _list_models(self, api_key):
+                return {
+                    "models": [
+                        {
+                            "name": "models/gemini-2.5-flash",
+                            "supportedGenerationMethods": ["generateContent"],
+                        }
+                    ]
+                }
+
+            def _request_model(self, prompt, api_key, model):
+                raise GeminiError("quota exceeded")
+
+        status = CheckGemini(model="gemini-2.5-flash").check_api("test")
+
+        self.assertFalse(status.ok)
+        self.assertEqual(status.model, "gemini-2.5-flash")
+        self.assertIn("generateContent failed", status.detail)
+
+    def test_check_api_reports_missing_generate_model(self):
+        class CheckGemini(GeminiCommitGenerator):
+            def _list_models(self, api_key):
+                return {
+                    "models": [
+                        {
+                            "name": "models/text-embedding-004",
+                            "supportedGenerationMethods": ["embedContent"],
+                        }
+                    ]
+                }
+
+        status = CheckGemini(model="gemini-3.5-flash").check_api("test")
+
+        self.assertFalse(status.ok)
+        self.assertIsNone(status.model)
+        self.assertIn("none of the configured Flash models", status.detail)
+
 
 class FakeGenerator:
     def __init__(self, message: CommitMessage | None = None, error: Exception | None = None):
@@ -451,13 +637,41 @@ class ExampleStoreTests(unittest.TestCase):
 class ConfigTests(unittest.TestCase):
     def test_saves_and_loads_local_api_key(self):
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / ".env.local"
+            path = Path(directory) / "smartcommitai" / "secrets.env"
 
             saved_path = save_api_key('abc-123_"key"', path)
 
             self.assertEqual(saved_path, path)
             self.assertEqual(load_api_key(path, include_environment=False), 'abc-123_"key"')
             self.assertIn("GEMINI_API_KEY=", path.read_text(encoding="utf-8"))
+
+    def test_provider_defaults_to_local_and_is_saved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "smartcommitai" / "settings.json"
+
+            self.assertEqual(load_provider(path), "local")
+
+            save_provider("gemini", path)
+
+            self.assertEqual(load_provider(path), "gemini")
+
+    def test_gemini_model_defaults_to_flash_and_is_saved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "smartcommitai" / "settings.json"
+
+            self.assertEqual(load_gemini_model(path), "gemini-2.5-flash")
+
+            save_gemini_model("gemini-flash-latest", path)
+
+            self.assertEqual(load_gemini_model(path), "gemini-flash-latest")
+
+    def test_invalid_provider_falls_back_to_local(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "smartcommitai" / "settings.json"
+
+            save_provider("unknown", path)
+
+            self.assertEqual(load_provider(path), "local")
 
 
 if __name__ == "__main__":
