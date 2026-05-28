@@ -1,0 +1,15 @@
+{
+  "title": "Docs: Ui - Update It So Gemini Key Is Saved Locally",
+  "original_text": "Yes. I updated it so the Gemini key is saved locally in .env.local, and .env.local is explicitly\n  ignored in .gitignore:29.\n\n  I also wired the app to:\n\n  - load the saved key when the window opens\n  - save the key when you press Create Commit\n  - store only GEMINI_API_KEY=... in .env.local\n  - set the file permissions to 600 when possible\n\n  Relevant files:\n\n  - smart_commit_ai/config.py:1\n  - smart_commit_ai/gui.py:8\n  - README.md:22\n\n  I verified:\n\n  - git check-ignore -v .env.local confirms it is ignored\n  - .env.local is not tracked by git\n  - tests pass: 4 tests OK\n  - compile check passes",
+  "expected_subject": "docs(ui): update it so Gemini key is saved locally",
+  "expected_body_lines": [
+    "- Update it",
+    "- tests pass: 4 tests OK",
+    "- Validation: all 4 tests pass"
+  ],
+  "expected_command": "git commit -m \"docs(ui): update it so Gemini key is saved locally\" \\\n  -m \"- Update it\" \\\n  -m \"- tests pass: 4 tests OK\" \\\n  -m \"- Validation: all 4 tests pass\"",
+  "source": "local",
+  "model": null,
+  "created_at": "2026-05-28T04:20:02.773787+00:00",
+  "content_hash": "05fb8b2a88ccc4c9a1567e43404bce64929b4f1e5a6667e06fda66c22a96fe38"
+}
