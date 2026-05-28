@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API contract testing with OpenAPI",
+  "original_text": "Added API contract testing with OpenAPI. Implemented OpenAPI schema validation. Added API contract verification. Implemented API documentation testing. Added API versioning support. Result: API contract tests pass.",
+  "expected_subject": "test(api): add API contract testing with OpenAPI",
+  "expected_body_lines": [
+    "- Implement OpenAPI schema validation",
+    "- Add API contract verification",
+    "- Implement API documentation testing",
+    "- Add API versioning support",
+    "- Validation: API contract tests pass"
+  ],
+  "expected_command": "git commit -m \"test(api): add API contract testing with OpenAPI\""
+}

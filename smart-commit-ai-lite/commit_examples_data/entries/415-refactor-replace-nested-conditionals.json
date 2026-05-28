@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace nested conditionals with guard clauses",
+  "original_text": "Refactored to replace nested conditionals with guard clauses. Identified deeply nested conditionals. Added guard clauses for early returns. Simplified conditional structure. Improved code readability. Result: nested conditionals replaced.",
+  "expected_subject": "refactor(simplify): replace nested conditionals with guard clauses",
+  "expected_body_lines": [
+    "- Identify deeply nested conditionals",
+    "- Add guard clauses for early returns",
+    "- Simplify conditional structure",
+    "- Improve code readability",
+    "- Validation: nested conditionals replaced"
+  ],
+  "expected_command": "git commit -m \"refactor(simplify): replace nested conditionals with guard clauses\""
+}

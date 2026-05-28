@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add application metrics",
+  "original_text": "Added application metrics with Prometheus. Implemented custom metrics for business logic. Added system metrics for CPU, memory, and disk. Implemented metrics endpoint for scraping. Added metrics dashboards with Grafana. Result: metrics operational.",
+  "expected_subject": "chore(monitoring): add application metrics with Prometheus",
+  "expected_body_lines": [
+    "- Implement custom metrics for business logic",
+    "- Add system metrics for CPU, memory, disk",
+    "- Implement metrics endpoint for scraping",
+    "- Add metrics dashboards with Grafana",
+    "- Validation: metrics operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add application metrics with Prometheus\""
+}

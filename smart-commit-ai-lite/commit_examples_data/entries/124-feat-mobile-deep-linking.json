@@ -1,0 +1,14 @@
+{
+  "title": "Add deep linking for mobile app",
+  "original_text": "Implemented deep linking for mobile application. Added universal links for iOS. Added app links for Android. Implemented deep link routing to specific screens. Added deep link parameter parsing. Implemented deep link analytics and tracking. Added deep link testing tools. Added fallback to web for unsupported links. Result: deep links working across platforms.",
+  "expected_subject": "feat(mobile): add deep linking with universal links",
+  "expected_body_lines": [
+    "- Add universal links for iOS",
+    "- Add app links for Android",
+    "- Implement deep link routing to screens",
+    "- Add deep link parameter parsing",
+    "- Add deep link analytics and tracking",
+    "- Validation: deep links working across platforms"
+  ],
+  "expected_command": "git commit -m \"feat(mobile): add deep linking with universal links\""
+}

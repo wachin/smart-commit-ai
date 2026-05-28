@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add advanced troubleshooting guide",
+  "original_text": "Added advanced troubleshooting guide. Documented complex issue resolution steps. Added debugging tools and techniques. Implemented log analysis procedures. Added performance troubleshooting. Result: advanced troubleshooting guide complete.",
+  "expected_subject": "docs(support): add advanced troubleshooting guide",
+  "expected_body_lines": [
+    "- Document complex issue resolution steps",
+    "- Add debugging tools and techniques",
+    "- Implement log analysis procedures",
+    "- Add performance troubleshooting",
+    "- Validation: advanced troubleshooting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(support): add advanced troubleshooting guide\""
+}

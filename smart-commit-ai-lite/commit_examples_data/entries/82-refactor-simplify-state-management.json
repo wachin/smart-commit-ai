@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Simplify state management with Redux pattern",
+  "original_text": "Refactored the state management to use a Redux-like pattern instead of scattered state variables. Created a centralized store in state/store.js with actions and reducers. This makes state changes predictable and easier to debug. Updated all components to dispatch actions instead of mutating state directly. Added middleware for logging and persistence. Result: 52 tests pass.",
+  "expected_subject": "refactor(state): simplify with Redux-like pattern",
+  "expected_body_lines": [
+    "- Create centralized store in state/store.js",
+    "- Implement actions and reducers for state changes",
+    "- Update components to dispatch actions",
+    "- Add middleware for logging and persistence",
+    "- Validation: 52 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(state): simplify with Redux-like pattern\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Corregir fuga de memoria en español",
+  "original_text": "Corregí una fuga de memoria en el procesador de imágenes. Las imágenes no se liberaban después de procesarlas, causando que la memoria creciera indefinidamente. Actualicé el código para usar with statements y asegurar la liberación de recursos. También añadí un límite de memoria para el procesador. Añadí tests en tests/test_image_processor.py. Resultado: 35 pruebas pasan, memoria estable.",
+  "expected_subject": "fix(imagen): liberar recursos correctamente para evitar fuga de memoria",
+  "expected_body_lines": [
+    "- Usar with statements para liberación automática de recursos",
+    "- Asegurar liberación de imágenes después de procesar",
+    "- Añadir límite de memoria para el procesador",
+    "- Añadir tests de regresión para fuga de memoria",
+    "- Validación: 35 pruebas pasan, memoria estable"
+  ],
+  "expected_command": "git commit -m \"fix(imagen): liberar recursos correctamente para evitar fuga de memoria\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add gRPC support",
+  "original_text": "Added gRPC support. Implemented protocol buffers. Added gRPC server. Implemented gRPC client. Added streaming support. Result: gRPC operational.",
+  "expected_subject": "feat(network): add gRPC support",
+  "expected_body_lines": [
+    "- Implement protocol buffers",
+    "- Add gRPC server",
+    "- Implement gRPC client",
+    "- Add streaming support",
+    "- Validation: gRPC operational"
+  ],
+  "expected_command": "git commit -m \"feat(network): add gRPC support\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement observer pattern",
+  "original_text": "Refactored to implement observer pattern. Added observer interface for event notification. Implemented subject class with observer registration. Added event propagation mechanism. Implemented observer detach functionality. Result: observer pattern implemented.",
+  "expected_subject": "refactor(pattern): implement observer pattern",
+  "expected_body_lines": [
+    "- Add observer interface for event notification",
+    "- Implement subject class with observer registration",
+    "- Add event propagation mechanism",
+    "- Implement observer detach functionality",
+    "- Validation: observer pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement observer pattern\""
+}

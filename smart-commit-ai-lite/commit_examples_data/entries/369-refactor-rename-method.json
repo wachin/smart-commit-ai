@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Rename method for clarity",
+  "original_text": "Refactored to rename method for clarity. Identified methods with unclear names. Renamed methods to reflect purpose. Updated all method references. Improved code readability. Result: method renaming complete.",
+  "expected_subject": "refactor(cleanup): rename method for clarity",
+  "expected_body_lines": [
+    "- Identify methods with unclear names",
+    "- Rename methods to reflect purpose",
+    "- Update all method references",
+    "- Improve code readability",
+    "- Validation: method renaming complete"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): rename method for clarity\""
+}

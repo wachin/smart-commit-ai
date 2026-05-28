@@ -1,0 +1,12 @@
+{
+  "title": "Smart Commit: Refactor comparison metrics for body cap",
+  "original_text": "Refactored commit_examples_data/compare_generator.py so body evaluation respects the current seven-bullet limit. The report now keeps legacy metrics while adding capped body count, capped line ratio, and capped coverage. Added tests/test_compare_generator.py to cover the capped metrics.",
+  "expected_subject": "refactor(eval): add capped body comparison metrics",
+  "expected_body_lines": [
+    "- Keep legacy comparison metrics",
+    "- Add capped body count and line-ratio metrics",
+    "- Add capped body coverage for seven generated bullets",
+    "- Cover capped comparison behavior with tests"
+  ],
+  "expected_command": "git commit -m \"refactor(eval): add capped body comparison metrics\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Unicode handling in string processing",
+  "original_text": "Fixed Unicode handling in string processing. Non-ASCII characters were being corrupted. Implemented proper UTF-8 encoding/decoding. Added Unicode normalization. Implemented locale-aware string operations. Result: Unicode handling fixed.",
+  "expected_subject": "fix(i18n): fix Unicode handling in string processing",
+  "expected_body_lines": [
+    "- Fix non-ASCII characters being corrupted",
+    "- Implement proper UTF-8 encoding/decoding",
+    "- Add Unicode normalization",
+    "- Implement locale-aware string operations",
+    "- Validation: Unicode handling fixed"
+  ],
+  "expected_command": "git commit -m \"fix(i18n): fix Unicode handling in string processing\""
+}

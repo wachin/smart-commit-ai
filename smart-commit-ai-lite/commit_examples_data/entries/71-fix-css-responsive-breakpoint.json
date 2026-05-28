@@ -1,0 +1,13 @@
+{
+  "title": "Fix CSS responsive breakpoint for mobile devices",
+  "original_text": "Fixed the responsive layout issue on mobile devices. The breakpoint was set to 768px but some tablets were falling through. Changed the breakpoint to 1024px and adjusted the flex-direction for smaller screens. Also fixed the navigation menu overlap issue on portrait mode. Updated styles/main.css and components/navbar.css. Tested on Chrome, Firefox, and Safari mobile emulators.",
+  "expected_subject": "fix(css): adjust responsive breakpoint for tablets",
+  "expected_body_lines": [
+    "- Change breakpoint from 768px to 1024px",
+    "- Adjust flex-direction for smaller screens",
+    "- Fix navigation menu overlap in portrait mode",
+    "- Update main.css and navbar.css stylesheets",
+    "- Validation: tested on Chrome, Firefox, Safari mobile"
+  ],
+  "expected_command": "git commit -m \"fix(css): adjust responsive breakpoint for tablets\""
+}

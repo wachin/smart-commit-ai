@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add FAQ section",
+  "original_text": "Added FAQ section with common questions. Documented troubleshooting steps for common issues. Added FAQ for installation and setup. Implemented FAQ search and categorization. Added FAQ contribution guidelines. Result: FAQ section complete.",
+  "expected_subject": "docs(support): add FAQ section",
+  "expected_body_lines": [
+    "- Document troubleshooting steps for common issues",
+    "- Add FAQ for installation and setup",
+    "- Implement FAQ search and categorization",
+    "- Add FAQ contribution guidelines",
+    "- Validation: FAQ section complete"
+  ],
+  "expected_command": "git commit -m \"docs(support): add FAQ section\""
+}

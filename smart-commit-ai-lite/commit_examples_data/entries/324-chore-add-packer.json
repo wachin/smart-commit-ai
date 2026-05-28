@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Packer image building",
+  "original_text": "Added Packer for image building. Implemented Packer templates for VM images. Added image provisioning scripts. Implemented image versioning. Added image validation. Result: Packer image building operational.",
+  "expected_subject": "chore(infra): add Packer image building",
+  "expected_body_lines": [
+    "- Implement Packer templates for VM images",
+    "- Add image provisioning scripts",
+    "- Implement image versioning",
+    "- Add image validation",
+    "- Validation: Packer image building operational"
+  ],
+  "expected_command": "git commit -m \"chore(infra): add Packer image building\""
+}

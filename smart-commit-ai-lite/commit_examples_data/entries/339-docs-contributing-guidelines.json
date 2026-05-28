@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add contributing guidelines",
+  "original_text": "Added contributing guidelines documentation. Documented contribution process. Added code of conduct for contributors. Implemented pull request guidelines. Added contribution recognition. Result: contributing guidelines complete.",
+  "expected_subject": "docs(contributing): add contributing guidelines",
+  "expected_body_lines": [
+    "- Document contribution process",
+    "- Add code of conduct for contributors",
+    "- Implement pull request guidelines",
+    "- Add contribution recognition",
+    "- Validation: contributing guidelines complete"
+  ],
+  "expected_command": "git commit -m \"docs(contributing): add contributing guidelines\""
+}

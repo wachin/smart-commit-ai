@@ -1,0 +1,16 @@
+{
+  "title": "5. Channels View: Mute & Solo",
+  "original_text": "We pushed the Channels view from read-only into something genuinely interactive. In [player.py]..., I added per-channel playback controls: muted channel tracking, solo channel tracking, solo reduction percentage support... In [app.py]..., the `Channels` window now has real `Mute` and `Solo` checkboxes per row... I updated the user guides too... Tests were expanded in: test_sequence_player.py, test_app_playlist.py... They now cover: muted-channel note silencing, solo reduction... And [Roadmap.md]... is updated to mark these channel-view items complete... Verification is clean: ... 119 tests OK...",
+  "expected_subject": "feat(app): add interactive Mute/Solo to Channels view",
+  "expected_body_lines": [
+    "- Implement per-channel mute/solo tracking in player.py",
+    "- Filter playback events based on channel state",
+    "- Apply solo reduction preference to non-soloed channels",
+    "- Add Mute/Solo checkboxes to ChannelsDialog in app.py",
+    "- Update user guides (EN/ES) with new control documentation",
+    "- Add tests for silencing, reduction, and UI wiring",
+    "- Update Roadmap.md to mark mute/solo items complete",
+    "- Validation: compileall OK, 119 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add interactive Mute/Solo to Channels view\" \\\n  -m \"- Implement per-channel mute/solo tracking in player.py\" \\\n  -m \"- Filter playback events based on channel state\" \\\n  -m \"- Apply solo reduction preference to non-soloed channels\" \\\n  -m \"- Add Mute/Solo checkboxes to ChannelsDialog in app.py\" \\\n  -m \"- Update user guides (EN/ES) with new control documentation\" \\\n  -m \"- Add tests for silencing, reduction, and UI wiring\" \\\n  -m \"- Update Roadmap.md to mark mute/solo items complete\" \\\n  -m \"- Validation: compileall OK, 119 tests pass, offscreen verified\""
+}

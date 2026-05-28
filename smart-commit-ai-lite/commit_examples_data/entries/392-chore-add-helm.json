@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Helm charts",
+  "original_text": "Added Helm charts for deployment. Implemented Helm chart templates. Added Helm values configuration. Implemented Helm chart testing. Added Helm chart repository. Result: Helm charts operational.",
+  "expected_subject": "chore(k8s): add Helm charts",
+  "expected_body_lines": [
+    "- Implement Helm chart templates",
+    "- Add Helm values configuration",
+    "- Implement Helm chart testing",
+    "- Add Helm chart repository",
+    "- Validation: Helm charts operational"
+  ],
+  "expected_command": "git commit -m \"chore(k8s): add Helm charts\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API reference documentation",
+  "original_text": "Added API reference documentation. Documented all API endpoints with parameters. Added request/response examples. Implemented API authentication documentation. Added error code reference. Result: API reference complete.",
+  "expected_subject": "docs(api): add API reference documentation",
+  "expected_body_lines": [
+    "- Document all API endpoints with parameters",
+    "- Add request/response examples",
+    "- Implement API authentication documentation",
+    "- Add error code reference",
+    "- Validation: API reference complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API reference documentation\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add golden master testing",
+  "original_text": "Added golden master testing for legacy code. Implemented golden master test suite. Added test data collection. Implemented regression testing with golden master. Added golden master validation. Result: golden master tests pass.",
+  "expected_subject": "test(regression): add golden master testing",
+  "expected_body_lines": [
+    "- Implement golden master test suite",
+    "- Add test data collection",
+    "- Implement regression testing with golden master",
+    "- Add golden master validation",
+    "- Validation: golden master tests pass"
+  ],
+  "expected_command": "git commit -m \"test(regression): add golden master testing\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: CSRF vulnerability in web application forms",
+  "original_text": "Fixed CSRF vulnerability in web forms. Implemented CSRF tokens. Added same-site cookies. Implemented request validation. Added CSRF detection. Result: CSRF vulnerability fixed.",
+  "expected_subject": "fix(security): fix CSRF vulnerability in web forms",
+  "expected_body_lines": [
+    "- Implement CSRF tokens",
+    "- Add same-site cookies",
+    "- Implement request validation",
+    "- Add CSRF detection",
+    "- Validation: CSRF vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix CSRF vulnerability in web forms\""
+}

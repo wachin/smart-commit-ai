@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Puppet configuration management",
+  "original_text": "Added Puppet configuration management. Implemented Puppet manifests. Added configuration automation. Implemented catalog compilation. Added configuration reporting. Result: Puppet configuration operational.",
+  "expected_subject": "chore(config): add Puppet configuration management",
+  "expected_body_lines": [
+    "- Implement Puppet manifests",
+    "- Add configuration automation",
+    "- Implement catalog compilation",
+    "- Add configuration reporting",
+    "- Validation: Puppet configuration operational"
+  ],
+  "expected_command": "git commit -m \"chore(config): add Puppet configuration management\""
+}

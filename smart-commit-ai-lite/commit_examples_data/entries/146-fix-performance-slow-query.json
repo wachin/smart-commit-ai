@@ -1,0 +1,14 @@
+{
+  "title": "Fix slow database query performance",
+  "original_text": "Fixed slow database query performance issue. The user list query was taking 10+ seconds due to missing indexes. Added composite indexes on frequently queried columns. Optimized JOIN operations. Implemented query result caching. Refactored N+1 query problem. Added query performance monitoring. Result: query time reduced from 10s to 200ms.",
+  "expected_subject": "fix(perf): optimize slow database queries with indexes",
+  "expected_body_lines": [
+    "- Add composite indexes on frequently queried columns",
+    "- Optimize JOIN operations",
+    "- Implement query result caching",
+    "- Refactor N+1 query problem",
+    "- Add query performance monitoring",
+    "- Validation: query time reduced from 10s to 200ms"
+  ],
+  "expected_command": "git commit -m \"fix(perf): optimize slow database queries with indexes\""
+}

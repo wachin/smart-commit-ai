@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add monitoring guide",
+  "original_text": "Added monitoring guide. Documented monitoring setup. Added metrics collection. Implemented alerting configuration. Added monitoring dashboards. Result: monitoring guide complete.",
+  "expected_subject": "docs(ops): add monitoring guide",
+  "expected_body_lines": [
+    "- Document monitoring setup",
+    "- Add metrics collection",
+    "- Implement alerting configuration",
+    "- Add monitoring dashboards",
+    "- Validation: monitoring guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(ops): add monitoring guide\""
+}

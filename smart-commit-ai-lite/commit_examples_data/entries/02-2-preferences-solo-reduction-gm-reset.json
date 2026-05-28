@@ -1,0 +1,14 @@
+{
+  "title": "2. Preferences: Solo Reduction & GM Reset",
+  "original_text": "We landed another useful preferences slice with real playback behavior behind it. In [settings.py]..., I added persisted General-tab settings for: `solo_volume_reduction` with a default of `50%`, `midi_reset_before_playback` with a default of `False`... In [app.py]..., the Preferences dialog’s `General` tab now includes: `Solo volume reduction`, `Send GM reset before playback`... In [player.py]..., I added actual GM reset behavior: when that preference is enabled, playback sends the standard GM reset SysEx... Tests were expanded across: test_settings.py, test_sequence_player.py, test_app_playlist.py... I also updated [Roadmap.md]... to mark these General-tab items complete... Verification is clean: ... 110 tests OK...",
+  "expected_subject": "feat(app): add solo reduction and GM reset prefs",
+  "expected_body_lines": [
+    "- Persist solo_volume_reduction (default 50%) and midi_reset",
+    "- Add General tab controls for both settings in Preferences dialog",
+    "- Send GM reset SysEx before playback when enabled in player.py",
+    "- Add tests for persistence, clamping, and reset behavior",
+    "- Update Roadmap.md to mark General tab items complete",
+    "- Validation: compileall OK, 110 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add solo reduction and GM reset prefs\" \\\n  -m \"- Persist solo_volume_reduction (default 50%) and midi_reset\" \\\n  -m \"- Add General tab controls for both settings in Preferences dialog\" \\\n  -m \"- Send GM reset SysEx before playback when enabled in player.py\" \\\n  -m \"- Add tests for persistence, clamping, and reset behavior\" \\\n  -m \"- Update Roadmap.md to mark General tab items complete\" \\\n  -m \"- Validation: compileall OK, 110 tests pass, offscreen verified\""
+}

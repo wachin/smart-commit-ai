@@ -1,0 +1,14 @@
+{
+  "title": "Add component documentation with Storybook",
+  "original_text": "Added component documentation using Storybook. Created stories for all UI components. Added component prop documentation. Added component interaction documentation. Implemented component visual testing. Added component accessibility documentation. Added component design system documentation. Result: component documentation complete.",
+  "expected_subject": "docs(ui): add component documentation with Storybook",
+  "expected_body_lines": [
+    "- Create stories for all UI components",
+    "- Add component prop documentation",
+    "- Add component interaction documentation",
+    "- Implement component visual testing",
+    "- Add component accessibility documentation",
+    "- Validation: component documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(ui): add component documentation with Storybook\""
+}

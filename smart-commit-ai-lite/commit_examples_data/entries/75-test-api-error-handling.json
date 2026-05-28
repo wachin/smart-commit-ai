@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API error handling tests",
+  "original_text": "Added tests for API error handling scenarios. Created test cases for 400, 401, 403, 404, 500 status codes. Tests verify that the client properly retries on transient errors and displays appropriate error messages to users. Added tests for rate limiting behavior and timeout handling. Updated tests/test_api_client.py. Result: 35 tests pass.",
+  "expected_subject": "test(api): add error handling and retry logic tests",
+  "expected_body_lines": [
+    "- Add tests for 400, 401, 403, 404, 500 status codes",
+    "- Verify retry logic for transient errors",
+    "- Test rate limiting behavior",
+    "- Add timeout handling tests",
+    "- Validation: 35 tests pass"
+  ],
+  "expected_command": "git commit -m \"test(api): add error handling and retry logic tests\""
+}

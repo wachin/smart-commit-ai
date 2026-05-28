@@ -1,0 +1,12 @@
+{
+  "title": "Smart Commit: Spanish conjugation regressions",
+  "original_text": "Added regression tests for Spanish first-person and team conjugations such as arreglé, añadimos, mejoramos, and documentamos. The tests verify that common Spanish summaries no longer fall back to actualiza proyecto and that ci does not match inside instrucciones.",
+  "expected_subject": "test(nlp): cover Spanish conjugation regressions",
+  "expected_body_lines": [
+    "- Add regression cases for arreglé and añadimos",
+    "- Add regression cases for mejoramos and documentamos",
+    "- Verify Spanish summaries avoid actualiza proyecto fallback",
+    "- Cover ci matching inside instrucciones"
+  ],
+  "expected_command": "git commit -m \"test(nlp): cover Spanish conjugation regressions\""
+}

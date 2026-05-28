@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Vault secret management",
+  "original_text": "Added Vault for secret management. Implemented secret storage and retrieval. Added secret rotation policies. Implemented Vault authentication. Added secret audit logging. Result: Vault secret management operational.",
+  "expected_subject": "chore(security): add Vault secret management",
+  "expected_body_lines": [
+    "- Implement secret storage and retrieval",
+    "- Add secret rotation policies",
+    "- Implement Vault authentication",
+    "- Add secret audit logging",
+    "- Validation: Vault secret management operational"
+  ],
+  "expected_command": "git commit -m \"chore(security): add Vault secret management\""
+}

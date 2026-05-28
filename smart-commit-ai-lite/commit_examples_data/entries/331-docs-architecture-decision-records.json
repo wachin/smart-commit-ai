@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add architecture decision records",
+  "original_text": "Added architecture decision records documentation. Documented ADR template and process. Added ADR for major architectural decisions. Implemented ADR status tracking. Added ADR review process. Result: ADR documentation complete.",
+  "expected_subject": "docs(adr): add architecture decision records",
+  "expected_body_lines": [
+    "- Document ADR template and process",
+    "- Add ADR for major architectural decisions",
+    "- Implement ADR status tracking",
+    "- Add ADR review process",
+    "- Validation: ADR documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(adr): add architecture decision records\""
+}

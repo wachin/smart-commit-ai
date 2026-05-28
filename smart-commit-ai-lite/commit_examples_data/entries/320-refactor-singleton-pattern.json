@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement singleton pattern",
+  "original_text": "Refactored to implement singleton pattern. Added singleton class with private constructor. Implemented static instance method. Added thread-safe initialization. Implemented lazy loading for performance. Result: singleton pattern implemented.",
+  "expected_subject": "refactor(pattern): implement singleton pattern",
+  "expected_body_lines": [
+    "- Add singleton class with private constructor",
+    "- Implement static instance method",
+    "- Add thread-safe initialization",
+    "- Implement lazy loading for performance",
+    "- Validation: singleton pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement singleton pattern\""
+}

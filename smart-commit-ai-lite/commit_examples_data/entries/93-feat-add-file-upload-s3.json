@@ -1,0 +1,14 @@
+{
+  "title": "Add file upload with S3 integration",
+  "original_text": "Added file upload functionality with AWS S3 integration. Implemented multipart upload for large files. Added file type validation and virus scanning. Implemented progress tracking for uploads. Added thumbnail generation for images. Integrated with S3 for storage. Added CDN integration for faster delivery. Implemented file expiration and cleanup. Added tests for upload flows. Result: 38 tests pass.",
+  "expected_subject": "feat(storage): add file upload with S3 integration",
+  "expected_body_lines": [
+    "- Implement multipart upload for large files",
+    "- Add file type validation and virus scanning",
+    "- Implement progress tracking for uploads",
+    "- Add thumbnail generation for images",
+    "- Integrate with S3 and CDN for delivery",
+    "- Validation: 38 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(storage): add file upload with S3 integration\""
+}

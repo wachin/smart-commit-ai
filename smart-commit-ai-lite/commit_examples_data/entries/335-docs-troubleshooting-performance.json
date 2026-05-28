@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add performance troubleshooting guide",
+  "original_text": "Added performance troubleshooting guide. Documented performance profiling tools. Added performance optimization techniques. Implemented performance bottleneck identification. Added performance monitoring setup. Result: performance troubleshooting guide complete.",
+  "expected_subject": "docs(performance): add performance troubleshooting guide",
+  "expected_body_lines": [
+    "- Document performance profiling tools",
+    "- Add performance optimization techniques",
+    "- Implement performance bottleneck identification",
+    "- Add performance monitoring setup",
+    "- Validation: performance troubleshooting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(performance): add performance troubleshooting guide\""
+}

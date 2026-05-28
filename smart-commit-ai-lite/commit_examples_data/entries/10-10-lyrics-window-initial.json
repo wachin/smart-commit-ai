@@ -1,0 +1,15 @@
+{
+  "title": "10. Lyrics Window (Initial)",
+  "original_text": "We moved the first real Lyrics window into the PyQt6 port. In [app.py]..., I added `View -> Lyrics` and a non-modal `LyricsDialog` that shows MIDI/KAR text events... It already supports filtering by text type... To support that cleanly, [sequence.py]... now exposes `text_events()`... I also updated the user guides... and marked the new completed lyrics items in [Roadmap.md]... Test coverage for the new window and filters is in [test_app_playlist.py]... Verification is clean: ... 131 tests OK...",
+  "expected_subject": "feat(ui): add Lyrics window with text type filtering",
+  "expected_body_lines": [
+    "- Add View > Lyrics action and non-modal LyricsDialog",
+    "- Display MIDI/KAR text events with filter for type (Lyrics, Text, etc.)",
+    "- Expose text_events() in sequence.py for UI queries",
+    "- Update user guides (EN/ES) to document the new Lyrics window",
+    "- Add tests for dialog lifecycle, event listing, and filtering",
+    "- Update Roadmap.md to mark initial lyrics view items complete",
+    "- Validation: compileall OK, 131 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add Lyrics window with text type filtering\" \\\n  -m \"- Add View > Lyrics action and non-modal LyricsDialog\" \\\n  -m \"- Display MIDI/KAR text events with filter for type (Lyrics, Text, etc.)\" \\\n  -m \"- Expose text_events() in sequence.py for UI queries\" \\\n  -m \"- Update user guides (EN/ES) to document the new Lyrics window\" \\\n  -m \"- Add tests for dialog lifecycle, event listing, and filtering\" \\\n  -m \"- Update Roadmap.md to mark initial lyrics view items complete\" \\\n  -m \"- Validation: compileall OK, 131 tests pass, offscreen verified\""
+}

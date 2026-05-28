@@ -1,0 +1,14 @@
+{
+  "title": "Add API documentation with Swagger",
+  "original_text": "Added comprehensive API documentation using Swagger/OpenAPI. Generated API documentation from code annotations. Added interactive API explorer. Added request/response examples. Added authentication documentation. Added error response documentation. Implemented API versioning in documentation. Added automatic documentation updates on deploy. Result: API documentation complete.",
+  "expected_subject": "docs(api): add Swagger/OpenAPI documentation",
+  "expected_body_lines": [
+    "- Generate API documentation from code annotations",
+    "- Add interactive API explorer",
+    "- Add request/response examples",
+    "- Add authentication and error documentation",
+    "- Implement API versioning in documentation",
+    "- Validation: API documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add Swagger/OpenAPI documentation\""
+}

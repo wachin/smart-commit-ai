@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Docker Compose for local development",
+  "original_text": "Added Docker Compose configuration for easier local development setup. Created docker-compose.yml with services for the application, database, and cache. Added Dockerfile for the application with multi-stage build for production. Added .dockerignore to exclude unnecessary files. Updated README with Docker setup instructions. This makes it easier to spin up the full development environment. Result: docker-compose up works correctly.",
+  "expected_subject": "chore(dev): add Docker Compose for local development",
+  "expected_body_lines": [
+    "- Create docker-compose.yml with app, db, cache services",
+    "- Add multi-stage Dockerfile for production builds",
+    "- Add .dockerignore to exclude unnecessary files",
+    "- Update README with Docker setup instructions",
+    "- Validation: docker-compose up works correctly"
+  ],
+  "expected_command": "git commit -m \"chore(dev): add Docker Compose for local development\""
+}

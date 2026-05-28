@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Timing attack vulnerability",
+  "original_text": "Fixed timing attack vulnerability in comparison. Implemented constant-time comparison. Added timing-safe string comparison. Implemented timing-safe HMAC verification. Added timing attack detection. Result: timing attack vulnerability fixed.",
+  "expected_subject": "fix(security): fix timing attack vulnerability",
+  "expected_body_lines": [
+    "- Implement constant-time comparison",
+    "- Add timing-safe string comparison",
+    "- Implement timing-safe HMAC verification",
+    "- Add timing attack detection",
+    "- Validation: timing attack vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix timing attack vulnerability\""
+}

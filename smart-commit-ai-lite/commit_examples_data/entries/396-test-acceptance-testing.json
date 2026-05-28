@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add acceptance testing",
+  "original_text": "Added acceptance testing with Cucumber. Implemented acceptance test scenarios. Added Gherkin feature files. Implemented step definitions. Added acceptance test reporting. Result: acceptance tests pass.",
+  "expected_subject": "test(acceptance): add acceptance testing",
+  "expected_body_lines": [
+    "- Implement acceptance test scenarios",
+    "- Add Gherkin feature files",
+    "- Implement step definitions",
+    "- Add acceptance test reporting",
+    "- Validation: acceptance tests pass"
+  ],
+  "expected_command": "git commit -m \"test(acceptance): add acceptance testing\""
+}

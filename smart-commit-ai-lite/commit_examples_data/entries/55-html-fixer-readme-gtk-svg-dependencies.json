@@ -1,0 +1,12 @@
+{
+  "title": "HTML Fixer: README GTK theme and SVG dependencies",
+  "original_text": "Perfecto, entonces el diálogo nativo ya funcionará automáticamente al lanzar el programa normal con python3 html_blogger_fixer_gui.py, sin necesidad de pasar la variable manualmente. Vale la pena documentar ese requisito en el README para que otros usuarios en Debian/Ubuntu sepan que deben instalarlo. Listo. Los dos cambios: html_blogger_fixer_gui.py ya tenía os.environ[\"QT_QPA_PLATFORMTHEME\"] = \"gtk3\" en main() desde el paso anterior, que es lo que hace funcionar el diálogo nativo automáticamente. README.md: el comando apt install ahora incluye qt6-gtk-platformtheme con su explicación, y también python3-pyqt6.qtsvg que ya estaba en el código pero faltaba documentar en el README.",
+  "expected_subject": "docs(readme): document GTK theme and SVG dependencies",
+  "expected_body_lines": [
+    "- Add qt6-gtk-platformtheme for native file dialog support",
+    "- Include python3-pyqt6.qtsvg in installation instructions",
+    "- Clarify automatic theme integration in main entry point",
+    "- Ensure Debian/Ubuntu users have complete setup guide"
+  ],
+  "expected_command": "git commit -m \"docs(readme): document GTK theme and SVG dependencies\""
+}

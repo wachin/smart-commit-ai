@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add usability testing",
+  "original_text": "Added usability testing framework. Implemented user task scenarios. Added usability metrics collection. Implemented user session recording. Added usability test analysis. Result: usability testing operational.",
+  "expected_subject": "test(usability): add usability testing",
+  "expected_body_lines": [
+    "- Implement user task scenarios",
+    "- Add usability metrics collection",
+    "- Implement user session recording",
+    "- Add usability test analysis",
+    "- Validation: usability testing operational"
+  ],
+  "expected_command": "git commit -m \"test(usability): add usability testing\""
+}

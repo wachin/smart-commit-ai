@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Introduce command pattern for actions",
+  "original_text": "Refactored to use command pattern for user actions. Created command classes for all user operations. Implemented command invoker with undo/redo support. Added command history for audit trail. This makes actions reversible and testable. Added tests for command classes. Result: 41 tests pass.",
+  "expected_subject": "refactor(pattern): introduce command pattern for actions",
+  "expected_body_lines": [
+    "- Create command classes for all user operations",
+    "- Implement command invoker with undo/redo support",
+    "- Add command history for audit trail",
+    "- Make actions reversible and testable",
+    "- Add tests for command classes",
+    "- Validation: 41 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): introduce command pattern for actions\""
+}

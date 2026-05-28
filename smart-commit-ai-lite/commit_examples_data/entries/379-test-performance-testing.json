@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add k6 performance testing",
+  "original_text": "Added performance testing with k6. Implemented performance test scenarios. Added performance benchmarking. Implemented performance monitoring. Added performance regression detection. Result: performance tests pass.",
+  "expected_subject": "test(performance): add performance testing",
+  "expected_body_lines": [
+    "- Implement performance test scenarios",
+    "- Add performance benchmarking",
+    "- Implement performance monitoring",
+    "- Add performance regression detection",
+    "- Validation: performance tests pass"
+  ],
+  "expected_command": "git commit -m \"test(performance): add performance testing\""
+}

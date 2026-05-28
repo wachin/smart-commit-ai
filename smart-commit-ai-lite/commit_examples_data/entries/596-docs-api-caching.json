@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API caching strategies",
+  "original_text": "Added API caching strategies guide. Documented cache headers. Added caching patterns. Implemented cache invalidation examples. Added cache performance tips. Result: caching guide complete.",
+  "expected_subject": "docs(api): add API caching strategies",
+  "expected_body_lines": [
+    "- Document cache headers",
+    "- Add caching patterns",
+    "- Implement cache invalidation examples",
+    "- Add cache performance tips",
+    "- Validation: caching guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API caching strategies\""
+}

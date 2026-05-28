@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add property testing with Hypothesis",
+  "original_text": "Added property testing with Hypothesis. Implemented property definitions. Added property generators. Implemented property shrinking. Added property coverage. Result: property tests pass.",
+  "expected_subject": "test(property): add property testing with Hypothesis",
+  "expected_body_lines": [
+    "- Implement property definitions",
+    "- Add property generators",
+    "- Implement property shrinking",
+    "- Add property coverage",
+    "- Validation: property tests pass"
+  ],
+  "expected_command": "git commit -m \"test(property): add property testing with Hypothesis\""
+}

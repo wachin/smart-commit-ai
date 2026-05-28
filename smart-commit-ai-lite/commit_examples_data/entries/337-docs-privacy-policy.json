@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add privacy policy",
+  "original_text": "Added privacy policy documentation. Documented data collection practices. Added user data handling procedures. Implemented GDPR compliance documentation. Added privacy impact assessment. Result: privacy policy complete.",
+  "expected_subject": "docs(legal): add privacy policy",
+  "expected_body_lines": [
+    "- Document data collection practices",
+    "- Add user data handling procedures",
+    "- Implement GDPR compliance documentation",
+    "- Add privacy impact assessment",
+    "- Validation: privacy policy complete"
+  ],
+  "expected_command": "git commit -m \"docs(legal): add privacy policy\""
+}

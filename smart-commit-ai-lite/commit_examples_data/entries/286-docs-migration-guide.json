@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add migration guide",
+  "original_text": "Added migration guide for version upgrades. Documented breaking changes and migration steps. Added migration scripts and tools. Implemented rollback procedures. Added migration testing checklist. Result: migration guide complete.",
+  "expected_subject": "docs(migration): add migration guide for version upgrades",
+  "expected_body_lines": [
+    "- Document breaking changes and migration steps",
+    "- Add migration scripts and tools",
+    "- Implement rollback procedures",
+    "- Add migration testing checklist",
+    "- Validation: migration guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(migration): add migration guide for version upgrades\""
+}

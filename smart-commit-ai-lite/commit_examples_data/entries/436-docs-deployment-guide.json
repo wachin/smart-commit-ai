@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add deployment automation guide",
+  "original_text": "Added deployment guide. Documented deployment process. Added deployment configuration. Implemented deployment automation. Added deployment troubleshooting. Result: deployment guide complete.",
+  "expected_subject": "docs(deployment): add deployment guide",
+  "expected_body_lines": [
+    "- Document deployment process",
+    "- Add deployment configuration",
+    "- Implement deployment automation",
+    "- Add deployment troubleshooting",
+    "- Validation: deployment guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(deployment): add deployment guide\""
+}

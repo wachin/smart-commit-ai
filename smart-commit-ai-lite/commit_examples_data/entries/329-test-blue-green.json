@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add blue-green deployment testing",
+  "original_text": "Added blue-green deployment testing. Implemented blue-green deployment strategy. Added automated traffic switching. Implemented blue-green validation. Added rollback mechanism. Result: blue-green deployment testing operational.",
+  "expected_subject": "test(deployment): add blue-green deployment testing",
+  "expected_body_lines": [
+    "- Implement blue-green deployment strategy",
+    "- Add automated traffic switching",
+    "- Implement blue-green validation",
+    "- Add rollback mechanism",
+    "- Validation: blue-green deployment testing operational"
+  ],
+  "expected_command": "git commit -m \"test(deployment): add blue-green deployment testing\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Implement hexagonal architecture",
+  "original_text": "Refactored to hexagonal architecture. Implemented ports and adapters pattern. Separated core logic from external interfaces. Added domain services layer. Implemented application services layer. Added infrastructure adapters for databases and APIs. Result: hexagonal architecture implemented.",
+  "expected_subject": "refactor(arch): implement hexagonal architecture",
+  "expected_body_lines": [
+    "- Implement ports and adapters pattern",
+    "- Separate core logic from external interfaces",
+    "- Add domain services layer",
+    "- Implement application services layer",
+    "- Add infrastructure adapters for databases and APIs",
+    "- Validation: hexagonal architecture implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(arch): implement hexagonal architecture\""
+}

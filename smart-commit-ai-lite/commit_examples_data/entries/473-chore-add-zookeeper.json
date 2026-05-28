@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Zookeeper coordination",
+  "original_text": "Added Zookeeper for distributed coordination. Implemented leader election. Added distributed locking. Implemented configuration management. Added Zookeeper ensemble. Result: Zookeeper coordination operational.",
+  "expected_subject": "chore(coordination): add Zookeeper coordination",
+  "expected_body_lines": [
+    "- Implement leader election",
+    "- Add distributed locking",
+    "- Implement configuration management",
+    "- Add Zookeeper ensemble",
+    "- Validation: Zookeeper coordination operational"
+  ],
+  "expected_command": "git commit -m \"chore(coordination): add Zookeeper coordination\""
+}

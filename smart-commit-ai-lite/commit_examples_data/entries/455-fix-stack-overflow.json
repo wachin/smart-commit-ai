@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Stack overflow in recursion",
+  "original_text": "Fixed stack overflow in recursion. Implemented tail recursion optimization. Added recursion depth limit. Implemented iterative alternative. Added stack depth monitoring. Result: stack overflow fixed.",
+  "expected_subject": "fix(runtime): fix stack overflow in recursion",
+  "expected_body_lines": [
+    "- Implement tail recursion optimization",
+    "- Add recursion depth limit",
+    "- Implement iterative alternative",
+    "- Add stack depth monitoring",
+    "- Validation: stack overflow fixed"
+  ],
+  "expected_command": "git commit -m \"fix(runtime): fix stack overflow in recursion\""
+}

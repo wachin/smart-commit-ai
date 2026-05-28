@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add contract testing for services",
+  "original_text": "Added contract testing for microservices. Created service contracts using OpenAPI. Implemented contract verification for service communication. Added contract testing for API versioning. Implemented contract breaking change detection. Added contract documentation. Result: all contracts verified.",
+  "expected_subject": "test(contracts): add contract testing for microservices",
+  "expected_body_lines": [
+    "- Create service contracts using OpenAPI",
+    "- Implement contract verification for service communication",
+    "- Add contract testing for API versioning",
+    "- Implement contract breaking change detection",
+    "- Add contract documentation",
+    "- Validation: all contracts verified"
+  ],
+  "expected_command": "git commit -m \"test(contracts): add contract testing for microservices\""
+}

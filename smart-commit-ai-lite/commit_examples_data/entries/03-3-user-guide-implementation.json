@@ -1,0 +1,14 @@
+{
+  "title": "3. User Guide Implementation",
+  "original_text": "We added real user-facing help for the PyQt6 app and exposed it from the interface. In [app.py]..., I added: a new `Help -> User Guide` action, shared localized document lookup for help files, a direct user-guide dialog... I created two new guide files: dmidiplayer/docs/en/pyqt6-user-guide.md, dmidiplayer/docs/es/pyqt6-user-guide.md... I also updated the local help indexes... Tests in [test_app_playlist.py]... now cover: `User Guide` action existence, localized guide-path resolution... And I updated [Roadmap.md]... to mark the local-help/app-help pieces as done. Verification is clean: ... 111 tests OK...",
+  "expected_subject": "docs(app): add localized PyQt6 user guide",
+  "expected_body_lines": [
+    "- Add Help > User Guide action with shared localized lookup",
+    "- Create comprehensive EN/ES guides for UI controls and menus",
+    "- Update local help indexes to reference new user guide",
+    "- Add tests for action existence and path resolution",
+    "- Update Roadmap.md to mark local help items complete",
+    "- Validation: compileall OK, 111 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"docs(app): add localized PyQt6 user guide\" \\\n  -m \"- Add Help > User Guide action with shared localized lookup\" \\\n  -m \"- Create comprehensive EN/ES guides for UI controls and menus\" \\\n  -m \"- Update local help indexes to reference new user guide\" \\\n  -m \"- Add tests for action existence and path resolution\" \\\n  -m \"- Update Roadmap.md to mark local help items complete\" \\\n  -m \"- Validation: compileall OK, 111 tests pass, offscreen verified\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API automation with REST Assured",
+  "original_text": "Added API automation with REST Assured. Implemented API test framework. Added API test data management. Implemented API test reporting. Added API test CI/CD integration. Result: API automation operational.",
+  "expected_subject": "test(api): add API automation with REST Assured",
+  "expected_body_lines": [
+    "- Implement API test framework",
+    "- Add API test data management",
+    "- Implement API test reporting",
+    "- Add API test CI/CD integration",
+    "- Validation: API automation operational"
+  ],
+  "expected_command": "git commit -m \"test(api): add API automation with REST Assured\""
+}

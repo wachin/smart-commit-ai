@@ -1,0 +1,13 @@
+{
+  "title": "Fix: LDAP injection vulnerability",
+  "original_text": "Fixed LDAP injection vulnerability in authentication. Implemented LDAP query parameterization. Added LDAP input sanitization. Implemented LDAP query escaping. Added LDAP injection detection. Result: LDAP injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix LDAP injection vulnerability",
+  "expected_body_lines": [
+    "- Implement LDAP query parameterization",
+    "- Add LDAP input sanitization",
+    "- Implement LDAP query escaping",
+    "- Add LDAP injection detection",
+    "- Validation: LDAP injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix LDAP injection vulnerability\""
+}

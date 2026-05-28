@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API versioning guide",
+  "original_text": "Added API versioning guide. Documented versioning strategy. Added version deprecation policy. Implemented version negotiation. Added version migration documentation. Result: API versioning guide complete.",
+  "expected_subject": "docs(api): add API versioning guide",
+  "expected_body_lines": [
+    "- Document versioning strategy",
+    "- Add version deprecation policy",
+    "- Implement version negotiation",
+    "- Add version migration documentation",
+    "- Validation: API versioning guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API versioning guide\""
+}

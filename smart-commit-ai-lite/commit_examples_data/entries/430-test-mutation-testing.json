@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add mutation testing with PIT",
+  "original_text": "Added mutation testing with PIT. Implemented mutation test configuration. Added mutation score reporting. Implemented mutation test analysis. Added mutation test optimization. Result: mutation tests pass.",
+  "expected_subject": "test(mutation): add mutation testing with PIT",
+  "expected_body_lines": [
+    "- Implement mutation test configuration",
+    "- Add mutation score reporting",
+    "- Implement mutation test analysis",
+    "- Add mutation test optimization",
+    "- Validation: mutation tests pass"
+  ],
+  "expected_command": "git commit -m \"test(mutation): add mutation testing with PIT\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Buffer overflow in file parsing",
+  "original_text": "Fixed buffer overflow in file parsing module. Added bounds checking for array operations. Implemented safe string handling functions. Added input validation for file size. Implemented memory safety checks. Result: buffer overflow fixed.",
+  "expected_subject": "fix(core): fix buffer overflow in file parsing",
+  "expected_body_lines": [
+    "- Add bounds checking for array operations",
+    "- Implement safe string handling functions",
+    "- Add input validation for file size",
+    "- Implement memory safety checks",
+    "- Validation: buffer overflow fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix buffer overflow in file parsing\""
+}

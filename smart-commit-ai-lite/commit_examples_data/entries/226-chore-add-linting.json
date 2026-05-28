@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add code linting",
+  "original_text": "Added code linting with ESLint and Prettier. Configured linting rules for code quality. Added pre-commit hooks for automatic linting. Implemented linting in CI/CD pipeline. Added code formatting on save. Result: linting operational.",
+  "expected_subject": "chore(tooling): add code linting with ESLint and Prettier",
+  "expected_body_lines": [
+    "- Configure linting rules for code quality",
+    "- Add pre-commit hooks for automatic linting",
+    "- Implement linting in CI/CD pipeline",
+    "- Add code formatting on save",
+    "- Validation: linting operational"
+  ],
+  "expected_command": "git commit -m \"chore(tooling): add code linting with ESLint and Prettier\""
+}

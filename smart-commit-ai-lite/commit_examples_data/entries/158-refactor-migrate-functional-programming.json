@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Migrate to functional programming style",
+  "original_text": "Refactored to use functional programming patterns. Replaced mutable state with immutable data structures. Implemented pure functions for data transformations. Added function composition for complex operations. Used map/filter/reduce instead of loops. This reduces bugs and improves testability. Added tests for functional components. Result: 46 tests pass.",
+  "expected_subject": "refactor(style): migrate to functional programming patterns",
+  "expected_body_lines": [
+    "- Replace mutable state with immutable data structures",
+    "- Implement pure functions for data transformations",
+    "- Add function composition for complex operations",
+    "- Use map/filter/reduce instead of loops",
+    "- Add tests for functional components",
+    "- Validation: 46 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(style): migrate to functional programming patterns\""
+}

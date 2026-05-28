@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add best practices guide",
+  "original_text": "Added best practices guide for development. Documented coding standards and patterns. Added performance optimization best practices. Implemented security best practices. Added testing best practices. Result: best practices guide complete.",
+  "expected_subject": "docs(guide): add best practices guide",
+  "expected_body_lines": [
+    "- Document coding standards and patterns",
+    "- Add performance optimization best practices",
+    "- Implement security best practices",
+    "- Add testing best practices",
+    "- Validation: best practices guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(guide): add best practices guide\""
+}

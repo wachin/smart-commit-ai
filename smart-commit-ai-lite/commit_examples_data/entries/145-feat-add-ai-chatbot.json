@@ -1,0 +1,14 @@
+{
+  "title": "Add AI-powered chatbot",
+  "original_text": "Implemented AI-powered chatbot for customer support. Integrated OpenAI GPT-4 for natural language understanding. Implemented context-aware conversations. Added knowledge base integration. Implemented intent classification and entity extraction. Added handoff to human agents. Added chatbot analytics and improvement tracking. Result: chatbot deployed and handling queries.",
+  "expected_subject": "feat(ai): add AI-powered chatbot for customer support",
+  "expected_body_lines": [
+    "- Integrate OpenAI GPT-4 for NLU",
+    "- Implement context-aware conversations",
+    "- Add knowledge base integration",
+    "- Implement intent classification and entity extraction",
+    "- Add handoff to human agents and analytics",
+    "- Validation: chatbot deployed and handling queries"
+  ],
+  "expected_command": "git commit -m \"feat(ai): add AI-powered chatbot for customer support\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Resource leak in file handling",
+  "original_text": "Fixed resource leak in file handling. Files were not being properly closed. Implemented context managers for file operations. Added resource cleanup in error handlers. Implemented resource leak detection. Result: resource leak fixed.",
+  "expected_subject": "fix(core): fix resource leak in file handling",
+  "expected_body_lines": [
+    "- Fix files not being properly closed",
+    "- Implement context managers for file operations",
+    "- Add resource cleanup in error handlers",
+    "- Implement resource leak detection",
+    "- Validation: resource leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix resource leak in file handling\""
+}

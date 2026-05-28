@@ -1,0 +1,11 @@
+{
+  "title": "DrumBurp: Remove empty legacy PyQt4 compatibility directory",
+  "original_text": "Primero déjame revisar el estado real del directorio src/PyQt4 y el informe completo: Ahora verifico el estado real de cada ítem antes de marcar: Bien. src/PyQt4 existe pero está vacío (solo __pycache__). El directorio en sí no tiene archivos .py — la capa de compatibilidad fue eliminada. Lo que queda es borrar el directorio vacío. Ahora tengo todo claro para reescribir el informe con checkboxes precisos: Listo. El informe fue reescrito completamente con checkboxes [x] para lo completado y [ ] para lo pendiente, basado en el estado real del código. Los pendientes reales son solo 5: - [ ] Borrar el directorio vacío src/PyQt4/ (solo tiene __pycache__) - [ ] Regenerar los 3 archivos *_rc.py con pyrcc5 (ahora son stubs) - [ ] Modernizar exec_() → exec() (opcional, baja prioridad) - [ ] Validación manual de flujos de usuario - [ ] Compatibilidad con LilyPond 2.24 (problema independiente de PyQt). ¿Quieres que empecemos con alguno de esos? El más fácil es borrar src/PyQt4/.",
+  "expected_subject": "chore(cleanup): remove empty legacy PyQt4 compatibility directory",
+  "expected_body_lines": [
+    "- Delete src/PyQt4/ as the compatibility layer is no longer needed",
+    "- Update migration report with accurate checkbox status",
+    "- Identify remaining tasks: resource compilation and manual validation"
+  ],
+  "expected_command": "git commit -m \"chore(cleanup): remove empty legacy PyQt4 compatibility directory\""
+}

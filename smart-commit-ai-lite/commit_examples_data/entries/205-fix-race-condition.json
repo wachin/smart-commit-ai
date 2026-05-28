@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Race condition in cache invalidation",
+  "original_text": "Fixed race condition in cache invalidation. Cache was being invalidated before data was written. Implemented proper cache update ordering. Added cache locking mechanism. Added cache consistency checks. Result: cache consistency maintained.",
+  "expected_subject": "fix(cache): fix race condition in cache invalidation",
+  "expected_body_lines": [
+    "- Fix cache invalidated before data write",
+    "- Implement proper cache update ordering",
+    "- Add cache locking mechanism",
+    "- Add cache consistency checks",
+    "- Validation: cache consistency maintained"
+  ],
+  "expected_command": "git commit -m \"fix(cache): fix race condition in cache invalidation\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add network troubleshooting guide",
+  "original_text": "Added network troubleshooting guide. Documented common network issues. Added network debugging tools. Implemented network connectivity troubleshooting. Added network security troubleshooting. Result: network troubleshooting guide complete.",
+  "expected_subject": "docs(network): add network troubleshooting guide",
+  "expected_body_lines": [
+    "- Document common network issues",
+    "- Add network debugging tools",
+    "- Implement network connectivity troubleshooting",
+    "- Add network security troubleshooting",
+    "- Validation: network troubleshooting guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(network): add network troubleshooting guide\""
+}

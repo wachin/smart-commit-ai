@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add Server-Sent Events streaming",
+  "original_text": "Added Server-Sent Events. Implemented SSE endpoint. Added event streaming. Implemented reconnection logic. Added event filtering. Result: SSE operational.",
+  "expected_subject": "feat(network): add Server-Sent Events",
+  "expected_body_lines": [
+    "- Implement SSE endpoint",
+    "- Add event streaming",
+    "- Implement reconnection logic",
+    "- Add event filtering",
+    "- Validation: SSE operational"
+  ],
+  "expected_command": "git commit -m \"feat(network): add Server-Sent Events\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Decorator pattern to caching",
+  "original_text": "Refactored to apply Decorator pattern to caching. Implemented cache decorator. Added cache invalidation. Implemented cache warming. Added cache statistics. Result: Decorator pattern applied.",
+  "expected_subject": "refactor(pattern): apply Decorator pattern to caching",
+  "expected_body_lines": [
+    "- Implement cache decorator",
+    "- Add cache invalidation",
+    "- Implement cache warming",
+    "- Add cache statistics",
+    "- Validation: Decorator pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Decorator pattern to caching\""
+}

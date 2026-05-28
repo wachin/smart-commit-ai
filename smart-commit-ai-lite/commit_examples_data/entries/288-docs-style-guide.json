@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add documentation style guide",
+  "original_text": "Added documentation style guide. Documented writing standards and conventions. Added markdown style guidelines. Implemented documentation templates. Added review process guidelines. Result: documentation style guide complete.",
+  "expected_subject": "docs(docs): add documentation style guide",
+  "expected_body_lines": [
+    "- Document writing standards and conventions",
+    "- Add markdown style guidelines",
+    "- Implement documentation templates",
+    "- Add review process guidelines",
+    "- Validation: documentation style guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(docs): add documentation style guide\""
+}

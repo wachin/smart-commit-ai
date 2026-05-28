@@ -1,0 +1,14 @@
+{
+  "title": "Add ML model explainability",
+  "original_text": "Implemented model explainability features. Added SHAP values for feature importance. Implemented LIME for local explanations. Added partial dependence plots. Implemented counterfactual explanations. Added model interpretation dashboard. Added explainability API endpoints. Added tests for explainability features. Result: model explainability working.",
+  "expected_subject": "feat(ml): add model explainability with SHAP and LIME",
+  "expected_body_lines": [
+    "- Add SHAP values for feature importance",
+    "- Implement LIME for local explanations",
+    "- Add partial dependence plots",
+    "- Implement counterfactual explanations",
+    "- Add model interpretation dashboard",
+    "- Validation: model explainability working"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add model explainability with SHAP and LIME\""
+}

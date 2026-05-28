@@ -1,0 +1,34 @@
+{
+  "artifact_policy_version": 1,
+  "created_at_utc": "2026-05-17T20:35:08+00:00",
+  "format_version": 1,
+  "label_balance": {
+    "counts": {
+      "chore": 101,
+      "docs": 100,
+      "feat": 99,
+      "fix": 98,
+      "refactor": 98,
+      "test": 102
+    },
+    "imbalance_ratio": 1.04,
+    "largest_count": 102,
+    "largest_label": "test",
+    "smallest_count": 98,
+    "smallest_label": "fix",
+    "total": 598
+  },
+  "labels": {
+    "chore": 101,
+    "docs": 100,
+    "feat": 99,
+    "fix": 98,
+    "refactor": 98,
+    "test": 102
+  },
+  "model_path": "/home/wachin/Dev/smart-commit-ai-lite/ml/commit_model.pkl",
+  "seed_examples_included": true,
+  "trainer": "TfidfVectorizer(ngram_range=(1, 2)) + LinearSVC(class_weight='balanced')",
+  "training_examples": 598,
+  "vectorizer_path": "/home/wachin/Dev/smart-commit-ai-lite/ml/vectorizer.pkl"
+}

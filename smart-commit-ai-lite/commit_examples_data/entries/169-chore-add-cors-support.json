@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add CORS support",
+  "original_text": "Added CORS support for API. Implemented CORS middleware. Configured allowed origins. Configured allowed methods and headers. Implemented CORS preflight handling. Added CORS error handling. Updated API documentation. Result: CORS support operational.",
+  "expected_subject": "chore(api): add CORS support for API",
+  "expected_body_lines": [
+    "- Implement CORS middleware",
+    "- Configure allowed origins, methods, headers",
+    "- Implement CORS preflight handling",
+    "- Add CORS error handling",
+    "- Update API documentation",
+    "- Validation: CORS support operational"
+  ],
+  "expected_command": "git commit -m \"chore(api): add CORS support for API\""
+}

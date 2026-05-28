@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Clickjacking vulnerability",
+  "original_text": "Fixed clickjacking vulnerability in web application. Implemented X-Frame-Options header. Added Content-Security-Policy frame-ancestors directive. Implemented frame busting JavaScript. Added clickjacking detection. Result: clickjacking vulnerability fixed.",
+  "expected_subject": "fix(security): fix clickjacking vulnerability",
+  "expected_body_lines": [
+    "- Implement X-Frame-Options header",
+    "- Add Content-Security-Policy frame-ancestors directive",
+    "- Implement frame busting JavaScript",
+    "- Add clickjacking detection",
+    "- Validation: clickjacking vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix clickjacking vulnerability\""
+}

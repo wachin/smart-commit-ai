@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Inline method for simplicity",
+  "original_text": "Refactored to inline method for simplicity. Inlined trivial methods to reduce complexity. Removed unnecessary method indirection. Simplified code structure. Improved code readability. Result: method inlining complete.",
+  "expected_subject": "refactor(simplify): inline method for simplicity",
+  "expected_body_lines": [
+    "- Inline trivial methods to reduce complexity",
+    "- Remove unnecessary method indirection",
+    "- Simplify code structure",
+    "- Improve code readability",
+    "- Validation: method inlining complete"
+  ],
+  "expected_command": "git commit -m \"refactor(simplify): inline method for simplicity\""
+}

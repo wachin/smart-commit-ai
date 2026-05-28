@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API SDK documentation",
+  "original_text": "Added API SDK documentation. Documented SDK installation. Added SDK usage examples. Implemented SDK configuration. Added SDK error handling. Result: SDK documentation complete.",
+  "expected_subject": "docs(api): add API SDK documentation",
+  "expected_body_lines": [
+    "- Document SDK installation",
+    "- Add SDK usage examples",
+    "- Implement SDK configuration",
+    "- Add SDK error handling",
+    "- Validation: SDK documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API SDK documentation\""
+}

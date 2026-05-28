@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add performance guide",
+  "original_text": "Added performance optimization guide. Documented performance best practices and anti-patterns. Added profiling and monitoring procedures. Implemented performance tuning guidelines. Added scalability considerations. Added performance benchmarking results. Result: performance guide complete.",
+  "expected_subject": "docs(perf): add performance optimization guide",
+  "expected_body_lines": [
+    "- Document performance best practices and anti-patterns",
+    "- Add profiling and monitoring procedures",
+    "- Implement performance tuning guidelines",
+    "- Add scalability considerations",
+    "- Add performance benchmarking results",
+    "- Validation: performance guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(perf): add performance optimization guide\""
+}

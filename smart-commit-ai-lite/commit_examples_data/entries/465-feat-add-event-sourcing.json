@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add event sourcing architecture",
+  "original_text": "Added event sourcing architecture. Implemented event store. Added event projection. Implemented event replay. Added event versioning. Result: event sourcing operational.",
+  "expected_subject": "feat(architecture): add event sourcing architecture",
+  "expected_body_lines": [
+    "- Implement event store",
+    "- Add event projection",
+    "- Implement event replay",
+    "- Add event versioning",
+    "- Validation: event sourcing operational"
+  ],
+  "expected_command": "git commit -m \"feat(architecture): add event sourcing architecture\""
+}

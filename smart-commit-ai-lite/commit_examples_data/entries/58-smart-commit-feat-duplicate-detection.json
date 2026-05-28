@@ -1,0 +1,12 @@
+{
+  "title": "Smart Commit: Duplicate detection in dataset loader",
+  "original_text": "Listo. Continué el desarrollo con una mejora pequeña pero importante para la calidad del dataset ML: Añadí validación de duplicados en ml/dataset_loader.py: ahora detecta title duplicado y original_text duplicado en commit_examples_data/entries/. Añadí tests en tests/test_ml_training.py para ambos casos. Actualicé README.md, ml/README.md y Roadmap.md con la nueva validación y el conteo actual. Verificación: python3 -m unittest tests/test_ml_training.py -v, QT_QPA_PLATFORM=offscreen python3 -m unittest discover -s tests -v, git diff --check. Resultado: 67 tests pasaron, git diff --check limpio, y no hay __pycache__ rastreado por Git.",
+  "expected_subject": "feat(ml): add duplicate detection to dataset loader",
+  "expected_body_lines": [
+    "- Detect duplicate titles and original_text in training entries",
+    "- Add regression tests for duplicate validation logic",
+    "- Update READMEs and Roadmap.md with new data quality rules",
+    "- Validation: all 67 tests pass, git diff --check clean"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add duplicate detection to dataset loader\""
+}

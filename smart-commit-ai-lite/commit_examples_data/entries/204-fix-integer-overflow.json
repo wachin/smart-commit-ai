@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Integer overflow in calculations",
+  "original_text": "Fixed integer overflow in financial calculations. Added bounds checking for arithmetic operations. Implemented safe integer arithmetic library. Added unit tests for edge cases. Updated calculation validation. Result: calculations safe from overflow.",
+  "expected_subject": "fix(core): fix integer overflow in calculations",
+  "expected_body_lines": [
+    "- Add bounds checking for arithmetic operations",
+    "- Implement safe integer arithmetic library",
+    "- Add unit tests for edge cases",
+    "- Update calculation validation",
+    "- Validation: calculations safe from overflow"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix integer overflow in calculations\""
+}

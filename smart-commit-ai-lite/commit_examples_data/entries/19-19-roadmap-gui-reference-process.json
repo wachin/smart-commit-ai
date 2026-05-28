@@ -1,0 +1,14 @@
+{
+  "title": "19. Roadmap & GUI Reference Process",
+  "original_text": "Done. I updated [Roadmap.md]... so the new `Roadmap-GUI/` material is part of the ongoing port process... What I added: `Roadmap-GUI/dmidiplayer-GUI.md` to the “read this first” list, a new **GUI Reference Check** section... explicit references to screenshots... an always-active checklist requiring visual comparison... I also updated the roadmap date to `2026-05-07`. No code changed this round, just the roadmap/handoff process.",
+  "expected_subject": "docs(roadmap): integrate GUI reference check process",
+  "expected_body_lines": [
+    "- Add Roadmap-GUI/dmidiplayer-GUI.md to primary reading list",
+    "- Create GUI Reference Check section with visual comparison checklist",
+    "- Link key reference screenshots (Playlist, Lyrics, Channels, Piano)",
+    "- Require visual verification before marking windows complete",
+    "- Update roadmap date to 2026-05-07",
+    "- No code changes; documentation and process update only"
+  ],
+  "expected_command": "git commit -m \"docs(roadmap): integrate GUI reference check process\" \\\n  -m \"- Add Roadmap-GUI/dmidiplayer-GUI.md to primary reading list\" \\\n  -m \"- Create GUI Reference Check section with visual comparison checklist\" \\\n  -m \"- Link key reference screenshots (Playlist, Lyrics, Channels, Piano)\" \\\n  -m \"- Require visual verification before marking windows complete\" \\\n  -m \"- Update roadmap date to 2026-05-07\" \\\n  -m \"- No code changes; documentation and process update only\""
+}

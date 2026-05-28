@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Null byte injection vulnerability",
+  "original_text": "Fixed null byte injection vulnerability in file operations. Implemented null byte sanitization. Added input validation for file paths. Implemented null byte detection. Added safe file handling. Result: null byte injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix null byte injection vulnerability",
+  "expected_body_lines": [
+    "- Implement null byte sanitization",
+    "- Add input validation for file paths",
+    "- Implement null byte detection",
+    "- Add safe file handling",
+    "- Validation: null byte injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix null byte injection vulnerability\""
+}

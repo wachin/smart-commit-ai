@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add OpenTelemetry instrumentation",
+  "original_text": "Added OpenTelemetry for observability. Implemented metric collection. Added distributed tracing. Implemented logging integration. Added telemetry export. Result: OpenTelemetry instrumentation operational.",
+  "expected_subject": "chore(observability): add OpenTelemetry instrumentation",
+  "expected_body_lines": [
+    "- Implement metric collection",
+    "- Add distributed tracing",
+    "- Implement logging integration",
+    "- Add telemetry export",
+    "- Validation: OpenTelemetry instrumentation operational"
+  ],
+  "expected_command": "git commit -m \"chore(observability): add OpenTelemetry instrumentation\""
+}

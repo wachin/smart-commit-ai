@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add model-based testing",
+  "original_text": "Added model-based testing framework. Implemented state machine model. Added model-based test generation. Implemented model-based oracle. Added model-based coverage. Result: model-based tests pass.",
+  "expected_subject": "test(model): add model-based testing",
+  "expected_body_lines": [
+    "- Implement state machine model",
+    "- Add model-based test generation",
+    "- Implement model-based oracle",
+    "- Add model-based coverage",
+    "- Validation: model-based tests pass"
+  ],
+  "expected_command": "git commit -m \"test(model): add model-based testing\""
+}

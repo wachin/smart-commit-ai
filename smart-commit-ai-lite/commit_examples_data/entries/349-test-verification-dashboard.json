@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add verification dashboard",
+  "original_text": "Added verification dashboard for monitoring. Implemented test result visualization. Added test trend analysis. Implemented test coverage dashboard. Added test performance metrics. Result: verification dashboard operational.",
+  "expected_subject": "test(monitoring): add verification dashboard",
+  "expected_body_lines": [
+    "- Implement test result visualization",
+    "- Add test trend analysis",
+    "- Implement test coverage dashboard",
+    "- Add test performance metrics",
+    "- Validation: verification dashboard operational"
+  ],
+  "expected_command": "git commit -m \"test(monitoring): add verification dashboard\""
+}

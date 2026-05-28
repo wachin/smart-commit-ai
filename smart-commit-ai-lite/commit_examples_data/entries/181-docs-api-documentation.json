@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add comprehensive API documentation",
+  "original_text": "Added comprehensive API documentation. Documented all REST endpoints with request/response examples. Added authentication and authorization documentation. Implemented API versioning documentation. Added error code documentation and troubleshooting guide. Added API rate limiting documentation. Created API quick start guide. Result: API documentation complete.",
+  "expected_subject": "docs(api): add comprehensive API documentation",
+  "expected_body_lines": [
+    "- Document all REST endpoints with request/response examples",
+    "- Add authentication and authorization documentation",
+    "- Implement API versioning documentation",
+    "- Add error code documentation and troubleshooting guide",
+    "- Add API rate limiting documentation and quick start",
+    "- Validation: API documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add comprehensive API documentation\""
+}

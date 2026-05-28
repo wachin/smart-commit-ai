@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add ClickHouse analytics database",
+  "original_text": "Added ClickHouse analytics database. Implemented ClickHouse client. Added columnar storage. Implemented distributed queries. Added materialized views. Result: ClickHouse operational.",
+  "expected_subject": "chore(database): add ClickHouse analytics database",
+  "expected_body_lines": [
+    "- Implement ClickHouse client",
+    "- Add columnar storage",
+    "- Implement distributed queries",
+    "- Add materialized views",
+    "- Validation: ClickHouse operational"
+  ],
+  "expected_command": "git commit -m \"chore(database): add ClickHouse analytics database\""
+}

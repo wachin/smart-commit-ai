@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Timing attack in authentication",
+  "original_text": "Fixed timing attack in authentication. Implemented constant-time comparison. Added random delays. Implemented timing-safe string comparison. Added timing attack detection. Result: timing attack fixed.",
+  "expected_subject": "fix(security): fix timing attack in authentication",
+  "expected_body_lines": [
+    "- Implement constant-time comparison",
+    "- Add random delays",
+    "- Implement timing-safe string comparison",
+    "- Add timing attack detection",
+    "- Validation: timing attack fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix timing attack in authentication\""
+}

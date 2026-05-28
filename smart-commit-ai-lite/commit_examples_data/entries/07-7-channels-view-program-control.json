@@ -1,0 +1,15 @@
+{
+  "title": "7. Channels View: Program Control",
+  "original_text": "We kept the Channels view moving and added patch/program control. In [app.py]..., the `Channels` window now has a `Program` spinbox per row. It’s initialized from the first program-change event... In [player.py]..., I added per-channel program overrides. Those overrides now do two useful things: send an immediate `program_change`... replace later file-sent `program_change` events... To support sensible initial values, [sequence.py]... now exposes `initial_programs()`. Tests were expanded... They now cover: program override rewriting file program changes... I also updated the user guides... And [Roadmap.md]... now marks the basic patch/program selector complete... Verification is clean: ... 125 tests OK...",
+  "expected_subject": "feat(app): add per-channel program control",
+  "expected_body_lines": [
+    "- Add Program spinbox to ChannelsDialog with immediate CC send",
+    "- Implement program overrides that replace file events during playback",
+    "- Expose initial_programs() in sequence.py for UI initialization",
+    "- Update user guides (EN/ES) with new program control docs",
+    "- Add tests for overrides, immediate sends, and UI wiring",
+    "- Update Roadmap.md to mark basic patch selector complete",
+    "- Validation: compileall OK, 125 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add per-channel program control\" \\\n  -m \"- Add Program spinbox to ChannelsDialog with immediate CC send\" \\\n  -m \"- Implement program overrides that replace file events during playback\" \\\n  -m \"- Expose initial_programs() in sequence.py for UI initialization\" \\\n  -m \"- Update user guides (EN/ES) with new program control docs\" \\\n  -m \"- Add tests for overrides, immediate sends, and UI wiring\" \\\n  -m \"- Update Roadmap.md to mark basic patch selector complete\" \\\n  -m \"- Validation: compileall OK, 125 tests pass, offscreen verified\""
+}

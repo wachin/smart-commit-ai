@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Argo Workflows",
+  "original_text": "Added Argo Workflows. Implemented workflow definitions. Added workflow execution. Implemented workflow artifacts. Added workflow templates. Result: Argo Workflows operational.",
+  "expected_subject": "chore(workflow): add Argo Workflows",
+  "expected_body_lines": [
+    "- Implement workflow definitions",
+    "- Add workflow execution",
+    "- Implement workflow artifacts",
+    "- Add workflow templates",
+    "- Validation: Argo Workflows operational"
+  ],
+  "expected_command": "git commit -m \"chore(workflow): add Argo Workflows\""
+}

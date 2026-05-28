@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement prototype pattern",
+  "original_text": "Refactored to implement prototype pattern. Added prototype for object cloning. Implemented prototype registry. Added deep cloning support. Improved object creation performance. Result: prototype pattern implemented.",
+  "expected_subject": "refactor(pattern): implement prototype pattern",
+  "expected_body_lines": [
+    "- Add prototype for object cloning",
+    "- Implement prototype registry",
+    "- Add deep cloning support",
+    "- Improve object creation performance",
+    "- Validation: prototype pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement prototype pattern\""
+}

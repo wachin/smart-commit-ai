@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add AWS Lambda integration",
+  "original_text": "Added AWS Lambda integration. Implemented Lambda function deployment. Added Lambda triggers. Implemented Lambda monitoring. Added Lambda IAM roles. Result: AWS Lambda integration operational.",
+  "expected_subject": "chore(serverless): add AWS Lambda integration",
+  "expected_body_lines": [
+    "- Implement Lambda function deployment",
+    "- Add Lambda triggers",
+    "- Implement Lambda monitoring",
+    "- Add Lambda IAM roles",
+    "- Validation: AWS Lambda integration operational"
+  ],
+  "expected_command": "git commit -m \"chore(serverless): add AWS Lambda integration\""
+}

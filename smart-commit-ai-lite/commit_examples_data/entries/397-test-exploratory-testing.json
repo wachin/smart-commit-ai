@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add exploratory testing",
+  "original_text": "Added exploratory testing framework. Implemented test session management. Added test note taking. Implemented test charter documentation. Added exploratory test reporting. Result: exploratory testing operational.",
+  "expected_subject": "test(exploratory): add exploratory testing",
+  "expected_body_lines": [
+    "- Implement test session management",
+    "- Add test note taking",
+    "- Implement test charter documentation",
+    "- Add exploratory test reporting",
+    "- Validation: exploratory testing operational"
+  ],
+  "expected_command": "git commit -m \"test(exploratory): add exploratory testing\""
+}

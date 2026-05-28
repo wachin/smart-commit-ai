@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Infinite loop in parser",
+  "original_text": "Fixed infinite loop in parser. Implemented loop termination condition. Added loop iteration limit. Implemented parser state tracking. Added parser timeout. Result: infinite loop fixed.",
+  "expected_subject": "fix(parser): fix infinite loop in parser",
+  "expected_body_lines": [
+    "- Implement loop termination condition",
+    "- Add loop iteration limit",
+    "- Implement parser state tracking",
+    "- Add parser timeout",
+    "- Validation: infinite loop fixed"
+  ],
+  "expected_command": "git commit -m \"fix(parser): fix infinite loop in parser\""
+}

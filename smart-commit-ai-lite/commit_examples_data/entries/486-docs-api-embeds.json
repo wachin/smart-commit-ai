@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API embeds documentation",
+  "original_text": "Added API embeds documentation. Documented embed parameters. Added embed examples. Implemented nested resources. Added embed depth limits. Result: embeds documentation complete.",
+  "expected_subject": "docs(api): add API embeds documentation",
+  "expected_body_lines": [
+    "- Document embed parameters",
+    "- Add embed examples",
+    "- Implement nested resources",
+    "- Add embed depth limits",
+    "- Validation: embeds documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API embeds documentation\""
+}

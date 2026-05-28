@@ -1,0 +1,13 @@
+{
+  "title": "Fix: SSL certificate validation",
+  "original_text": "Fixed SSL certificate validation issue. Application was accepting invalid certificates. Implemented proper certificate chain validation. Added certificate pinning. Updated SSL configuration for security. Result: SSL certificate validation fixed.",
+  "expected_subject": "fix(security): fix SSL certificate validation",
+  "expected_body_lines": [
+    "- Fix accepting invalid certificates",
+    "- Implement proper certificate chain validation",
+    "- Add certificate pinning",
+    "- Update SSL configuration for security",
+    "- Validation: SSL certificate validation fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix SSL certificate validation\""
+}

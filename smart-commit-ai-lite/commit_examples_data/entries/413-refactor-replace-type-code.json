@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace type code with polymorphism",
+  "original_text": "Refactored to replace type code with polymorphism. Identified type code patterns. Added polymorphic classes. Implemented type-specific behavior. Removed type code checks. Result: type code replaced with polymorphism.",
+  "expected_subject": "refactor(pattern): replace type code with polymorphism",
+  "expected_body_lines": [
+    "- Identify type code patterns",
+    "- Add polymorphic classes",
+    "- Implement type-specific behavior",
+    "- Remove type code checks",
+    "- Validation: type code replaced with polymorphism"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): replace type code with polymorphism\""
+}

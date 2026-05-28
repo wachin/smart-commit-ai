@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add New Relic monitoring",
+  "original_text": "Added New Relic monitoring integration. Implemented APM for application performance monitoring. Added infrastructure monitoring with New Relic Infrastructure. Implemented browser monitoring for frontend. Added custom dashboards and alerts. Result: New Relic monitoring operational.",
+  "expected_subject": "chore(monitoring): add New Relic monitoring",
+  "expected_body_lines": [
+    "- Implement APM for application performance monitoring",
+    "- Add infrastructure monitoring with New Relic Infrastructure",
+    "- Implement browser monitoring for frontend",
+    "- Add custom dashboards and alerts",
+    "- Validation: New Relic monitoring operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add New Relic monitoring\""
+}

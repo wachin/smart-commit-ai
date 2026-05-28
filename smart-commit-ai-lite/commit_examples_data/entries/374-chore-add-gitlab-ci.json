@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add GitLab CI/CD",
+  "original_text": "Added GitLab CI/CD pipeline. Implemented GitLab CI configuration. Added GitLab runner setup. Implemented GitLab artifact management. Added GitLab deployment automation. Result: GitLab CI/CD operational.",
+  "expected_subject": "chore(ci): add GitLab CI/CD",
+  "expected_body_lines": [
+    "- Implement GitLab CI configuration",
+    "- Add GitLab runner setup",
+    "- Implement GitLab artifact management",
+    "- Add GitLab deployment automation",
+    "- Validation: GitLab CI/CD operational"
+  ],
+  "expected_command": "git commit -m \"chore(ci): add GitLab CI/CD\""
+}

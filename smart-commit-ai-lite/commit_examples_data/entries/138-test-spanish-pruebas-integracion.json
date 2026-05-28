@@ -1,0 +1,14 @@
+{
+  "title": "Test: Añadir pruebas de integración en español",
+  "original_text": "Añadí pruebas de integración para la API y base de datos. Creé base de datos de pruebas con datos de prueba. Implementé pruebas de endpoints de API con base de datos real. Añadí rollback de transacciones para aislamiento de pruebas. Implementé limpieza de datos de prueba entre pruebas. Añadí pruebas de contrato de API. Añadí pruebas de rendimiento para consultas de base de datos. Resultado: 54 pruebas de integración pasan.",
+  "expected_subject": "test(integración): añadir pruebas de integración para API y base de datos",
+  "expected_body_lines": [
+    "- Crear base de datos de pruebas con datos de prueba",
+    "- Implementar pruebas de endpoints con base de datos real",
+    "- Añadir rollback de transacciones para aislamiento",
+    "- Implementar limpieza de datos entre pruebas",
+    "- Añadir pruebas de contrato y rendimiento",
+    "- Validación: 54 pruebas de integración pasan"
+  ],
+  "expected_command": "git commit -m \"test(integración): añadir pruebas de integración para API y base de datos\""
+}

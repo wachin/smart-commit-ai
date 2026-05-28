@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add OpenTelemetry observability testing",
+  "original_text": "Added observability testing with OpenTelemetry. Implemented distributed tracing. Added metrics collection and export. Implemented log correlation with traces. Added observability dashboards. Result: observability testing operational.",
+  "expected_subject": "test(observability): add observability testing with OpenTelemetry",
+  "expected_body_lines": [
+    "- Implement distributed tracing",
+    "- Add metrics collection and export",
+    "- Implement log correlation with traces",
+    "- Add observability dashboards",
+    "- Validation: observability testing operational"
+  ],
+  "expected_command": "git commit -m \"test(observability): add observability testing with OpenTelemetry\""
+}

@@ -1,0 +1,11 @@
+{
+  "title": "46. WPS Dicts: Enriched Configs (Batch 2)",
+  "original_text": "Hecho. Enriquecí estos tres archivos: hr_HR/dict.conf, km_KH/dict.conf, qu_EC/dict.conf... Ahora cada uno tiene 8 entradas `DisplayName`... También dejé `km_KH` con nombre local en jemer: `ភាសាខ្មែរ (កម្ពុជា)`.",
+  "expected_subject": "feat(dict): enrich hr_HR, km_KH, and qu_EC dict configs",
+  "expected_body_lines": [
+    "- Add 8 localized DisplayName entries to match WPS standards",
+    "- Include native Khmer script for km_KH display name",
+    "- Ensure consistency across all regional variant configurations"
+  ],
+  "expected_command": "git commit -m \"feat(dict): enrich hr_HR, km_KH, and qu_EC dict configs\" \\\n  -m \"- Add 8 localized DisplayName entries to match WPS standards\" \\\n  -m \"- Include native Khmer script for km_KH display name\" \\\n  -m \"- Ensure consistency across all regional variant configurations\""
+}

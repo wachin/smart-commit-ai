@@ -1,0 +1,14 @@
+{
+  "title": "Add end-to-end testing with Cypress",
+  "original_text": "Added end-to-end testing using Cypress. Created test suites for critical user flows: registration, login, checkout, and dashboard. Implemented visual regression testing. Added network request mocking for API tests. Implemented test data management with fixtures. Added CI integration for automated E2E tests. Added test reporting with screenshots on failure. Result: 24 E2E tests pass.",
+  "expected_subject": "test(e2e): add end-to-end testing with Cypress",
+  "expected_body_lines": [
+    "- Create test suites for critical user flows",
+    "- Implement visual regression testing",
+    "- Add network request mocking for API tests",
+    "- Implement test data management with fixtures",
+    "- Add CI integration and test reporting",
+    "- Validation: 24 E2E tests pass"
+  ],
+  "expected_command": "git commit -m \"test(e2e): add end-to-end testing with Cypress\""
+}

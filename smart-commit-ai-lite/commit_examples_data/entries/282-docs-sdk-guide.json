@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add SDK guide",
+  "original_text": "Added SDK guide for developers. Documented SDK installation and setup. Added SDK code examples for common operations. Implemented SDK authentication guide. Added SDK troubleshooting section. Result: SDK guide complete.",
+  "expected_subject": "docs(sdk): add SDK guide for developers",
+  "expected_body_lines": [
+    "- Document SDK installation and setup",
+    "- Add SDK code examples for common operations",
+    "- Implement SDK authentication guide",
+    "- Add SDK troubleshooting section",
+    "- Validation: SDK guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(sdk): add SDK guide for developers\""
+}

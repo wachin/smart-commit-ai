@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Nginx reverse proxy",
+  "original_text": "Added Nginx reverse proxy configuration. Implemented load balancing with Nginx. Added SSL termination with Nginx. Implemented caching with Nginx. Added rate limiting with Nginx. Result: Nginx reverse proxy operational.",
+  "expected_subject": "chore(infra): add Nginx reverse proxy",
+  "expected_body_lines": [
+    "- Implement load balancing with Nginx",
+    "- Add SSL termination with Nginx",
+    "- Implement caching with Nginx",
+    "- Add rate limiting with Nginx",
+    "- Validation: Nginx reverse proxy operational"
+  ],
+  "expected_command": "git commit -m \"chore(infra): add Nginx reverse proxy\""
+}

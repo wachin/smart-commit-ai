@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add contract testing with Pact framework",
+  "original_text": "Implemented Pact contract testing for microservices. Created consumer contract specifications. Added provider contract validation. Integrated with Pact broker. Set up contract versioning and publishing. Result: Pact contract testing complete.",
+  "expected_subject": "test(contract): add contract testing with Pact",
+  "expected_body_lines": [
+    "- Implement consumer contracts",
+    "- Add provider verification",
+    "- Implement contract publishing",
+    "- Add contract versioning",
+    "- Validation: contract tests pass"
+  ],
+  "expected_command": "git commit -m \"test(contract): add contract testing with Pact\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add integration testing suite",
+  "original_text": "Added integration testing suite. Implemented integration tests for API endpoints. Added integration test environment. Implemented integration test data seeding. Added integration test cleanup. Result: integration tests pass.",
+  "expected_subject": "test(integration): add integration testing suite",
+  "expected_body_lines": [
+    "- Implement integration tests for API endpoints",
+    "- Add integration test environment",
+    "- Implement integration test data seeding",
+    "- Add integration test cleanup",
+    "- Validation: integration tests pass"
+  ],
+  "expected_command": "git commit -m \"test(integration): add integration testing suite\""
+}

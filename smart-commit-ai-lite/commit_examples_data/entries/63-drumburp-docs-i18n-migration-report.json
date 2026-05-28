@@ -1,0 +1,12 @@
+{
+  "title": "DrumBurp: English translation of PyQt5 migration report",
+  "original_text": "Let me read the Spanish report first: Done. migration_report_pyqt5.md is a complete, faithful English translation of the Spanish report. Every section, checkbox, code block, table, and technical note has been translated — nothing was omitted or summarised. The two files now sit side by side: - migration_report_pyqt5_ES.md — Spanish original - migration_report_pyqt5.md — English translation",
+  "expected_subject": "docs(i18n): add English translation of PyQt5 migration report",
+  "expected_body_lines": [
+    "- Translate migration_report_pyqt5_ES.md to migration_report_pyqt5.md",
+    "- Preserve all technical details, code blocks, and checklists",
+    "- Provide side-by-side Spanish and English documentation",
+    "- Ensure global accessibility for project maintainers"
+  ],
+  "expected_command": "git commit -m \"docs(i18n): add English translation of PyQt5 migration report\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Kafka event streaming",
+  "original_text": "Added Kafka for event streaming. Implemented Kafka topic configuration. Added event producer and consumer. Implemented Kafka cluster. Added event monitoring. Result: Kafka event streaming operational.",
+  "expected_subject": "chore(streaming): add Kafka event streaming",
+  "expected_body_lines": [
+    "- Implement Kafka topic configuration",
+    "- Add event producer and consumer",
+    "- Implement Kafka cluster",
+    "- Add event monitoring",
+    "- Validation: Kafka event streaming operational"
+  ],
+  "expected_command": "git commit -m \"chore(streaming): add Kafka event streaming\""
+}

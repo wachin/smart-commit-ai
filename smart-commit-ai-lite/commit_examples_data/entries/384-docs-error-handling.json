@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add error handling guide",
+  "original_text": "Added error handling guide. Documented error codes and messages. Added error handling best practices. Implemented error recovery procedures. Added error logging documentation. Result: error handling guide complete.",
+  "expected_subject": "docs(api): add error handling guide",
+  "expected_body_lines": [
+    "- Document error codes and messages",
+    "- Add error handling best practices",
+    "- Implement error recovery procedures",
+    "- Add error logging documentation",
+    "- Validation: error handling guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add error handling guide\""
+}

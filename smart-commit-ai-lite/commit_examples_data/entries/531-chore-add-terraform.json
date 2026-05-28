@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Terraform modules for cloud infrastructure",
+  "original_text": "Added Terraform infrastructure. Implemented Terraform modules. Added infrastructure provisioning. Implemented state management. Added infrastructure monitoring. Result: Terraform infrastructure operational.",
+  "expected_subject": "chore(infrastructure): add Terraform infrastructure",
+  "expected_body_lines": [
+    "- Implement Terraform modules",
+    "- Add infrastructure provisioning",
+    "- Implement state management",
+    "- Add infrastructure monitoring",
+    "- Validation: Terraform infrastructure operational"
+  ],
+  "expected_command": "git commit -m \"chore(infrastructure): add Terraform infrastructure\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Deadlock in thread pool executor",
+  "original_text": "Fixed deadlock in thread pool. Implemented lock ordering. Added deadlock detection. Implemented timeout handling. Added thread pool monitoring. Result: deadlock fixed.",
+  "expected_subject": "fix(concurrency): fix deadlock in thread pool",
+  "expected_body_lines": [
+    "- Implement lock ordering",
+    "- Add deadlock detection",
+    "- Implement timeout handling",
+    "- Add thread pool monitoring",
+    "- Validation: deadlock fixed"
+  ],
+  "expected_command": "git commit -m \"fix(concurrency): fix deadlock in thread pool\""
+}

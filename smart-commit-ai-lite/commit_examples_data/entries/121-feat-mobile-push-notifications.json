@@ -1,0 +1,14 @@
+{
+  "title": "Add mobile push notifications",
+  "original_text": "Implemented push notifications for mobile apps. Integrated Firebase Cloud Messaging (FCM) for Android. Added Apple Push Notification Service (APNs) for iOS. Implemented notification scheduling and delivery. Added notification grouping and stacking. Implemented rich media notifications with images. Added notification action buttons. Added notification analytics and open tracking. Result: push notifications working on both platforms.",
+  "expected_subject": "feat(mobile): add push notifications for iOS and Android",
+  "expected_body_lines": [
+    "- Integrate FCM for Android push notifications",
+    "- Add APNs for iOS push notifications",
+    "- Implement notification scheduling and delivery",
+    "- Add notification grouping and rich media",
+    "- Add notification analytics and tracking",
+    "- Validation: push notifications working on both platforms"
+  ],
+  "expected_command": "git commit -m \"feat(mobile): add push notifications for iOS and Android\""
+}

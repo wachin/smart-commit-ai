@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement template method pattern",
+  "original_text": "Refactored to implement template method pattern. Added abstract base class with template method. Implemented primitive operations for subclasses. Added hook methods for optional behavior. Implemented concrete classes with specific algorithms. Result: template method pattern implemented.",
+  "expected_subject": "refactor(pattern): implement template method pattern",
+  "expected_body_lines": [
+    "- Add abstract base class with template method",
+    "- Implement primitive operations for subclasses",
+    "- Add hook methods for optional behavior",
+    "- Implement concrete classes with specific algorithms",
+    "- Validation: template method pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement template method pattern\""
+}

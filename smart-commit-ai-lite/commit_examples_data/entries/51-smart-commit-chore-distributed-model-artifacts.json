@@ -1,0 +1,12 @@
+{
+  "title": "Smart Commit: Distributed model artifacts",
+  "original_text": "Generated the official local ML model artifacts after installing python3-sklearn from Debian repositories. The training command wrote ml/commit_model.pkl, ml/vectorizer.pkl, and ml/model_metadata.json so the distributed predictor can load without retraining.",
+  "expected_subject": "chore(ml): generate distributed model artifacts",
+  "expected_body_lines": [
+    "- Train the local sklearn model with Debian packages",
+    "- Write official commit_model.pkl and vectorizer.pkl artifacts",
+    "- Store model_metadata.json for predictor validation",
+    "- Validate that the distributed predictor loads without retraining"
+  ],
+  "expected_command": "git commit -m \"chore(ml): generate distributed model artifacts\""
+}

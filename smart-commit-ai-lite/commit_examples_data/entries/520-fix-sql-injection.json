@@ -1,0 +1,13 @@
+{
+  "title": "Fix: SQL injection in database queries",
+  "original_text": "Fixed SQL injection in database queries. Implemented parameterized queries. Added input validation. Implemented query escaping. Added SQL injection detection. Result: SQL injection fixed.",
+  "expected_subject": "fix(security): fix SQL injection in database queries",
+  "expected_body_lines": [
+    "- Implement parameterized queries",
+    "- Add input validation",
+    "- Implement query escaping",
+    "- Add SQL injection detection",
+    "- Validation: SQL injection fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix SQL injection in database queries\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add GraphQL API support",
+  "original_text": "Added GraphQL API support. Implemented GraphQL schema. Added query resolvers. Implemented mutation handlers. Added subscription support. Result: GraphQL API operational.",
+  "expected_subject": "feat(api): add GraphQL API support",
+  "expected_body_lines": [
+    "- Implement GraphQL schema",
+    "- Add query resolvers",
+    "- Implement mutation handlers",
+    "- Add subscription support",
+    "- Validation: GraphQL API operational"
+  ],
+  "expected_command": "git commit -m \"feat(api): add GraphQL API support\""
+}

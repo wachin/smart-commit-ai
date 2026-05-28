@@ -1,0 +1,13 @@
+{
+  "title": "Fix: JSON injection vulnerability",
+  "original_text": "Fixed JSON injection vulnerability in API. Implemented secure JSON parsing with validation. Added JSON schema validation. Implemented JSON sanitization for user input. Added JSON parsing error handling. Result: JSON injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix JSON injection vulnerability",
+  "expected_body_lines": [
+    "- Implement secure JSON parsing with validation",
+    "- Add JSON schema validation",
+    "- Implement JSON sanitization for user input",
+    "- Add JSON parsing error handling",
+    "- Validation: JSON injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix JSON injection vulnerability\""
+}

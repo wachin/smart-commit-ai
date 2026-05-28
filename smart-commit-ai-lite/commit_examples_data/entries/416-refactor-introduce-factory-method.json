@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Introduce factory method",
+  "original_text": "Refactored to introduce factory method. Identified object creation logic. Added factory method for object creation. Implemented factory pattern. Simplified object instantiation. Result: factory method introduced.",
+  "expected_subject": "refactor(pattern): introduce factory method",
+  "expected_body_lines": [
+    "- Identify object creation logic",
+    "- Add factory method for object creation",
+    "- Implement factory pattern",
+    "- Simplify object instantiation",
+    "- Validation: factory method introduced"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): introduce factory method\""
+}

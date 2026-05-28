@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Kubernetes deployment",
+  "original_text": "Added Kubernetes deployment manifests. Implemented Kubernetes deployment configuration. Added Kubernetes services and ingress. Implemented Kubernetes ConfigMaps and Secrets. Added Kubernetes Helm charts. Result: Kubernetes deployment operational.",
+  "expected_subject": "chore(k8s): add Kubernetes deployment",
+  "expected_body_lines": [
+    "- Implement Kubernetes deployment configuration",
+    "- Add Kubernetes services and ingress",
+    "- Implement Kubernetes ConfigMaps and Secrets",
+    "- Add Kubernetes Helm charts",
+    "- Validation: Kubernetes deployment operational"
+  ],
+  "expected_command": "git commit -m \"chore(k8s): add Kubernetes deployment\""
+}

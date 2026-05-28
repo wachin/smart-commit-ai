@@ -1,0 +1,16 @@
+{
+  "title": "17. Lyrics Window: Auto-Detection Encoding",
+  "original_text": "We pushed the Lyrics window through the encoding milestone. In [drumstick/drumstick_py/file.py], text events now keep their raw bytes and decode through a shared helper... try `UTF-8`, then prefer `CP1252`... otherwise fall back to `Latin-1`. In [app.py]..., the Lyrics window’s `Encoding` selector now controls both display decoding and save behavior: `Auto`, `UTF-8`, `Latin-1`, `CP1252`... I added coverage in [test_smf_parser.py] and [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 145 tests OK...",
+  "expected_subject": "feat(app): add auto-detection and override for lyrics encoding",
+  "expected_body_lines": [
+    "- Store raw bytes in TextEvent; decode via shared helper on demand",
+    "- Implement auto-detection: UTF-8 -> CP1252 heuristic -> Latin-1 fallback",
+    "- Add Auto option to Encoding selector in LyricsDialog",
+    "- Update save logic: Auto writes UTF-8, others use selected encoding",
+    "- Add tests for detection, manual override, and save behavior",
+    "- Update user guides (EN/ES) with new encoding documentation",
+    "- Update Roadmap.md to mark encoding detection item complete",
+    "- Validation: compileall OK, 145 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add auto-detection and override for lyrics encoding\" \\\n  -m \"- Store raw bytes in TextEvent; decode via shared helper on demand\" \\\n  -m \"- Implement auto-detection: UTF-8 -> CP1252 heuristic -> Latin-1 fallback\" \\\n  -m \"- Add Auto option to Encoding selector in LyricsDialog\" \\\n  -m \"- Update save logic: Auto writes UTF-8, others use selected encoding\" \\\n  -m \"- Add tests for detection, manual override, and save behavior\" \\\n  -m \"- Update user guides (EN/ES) with new encoding documentation\" \\\n  -m \"- Update Roadmap.md to mark encoding detection item complete\" \\\n  -m \"- Validation: compileall OK, 145 tests pass, offscreen verified\""
+}

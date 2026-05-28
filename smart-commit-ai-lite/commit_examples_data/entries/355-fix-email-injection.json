@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Email header injection vulnerability",
+  "original_text": "Fixed email header injection vulnerability. Implemented email header sanitization. Added email address validation. Implemented email content encoding. Added email injection detection. Result: email header injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix email header injection vulnerability",
+  "expected_body_lines": [
+    "- Implement email header sanitization",
+    "- Add email address validation",
+    "- Implement email content encoding",
+    "- Add email injection detection",
+    "- Validation: email header injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix email header injection vulnerability\""
+}

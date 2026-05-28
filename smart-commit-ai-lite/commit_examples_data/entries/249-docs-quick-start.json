@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add quick start guide",
+  "original_text": "Added quick start guide for new users. Documented 5-minute setup process. Added common use case examples. Implemented quick start validation. Added quick start troubleshooting. Result: quick start guide complete.",
+  "expected_subject": "docs(guide): add quick start guide",
+  "expected_body_lines": [
+    "- Document 5-minute setup process",
+    "- Add common use case examples",
+    "- Implement quick start validation",
+    "- Add quick start troubleshooting",
+    "- Validation: quick start guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(guide): add quick start guide\""
+}

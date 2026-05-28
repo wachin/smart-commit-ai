@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Connection leak in database pool",
+  "original_text": "Fixed connection leak in database pool. Implemented proper connection cleanup. Added connection timeout. Implemented connection tracking. Added connection monitoring. Result: connection leak fixed.",
+  "expected_subject": "fix(database): fix connection leak in database pool",
+  "expected_body_lines": [
+    "- Implement proper connection cleanup",
+    "- Add connection timeout",
+    "- Implement connection tracking",
+    "- Add connection monitoring",
+    "- Validation: connection leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(database): fix connection leak in database pool\""
+}

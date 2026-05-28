@@ -1,0 +1,14 @@
+{
+  "title": "13. About Dialog Enhancement",
+  "original_text": "Yes, that wording is fine, and I’ve now wired the idea into the app. In [app.py]..., `Help > About` now includes: original C++ credit... Python/PyQt6 port credit... clickable author names using `mailto:` links... GPL notice... a short “Technologies used in this port” section... I also updated the help-guide text... and expanded [test_app_playlist.py]... Verification is clean: ... 136 tests OK...",
+  "expected_subject": "docs(app): enhance About dialog with credits and tech",
+  "expected_body_lines": [
+    "- Add C++ and Python/PyQt6 port credits with clickable mailto links",
+    "- Hide emails via hover text while keeping names visible",
+    "- Include GPL notice and 'Technologies used' section",
+    "- Update user guides (EN/ES) to reflect new About content",
+    "- Add tests for credit presence, links, and technology list",
+    "- Validation: compileall OK, 136 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"docs(app): enhance About dialog with credits and tech\" \\\n  -m \"- Add C++ and Python/PyQt6 port credits with clickable mailto links\" \\\n  -m \"- Hide emails via hover text while keeping names visible\" \\\n  -m \"- Include GPL notice and 'Technologies used' section\" \\\n  -m \"- Update user guides (EN/ES) to reflect new About content\" \\\n  -m \"- Add tests for credit presence, links, and technology list\" \\\n  -m \"- Validation: compileall OK, 136 tests pass, offscreen verified\""
+}

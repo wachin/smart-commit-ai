@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Infinite loop in data processing",
+  "original_text": "Fixed infinite loop in data processing pipeline. Loop condition was not being updated correctly. Added loop iteration limit as safety measure. Implemented proper loop termination condition. Added monitoring for long-running loops. Result: infinite loop fixed.",
+  "expected_subject": "fix(core): fix infinite loop in data processing",
+  "expected_body_lines": [
+    "- Fix loop condition not being updated correctly",
+    "- Add loop iteration limit as safety measure",
+    "- Implement proper loop termination condition",
+    "- Add monitoring for long-running loops",
+    "- Validation: infinite loop fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix infinite loop in data processing\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "24. Piano Player: Richer Track Info",
+  "original_text": "We refined the first `Piano Player` slice so it’s easier to use. In [sequence.py]..., I added `midi_track_infos()` so the UI can get: track number, MIDI-bearing channels, first track title/instrument-style meta label... Then in [app.py]..., each Pianola row now shows: a richer track heading like `Track 2 - Part 2`, a channel summary like `Channels: 2`... I updated [Roadmap.md]... and I refreshed the user guides... Tests in [test_app_playlist.py]... were expanded... Verification is clean: ... 151 tests OK...",
+  "expected_subject": "feat(ui): enrich Pianola rows with track info",
+  "expected_body_lines": [
+    "- Add midi_track_infos() to expose labels and channel data",
+    "- Display rich headings (e.g., 'Track 2 - Part 2') per row",
+    "- Show channel summary (e.g., 'Channels: 2') above keyboards",
+    "- Update user guides (EN/ES) and Roadmap.md with new details",
+    "- Add tests for label rendering and channel summary accuracy",
+    "- Validation: compileall OK, 151 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): enrich Pianola rows with track info\" \\\n  -m \"- Add midi_track_infos() to expose labels and channel data\" \\\n  -m \"- Display rich headings (e.g., 'Track 2 - Part 2') per row\" \\\n  -m \"- Show channel summary (e.g., 'Channels: 2') above keyboards\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new details\" \\\n  -m \"- Add tests for label rendering and channel summary accuracy\" \\\n  -m \"- Validation: compileall OK, 151 tests pass, offscreen verified\""
+}

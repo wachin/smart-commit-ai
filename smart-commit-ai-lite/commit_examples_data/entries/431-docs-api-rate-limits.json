@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API rate limits guide",
+  "original_text": "Added API rate limits guide. Documented rate limit headers. Added rate limit retry logic. Implemented rate limit backoff. Added rate limit best practices. Result: rate limits guide complete.",
+  "expected_subject": "docs(api): add API rate limits guide",
+  "expected_body_lines": [
+    "- Document rate limit headers",
+    "- Add rate limit retry logic",
+    "- Implement rate limit backoff",
+    "- Add rate limit best practices",
+    "- Validation: rate limits guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API rate limits guide\""
+}

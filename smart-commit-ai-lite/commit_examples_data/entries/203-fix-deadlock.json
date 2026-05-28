@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Deadlock in concurrent transactions",
+  "original_text": "Fixed deadlock in concurrent database transactions. Identified circular dependency in transaction ordering. Implemented consistent lock ordering. Added transaction timeout. Implemented deadlock detection and retry logic. Result: deadlocks resolved.",
+  "expected_subject": "fix(db): fix deadlock in concurrent transactions",
+  "expected_body_lines": [
+    "- Identify circular dependency in transaction ordering",
+    "- Implement consistent lock ordering",
+    "- Add transaction timeout",
+    "- Implement deadlock detection and retry logic",
+    "- Validation: deadlocks resolved"
+  ],
+  "expected_command": "git commit -m \"fix(db): fix deadlock in concurrent transactions\""
+}

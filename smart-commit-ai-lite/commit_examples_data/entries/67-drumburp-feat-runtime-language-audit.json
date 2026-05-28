@@ -1,0 +1,13 @@
+{
+  "title": "DrumBurp: Finalize runtime language switching and audit",
+  "original_text": "Let me finish the 3 new strings, recompile, and do a full audit: 625/625 in both files. Now do a full audit — compile, tests, and verify the translator works end-to-end: 8/8 tests pass across all contexts. Now update the roadmap to reflect Phase 6 completion: Also update the total string count in the header and the progress table: Also update the quick reference to reflect the new total: Done. Here's a summary of what was completed in this session: Phase 6 — Runtime language switching (complete): Help > Language submenu is now built dynamically at startup from whatever .qm files exist in src/i18n/. Right now it shows English and Español. When you add more languages later, they appear automatically with no code changes. Selecting a language saves it to QSettings and shows a one-line restart notice. On the next launch, DrumBurp.py reads that setting before any UI is created, so the correct translation is active from the very first window. Priority chain: --language CLI flag → QSettings saved preference → LANGUAGE env var → system locale → English fallback. Final state: - 625 strings, 0 unfinished in both drumburp_en.ts and drumburp_es.ts - Both .qm files compiled and verified - 373 unit tests still pass - All source files compile cleanly. Only thing left that requires you: run LANGUAGE=es ./run-drumburp.sh and manually check that menus, dialogs, and messages appear in Spanish. If you find anything that looks wrong, let me know and I'll fix it.",
+  "expected_subject": "feat(i18n): finalize runtime language switching and audit",
+  "expected_body_lines": [
+    "- Implement dynamic Help > Language menu with QSettings persistence",
+    "- Establish priority chain: CLI flag > settings > env var > locale",
+    "- Translate all 625 strings to Spanish with 0 unfinished entries",
+    "- Update ROADMAP_i18n.md to mark Phase 6 as complete",
+    "- Verify 373 unit tests pass and all source files compile cleanly"
+  ],
+  "expected_command": "git commit -m \"feat(i18n): finalize runtime language switching and audit\""
+}

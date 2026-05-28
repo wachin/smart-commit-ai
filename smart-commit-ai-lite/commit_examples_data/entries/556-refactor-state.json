@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply State pattern to workflows",
+  "original_text": "Refactored to apply State pattern to workflows. Implemented state interface. Added concrete states. Implemented state transitions. Added state context. Result: State pattern applied.",
+  "expected_subject": "refactor(pattern): apply State pattern to workflows",
+  "expected_body_lines": [
+    "- Implement state interface",
+    "- Add concrete states",
+    "- Implement state transitions",
+    "- Add state context",
+    "- Validation: State pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply State pattern to workflows\""
+}

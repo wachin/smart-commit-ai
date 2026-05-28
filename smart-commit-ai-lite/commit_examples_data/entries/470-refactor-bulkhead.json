@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement bulkhead pattern",
+  "original_text": "Refactored to implement bulkhead pattern. Implemented resource isolation. Added bulkhead configuration. Implemented bulkhead monitoring. Added bulkhead fallback. Result: bulkhead pattern implemented.",
+  "expected_subject": "refactor(pattern): implement bulkhead pattern",
+  "expected_body_lines": [
+    "- Implement resource isolation",
+    "- Add bulkhead configuration",
+    "- Implement bulkhead monitoring",
+    "- Add bulkhead fallback",
+    "- Validation: bulkhead pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement bulkhead pattern\""
+}

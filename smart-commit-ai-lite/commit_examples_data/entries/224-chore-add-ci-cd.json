@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add CI/CD pipeline",
+  "original_text": "Added CI/CD pipeline with GitHub Actions. Implemented automated testing on every commit. Added automated deployment to staging. Implemented automated deployment to production with approval. Added rollback capability. Result: CI/CD pipeline operational.",
+  "expected_subject": "chore(ci): add CI/CD pipeline with GitHub Actions",
+  "expected_body_lines": [
+    "- Implement automated testing on every commit",
+    "- Add automated deployment to staging",
+    "- Implement automated deployment to production with approval",
+    "- Add rollback capability",
+    "- Validation: CI/CD pipeline operational"
+  ],
+  "expected_command": "git commit -m \"chore(ci): add CI/CD pipeline with GitHub Actions\""
+}

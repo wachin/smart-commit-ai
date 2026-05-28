@@ -1,0 +1,14 @@
+{
+  "title": "18. Lyrics Window: Highlighting",
+  "original_text": "We landed the next lyrics milestone: live past/current/future highlighting during playback. In [app.py]..., the `LyricsDialog` now keeps the current playback tick, filters the visible events, and renders them as HTML with three states: past lines dimmed, current line emphasized, future lines clearly visible... I added a timed-lyrics fixture and coverage in [test_app_playlist.py]... I also updated the user guides... [Roadmap.md]... now marks `Highlight past/future lyrics with configurable colors` complete. Verification is clean: ... 146 tests OK...",
+  "expected_subject": "feat(ui): add live lyric highlighting during playback",
+  "expected_body_lines": [
+    "- Sync LyricsDialog with playback tick for real-time updates",
+    "- Render HTML with distinct styles for past, current, and future lines",
+    "- Add timed-lyrics fixture and tests for state transitions",
+    "- Update user guides (EN/ES) with new highlighting documentation",
+    "- Update Roadmap.md to mark lyric highlighting item complete",
+    "- Validation: compileall OK, 146 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add live lyric highlighting during playback\" \\\n  -m \"- Sync LyricsDialog with playback tick for real-time updates\" \\\n  -m \"- Render HTML with distinct styles for past, current, and future lines\" \\\n  -m \"- Add timed-lyrics fixture and tests for state transitions\" \\\n  -m \"- Update user guides (EN/ES) with new highlighting documentation\" \\\n  -m \"- Update Roadmap.md to mark lyric highlighting item complete\" \\\n  -m \"- Validation: compileall OK, 146 tests pass, offscreen verified\""
+}

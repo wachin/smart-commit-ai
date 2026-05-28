@@ -1,0 +1,14 @@
+{
+  "title": "Add AutoML for hyperparameter tuning",
+  "original_text": "Implemented AutoML for automatic hyperparameter tuning. Integrated Optuna for hyperparameter optimization. Implemented automated feature selection. Added neural architecture search for deep learning. Implemented automated model selection. Added hyperparameter search space definition. Added experiment tracking with MLflow. Result: AutoML pipeline operational.",
+  "expected_subject": "feat(ml): add AutoML for hyperparameter tuning",
+  "expected_body_lines": [
+    "- Integrate Optuna for hyperparameter optimization",
+    "- Implement automated feature selection",
+    "- Add neural architecture search for deep learning",
+    "- Implement automated model selection",
+    "- Add experiment tracking with MLflow",
+    "- Validation: AutoML pipeline operational"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add AutoML for hyperparameter tuning\""
+}

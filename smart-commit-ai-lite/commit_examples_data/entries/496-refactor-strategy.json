@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Strategy pattern to algorithms",
+  "original_text": "Refactored to implement Strategy pattern. Implemented strategy interface. Added concrete strategies. Implemented strategy context. Added strategy factory. Result: Strategy pattern implemented.",
+  "expected_subject": "refactor(pattern): implement Strategy pattern",
+  "expected_body_lines": [
+    "- Implement strategy interface",
+    "- Add concrete strategies",
+    "- Implement strategy context",
+    "- Add strategy factory",
+    "- Validation: Strategy pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement Strategy pattern\""
+}

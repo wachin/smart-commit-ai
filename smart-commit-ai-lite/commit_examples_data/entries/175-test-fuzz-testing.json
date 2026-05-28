@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add fuzz testing",
+  "original_text": "Added fuzz testing using AFL. Implemented fuzz testing for input parsing functions. Added fuzz testing for file format parsers. Implemented fuzz testing for network protocol handlers. Added fuzz test coverage and crash reporting. Result: no crashes found.",
+  "expected_subject": "test(security): add fuzz testing with AFL",
+  "expected_body_lines": [
+    "- Implement fuzz testing for input parsing functions",
+    "- Add fuzz testing for file format parsers",
+    "- Implement fuzz testing for network protocol handlers",
+    "- Add fuzz test coverage and crash reporting",
+    "- Validate no crashes found",
+    "- Validation: no crashes found"
+  ],
+  "expected_command": "git commit -m \"test(security): add fuzz testing with AFL\""
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="120" fill="#673AB7"/>
+  
+  <!-- Git branch lines -->
+  <path d="M 60 128 L 100 128" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 100 128 L 140 80" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 100 128 L 140 176" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 140 80 L 196 80" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 140 176 L 196 176" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Git commit nodes (circles) -->
+  <circle cx="60" cy="128" r="16" fill="#4CAF50"/>
+  <circle cx="100" cy="128" r="16" fill="#4CAF50"/>
+  <circle cx="140" cy="80" r="16" fill="#4CAF50"/>
+  <circle cx="140" cy="176" r="16" fill="#4CAF50"/>
+  <circle cx="196" cy="80" r="16" fill="#4CAF50"/>
+  <circle cx="196" cy="176" r="16" fill="#4CAF50"/>
+  
+  <!-- AI/Brain symbol in center -->
+  <circle cx="128" cy="128" r="35" fill="#FF9800" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M 115 115 Q 128 105 141 115 Q 150 128 141 141 Q 128 150 115 141 Q 105 128 115 115" 
+        fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="120" cy="122" r="4" fill="#FFFFFF"/>
+  <circle cx="136" cy="122" r="4" fill="#FFFFFF"/>
+  <path d="M 120 135 Q 128 142 136 135" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Sparkle/AI indicators -->
+  <path d="M 170 40 L 175 55 L 190 55 L 178 65 L 183 80 L 170 70 L 157 80 L 162 65 L 150 55 L 165 55 Z" fill="#FFEB3B"/>
+  <path d="M 86 216 L 91 231 L 106 231 L 94 241 L 99 256 L 86 246 L 73 256 L 78 241 L 66 231 L 81 231 Z" fill="#FFEB3B"/>
+</svg>

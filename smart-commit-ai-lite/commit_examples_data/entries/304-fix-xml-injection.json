@@ -1,0 +1,13 @@
+{
+  "title": "Fix: XML injection vulnerability",
+  "original_text": "Fixed XML injection vulnerability in XML parser. Implemented secure XML parsing with validation. Added XML entity expansion limits. Implemented XML schema validation. Added XML sanitization for user input. Result: XML injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix XML injection vulnerability",
+  "expected_body_lines": [
+    "- Implement secure XML parsing with validation",
+    "- Add XML entity expansion limits",
+    "- Implement XML schema validation",
+    "- Add XML sanitization for user input",
+    "- Validation: XML injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix XML injection vulnerability\""
+}

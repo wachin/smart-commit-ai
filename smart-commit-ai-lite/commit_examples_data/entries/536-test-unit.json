@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add unit tests with pytest",
+  "original_text": "Added unit tests with pytest. Implemented test fixtures. Added test coverage. Implemented test mocking. Added test parametrization. Result: unit tests pass.",
+  "expected_subject": "test(unit): add unit tests with pytest",
+  "expected_body_lines": [
+    "- Implement test fixtures",
+    "- Add test coverage",
+    "- Implement test mocking",
+    "- Add test parametrization",
+    "- Validation: unit tests pass"
+  ],
+  "expected_command": "git commit -m \"test(unit): add unit tests with pytest\""
+}

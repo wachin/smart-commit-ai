@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Command injection vulnerability",
+  "original_text": "Fixed command injection vulnerability in system calls. Implemented parameterized command execution. Added input validation for command arguments. Implemented allowlist for permitted commands. Added command execution audit logging. Result: command injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix command injection vulnerability",
+  "expected_body_lines": [
+    "- Implement parameterized command execution",
+    "- Add input validation for command arguments",
+    "- Implement allowlist for permitted commands",
+    "- Add command execution audit logging",
+    "- Validation: command injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix command injection vulnerability\""
+}

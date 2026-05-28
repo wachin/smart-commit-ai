@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Handle leak in OS resources",
+  "original_text": "Fixed handle leak in OS resources. Implemented proper handle cleanup. Added handle tracking. Implemented automatic handle closure. Added handle monitoring. Result: handle leak fixed.",
+  "expected_subject": "fix(os): fix handle leak in OS resources",
+  "expected_body_lines": [
+    "- Implement proper handle cleanup",
+    "- Add handle tracking",
+    "- Implement automatic handle closure",
+    "- Add handle monitoring",
+    "- Validation: handle leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(os): fix handle leak in OS resources\""
+}

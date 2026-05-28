@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API virtualization with Hoverfly",
+  "original_text": "Added API virtualization with Hoverfly. Implemented API simulation. Added request/response capture. Implemented API delay simulation. Added API failure simulation. Result: API virtualization operational.",
+  "expected_subject": "test(api): add API virtualization with Hoverfly",
+  "expected_body_lines": [
+    "- Implement API simulation",
+    "- Add request/response capture",
+    "- Implement API delay simulation",
+    "- Add API failure simulation",
+    "- Validation: API virtualization operational"
+  ],
+  "expected_command": "git commit -m \"test(api): add API virtualization with Hoverfly\""
+}

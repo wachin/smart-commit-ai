@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add chaos engineering tests",
+  "original_text": "Added chaos engineering tests using Chaos Monkey. Implemented fault injection tests for network failures. Added fault injection tests for service crashes. Implemented chaos tests for database failures. Added chaos test scenarios and recovery verification. Result: system resilient to chaos.",
+  "expected_subject": "test(resilience): add chaos engineering tests",
+  "expected_body_lines": [
+    "- Implement fault injection tests for network failures",
+    "- Add fault injection tests for service crashes",
+    "- Implement chaos tests for database failures",
+    "- Add chaos test scenarios and recovery verification",
+    "- Validate system resilience to chaos",
+    "- Validation: system resilient to chaos"
+  ],
+  "expected_command": "git commit -m \"test(resilience): add chaos engineering tests\""
+}

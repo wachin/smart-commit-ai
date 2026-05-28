@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add design principles",
+  "original_text": "Added design principles documentation. Documented SOLID principles. Added design pattern guidelines. Implemented architectural principles. Added coding standards. Result: design principles complete.",
+  "expected_subject": "docs(design): add design principles",
+  "expected_body_lines": [
+    "- Document SOLID principles",
+    "- Add design pattern guidelines",
+    "- Implement architectural principles",
+    "- Add coding standards",
+    "- Validation: design principles complete"
+  ],
+  "expected_command": "git commit -m \"docs(design): add design principles\""
+}

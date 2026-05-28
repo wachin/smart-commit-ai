@@ -5,6 +5,9 @@ from __future__ import annotations
 import re
 
 from .commit_message import CommitMessage, normalize_body_line, normalize_subject
+from .input_cleanup import clean_input, strip_markdown_noise
+from .type_scope import detect_scope as heuristic_detect_scope
+from .type_scope import select_commit_type as heuristic_select_commit_type
 
 
 ACTION_VERBS = {
@@ -25,8 +28,9 @@ class LocalCommitGenerator:
 
     def generate(self, original_text: str) -> CommitMessage:
         cleaned = normalize_input_text(original_text)
-        commit_type = detect_type(cleaned)
-        scope = detect_scope(cleaned, commit_type)
+        signal_text = clean_input(original_text) or cleaned
+        commit_type = detect_type(signal_text)
+        scope = detect_scope(signal_text, commit_type)
         subject_phrase = build_subject_phrase(cleaned, commit_type, scope)
         subject = normalize_subject(f"{commit_type}({scope}): {subject_phrase}")
         body_lines = build_body_lines(cleaned, commit_type, scope)
@@ -34,9 +38,7 @@ class LocalCommitGenerator:
 
 
 def normalize_input_text(text: str) -> str:
-    text = re.sub(r"```[a-zA-Z0-9_-]*\n?", "", text)
-    text = text.replace("```", "")
-    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = strip_markdown_noise(text)
     text = text.replace("“", '"').replace("”", '"').replace("’", "'")
     return text.strip()
 
@@ -49,6 +51,10 @@ def detect_type(text: str) -> str:
         return "fix"
     if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
         return "feat"
+
+    heuristic = heuristic_select_commit_type(text, subject_verb=extract_subject_verb(text))
+    if heuristic in ACTION_VERBS:
+        return heuristic
 
     scores = {
         "fix": score_keywords(
@@ -136,6 +142,10 @@ def detect_scope(text: str, commit_type: str) -> str:
     if is_prompt_example_filter_summary(lower):
         return "prompt"
 
+    heuristic = heuristic_detect_scope(text)
+    if heuristic in {"config", "parser", "prompt", "ui", "docs", "repo", "ml", "test"}:
+        return heuristic
+
     scopes = [
         (
             "parser",
@@ -192,6 +202,22 @@ def detect_scope(text: str, commit_type: str) -> str:
         return "test"
 
     return max(scores, key=lambda scope: (scores[scope], -list(scores).index(scope)))
+
+
+def extract_subject_verb(text: str) -> str | None:
+    for sentence in split_sentences(text):
+        normalized = strip_sentence_noise(sentence)
+        match = re.match(r"^(?:we|i|the app|this|it)\s+(?:now\s+)?([a-z]+)", normalized, flags=re.I)
+        if match:
+            return match.group(1).lower()
+        match = re.search(
+            r"\b(added|implemented|updated|fixed|refactored|documented|improved|prevented|detected|recognized|supports?|loads?|writes?|reports?|validates?)\b",
+            normalized,
+            flags=re.I,
+        )
+        if match:
+            return match.group(1).lower()
+    return None
 
 
 def build_subject_phrase(text: str, commit_type: str, scope: str) -> str:

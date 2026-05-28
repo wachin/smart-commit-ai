@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add gRPC API",
+  "original_text": "Added gRPC API for high-performance RPC. Implemented gRPC service definitions. Added gRPC server. Implemented gRPC client library. Added gRPC streaming. Result: gRPC API operational.",
+  "expected_subject": "feat(api): add gRPC API",
+  "expected_body_lines": [
+    "- Implement gRPC service definitions",
+    "- Add gRPC server",
+    "- Implement gRPC client library",
+    "- Add gRPC streaming",
+    "- Validation: gRPC API operational"
+  ],
+  "expected_command": "git commit -m \"feat(api): add gRPC API\""
+}

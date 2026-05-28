@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add TimescaleDB extension",
+  "original_text": "Added TimescaleDB extension for PostgreSQL. Implemented hypertables. Added time-based partitioning. Implemented continuous aggregates. Added compression policies. Result: TimescaleDB operational.",
+  "expected_subject": "chore(database): add TimescaleDB extension",
+  "expected_body_lines": [
+    "- Implement hypertables",
+    "- Add time-based partitioning",
+    "- Implement continuous aggregates",
+    "- Add compression policies",
+    "- Validation: TimescaleDB operational"
+  ],
+  "expected_command": "git commit -m \"chore(database): add TimescaleDB extension\""
+}

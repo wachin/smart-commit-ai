@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement circuit breaker pattern",
+  "original_text": "Refactored to implement circuit breaker pattern. Implemented circuit breaker state machine. Added circuit breaker configuration. Implemented circuit breaker monitoring. Added circuit breaker fallback. Result: circuit breaker pattern implemented.",
+  "expected_subject": "refactor(pattern): implement circuit breaker pattern",
+  "expected_body_lines": [
+    "- Implement circuit breaker state machine",
+    "- Add circuit breaker configuration",
+    "- Implement circuit breaker monitoring",
+    "- Add circuit breaker fallback",
+    "- Validation: circuit breaker pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement circuit breaker pattern\""
+}

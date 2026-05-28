@@ -1,0 +1,13 @@
+{
+  "title": "Fix: ReDoS vulnerability",
+  "original_text": "Fixed ReDoS vulnerability in regex patterns. Implemented regex timeout protection. Added regex complexity analysis. Implemented safe regex patterns. Added ReDoS detection. Result: ReDoS vulnerability fixed.",
+  "expected_subject": "fix(security): fix ReDoS vulnerability",
+  "expected_body_lines": [
+    "- Implement regex timeout protection",
+    "- Add regex complexity analysis",
+    "- Implement safe regex patterns",
+    "- Add ReDoS detection",
+    "- Validation: ReDoS vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix ReDoS vulnerability\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: SQL injection vulnerability",
+  "original_text": "Fixed SQL injection vulnerability in user authentication. Implemented parameterized queries for all database operations. Added input validation and sanitization. Implemented ORM with safe query building. Added security audit for SQL injection. Result: SQL injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix SQL injection vulnerability",
+  "expected_body_lines": [
+    "- Implement parameterized queries for database operations",
+    "- Add input validation and sanitization",
+    "- Implement ORM with safe query building",
+    "- Add security audit for SQL injection",
+    "- Validation: SQL injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix SQL injection vulnerability\""
+}

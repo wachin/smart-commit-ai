@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Consolidate duplicate code in data processors",
+  "original_text": "Refactored duplicate code in the data processing modules. Found that CSV and JSON processors had nearly identical parsing logic. Extracted the common logic into a base DataProcessor class in utils/data_processor.py. Both CSV and JSON processors now inherit from this base class. Reduced code duplication by 40%. Added tests for the base class. Result: 47 tests pass.",
+  "expected_subject": "refactor(data): consolidate duplicate parsing logic",
+  "expected_body_lines": [
+    "- Extract common logic into DataProcessor base class",
+    "- Make CSV and JSON processors inherit from base class",
+    "- Reduce code duplication by 40%",
+    "- Add tests for base DataProcessor class",
+    "- Validation: 47 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(data): consolidate duplicate parsing logic\""
+}

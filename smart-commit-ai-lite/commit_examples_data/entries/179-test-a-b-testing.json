@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add A/B testing framework",
+  "original_text": "Added A/B testing framework. Implemented feature flag system. Added A/B test experiment tracking. Implemented A/B test statistical analysis. Added A/B test result visualization. Implemented A/B test automation. Result: A/B testing operational.",
+  "expected_subject": "test(experiments): add A/B testing framework",
+  "expected_body_lines": [
+    "- Implement feature flag system",
+    "- Add A/B test experiment tracking",
+    "- Implement A/B test statistical analysis",
+    "- Add A/B test result visualization",
+    "- Implement A/B test automation",
+    "- Validation: A/B testing operational"
+  ],
+  "expected_command": "git commit -m \"test(experiments): add A/B testing framework\""
+}

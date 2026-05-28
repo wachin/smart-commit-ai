@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Decompose complex conditional",
+  "original_text": "Refactored to decompose complex conditional. Extracted complex conditions into named methods. Added guard clauses for early returns. Simplified conditional logic. Improved code readability. Result: conditional decomposition complete.",
+  "expected_subject": "refactor(simplify): decompose complex conditional",
+  "expected_body_lines": [
+    "- Extract complex conditions into named methods",
+    "- Add guard clauses for early returns",
+    "- Simplify conditional logic",
+    "- Improve code readability",
+    "- Validation: conditional decomposition complete"
+  ],
+  "expected_command": "git commit -m \"refactor(simplify): decompose complex conditional\""
+}

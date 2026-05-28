@@ -1,0 +1,14 @@
+{
+  "title": "42. WPS Dicts: Regional Variants",
+  "original_text": "Hecho. Creé 20 carpetas nuevas en: [build/wps-libreoffice-dicts]... Nuevas variantes agregadas: de_AT, de_CH, en_CA, en_ZA, es_CR, es_CU, es_DO, es_EC, es_GQ, es_GT, es_HN, es_NI, es_PA, es_PE, es_PH, es_PY, es_SV, es_US, es_UY, es_VE... También actualicé el reporte: [BUILD_SOURCE_MAP.txt]... Verificación: ahora hay 71 carpetas en total y 213 archivos esperados...",
+  "expected_subject": "feat(dict): expand WPS dictionaries with LibreOffice variants",
+  "expected_body_lines": [
+    "- Generate 71 language folders with dict.conf, main.aff, and main.dic",
+    "- Add 20 new regional variants (de_AT, en_CA, es_*, etc.)",
+    "- Fallback to legacy WPS dicts for km_KH, ms_MY, qu_EC, sw_TZ",
+    "- Exclude generic 'es' due to missing base orthographic files",
+    "- Update BUILD_SOURCE_MAP.txt with exact origin for each language",
+    "- Verify integrity: 71 folders x 3 files = 213 files present"
+  ],
+  "expected_command": "git commit -m \"feat(dict): expand WPS dictionaries with LibreOffice variants\" \\\n  -m \"- Generate 71 language folders with dict.conf, main.aff, and main.dic\" \\\n  -m \"- Add 20 new regional variants (de_AT, en_CA, es_*, etc.)\" \\\n  -m \"- Fallback to legacy WPS dicts for km_KH, ms_MY, qu_EC, sw_TZ\" \\\n  -m \"- Exclude generic 'es' due to missing base orthographic files\" \\\n  -m \"- Update BUILD_SOURCE_MAP.txt with exact origin for each language\" \\\n  -m \"- Verify integrity: 71 folders x 3 files = 213 files present\""
+}

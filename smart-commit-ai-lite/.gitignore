@@ -1,0 +1,21 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# --- Smart Commit AI Lite Specifics ---
+
+# ML Artifacts
+# We IGNORE local training artifacts to keep the repo clean...
+ml/*.pkl
+!ml/commit_model.pkl
+!ml/vectorizer.pkl
+!ml/model_metadata.json
+
+# However, we TRACK the distributed pre-trained model and vectorizer.
+# The lines above (!ml/commit_model.pkl) ensure they are included.
+
+# Local data generation (if any temporary files are created during parsing)
+commit_examples_data/temp_*.json

@@ -1,0 +1,14 @@
+{
+  "title": "Add integration tests for API and database",
+  "original_text": "Added integration tests for API and database interactions. Created test database with seed data. Implemented API endpoint testing with real database. Added transaction rollback for test isolation. Implemented test data cleanup between tests. Added API contract testing. Added performance tests for database queries. Result: 56 integration tests pass.",
+  "expected_subject": "test(integration): add API and database integration tests",
+  "expected_body_lines": [
+    "- Create test database with seed data",
+    "- Implement API endpoint testing with real database",
+    "- Add transaction rollback for test isolation",
+    "- Implement test data cleanup between tests",
+    "- Add API contract and performance tests",
+    "- Validation: 56 integration tests pass"
+  ],
+  "expected_command": "git commit -m \"test(integration): add API and database integration tests\""
+}

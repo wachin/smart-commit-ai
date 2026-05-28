@@ -1,0 +1,14 @@
+{
+  "title": "Test: Add component testing",
+  "original_text": "Added component testing for UI components. Created component tests for all major UI elements. Implemented component testing with Storybook. Added component interaction tests. Implemented component accessibility tests. Added component snapshot testing. Result: all components tested.",
+  "expected_subject": "test(ui): add component testing with Storybook",
+  "expected_body_lines": [
+    "- Create component tests for all major UI elements",
+    "- Implement component testing with Storybook",
+    "- Add component interaction tests",
+    "- Implement component accessibility tests",
+    "- Add component snapshot testing",
+    "- Validation: all components tested"
+  ],
+  "expected_command": "git commit -m \"test(ui): add component testing with Storybook\""
+}

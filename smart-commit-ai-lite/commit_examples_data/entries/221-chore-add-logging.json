@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add structured logging",
+  "original_text": "Added structured logging throughout the application. Implemented JSON logging format. Added log levels and severity filtering. Implemented log aggregation with ELK stack. Added log rotation and retention policies. Result: structured logging operational.",
+  "expected_subject": "chore(logging): add structured logging",
+  "expected_body_lines": [
+    "- Implement JSON logging format",
+    "- Add log levels and severity filtering",
+    "- Implement log aggregation with ELK stack",
+    "- Add log rotation and retention policies",
+    "- Validation: structured logging operational"
+  ],
+  "expected_command": "git commit -m \"chore(logging): add structured logging\""
+}

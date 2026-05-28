@@ -1,0 +1,14 @@
+{
+  "title": "Fix memory leak in event listeners",
+  "original_text": "Fixed a memory leak caused by event listeners not being properly removed. Event listeners were being added but never removed when components unmounted. Implemented proper cleanup in component lifecycle hooks. Added event listener tracking to detect leaks. Implemented weak references for event handlers. Added memory profiling to detect leaks. Added tests for memory leak prevention. Result: 31 tests pass, memory stable.",
+  "expected_subject": "fix(memory): properly remove event listeners to prevent leaks",
+  "expected_body_lines": [
+    "- Implement proper cleanup in lifecycle hooks",
+    "- Add event listener tracking to detect leaks",
+    "- Implement weak references for event handlers",
+    "- Add memory profiling for leak detection",
+    "- Add tests for memory leak prevention",
+    "- Validation: 31 tests pass, memory stable"
+  ],
+  "expected_command": "git commit -m \"fix(memory): properly remove event listeners to prevent leaks\""
+}

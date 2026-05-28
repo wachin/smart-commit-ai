@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Null pointer exception",
+  "original_text": "Fixed null pointer exception in user profile loading. Added null checks for optional user fields. Implemented defensive programming patterns. Added error handling for missing data. Updated unit tests for null cases. Result: null pointer exception fixed.",
+  "expected_subject": "fix(core): fix null pointer exception in user profile",
+  "expected_body_lines": [
+    "- Add null checks for optional user fields",
+    "- Implement defensive programming patterns",
+    "- Add error handling for missing data",
+    "- Update unit tests for null cases",
+    "- Validation: null pointer exception fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix null pointer exception in user profile\""
+}

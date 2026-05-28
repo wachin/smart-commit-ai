@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Path traversal vulnerability",
+  "original_text": "Fixed path traversal vulnerability in file upload. Implemented path sanitization for file operations. Added validation for file paths. Implemented canonical path resolution. Added file access control checks. Result: path traversal vulnerability fixed.",
+  "expected_subject": "fix(security): fix path traversal vulnerability",
+  "expected_body_lines": [
+    "- Implement path sanitization for file operations",
+    "- Add validation for file paths",
+    "- Implement canonical path resolution",
+    "- Add file access control checks",
+    "- Validation: path traversal vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix path traversal vulnerability\""
+}

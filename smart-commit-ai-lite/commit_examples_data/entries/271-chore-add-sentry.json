@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Sentry error tracking",
+  "original_text": "Added Sentry error tracking. Implemented error capturing and reporting. Added user context and breadcrumbs. Implemented performance monitoring. Added alerting for critical errors. Result: Sentry error tracking operational.",
+  "expected_subject": "chore(monitoring): add Sentry error tracking",
+  "expected_body_lines": [
+    "- Implement error capturing and reporting",
+    "- Add user context and breadcrumbs",
+    "- Implement performance monitoring",
+    "- Add alerting for critical errors",
+    "- Validation: Sentry error tracking operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Sentry error tracking\""
+}

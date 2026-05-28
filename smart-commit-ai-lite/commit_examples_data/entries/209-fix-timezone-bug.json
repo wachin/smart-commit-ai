@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Timezone handling bug",
+  "original_text": "Fixed timezone handling bug in scheduling. Dates were being displayed in wrong timezone. Implemented proper timezone conversion. Added timezone-aware datetime handling. Updated scheduling logic with timezone support. Result: timezone handling fixed.",
+  "expected_subject": "fix(core): fix timezone handling in scheduling",
+  "expected_body_lines": [
+    "- Fix dates displayed in wrong timezone",
+    "- Implement proper timezone conversion",
+    "- Add timezone-aware datetime handling",
+    "- Update scheduling logic with timezone support",
+    "- Validation: timezone handling fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix timezone handling in scheduling\""
+}

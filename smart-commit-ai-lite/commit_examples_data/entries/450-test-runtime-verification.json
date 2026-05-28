@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add runtime verification",
+  "original_text": "Added runtime verification framework. Implemented temporal logic specifications. Added runtime monitors. Implemented violation detection. Added runtime verification reporting. Result: runtime verification operational.",
+  "expected_subject": "test(runtime): add runtime verification",
+  "expected_body_lines": [
+    "- Implement temporal logic specifications",
+    "- Add runtime monitors",
+    "- Implement violation detection",
+    "- Add runtime verification reporting",
+    "- Validation: runtime verification operational"
+  ],
+  "expected_command": "git commit -m \"test(runtime): add runtime verification\""
+}

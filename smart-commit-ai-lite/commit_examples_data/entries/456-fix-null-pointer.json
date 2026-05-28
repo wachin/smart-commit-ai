@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Null pointer dereference",
+  "original_text": "Fixed null pointer dereference. Implemented null checks. Added defensive programming. Implemented null object pattern. Added null pointer detection. Result: null pointer dereference fixed.",
+  "expected_subject": "fix(runtime): fix null pointer dereference",
+  "expected_body_lines": [
+    "- Implement null checks",
+    "- Add defensive programming",
+    "- Implement null object pattern",
+    "- Add null pointer detection",
+    "- Validation: null pointer dereference fixed"
+  ],
+  "expected_command": "git commit -m \"fix(runtime): fix null pointer dereference\""
+}

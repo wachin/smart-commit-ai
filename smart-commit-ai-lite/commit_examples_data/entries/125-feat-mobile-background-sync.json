@@ -1,0 +1,14 @@
+{
+  "title": "Add background sync for mobile app",
+  "original_text": "Implemented background synchronization for mobile app. Added background fetch for iOS. Added WorkManager for Android background tasks. Implemented incremental sync to save battery. Implemented sync conflict resolution. Added sync progress indicators. Added sync failure retry logic. Added battery optimization for sync. Result: background sync working efficiently.",
+  "expected_subject": "feat(mobile): add background synchronization",
+  "expected_body_lines": [
+    "- Add background fetch for iOS",
+    "- Add WorkManager for Android background tasks",
+    "- Implement incremental sync to save battery",
+    "- Add sync conflict resolution",
+    "- Add sync progress and retry logic",
+    "- Validation: background sync working efficiently"
+  ],
+  "expected_command": "git commit -m \"feat(mobile): add background synchronization\""
+}

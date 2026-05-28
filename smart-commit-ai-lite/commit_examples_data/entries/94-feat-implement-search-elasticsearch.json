@@ -1,0 +1,14 @@
+{
+  "title": "Implement search with Elasticsearch",
+  "original_text": "Implemented full-text search using Elasticsearch. Added search API with filtering and sorting. Implemented autocomplete for search suggestions. Added faceted search for categories. Implemented search analytics to track queries. Added search result highlighting. Integrated with existing database for indexing. Implemented search result caching. Added tests for search functionality. Result: 55 tests pass.",
+  "expected_subject": "feat(search): implement full-text search with Elasticsearch",
+  "expected_body_lines": [
+    "- Add search API with filtering and sorting",
+    "- Implement autocomplete for search suggestions",
+    "- Add faceted search for categories",
+    "- Implement search analytics and query tracking",
+    "- Add search result highlighting and caching",
+    "- Validation: 55 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(search): implement full-text search with Elasticsearch\""
+}

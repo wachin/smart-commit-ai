@@ -1,0 +1,12 @@
+{
+  "title": "DrumBurp: Translate README to English and archive Spanish",
+  "original_text": "Done. The original Spanish README is now README_ES.md and the new README.md is a faithful English translation. The reference at the bottom points to migration_report_pyqt5.md (the English version of the migration report) instead of the Spanish one.",
+  "expected_subject": "docs(i18n): translate README to English and archive Spanish",
+  "expected_body_lines": [
+    "- Rename original README to README_ES.md for preservation",
+    "- Create new English README.md with faithful translation",
+    "- Update internal links to point to English migration report",
+    "- Ensure consistent language across primary project documentation"
+  ],
+  "expected_command": "git commit -m \"docs(i18n): translate README to English and archive Spanish\""
+}

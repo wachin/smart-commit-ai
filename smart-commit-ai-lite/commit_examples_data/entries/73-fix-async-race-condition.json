@@ -1,0 +1,13 @@
+{
+  "title": "Fix race condition in async task queue",
+  "original_text": "Fixed a race condition in the async task queue where multiple tasks could modify shared state simultaneously. Added a mutex lock around the critical section in task_queue.py. Also implemented proper task cancellation to prevent orphaned tasks. Updated the task scheduler to use atomic operations for state changes. Added tests in tests/test_async_queue.py to verify thread safety. Result: 23 tests pass, no race conditions detected.",
+  "expected_subject": "fix(async): add mutex lock to prevent race conditions",
+  "expected_body_lines": [
+    "- Add mutex lock around critical section in task_queue.py",
+    "- Implement proper task cancellation",
+    "- Use atomic operations for state changes",
+    "- Add thread safety tests",
+    "- Validation: 23 tests pass, no race conditions detected"
+  ],
+  "expected_command": "git commit -m \"fix(async): add mutex lock to prevent race conditions\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API search documentation",
+  "original_text": "Added API search documentation. Documented search parameters. Added search examples. Implemented full-text search. Added search highlighting. Result: search documentation complete.",
+  "expected_subject": "docs(api): add API search documentation",
+  "expected_body_lines": [
+    "- Document search parameters",
+    "- Add search examples",
+    "- Implement full-text search",
+    "- Add search highlighting",
+    "- Validation: search documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API search documentation\""
+}

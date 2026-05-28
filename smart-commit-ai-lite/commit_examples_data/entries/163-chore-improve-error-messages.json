@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Improve error messages",
+  "original_text": "Improved error messages across the application. Made error messages more user-friendly and actionable. Added error codes for easier debugging. Implemented error message localization. Added error context and suggestions. Updated error logging with structured data. Added tests for error message quality. Result: error messages improved.",
+  "expected_subject": "chore(ux): improve error messages for better user experience",
+  "expected_body_lines": [
+    "- Make error messages more user-friendly and actionable",
+    "- Add error codes for easier debugging",
+    "- Implement error message localization",
+    "- Add error context and suggestions",
+    "- Update error logging with structured data",
+    "- Validation: error messages improved"
+  ],
+  "expected_command": "git commit -m \"chore(ux): improve error messages for better user experience\""
+}

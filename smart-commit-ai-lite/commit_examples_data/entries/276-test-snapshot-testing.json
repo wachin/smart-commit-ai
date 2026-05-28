@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add snapshot testing",
+  "original_text": "Added snapshot testing with Jest. Implemented snapshot tests for UI components. Added snapshot tests for API responses. Implemented snapshot update mechanism. Added snapshot diff review. Result: snapshot tests pass.",
+  "expected_subject": "test(snapshot): add snapshot testing with Jest",
+  "expected_body_lines": [
+    "- Implement snapshot tests for UI components",
+    "- Add snapshot tests for API responses",
+    "- Implement snapshot update mechanism",
+    "- Add snapshot diff review",
+    "- Validation: snapshot tests pass"
+  ],
+  "expected_command": "git commit -m \"test(snapshot): add snapshot testing with Jest\""
+}

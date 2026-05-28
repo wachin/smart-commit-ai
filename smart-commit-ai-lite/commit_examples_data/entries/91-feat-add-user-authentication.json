@@ -1,0 +1,14 @@
+{
+  "title": "Add user authentication system",
+  "original_text": "Implemented a complete user authentication system. Added user registration, login, and password reset functionality. Integrated JWT tokens for session management. Added email verification for new users. Implemented role-based access control (RBAC) with admin, user, and guest roles. Added rate limiting to prevent brute force attacks. Updated database schema with users and sessions tables. Added comprehensive tests for auth flows. Result: 65 tests pass.",
+  "expected_subject": "feat(auth): implement complete user authentication system",
+  "expected_body_lines": [
+    "- Add user registration, login, and password reset",
+    "- Integrate JWT tokens for session management",
+    "- Implement email verification for new users",
+    "- Add role-based access control (RBAC)",
+    "- Add rate limiting for brute force prevention",
+    "- Validation: 65 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(auth): implement complete user authentication system\""
+}

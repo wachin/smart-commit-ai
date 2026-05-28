@@ -11,12 +11,16 @@ from smart_commit_ai.commit_message import (
     parse_git_commit_command,
 )
 from smart_commit_ai.examples import ExampleStore
+from smart_commit_ai.input_cleanup import clean_input, detect_input_noise_warnings
+from smart_commit_ai.language import detect_language
 from smart_commit_ai.gemini_client import GeminiError
 from smart_commit_ai.gemini_client import GeminiCommitGenerator
 from smart_commit_ai.gemini_client import parse_model_response
 from smart_commit_ai.gemini_client import quality_issues
 from smart_commit_ai.local_generator import LocalCommitGenerator
 from smart_commit_ai.service import SmartCommitService
+from smart_commit_ai.type_scope import detect_scope as heuristic_detect_scope
+from smart_commit_ai.type_scope import select_commit_type as heuristic_select_commit_type
 
 
 WRK_SUMMARY = """We kept the development moving and took the first real WRK step.
@@ -141,6 +145,32 @@ class LocalGeneratorTests(unittest.TestCase):
         self.assertIn("- Keep bodyless or vague examples out of few-shot data", message.body_lines)
         self.assertIn("- Exclude referenced weak entries such as 599, 600", message.body_lines)
         self.assertTrue(all(len(line) <= MAX_BODY_LINE_LENGTH for line in message.body_lines))
+
+
+class CleanupAndHeuristicTests(unittest.TestCase):
+    def test_input_cleanup_filters_pasted_command_noise(self):
+        text = """```bash
+git commit -m "feat(config): persist Gemini API key"
+```
+
+I updated it so the Gemini key is saved locally in .env.local.
+"""
+
+        cleaned = clean_input(text)
+
+        self.assertIn("Gemini key is saved locally", cleaned)
+        self.assertNotIn("git commit", cleaned)
+        self.assertIn("mucho ruido filtrado", detect_input_noise_warnings(text))
+
+    def test_detect_language_prefers_spanish_markers(self):
+        self.assertEqual(detect_language("He actualizado la configuración y añadí pruebas."), "es")
+        self.assertEqual(detect_language("I updated the config and added tests."), "en")
+
+    def test_heuristics_find_prompt_scope_and_fix_type(self):
+        text = "Skip low-quality examples from prompt data and JSON entries."
+
+        self.assertEqual(heuristic_detect_scope(text), "prompt")
+        self.assertEqual(heuristic_select_commit_type(text, subject_verb="skip"), "fix")
 
 
 class GeminiParserTests(unittest.TestCase):
@@ -371,6 +401,28 @@ class ServiceSavePolicyTests(unittest.TestCase):
             )
 
             result = service.generate("summary", provider="auto", save=True)
+
+            self.assertIsNone(result.saved_path)
+            self.assertEqual(store.load(), [])
+
+    def test_does_not_save_gemini_fallback_messages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = ExampleStore(Path(directory))
+            service = SmartCommitService(store)
+            service.gemini = FakeGenerator(error=GeminiError("invalid response"))
+            service.local = FakeGenerator(
+                CommitMessage(
+                    subject="fix(prompt): skip low-quality prompt examples",
+                    body_lines=[
+                        "- Filter low-quality examples out of Gemini prompt context",
+                        "- Prevent weak saved JSON entries from shaping future responses",
+                        "- Keep bodyless or vague examples out of few-shot data",
+                    ],
+                    source="local",
+                )
+            )
+
+            result = service.generate("summary", provider="gemini", save=True)
 
             self.assertIsNone(result.saved_path)
             self.assertEqual(store.load(), [])

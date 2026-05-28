@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add deployment guide",
+  "original_text": "Added deployment documentation. Documented deployment procedures for different environments. Added infrastructure as code examples. Implemented deployment rollback procedures. Added monitoring and alerting setup guide. Added deployment troubleshooting steps. Result: deployment guide complete.",
+  "expected_subject": "docs(deploy): add deployment documentation",
+  "expected_body_lines": [
+    "- Document deployment procedures for different environments",
+    "- Add infrastructure as code examples",
+    "- Implement deployment rollback procedures",
+    "- Add monitoring and alerting setup guide",
+    "- Add deployment troubleshooting steps",
+    "- Validation: deployment guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(deploy): add deployment documentation\""
+}

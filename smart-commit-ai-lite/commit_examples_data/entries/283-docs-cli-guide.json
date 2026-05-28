@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add CLI guide",
+  "original_text": "Added CLI guide for command-line users. Documented all CLI commands and options. Added CLI usage examples. Implemented CLI configuration guide. Added CLI troubleshooting section. Result: CLI guide complete.",
+  "expected_subject": "docs(cli): add CLI guide for command-line users",
+  "expected_body_lines": [
+    "- Document all CLI commands and options",
+    "- Add CLI usage examples",
+    "- Implement CLI configuration guide",
+    "- Add CLI troubleshooting section",
+    "- Validation: CLI guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(cli): add CLI guide for command-line users\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Iterator pattern to collections",
+  "original_text": "Refactored to apply Iterator pattern to collections. Implemented iterator interface. Added concrete iterators. Implemented aggregate interface. Added traversal logic. Result: Iterator pattern applied.",
+  "expected_subject": "refactor(pattern): apply Iterator pattern to collections",
+  "expected_body_lines": [
+    "- Implement iterator interface",
+    "- Add concrete iterators",
+    "- Implement aggregate interface",
+    "- Add traversal logic",
+    "- Validation: Iterator pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Iterator pattern to collections\""
+}

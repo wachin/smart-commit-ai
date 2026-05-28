@@ -1,0 +1,14 @@
+{
+  "title": "Implement audit logging system",
+  "original_text": "Implemented comprehensive audit logging system. Added logging for all user actions. Implemented log retention and archival. Added log search and filtering. Implemented log export functionality. Added audit trail for compliance. Implemented log tamper detection. Added audit dashboard for administrators. Added tests for audit logging. Result: 44 tests pass.",
+  "expected_subject": "feat(audit): implement comprehensive audit logging",
+  "expected_body_lines": [
+    "- Add logging for all user actions",
+    "- Implement log retention and archival",
+    "- Add log search and filtering",
+    "- Implement log export functionality",
+    "- Add audit trail and tamper detection",
+    "- Validation: 44 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(audit): implement comprehensive audit logging\""
+}

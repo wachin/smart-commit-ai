@@ -1,0 +1,14 @@
+{
+  "title": "Add payment processing with Stripe",
+  "original_text": "Integrated Stripe for payment processing. Added subscription management with recurring billing. Implemented one-time payment flow. Added payment method management (cards, bank accounts). Implemented webhook handling for payment events. Added refund processing. Implemented payment analytics and reporting. Added test mode for development. Added comprehensive tests for payment flows. Result: 48 tests pass.",
+  "expected_subject": "feat(payments): integrate Stripe for payment processing",
+  "expected_body_lines": [
+    "- Add subscription management with recurring billing",
+    "- Implement one-time payment flow",
+    "- Add payment method management",
+    "- Implement webhook handling for payment events",
+    "- Add refund processing and analytics",
+    "- Validation: 48 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(payments): integrate Stripe for payment processing\""
+}

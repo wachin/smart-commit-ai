@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add contract testing",
+  "original_text": "Added contract testing with Pact. Implemented consumer contracts for API interactions. Added contract verification in CI/CD. Implemented contract versioning. Added contract breaking change detection. Result: contract tests pass.",
+  "expected_subject": "test(contract): add contract testing with Pact",
+  "expected_body_lines": [
+    "- Implement consumer contracts for API interactions",
+    "- Add contract verification in CI/CD",
+    "- Implement contract versioning",
+    "- Add contract breaking change detection",
+    "- Validation: contract tests pass"
+  ],
+  "expected_command": "git commit -m \"test(contract): add contract testing with Pact\""
+}

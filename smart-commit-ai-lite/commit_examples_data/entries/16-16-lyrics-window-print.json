@@ -1,0 +1,14 @@
+{
+  "title": "16. Lyrics Window: Print",
+  "original_text": "We moved the Lyrics window another step forward: it can print now. In [app.py]..., I added a `Print` button that sends the currently filtered text through Qt’s standard print dialog... Tests in [test_app_playlist.py]... now cover: accepted print flow... cancelled print dialog... I updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 142 tests OK...",
+  "expected_subject": "feat(ui): add print support to Lyrics window",
+  "expected_body_lines": [
+    "- Add Print button using Qt standard print dialog for filtered text",
+    "- Emit textPrinted signal for status bar confirmation on success",
+    "- Update user guides (EN/ES) with new printing documentation",
+    "- Add tests for accepted/cancelled print flows and feedback",
+    "- Update Roadmap.md to mark print lyrics item complete",
+    "- Validation: compileall OK, 142 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add print support to Lyrics window\" \\\n  -m \"- Add Print button using Qt standard print dialog for filtered text\" \\\n  -m \"- Emit textPrinted signal for status bar confirmation on success\" \\\n  -m \"- Update user guides (EN/ES) with new printing documentation\" \\\n  -m \"- Add tests for accepted/cancelled print flows and feedback\" \\\n  -m \"- Update Roadmap.md to mark print lyrics item complete\" \\\n  -m \"- Validation: compileall OK, 142 tests pass, offscreen verified\""
+}

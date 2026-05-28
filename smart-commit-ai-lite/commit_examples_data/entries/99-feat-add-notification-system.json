@@ -1,0 +1,14 @@
+{
+  "title": "Add notification system",
+  "original_text": "Implemented multi-channel notification system. Added email notifications with templates. Implemented SMS notifications for critical alerts. Added push notifications for mobile apps. Implemented in-app notification center. Added notification preferences per user. Implemented notification scheduling and batching. Added notification analytics and delivery tracking. Added tests for notifications. Result: 52 tests pass.",
+  "expected_subject": "feat(notify): implement multi-channel notification system",
+  "expected_body_lines": [
+    "- Add email notifications with templates",
+    "- Implement SMS notifications for critical alerts",
+    "- Add push notifications for mobile apps",
+    "- Implement in-app notification center",
+    "- Add notification preferences and scheduling",
+    "- Validation: 52 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(notify): implement multi-channel notification system\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add unit tests for authentication flow",
+  "original_text": "Added comprehensive unit tests for the authentication flow. Created tests/test_auth.py with test cases for login, logout, token refresh, and password reset. Mocked external API calls to ensure tests run offline. Added test fixtures for user data and session management. Also added integration tests for the auth middleware. Result: 28 tests pass, coverage increased to 85%.",
+  "expected_subject": "test(auth): add comprehensive unit tests for authentication",
+  "expected_body_lines": [
+    "- Create test_auth.py with login, logout, token refresh tests",
+    "- Mock external API calls for offline test execution",
+    "- Add fixtures for user data and session management",
+    "- Add integration tests for auth middleware",
+    "- Validation: 28 tests pass, coverage 85%"
+  ],
+  "expected_command": "git commit -m \"test(auth): add comprehensive unit tests for authentication\""
+}

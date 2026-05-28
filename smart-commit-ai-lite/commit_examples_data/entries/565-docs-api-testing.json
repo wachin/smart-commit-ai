@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API testing guide",
+  "original_text": "Added API testing guide. Documented testing strategies. Added test automation examples. Implemented test data management. Added test reporting. Result: API testing guide complete.",
+  "expected_subject": "docs(api): add API testing guide",
+  "expected_body_lines": [
+    "- Document testing strategies",
+    "- Add test automation examples",
+    "- Implement test data management",
+    "- Add test reporting",
+    "- Validation: API testing guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API testing guide\""
+}

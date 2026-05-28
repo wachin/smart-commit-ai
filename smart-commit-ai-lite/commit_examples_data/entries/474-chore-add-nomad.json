@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Nomad workload orchestration",
+  "original_text": "Added Nomad for workload orchestration. Implemented job scheduling. Added task driver configuration. Implemented service discovery integration. Added Nomad cluster. Result: Nomad orchestration operational.",
+  "expected_subject": "chore(orchestration): add Nomad workload orchestration",
+  "expected_body_lines": [
+    "- Implement job scheduling",
+    "- Add task driver configuration",
+    "- Implement service discovery integration",
+    "- Add Nomad cluster",
+    "- Validation: Nomad orchestration operational"
+  ],
+  "expected_command": "git commit -m \"chore(orchestration): add Nomad workload orchestration\""
+}

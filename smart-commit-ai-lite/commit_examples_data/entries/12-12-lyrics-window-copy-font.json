@@ -1,0 +1,14 @@
+{
+  "title": "12. Lyrics Window: Copy & Font",
+  "original_text": "We gave the Lyrics window a bit more real-world usefulness. In [app.py]..., the `LyricsDialog` now has `Copy` and `Font` buttons. `Copy` puts the currently filtered text into the clipboard... `Font` opens a real font chooser... I added tests in [test_app_playlist.py]... and updated [Roadmap.md]... The user guides were updated too... Verification is clean: ... 136 tests OK...",
+  "expected_subject": "feat(ui): add Copy and Font controls to Lyrics window",
+  "expected_body_lines": [
+    "- Add Copy button to export filtered text to clipboard",
+    "- Add Font button for real-time lyrics pane styling",
+    "- Update user guides (EN/ES) with new control documentation",
+    "- Add tests for clipboard content and font dialog behavior",
+    "- Update Roadmap.md to mark copy/font items complete",
+    "- Validation: compileall OK, 136 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add Copy and Font controls to Lyrics window\" \\\n  -m \"- Add Copy button to export filtered text to clipboard\" \\\n  -m \"- Add Font button for real-time lyrics pane styling\" \\\n  -m \"- Update user guides (EN/ES) with new control documentation\" \\\n  -m \"- Add tests for clipboard content and font dialog behavior\" \\\n  -m \"- Update Roadmap.md to mark copy/font items complete\" \\\n  -m \"- Validation: compileall OK, 136 tests pass, offscreen verified\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add behavioral testing",
+  "original_text": "Added behavioral testing with Cucumber. Implemented Gherkin feature files. Added step definitions for scenarios. Implemented scenario outlines for data-driven tests. Added behavior reports. Result: behavioral tests pass.",
+  "expected_subject": "test(bdd): add behavioral testing with Cucumber",
+  "expected_body_lines": [
+    "- Implement Gherkin feature files",
+    "- Add step definitions for scenarios",
+    "- Implement scenario outlines for data-driven tests",
+    "- Add behavior reports",
+    "- Validation: behavioral tests pass"
+  ],
+  "expected_command": "git commit -m \"test(bdd): add behavioral testing with Cucumber\""
+}

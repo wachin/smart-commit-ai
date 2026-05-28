@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Chef configuration management",
+  "original_text": "Added Chef configuration management. Implemented Chef cookbooks. Added configuration automation. Implemented resource management. Added configuration testing. Result: Chef configuration operational.",
+  "expected_subject": "chore(config): add Chef configuration management",
+  "expected_body_lines": [
+    "- Implement Chef cookbooks",
+    "- Add configuration automation",
+    "- Implement resource management",
+    "- Add configuration testing",
+    "- Validation: Chef configuration operational"
+  ],
+  "expected_command": "git commit -m \"chore(config): add Chef configuration management\""
+}

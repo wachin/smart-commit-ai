@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add terms of service",
+  "original_text": "Added terms of service documentation. Documented service usage terms. Added acceptable use policy. Implemented service level agreement. Added termination policy. Result: terms of service complete.",
+  "expected_subject": "docs(legal): add terms of service",
+  "expected_body_lines": [
+    "- Document service usage terms",
+    "- Add acceptable use policy",
+    "- Implement service level agreement",
+    "- Add termination policy",
+    "- Validation: terms of service complete"
+  ],
+  "expected_command": "git commit -m \"docs(legal): add terms of service\""
+}

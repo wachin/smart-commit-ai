@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add code coverage reporting",
+  "original_text": "Added code coverage reporting with Jest. Configured coverage thresholds. Added coverage reporting in CI/CD. Implemented coverage badge in README. Added coverage trend tracking. Result: code coverage reporting operational.",
+  "expected_subject": "chore(testing): add code coverage reporting",
+  "expected_body_lines": [
+    "- Configure coverage thresholds",
+    "- Add coverage reporting in CI/CD",
+    "- Implement coverage badge in README",
+    "- Add coverage trend tracking",
+    "- Validation: code coverage reporting operational"
+  ],
+  "expected_command": "git commit -m \"chore(testing): add code coverage reporting\""
+}

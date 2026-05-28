@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add biometric authentication",
+  "original_text": "Added biometric authentication support. Implemented fingerprint authentication. Added facial recognition. Implemented biometric enrollment. Added biometric fallback. Result: biometric authentication operational.",
+  "expected_subject": "feat(auth): add biometric authentication",
+  "expected_body_lines": [
+    "- Implement fingerprint authentication",
+    "- Add facial recognition",
+    "- Implement biometric enrollment",
+    "- Add biometric fallback",
+    "- Validation: biometric authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add biometric authentication\""
+}

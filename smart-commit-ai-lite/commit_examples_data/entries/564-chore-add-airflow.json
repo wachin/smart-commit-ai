@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Apache Airflow",
+  "original_text": "Added Apache Airflow. Implemented DAG definitions. Added task scheduling. Implemented task dependencies. Added workflow monitoring. Result: Airflow operational.",
+  "expected_subject": "chore(workflow): add Apache Airflow",
+  "expected_body_lines": [
+    "- Implement DAG definitions",
+    "- Add task scheduling",
+    "- Implement task dependencies",
+    "- Add workflow monitoring",
+    "- Validation: Airflow operational"
+  ],
+  "expected_command": "git commit -m \"chore(workflow): add Apache Airflow\""
+}

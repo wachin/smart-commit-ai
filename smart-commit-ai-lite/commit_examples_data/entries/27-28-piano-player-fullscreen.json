@@ -1,0 +1,13 @@
+{
+  "title": "28. Piano Player: Fullscreen",
+  "original_text": "We kept the Pianola window moving and knocked out fullscreen. In [app.py]..., the `Piano Player` dialog now has a `Fullscreen` toggle button, and `Esc` exits fullscreen cleanly. I used the same behavior pattern as the Lyrics window... I added coverage in [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 159 tests OK...",
+  "expected_subject": "feat(ui): add fullscreen mode to Piano Player window",
+  "expected_body_lines": [
+    "- Add Fullscreen toggle button with Esc key exit support",
+    "- Reuse Lyrics window pattern for consistent app-wide behavior",
+    "- Update user guides (EN/ES) and Roadmap.md with new docs",
+    "- Add tests for fullscreen toggle and Esc exit path",
+    "- Validation: compileall OK, 159 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add fullscreen mode to Piano Player window\" \\\n  -m \"- Add Fullscreen toggle button with Esc key exit support\" \\\n  -m \"- Reuse Lyrics window pattern for consistent app-wide behavior\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new docs\" \\\n  -m \"- Add tests for fullscreen toggle and Esc exit path\" \\\n  -m \"- Validation: compileall OK, 159 tests pass\""
+}

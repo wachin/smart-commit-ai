@@ -1,0 +1,14 @@
+{
+  "title": "Refactor JavaScript to TypeScript",
+  "original_text": "Refactored codebase from JavaScript to TypeScript. Added type definitions for all modules. Implemented strict type checking. Added type guards for runtime validation. Migrated build system to handle TypeScript. Added type linting with ESLint. Added type tests with tsd. Updated documentation with type information. Result: 87 files migrated, type coverage 95%.",
+  "expected_subject": "refactor(typescript): migrate JavaScript to TypeScript",
+  "expected_body_lines": [
+    "- Add type definitions for all modules",
+    "- Implement strict type checking",
+    "- Add type guards for runtime validation",
+    "- Migrate build system for TypeScript",
+    "- Add type linting and type tests",
+    "- Validation: 87 files migrated, type coverage 95%"
+  ],
+  "expected_command": "git commit -m \"refactor(typescript): migrate JavaScript to TypeScript\""
+}

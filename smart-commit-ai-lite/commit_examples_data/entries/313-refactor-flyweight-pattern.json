@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement flyweight pattern",
+  "original_text": "Refactored to implement flyweight pattern. Added flyweight factory for shared objects. Implemented intrinsic state management. Added extrinsic state handling. Implemented object pooling for memory efficiency. Result: flyweight pattern implemented.",
+  "expected_subject": "refactor(pattern): implement flyweight pattern",
+  "expected_body_lines": [
+    "- Add flyweight factory for shared objects",
+    "- Implement intrinsic state management",
+    "- Add extrinsic state handling",
+    "- Implement object pooling for memory efficiency",
+    "- Validation: flyweight pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement flyweight pattern\""
+}

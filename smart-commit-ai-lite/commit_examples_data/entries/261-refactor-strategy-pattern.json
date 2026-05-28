@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement strategy pattern",
+  "original_text": "Refactored to implement strategy pattern. Extracted interchangeable algorithms into strategy classes. Implemented strategy context and factory. Added strategy selection mechanism. Improved code flexibility and maintainability. Result: strategy pattern implemented.",
+  "expected_subject": "refactor(pattern): implement strategy pattern",
+  "expected_body_lines": [
+    "- Extract interchangeable algorithms into strategy classes",
+    "- Implement strategy context and factory",
+    "- Add strategy selection mechanism",
+    "- Improve code flexibility and maintainability",
+    "- Validation: strategy pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement strategy pattern\""
+}

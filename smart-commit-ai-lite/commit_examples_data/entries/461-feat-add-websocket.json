@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add WebSocket support",
+  "original_text": "Added WebSocket support for real-time communication. Implemented WebSocket server. Added WebSocket client library. Implemented WebSocket message handling. Added WebSocket authentication. Result: WebSocket support operational.",
+  "expected_subject": "feat(realtime): add WebSocket support",
+  "expected_body_lines": [
+    "- Implement WebSocket server",
+    "- Add WebSocket client library",
+    "- Implement WebSocket message handling",
+    "- Add WebSocket authentication",
+    "- Validation: WebSocket support operational"
+  ],
+  "expected_command": "git commit -m \"feat(realtime): add WebSocket support\""
+}

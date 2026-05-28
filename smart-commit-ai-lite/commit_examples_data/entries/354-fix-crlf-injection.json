@@ -1,0 +1,13 @@
+{
+  "title": "Fix: CRLF injection vulnerability",
+  "original_text": "Fixed CRLF injection vulnerability in HTTP headers. Implemented CRLF sequence sanitization. Added input validation for user-supplied headers. Implemented HTTP header encoding. Added CRLF injection detection. Result: CRLF injection vulnerability fixed.",
+  "expected_subject": "fix(security): fix CRLF injection vulnerability",
+  "expected_body_lines": [
+    "- Implement CRLF sequence sanitization",
+    "- Add input validation for user-supplied headers",
+    "- Implement HTTP header encoding",
+    "- Add CRLF injection detection",
+    "- Validation: CRLF injection vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix CRLF injection vulnerability\""
+}

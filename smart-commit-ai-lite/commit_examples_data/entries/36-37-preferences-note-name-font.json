@@ -1,0 +1,14 @@
+{
+  "title": "37. Preferences: Note-Name Font",
+  "original_text": "We kept the preferences work moving and finished another real `Player Piano` item: note-name font. In [widgets.py]..., `PianoKeyboard` now has a configurable note-label font... In [settings.py]..., I added persisted Player Piano font settings for: note-name font family, note-name font size... In [app.py]..., the `Preferences` dialog’s `Player Piano` tab now includes: `Note-name font`, `Note-name size`... Tests were expanded in: [test_settings.py], [test_app_playlist.py]... I updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 176 tests OK...",
+  "expected_subject": "feat(app): add configurable note-name font to Pianola",
+  "expected_body_lines": [
+    "- Support custom font family and size in PianoKeyboard widget",
+    "- Persist note-name font settings in Player Piano preferences tab",
+    "- Apply font changes live to open Pianola windows and new instances",
+    "- Update user guides (EN/ES) and Roadmap.md with new font docs",
+    "- Add tests for persistence, clamping, and live application",
+    "- Validation: compileall OK, 176 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(app): add configurable note-name font to Pianola\" \\\n  -m \"- Support custom font family and size in PianoKeyboard widget\" \\\n  -m \"- Persist note-name font settings in Player Piano preferences tab\" \\\n  -m \"- Apply font changes live to open Pianola windows and new instances\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new font docs\" \\\n  -m \"- Add tests for persistence, clamping, and live application\" \\\n  -m \"- Validation: compileall OK, 176 tests pass\""
+}

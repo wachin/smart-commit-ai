@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Adapter pattern to integrations",
+  "original_text": "Refactored to apply Adapter pattern to integrations. Implemented integration adapters. Added protocol conversion. Implemented data transformation. Added error translation. Result: Adapter pattern applied.",
+  "expected_subject": "refactor(pattern): apply Adapter pattern to integrations",
+  "expected_body_lines": [
+    "- Implement integration adapters",
+    "- Add protocol conversion",
+    "- Implement data transformation",
+    "- Add error translation",
+    "- Validation: Adapter pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Adapter pattern to integrations\""
+}

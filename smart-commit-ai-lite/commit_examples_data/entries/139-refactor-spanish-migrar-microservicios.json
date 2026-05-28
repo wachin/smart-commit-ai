@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Migrar a arquitectura de microservicios en español",
+  "original_text": "Refactoricé la aplicación monolítica a arquitectura de microservicios. Dividí la aplicación en servicio de usuarios, servicio de pedidos y servicio de productos. Implementé API gateway para enrutamiento. Añadí descubrimiento de servicios con Consul. Implementé comunicación entre servicios con gRPC. Añadí tracing distribuido con Jaeger. Implementé configuración centralizada. Añadí tests para microservicios. Resultado: 76 pruebas pasan.",
+  "expected_subject": "refactor(arquitectura): migrar a microservicios",
+  "expected_body_lines": [
+    "- Dividir aplicación en servicios de usuarios, pedidos, productos",
+    "- Implementar API gateway para enrutamiento",
+    "- Añadir descubrimiento de servicios con Consul",
+    "- Implementar comunicación entre servicios con gRPC",
+    "- Añadir tracing distribuido y configuración centralizada",
+    "- Validación: 76 pruebas pasan"
+  ],
+  "expected_command": "git commit -m \"refactor(arquitectura): migrar a microservicios\""
+}

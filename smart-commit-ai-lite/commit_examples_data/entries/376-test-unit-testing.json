@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add comprehensive unit testing",
+  "original_text": "Added comprehensive unit testing. Implemented unit tests for core modules. Added unit test coverage reporting. Implemented unit test mocking. Added unit test data fixtures. Result: unit tests pass.",
+  "expected_subject": "test(unit): add comprehensive unit testing",
+  "expected_body_lines": [
+    "- Implement unit tests for core modules",
+    "- Add unit test coverage reporting",
+    "- Implement unit test mocking",
+    "- Add unit test data fixtures",
+    "- Validation: unit tests pass"
+  ],
+  "expected_command": "git commit -m \"test(unit): add comprehensive unit testing\""
+}

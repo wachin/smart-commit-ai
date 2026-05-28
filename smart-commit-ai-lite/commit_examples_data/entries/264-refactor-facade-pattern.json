@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement facade pattern",
+  "original_text": "Refactored to implement facade pattern. Added facade for complex subsystems. Simplified API for client interactions. Implemented facade for external integrations. Improved code usability. Result: facade pattern implemented.",
+  "expected_subject": "refactor(pattern): implement facade pattern",
+  "expected_body_lines": [
+    "- Add facade for complex subsystems",
+    "- Simplify API for client interactions",
+    "- Implement facade for external integrations",
+    "- Improve code usability",
+    "- Validation: facade pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement facade pattern\""
+}

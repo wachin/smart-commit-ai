@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Cryptographic failure",
+  "original_text": "Fixed cryptographic failure in encryption. Implemented strong encryption algorithms. Added proper key management. Implemented secure random number generation. Added cryptographic audit. Result: cryptographic failure fixed.",
+  "expected_subject": "fix(security): fix cryptographic failure",
+  "expected_body_lines": [
+    "- Implement strong encryption algorithms",
+    "- Add proper key management",
+    "- Implement secure random number generation",
+    "- Add cryptographic audit",
+    "- Validation: cryptographic failure fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix cryptographic failure\""
+}

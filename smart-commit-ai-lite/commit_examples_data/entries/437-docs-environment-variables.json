@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add environment variables guide",
+  "original_text": "Added environment variables guide. Documented required environment variables. Added environment variable examples. Implemented environment validation. Added environment security. Result: environment variables guide complete.",
+  "expected_subject": "docs(config): add environment variables guide",
+  "expected_body_lines": [
+    "- Document required environment variables",
+    "- Add environment variable examples",
+    "- Implement environment validation",
+    "- Add environment security",
+    "- Validation: environment variables guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(config): add environment variables guide\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Character encoding issue",
+  "original_text": "Fixed character encoding issue in file upload. Files with non-ASCII characters were being corrupted. Implemented proper UTF-8 encoding handling. Added encoding detection and conversion. Updated file processing to handle all encodings. Result: encoding issue fixed.",
+  "expected_subject": "fix(i18n): fix character encoding issue in file upload",
+  "expected_body_lines": [
+    "- Fix non-ASCII character corruption",
+    "- Implement proper UTF-8 encoding handling",
+    "- Add encoding detection and conversion",
+    "- Update file processing for all encodings",
+    "- Validation: encoding issue fixed"
+  ],
+  "expected_command": "git commit -m \"fix(i18n): fix character encoding issue in file upload\""
+}

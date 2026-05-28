@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Apply Mediator pattern to events",
+  "original_text": "Refactored to apply Mediator pattern to events. Implemented mediator interface. Added colleague components. Implemented event dispatching. Added event handling. Result: Mediator pattern applied.",
+  "expected_subject": "refactor(pattern): apply Mediator pattern to events",
+  "expected_body_lines": [
+    "- Implement mediator interface",
+    "- Add colleague components",
+    "- Implement event dispatching",
+    "- Add event handling",
+    "- Validation: Mediator pattern applied"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): apply Mediator pattern to events\""
+}

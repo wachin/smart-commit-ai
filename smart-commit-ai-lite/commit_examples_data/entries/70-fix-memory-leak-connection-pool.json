@@ -1,0 +1,13 @@
+{
+  "title": "Fix memory leak in database connection pool",
+  "original_text": "Fixed a memory leak in the database connection pool. Connections were not being properly closed after use, causing the pool to exhaust over time. Updated the connection manager to call close() in a finally block. Also added a timeout mechanism to release stale connections. Modified db/connection_pool.py and added a test in tests/test_connection_pool.py. Verification: QT_QPA_PLATFORM=offscreen python3 -m unittest tests/test_connection_pool.py -v. Result: 8 tests pass, memory usage stable.",
+  "expected_subject": "fix(db): close connections properly to prevent memory leak",
+  "expected_body_lines": [
+    "- Ensure connections close in finally block",
+    "- Add timeout mechanism for stale connections",
+    "- Update connection_pool.py with proper cleanup",
+    "- Add regression test for connection lifecycle",
+    "- Validation: 8 tests pass, memory usage stable"
+  ],
+  "expected_command": "git commit -m \"fix(db): close connections properly to prevent memory leak\""
+}

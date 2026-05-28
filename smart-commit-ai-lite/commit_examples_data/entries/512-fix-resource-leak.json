@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Resource leak in file handler",
+  "original_text": "Fixed resource leak in file handler. Implemented proper resource cleanup. Added resource tracking. Implemented automatic resource closure. Added resource monitoring. Result: resource leak fixed.",
+  "expected_subject": "fix(resource): fix resource leak in file handler",
+  "expected_body_lines": [
+    "- Implement proper resource cleanup",
+    "- Add resource tracking",
+    "- Implement automatic resource closure",
+    "- Add resource monitoring",
+    "- Validation: resource leak fixed"
+  ],
+  "expected_command": "git commit -m \"fix(resource): fix resource leak in file handler\""
+}

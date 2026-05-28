@@ -1,0 +1,14 @@
+{
+  "title": "43. WPS Dicts: Converter Tool",
+  "original_text": "Hecho. Creé el programa PyQt6 en: [tools/wps_libreoffice_dict_converter.py]... Qué hace: Muestra a la izquierda los diccionarios fuente de LibreOffice. Muestra a la derecha los destinos WPS... Verifica antes de convertir... Sólo habilita `Convert` si no hay errores bloqueantes. Regenera `BUILD_SOURCE_MAP.txt` al convertir. Verifiqué dos cosas: python3 -m py_compile... y el analizador interno detecta: 71 mappings, 0 blocking errors, 5 warnings...",
+  "expected_subject": "feat(tools): add PyQt6 dictionary converter GUI",
+  "expected_body_lines": [
+    "- Implement side-by-side view for LibreOffice sources and WPS targets",
+    "- Validate .aff/.dic pairs, dict.conf, and special case mappings",
+    "- Handle legacy fallbacks for km_KH, ms_MY, qu_EC, sw_TZ",
+    "- Enable Convert only when no blocking errors are detected",
+    "- Auto-regenerate BUILD_SOURCE_MAP.txt upon successful conversion",
+    "- Verify compilation and internal logic (71 mappings, 0 errors)"
+  ],
+  "expected_command": "git commit -m \"feat(tools): add PyQt6 dictionary converter GUI\" \\\n  -m \"- Implement side-by-side view for LibreOffice sources and WPS targets\" \\\n  -m \"- Validate .aff/.dic pairs, dict.conf, and special case mappings\" \\\n  -m \"- Handle legacy fallbacks for km_KH, ms_MY, qu_EC, sw_TZ\" \\\n  -m \"- Enable Convert only when no blocking errors are detected\" \\\n  -m \"- Auto-regenerate BUILD_SOURCE_MAP.txt upon successful conversion\" \\\n  -m \"- Verify compilation and internal logic (71 mappings, 0 errors)\""
+}

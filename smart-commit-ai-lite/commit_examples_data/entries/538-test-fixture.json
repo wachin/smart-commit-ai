@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add test fixtures with factory_boy",
+  "original_text": "Added test fixtures with factory_boy. Implemented test factories. Added fixture generation. Implemented fixture relationships. Added fixture sequences. Result: test fixtures operational.",
+  "expected_subject": "test(fixtures): add test fixtures with factory_boy",
+  "expected_body_lines": [
+    "- Implement test factories",
+    "- Add fixture generation",
+    "- Implement fixture relationships",
+    "- Add fixture sequences",
+    "- Validation: test fixtures operational"
+  ],
+  "expected_command": "git commit -m \"test(fixtures): add test fixtures with factory_boy\""
+}

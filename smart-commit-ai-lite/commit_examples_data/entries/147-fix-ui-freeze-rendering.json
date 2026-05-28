@@ -1,0 +1,14 @@
+{
+  "title": "Fix UI freeze during large data rendering",
+  "original_text": "Fixed UI freeze when rendering large datasets. The main thread was blocked during data processing. Implemented virtual scrolling for large lists. Moved data processing to web workers. Implemented progressive rendering. Added loading indicators during processing. Optimized DOM manipulation. Result: UI remains responsive with 100k+ rows.",
+  "expected_subject": "fix(ui): implement virtual scrolling for large datasets",
+  "expected_body_lines": [
+    "- Implement virtual scrolling for large lists",
+    "- Move data processing to web workers",
+    "- Implement progressive rendering",
+    "- Add loading indicators during processing",
+    "- Optimize DOM manipulation",
+    "- Validation: UI responsive with 100k+ rows"
+  ],
+  "expected_command": "git commit -m \"fix(ui): implement virtual scrolling for large datasets\""
+}

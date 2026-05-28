@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Race condition in cache",
+  "original_text": "Fixed race condition in cache. Implemented cache locking. Added atomic cache operations. Implemented cache consistency checks. Added cache monitoring. Result: race condition fixed.",
+  "expected_subject": "fix(concurrency): fix race condition in cache",
+  "expected_body_lines": [
+    "- Implement cache locking",
+    "- Add atomic cache operations",
+    "- Implement cache consistency checks",
+    "- Add cache monitoring",
+    "- Validation: race condition fixed"
+  ],
+  "expected_command": "git commit -m \"fix(concurrency): fix race condition in cache\""
+}

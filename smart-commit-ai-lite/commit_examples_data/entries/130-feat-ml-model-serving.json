@@ -1,0 +1,14 @@
+{
+  "title": "Add ML model serving infrastructure",
+  "original_text": "Implemented ML model serving infrastructure. Added model REST API with FastAPI. Implemented model batching for throughput. Added model caching for latency reduction. Implemented model A/B testing. Added model canary deployment. Added model monitoring and alerting. Added load balancing for model servers. Result: model serving operational.",
+  "expected_subject": "feat(ml): add model serving infrastructure",
+  "expected_body_lines": [
+    "- Add model REST API with FastAPI",
+    "- Implement model batching for throughput",
+    "- Add model caching for latency reduction",
+    "- Implement model A/B testing and canary deployment",
+    "- Add model monitoring and load balancing",
+    "- Validation: model serving operational"
+  ],
+  "expected_command": "git commit -m \"feat(ml): add model serving infrastructure\""
+}

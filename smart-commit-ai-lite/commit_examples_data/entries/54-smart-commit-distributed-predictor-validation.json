@@ -1,0 +1,13 @@
+{
+  "title": "Smart Commit: Distributed predictor validation",
+  "original_text": "Continued development by making distributed predictor validation explicit. I updated ml/__init__.py so the package exposes the common API: PredictionResult, SklearnCommitPredictor, and predict_commit_type. Then I added predictor tests in tests/test_predictor.py that verify the public ml package exports work, the distributed model artifacts load successfully, and the shipped model predicts the core examples: fix, feat, docs, refactor, test, and chore. I also updated Roadmap.md to show 61 tests. Verification passed: QT_QPA_PLATFORM=offscreen python3 -m unittest discover -s tests -v. Result: 61 tests ran, 61 passed. git diff --check passed, and tracked __pycache__ remains clean.",
+  "expected_subject": "test(ml): add distributed predictor validation suite",
+  "expected_body_lines": [
+    "- Expose PredictionResult and SklearnCommitPredictor via ml/__init__",
+    "- Verify successful loading of shipped model artifacts",
+    "- Validate predictions for core types: fix, feat, docs, refactor, test, and chore",
+    "- Update Roadmap.md to reflect expanded test coverage",
+    "- Validation: all 61 tests pass, git diff --check clean"
+  ],
+  "expected_command": "git commit -m \"test(ml): add distributed predictor validation suite\""
+}

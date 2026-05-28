@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add contributing guide",
+  "original_text": "Added contributing guide for developers. Documented development workflow and PR process. Added coding standards and conventions. Implemented code review guidelines. Added testing requirements and procedures. Added issue reporting guidelines. Result: contributing guide complete.",
+  "expected_subject": "docs(dev): add contributing guide for developers",
+  "expected_body_lines": [
+    "- Document development workflow and PR process",
+    "- Add coding standards and conventions",
+    "- Implement code review guidelines",
+    "- Add testing requirements and procedures",
+    "- Add issue reporting guidelines",
+    "- Validation: contributing guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(dev): add contributing guide for developers\""
+}

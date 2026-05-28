@@ -1,0 +1,14 @@
+{
+  "title": "Add operations runbooks",
+  "original_text": "Added operations runbooks for common tasks. Created runbook for database backups. Created runbook for service deployments. Created runbook for incident response. Created runbook for scaling procedures. Created runbook for monitoring setup. Created runbook for security incidents. Added runbook testing and validation. Result: 6 runbooks documented.",
+  "expected_subject": "docs(ops): add operations runbooks",
+  "expected_body_lines": [
+    "- Create runbook for database backups",
+    "- Create runbook for service deployments",
+    "- Create runbook for incident response",
+    "- Create runbook for scaling procedures",
+    "- Create runbook for monitoring and security",
+    "- Validation: 6 runbooks documented"
+  ],
+  "expected_command": "git commit -m \"docs(ops): add operations runbooks\""
+}

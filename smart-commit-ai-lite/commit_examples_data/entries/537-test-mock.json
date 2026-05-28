@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add mocking with unittest.mock",
+  "original_text": "Added mocking with unittest.mock. Implemented mock objects. Added patch decorators. Implemented mock assertions. Added mock verification. Result: mocking operational.",
+  "expected_subject": "test(mocking): add mocking with unittest.mock",
+  "expected_body_lines": [
+    "- Implement mock objects",
+    "- Add patch decorators",
+    "- Implement mock assertions",
+    "- Add mock verification",
+    "- Validation: mocking operational"
+  ],
+  "expected_command": "git commit -m \"test(mocking): add mocking with unittest.mock\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Feat: Implementar sistema de autenticación en español",
+  "original_text": "Implementé un sistema completo de autenticación. Añadí registro de usuarios, inicio de sesión y restablecimiento de contraseña. Integré tokens JWT para gestión de sesiones. Añadí verificación de email para nuevos usuarios. Implementé control de acceso basado en roles (RBAC) con roles de admin, usuario y guest. Añadí limitación de tasa para prevenir ataques de fuerza bruta. Actualicé el esquema de base de datos. Añadí tests completos. Resultado: 62 pruebas pasan.",
+  "expected_subject": "feat(auth): implementar sistema completo de autenticación",
+  "expected_body_lines": [
+    "- Añadir registro, inicio de sesión y restablecimiento de contraseña",
+    "- Integrar tokens JWT para gestión de sesiones",
+    "- Añadir verificación de email para nuevos usuarios",
+    "- Implementar control de acceso basado en roles (RBAC)",
+    "- Añadir limitación de tasa para prevenir ataques",
+    "- Validación: 62 pruebas pasan"
+  ],
+  "expected_command": "git commit -m \"feat(auth): implementar sistema completo de autenticación\""
+}

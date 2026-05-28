@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add architecture guide",
+  "original_text": "Added system architecture guide. Documented component interactions and data flow. Added system design decisions and trade-offs. Implemented architecture diagrams with Mermaid. Added scalability and performance considerations. Added security architecture documentation. Result: architecture guide complete.",
+  "expected_subject": "docs(arch): add system architecture guide",
+  "expected_body_lines": [
+    "- Document component interactions and data flow",
+    "- Add system design decisions and trade-offs",
+    "- Implement architecture diagrams with Mermaid",
+    "- Add scalability and performance considerations",
+    "- Add security architecture documentation",
+    "- Validation: architecture guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(arch): add system architecture guide\""
+}

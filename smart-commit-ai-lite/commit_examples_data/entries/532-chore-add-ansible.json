@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Ansible configuration management",
+  "original_text": "Added Ansible configuration management. Implemented Ansible playbooks. Added configuration automation. Implemented inventory management. Added configuration drift detection. Result: Ansible configuration operational.",
+  "expected_subject": "chore(config): add Ansible configuration management",
+  "expected_body_lines": [
+    "- Implement Ansible playbooks",
+    "- Add configuration automation",
+    "- Implement inventory management",
+    "- Add configuration drift detection",
+    "- Validation: Ansible configuration operational"
+  ],
+  "expected_command": "git commit -m \"chore(config): add Ansible configuration management\""
+}

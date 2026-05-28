@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Rename variable for clarity",
+  "original_text": "Refactored to rename variable for clarity. Identified variables with unclear names. Renamed variables to reflect purpose. Updated all variable references. Improved code readability. Result: variable renaming complete.",
+  "expected_subject": "refactor(cleanup): rename variable for clarity",
+  "expected_body_lines": [
+    "- Identify variables with unclear names",
+    "- Rename variables to reflect purpose",
+    "- Update all variable references",
+    "- Improve code readability",
+    "- Validation: variable renaming complete"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): rename variable for clarity\""
+}

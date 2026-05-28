@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add security guidelines",
+  "original_text": "Added security guidelines documentation. Documented security best practices. Added security checklist for development. Implemented security review process. Added security incident response guide. Result: security guidelines complete.",
+  "expected_subject": "docs(security): add security guidelines",
+  "expected_body_lines": [
+    "- Document security best practices",
+    "- Add security checklist for development",
+    "- Implement security review process",
+    "- Add security incident response guide",
+    "- Validation: security guidelines complete"
+  ],
+  "expected_command": "git commit -m \"docs(security): add security guidelines\""
+}

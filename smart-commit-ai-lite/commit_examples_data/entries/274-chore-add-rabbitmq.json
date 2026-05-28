@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add RabbitMQ message queue",
+  "original_text": "Added RabbitMQ message queue. Implemented message producers and consumers. Added message durability and acknowledgments. Implemented dead letter queue. Added queue monitoring. Result: RabbitMQ message queue operational.",
+  "expected_subject": "chore(messaging): add RabbitMQ message queue",
+  "expected_body_lines": [
+    "- Implement message producers and consumers",
+    "- Add message durability and acknowledgments",
+    "- Implement dead letter queue",
+    "- Add queue monitoring",
+    "- Validation: RabbitMQ message queue operational"
+  ],
+  "expected_command": "git commit -m \"chore(messaging): add RabbitMQ message queue\""
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Improve accessibility",
+  "original_text": "Improved accessibility across the application. Added ARIA labels to all interactive elements. Implemented keyboard navigation support. Added screen reader support. Improved color contrast ratios. Added focus indicators. Implemented accessibility testing. Result: accessibility improved.",
+  "expected_subject": "chore(a11y): improve accessibility compliance",
+  "expected_body_lines": [
+    "- Add ARIA labels to all interactive elements",
+    "- Implement keyboard navigation support",
+    "- Add screen reader support",
+    "- Improve color contrast ratios",
+    "- Add focus indicators and testing",
+    "- Validation: accessibility improved"
+  ],
+  "expected_command": "git commit -m \"chore(a11y): improve accessibility compliance\""
+}

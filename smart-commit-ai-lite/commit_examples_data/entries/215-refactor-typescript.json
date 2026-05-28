@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Migrate to TypeScript",
+  "original_text": "Refactored codebase to TypeScript. Added type definitions for all modules. Implemented strict type checking. Added type guards and utility types. Updated build pipeline for TypeScript compilation. Result: TypeScript migration complete.",
+  "expected_subject": "refactor(types): migrate codebase to TypeScript",
+  "expected_body_lines": [
+    "- Add type definitions for all modules",
+    "- Implement strict type checking",
+    "- Add type guards and utility types",
+    "- Update build pipeline for TypeScript compilation",
+    "- Validation: TypeScript migration complete"
+  ],
+  "expected_command": "git commit -m \"refactor(types): migrate codebase to TypeScript\""
+}

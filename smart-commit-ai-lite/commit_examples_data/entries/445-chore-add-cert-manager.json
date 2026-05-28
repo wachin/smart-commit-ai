@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add cert-manager for TLS",
+  "original_text": "Added cert-manager for TLS certificate management. Implemented certificate issuance. Added certificate renewal. Implemented certificate rotation. Added certificate monitoring. Result: cert-manager operational.",
+  "expected_subject": "chore(security): add cert-manager for TLS",
+  "expected_body_lines": [
+    "- Implement certificate issuance",
+    "- Add certificate renewal",
+    "- Implement certificate rotation",
+    "- Add certificate monitoring",
+    "- Validation: cert-manager operational"
+  ],
+  "expected_command": "git commit -m \"chore(security): add cert-manager for TLS\""
+}

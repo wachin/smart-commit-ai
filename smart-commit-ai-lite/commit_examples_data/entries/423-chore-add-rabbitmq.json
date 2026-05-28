@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add RabbitMQ message broker",
+  "original_text": "Added RabbitMQ for messaging. Implemented message queue configuration. Added message routing. Implemented RabbitMQ cluster. Added message monitoring. Result: RabbitMQ message broker operational.",
+  "expected_subject": "chore(messaging): add RabbitMQ message broker",
+  "expected_body_lines": [
+    "- Implement message queue configuration",
+    "- Add message routing",
+    "- Implement RabbitMQ cluster",
+    "- Add message monitoring",
+    "- Validation: RabbitMQ message broker operational"
+  ],
+  "expected_command": "git commit -m \"chore(messaging): add RabbitMQ message broker\""
+}

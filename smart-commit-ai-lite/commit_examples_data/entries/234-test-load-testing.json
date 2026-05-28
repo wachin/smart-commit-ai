@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add load testing",
+  "original_text": "Added load testing with k6. Implemented load tests for API endpoints. Added load tests for database queries. Implemented load tests for web pages. Added load test reporting and metrics. Result: system handles 1000 concurrent users.",
+  "expected_subject": "test(perf): add load testing with k6",
+  "expected_body_lines": [
+    "- Implement load tests for API endpoints",
+    "- Add load tests for database queries",
+    "- Implement load tests for web pages",
+    "- Add load test reporting and metrics",
+    "- Validation: system handles 1000 concurrent users"
+  ],
+  "expected_command": "git commit -m \"test(perf): add load testing with k6\""
+}

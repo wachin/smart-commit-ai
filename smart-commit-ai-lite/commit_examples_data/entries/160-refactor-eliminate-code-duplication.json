@@ -1,0 +1,14 @@
+{
+  "title": "Refactor: Eliminate code duplication",
+  "original_text": "Refactored to eliminate code duplication across the codebase. Identified duplicate code blocks using static analysis. Extracted common functionality into utility functions. Created shared components for repeated UI patterns. This reduces maintenance burden and bug surface. Added tests for extracted utilities. Result: 49 tests pass.",
+  "expected_subject": "refactor(cleanup): eliminate code duplication",
+  "expected_body_lines": [
+    "- Identify duplicate code using static analysis",
+    "- Extract common functionality into utility functions",
+    "- Create shared components for repeated patterns",
+    "- Reduce maintenance burden and bug surface",
+    "- Add tests for extracted utilities",
+    "- Validation: 49 tests pass"
+  ],
+  "expected_command": "git commit -m \"refactor(cleanup): eliminate code duplication\""
+}

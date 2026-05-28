@@ -1,0 +1,14 @@
+{
+  "title": "Add offline support for mobile app",
+  "original_text": "Implemented offline support for mobile application. Added local database with SQLite for offline data storage. Implemented data synchronization when connection restored. Added conflict resolution for concurrent edits. Implemented offline queue for API requests. Added offline indicator in UI. Implemented optimistic UI updates. Added tests for offline functionality. Result: app works seamlessly offline.",
+  "expected_subject": "feat(mobile): add offline support with local storage",
+  "expected_body_lines": [
+    "- Add SQLite for offline data storage",
+    "- Implement data synchronization on connection restore",
+    "- Add conflict resolution for concurrent edits",
+    "- Implement offline queue for API requests",
+    "- Add offline indicator and optimistic UI",
+    "- Validation: app works seamlessly offline"
+  ],
+  "expected_command": "git commit -m \"feat(mobile): add offline support with local storage\""
+}

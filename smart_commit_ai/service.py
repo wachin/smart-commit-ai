@@ -39,7 +39,11 @@ class SmartCommitService:
         if provider == "local":
             message = self.local.generate(original_text)
         elif provider == "gemini":
-            message = self.gemini.generate(original_text, api_key=api_key)
+            try:
+                message = self.gemini.generate(original_text, api_key=api_key)
+            except GeminiError as exc:
+                warning = f"Gemini unavailable; used local generator. {exc}"
+                message = self.local.generate(original_text)
         else:
             try:
                 message = self.gemini.generate(original_text, api_key=api_key)

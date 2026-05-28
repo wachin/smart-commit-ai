@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Add Argo CD GitOps",
+  "original_text": "Added Argo CD for GitOps. Implemented GitOps workflow configuration. Added application manifests. Implemented sync automation. Added Argo CD monitoring. Result: Argo CD GitOps operational.",
+  "expected_subject": "chore(gitops): add Argo CD GitOps",
+  "expected_body_lines": [
+    "- Implement GitOps workflow configuration",
+    "- Add application manifests",
+    "- Implement sync automation",
+    "- Add Argo CD monitoring",
+    "- Validation: Argo CD GitOps operational"
+  ],
+  "expected_command": "git commit -m \"chore(gitops): add Argo CD GitOps\""
+}

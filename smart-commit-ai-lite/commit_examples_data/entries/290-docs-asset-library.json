@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add asset library documentation",
+  "original_text": "Added asset library documentation. Documented available assets and resources. Added asset usage guidelines. Implemented asset download instructions. Added asset contribution guidelines. Result: asset library documentation complete.",
+  "expected_subject": "docs(assets): add asset library documentation",
+  "expected_body_lines": [
+    "- Document available assets and resources",
+    "- Add asset usage guidelines",
+    "- Implement asset download instructions",
+    "- Add asset contribution guidelines",
+    "- Validation: asset library documentation complete"
+  ],
+  "expected_command": "git commit -m \"docs(assets): add asset library documentation\""
+}

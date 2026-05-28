@@ -1,0 +1,13 @@
+{
+  "title": "Chore: Implement Grafana dashboards for monitoring",
+  "original_text": "Added Grafana dashboards. Implemented dashboard configuration. Added data source connections. Implemented panel layouts. Added alerting dashboards. Result: Grafana dashboards operational.",
+  "expected_subject": "chore(monitoring): add Grafana dashboards",
+  "expected_body_lines": [
+    "- Implement dashboard configuration",
+    "- Add data source connections",
+    "- Implement panel layouts",
+    "- Add alerting dashboards",
+    "- Validation: Grafana dashboards operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add Grafana dashboards\""
+}

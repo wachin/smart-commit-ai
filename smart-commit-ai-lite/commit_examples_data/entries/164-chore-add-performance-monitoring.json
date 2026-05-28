@@ -1,0 +1,14 @@
+{
+  "title": "Chore: Add performance monitoring",
+  "original_text": "Added performance monitoring with APM integration. Implemented request timing tracking. Added database query performance monitoring. Implemented memory usage monitoring. Added CPU usage monitoring. Implemented performance alerting. Added performance dashboard. Result: performance monitoring operational.",
+  "expected_subject": "chore(monitoring): add performance monitoring with APM",
+  "expected_body_lines": [
+    "- Implement request timing tracking",
+    "- Add database query performance monitoring",
+    "- Implement memory and CPU usage monitoring",
+    "- Add performance alerting",
+    "- Add performance dashboard",
+    "- Validation: performance monitoring operational"
+  ],
+  "expected_command": "git commit -m \"chore(monitoring): add performance monitoring with APM\""
+}

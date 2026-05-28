@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add combinatorial testing",
+  "original_text": "Added combinatorial testing framework. Implemented pairwise testing. Added orthogonal array testing. Implemented test case generation. Added combinatorial coverage. Result: combinatorial tests pass.",
+  "expected_subject": "test(combinatorial): add combinatorial testing",
+  "expected_body_lines": [
+    "- Implement pairwise testing",
+    "- Add orthogonal array testing",
+    "- Implement test case generation",
+    "- Add combinatorial coverage",
+    "- Validation: combinatorial tests pass"
+  ],
+  "expected_command": "git commit -m \"test(combinatorial): add combinatorial testing\""
+}

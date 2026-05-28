@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement immutable data structures",
+  "original_text": "Refactored to use immutable data structures. Replaced mutable state with immutable objects. Implemented immutable collections with libraries. Added deep cloning for nested objects. Implemented state management with immutable patterns. Result: immutable data structures implemented.",
+  "expected_subject": "refactor(data): implement immutable data structures",
+  "expected_body_lines": [
+    "- Replace mutable state with immutable objects",
+    "- Implement immutable collections with libraries",
+    "- Add deep cloning for nested objects",
+    "- Implement state management with immutable patterns",
+    "- Validation: immutable data structures implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(data): implement immutable data structures\""
+}

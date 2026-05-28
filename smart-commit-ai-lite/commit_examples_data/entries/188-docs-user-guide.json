@@ -1,0 +1,14 @@
+{
+  "title": "Docs: Add user guide",
+  "original_text": "Added comprehensive user guide. Documented all user-facing features and workflows. Added step-by-step tutorials for common tasks. Implemented user interface screenshots and descriptions. Added FAQ section with common questions. Added keyboard shortcuts reference. Result: user guide complete.",
+  "expected_subject": "docs(user): add comprehensive user guide",
+  "expected_body_lines": [
+    "- Document all user-facing features and workflows",
+    "- Add step-by-step tutorials for common tasks",
+    "- Implement user interface screenshots and descriptions",
+    "- Add FAQ section with common questions",
+    "- Add keyboard shortcuts reference",
+    "- Validation: user guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(user): add comprehensive user guide\""
+}

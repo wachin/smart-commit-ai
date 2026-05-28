@@ -1,0 +1,15 @@
+{
+  "title": "11. Lyrics Window: Track Filtering",
+  "original_text": "We kept the Lyrics view moving and made it track-aware. In [drumstick/drumstick_py/file.py], `TextEvent` now remembers its source track... Then in [app.py]..., the `Lyrics` window gained a `Track:` filter with `All tracks` plus one entry per text-bearing track, and it now auto-selects the track with the most text events... I updated [Roadmap.md]... refreshed the user guides... and added coverage in [test_smf_parser.py] and [test_app_playlist.py]... Verification is clean: ... 134 tests OK...",
+  "expected_subject": "feat(ui): add track filtering to Lyrics window",
+  "expected_body_lines": [
+    "- Preserve source track info in TextEvent via drumstick_py/file.py",
+    "- Add Track filter with auto-selection of most text-heavy track",
+    "- Prefix lines with track number in All tracks view for clarity",
+    "- Update user guides (EN/ES) with new filtering documentation",
+    "- Add tests for track metadata, selection, and filtering logic",
+    "- Update Roadmap.md to mark track filtering items complete",
+    "- Validation: compileall OK, 134 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add track filtering to Lyrics window\" \\\n  -m \"- Preserve source track info in TextEvent via drumstick_py/file.py\" \\\n  -m \"- Add Track filter with auto-selection of most text-heavy track\" \\\n  -m \"- Prefix lines with track number in All tracks view for clarity\" \\\n  -m \"- Update user guides (EN/ES) with new filtering documentation\" \\\n  -m \"- Add tests for track metadata, selection, and filtering logic\" \\\n  -m \"- Update Roadmap.md to mark track filtering items complete\" \\\n  -m \"- Validation: compileall OK, 134 tests pass, offscreen verified\""
+}

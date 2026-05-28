@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Off-by-one error in array indexing",
+  "original_text": "Fixed off-by-one error in array indexing. Array bounds were being incorrectly calculated. Added proper index validation. Implemented zero-based indexing consistency. Added unit tests for boundary conditions. Result: off-by-one error fixed.",
+  "expected_subject": "fix(core): fix off-by-one error in array indexing",
+  "expected_body_lines": [
+    "- Fix array bounds incorrectly calculated",
+    "- Add proper index validation",
+    "- Implement zero-based indexing consistency",
+    "- Add unit tests for boundary conditions",
+    "- Validation: off-by-one error fixed"
+  ],
+  "expected_command": "git commit -m \"fix(core): fix off-by-one error in array indexing\""
+}

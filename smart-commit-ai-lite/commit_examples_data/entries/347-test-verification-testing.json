@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add verification testing",
+  "original_text": "Added verification testing for compliance. Implemented compliance verification tests. Added regulatory compliance checks. Implemented security verification testing. Added data privacy verification. Result: verification tests pass.",
+  "expected_subject": "test(compliance): add verification testing",
+  "expected_body_lines": [
+    "- Implement compliance verification tests",
+    "- Add regulatory compliance checks",
+    "- Implement security verification testing",
+    "- Add data privacy verification",
+    "- Validation: verification tests pass"
+  ],
+  "expected_command": "git commit -m \"test(compliance): add verification testing\""
+}

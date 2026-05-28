@@ -1,0 +1,14 @@
+{
+  "title": "Fix deadlock in database connection pool",
+  "original_text": "Fixed a deadlock in the database connection pool. Connections were being acquired in inconsistent order, causing circular wait conditions. Implemented consistent lock ordering. Added connection timeout mechanism. Implemented deadlock detection and recovery. Added connection pool monitoring. Added tests for deadlock prevention. Result: 28 tests pass, no deadlocks detected.",
+  "expected_subject": "fix(db): fix deadlock in connection pool with consistent ordering",
+  "expected_body_lines": [
+    "- Implement consistent lock ordering",
+    "- Add connection timeout mechanism",
+    "- Implement deadlock detection and recovery",
+    "- Add connection pool monitoring",
+    "- Add tests for deadlock prevention",
+    "- Validation: 28 tests pass, no deadlocks"
+  ],
+  "expected_command": "git commit -m \"fix(db): fix deadlock in connection pool with consistent ordering\""
+}

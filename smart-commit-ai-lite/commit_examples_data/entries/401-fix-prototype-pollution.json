@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Prototype pollution vulnerability",
+  "original_text": "Fixed prototype pollution vulnerability. Implemented object prototype sanitization. Added input validation for object properties. Implemented safe object merging. Added prototype pollution detection. Result: prototype pollution vulnerability fixed.",
+  "expected_subject": "fix(security): fix prototype pollution vulnerability",
+  "expected_body_lines": [
+    "- Implement object prototype sanitization",
+    "- Add input validation for object properties",
+    "- Implement safe object merging",
+    "- Add prototype pollution detection",
+    "- Validation: prototype pollution vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix prototype pollution vulnerability\""
+}

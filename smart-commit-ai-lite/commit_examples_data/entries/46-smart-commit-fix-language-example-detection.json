@@ -1,0 +1,13 @@
+{
+  "title": "Smart Commit: English summary with Spanish examples",
+  "original_text": "Fixed language detection when an English summary contains Spanish examples inside fenced text blocks. The generator now ignores quoted examples and embedded git commit snippets while deciding the output language, so English explanations stay in English even when they mention Spanish test cases. Updated smart_commit_nltk.py and tests/test_smart_commit_nltk.py. Result: 38 tests OK.",
+  "expected_subject": "fix(nlp): keep English output for Spanish examples",
+  "expected_body_lines": [
+    "- Ignore fenced examples during language detection",
+    "- Ignore embedded git commit snippets for language scoring",
+    "- Preserve English output for English summaries",
+    "- Add regression test for Spanish examples in English text",
+    "- Validation: 38 tests pass"
+  ],
+  "expected_command": "git commit -m \"fix(nlp): keep English output for Spanish examples\""
+}

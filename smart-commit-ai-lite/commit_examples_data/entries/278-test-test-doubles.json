@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add test doubles",
+  "original_text": "Added test doubles for isolated testing. Implemented fakes for in-memory storage. Added dummies for unused parameters. Implemented test factories for object creation. Added test data builders. Result: test doubles operational.",
+  "expected_subject": "test(testing): add test doubles for isolated testing",
+  "expected_body_lines": [
+    "- Implement fakes for in-memory storage",
+    "- Add dummies for unused parameters",
+    "- Implement test factories for object creation",
+    "- Add test data builders",
+    "- Validation: test doubles operational"
+  ],
+  "expected_command": "git commit -m \"test(testing): add test doubles for isolated testing\""
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add translation guide",
+  "original_text": "Added translation guide for internationalization. Documented translation workflow and tools. Added translation key management. Implemented translation review process. Added locale-specific guidelines. Result: translation guide complete.",
+  "expected_subject": "docs(i18n): add translation guide for internationalization",
+  "expected_body_lines": [
+    "- Document translation workflow and tools",
+    "- Add translation key management",
+    "- Implement translation review process",
+    "- Add locale-specific guidelines",
+    "- Validation: translation guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(i18n): add translation guide for internationalization\""
+}

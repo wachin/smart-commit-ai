@@ -1,0 +1,16 @@
+{
+  "title": "6. Channels View: Volume Sliders",
+  "original_text": "We kept the Channels work moving and added per-channel volume. In [player.py]..., I added per-channel volume percentages and applied them in playback before the global volume scaling... In [app.py]..., the `Channels` window now has a `Volume` slider per row... Moving the slider updates the player immediately... I also fixed the channel dialog’s level-reset bookkeeping... Tests were extended in: test_sequence_player.py, test_app_playlist.py... They now cover: per-channel volume scaling... immediate CC7 send... I updated the user guides too... And [Roadmap.md]... now marks `Volume slider per channel` complete. Verification is clean: ... 122 tests OK...",
+  "expected_subject": "feat(app): add per-channel volume sliders",
+  "expected_body_lines": [
+    "- Implement per-channel volume scaling before global volume",
+    "- Send immediate CC7 updates on slider change",
+    "- Add Volume slider to ChannelsDialog alongside Mute/Solo",
+    "- Fix level meter index after previous UI expansion",
+    "- Update user guides (EN/ES) with new volume control docs",
+    "- Add tests for scaling order, CC7 sends, and UI wiring",
+    "- Update Roadmap.md to mark volume slider item complete",
+    "- Validation: compileall OK, 122 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(app): add per-channel volume sliders\" \\\n  -m \"- Implement per-channel volume scaling before global volume\" \\\n  -m \"- Send immediate CC7 updates on slider change\" \\\n  -m \"- Add Volume slider to ChannelsDialog alongside Mute/Solo\" \\\n  -m \"- Fix level meter index after previous UI expansion\" \\\n  -m \"- Update user guides (EN/ES) with new volume control docs\" \\\n  -m \"- Add tests for scaling order, CC7 sends, and UI wiring\" \\\n  -m \"- Update Roadmap.md to mark volume slider item complete\" \\\n  -m \"- Validation: compileall OK, 122 tests pass, offscreen verified\""
+}

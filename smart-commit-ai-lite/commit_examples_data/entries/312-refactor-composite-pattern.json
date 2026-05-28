@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Implement composite pattern",
+  "original_text": "Refactored to implement composite pattern. Added component interface for tree structures. Implemented composite and leaf classes. Added tree traversal operations. Implemented uniform interface for individual and composite objects. Result: composite pattern implemented.",
+  "expected_subject": "refactor(pattern): implement composite pattern",
+  "expected_body_lines": [
+    "- Add component interface for tree structures",
+    "- Implement composite and leaf classes",
+    "- Add tree traversal operations",
+    "- Implement uniform interface for individual and composite objects",
+    "- Validation: composite pattern implemented"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): implement composite pattern\""
+}

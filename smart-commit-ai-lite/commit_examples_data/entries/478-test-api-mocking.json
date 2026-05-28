@@ -1,0 +1,13 @@
+{
+  "title": "Test: Add API mocking with WireMock",
+  "original_text": "Added API mocking with WireMock. Implemented mock server configuration. Added stub mappings. Implemented request matching. Added response templating. Result: API mocking operational.",
+  "expected_subject": "test(api): add API mocking with WireMock",
+  "expected_body_lines": [
+    "- Implement mock server configuration",
+    "- Add stub mappings",
+    "- Implement request matching",
+    "- Add response templating",
+    "- Validation: API mocking operational"
+  ],
+  "expected_command": "git commit -m \"test(api): add API mocking with WireMock\""
+}

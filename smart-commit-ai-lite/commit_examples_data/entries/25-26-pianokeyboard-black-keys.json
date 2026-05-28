@@ -1,0 +1,14 @@
+{
+  "title": "26. PianoKeyboard: Black Keys",
+  "original_text": "We improved the shared keyboard layer in a meaningful way: `PianoKeyboard` now supports black keys and a real configurable note range. In [widgets.py]..., I added: `visible_white_notes()`, `visible_black_notes()`, real black-key drawing on top of the white-key base... I also added a dedicated widget test file, [test_widgets.py]... And I updated: [Roadmap.md]... [EN guide]... [ES guide]... Verification is clean: ... 154 tests OK...",
+  "expected_subject": "feat(ui): add black keys and range support to PianoKeyboard",
+  "expected_body_lines": [
+    "- Implement visible_white_notes() and visible_black_notes() helpers",
+    "- Render black keys on top of white-key base for realistic look",
+    "- Support range-aware rendering via existing set_note_range()",
+    "- Add test_widgets.py for note lists and MIDI-range clamping",
+    "- Update user guides (EN/ES) and Roadmap.md with new widget docs",
+    "- Validation: compileall OK, 154 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add black keys and range support to PianoKeyboard\" \\\n  -m \"- Implement visible_white_notes() and visible_black_notes() helpers\" \\\n  -m \"- Render black keys on top of white-key base for realistic look\" \\\n  -m \"- Support range-aware rendering via existing set_note_range()\" \\\n  -m \"- Add test_widgets.py for note lists and MIDI-range clamping\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new widget docs\" \\\n  -m \"- Validation: compileall OK, 154 tests pass, offscreen verified\""
+}

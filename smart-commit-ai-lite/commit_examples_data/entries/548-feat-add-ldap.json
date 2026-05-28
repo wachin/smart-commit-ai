@@ -1,0 +1,13 @@
+{
+  "title": "Feat: Add LDAP authentication",
+  "original_text": "Added LDAP authentication support. Implemented LDAP connection. Added user authentication. Implemented group mapping. Added LDAP synchronization. Result: LDAP authentication operational.",
+  "expected_subject": "feat(auth): add LDAP authentication",
+  "expected_body_lines": [
+    "- Implement LDAP connection",
+    "- Add user authentication",
+    "- Implement group mapping",
+    "- Add LDAP synchronization",
+    "- Validation: LDAP authentication operational"
+  ],
+  "expected_command": "git commit -m \"feat(auth): add LDAP authentication\""
+}

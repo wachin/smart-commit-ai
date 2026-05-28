@@ -1,0 +1,13 @@
+{
+  "title": "Refactor: Replace conditional with polymorphism",
+  "original_text": "Refactored to replace conditional with polymorphism. Replaced switch statements with polymorphic dispatch. Added strategy classes for different behaviors. Implemented polymorphic interface. Improved code extensibility. Result: conditional replacement complete.",
+  "expected_subject": "refactor(pattern): replace conditional with polymorphism",
+  "expected_body_lines": [
+    "- Replace switch statements with polymorphic dispatch",
+    "- Add strategy classes for different behaviors",
+    "- Implement polymorphic interface",
+    "- Improve code extensibility",
+    "- Validation: conditional replacement complete"
+  ],
+  "expected_command": "git commit -m \"refactor(pattern): replace conditional with polymorphism\""
+}

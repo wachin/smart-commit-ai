@@ -1,0 +1,15 @@
+{
+  "title": "1. Rhythm View Implementation",
+  "original_text": "We got the Rhythm view over the line. In [app.py]..., I added an embedded `RhythmView` panel that shows: current meter, current bar, current beat, current BPM, a live beat strip... It updates from the same playback position flow... I also added a `View -> Rhythm` toggle... To support that cleanly, [sequence.py]... now has `time_signature_at_tick()`... Tests in [test_app_playlist.py]... now cover: rhythm action existence, toggling... rhythm panel updates... I also updated [Roadmap.md]... to mark these complete... Verification is clean: compileall passed, full unittest suite passed: 106 tests OK...",
+  "expected_subject": "feat(ui): add embedded Rhythm view with playback sync",
+  "expected_body_lines": [
+    "- Add RhythmView panel showing meter, bar, beat, BPM, and strip",
+    "- Sync updates with playback position, tempo changes, and seeks",
+    "- Add View > Rhythm toggle for show/hide control",
+    "- Implement time_signature_at_tick() in sequence.py for UI queries",
+    "- Add tests for rhythm action, toggling, and live updates",
+    "- Update Roadmap.md to mark rhythm view items complete",
+    "- Validation: compileall OK, 106 tests pass, offscreen verified"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add embedded Rhythm view with playback sync\" \\\n  -m \"- Add RhythmView panel showing meter, bar, beat, BPM, and strip\" \\\n  -m \"- Sync updates with playback position, tempo changes, and seeks\" \\\n  -m \"- Add View > Rhythm toggle for show/hide control\" \\\n  -m \"- Implement time_signature_at_tick() in sequence.py for UI queries\" \\\n  -m \"- Add tests for rhythm action, toggling, and live updates\" \\\n  -m \"- Update Roadmap.md to mark rhythm view items complete\" \\\n  -m \"- Validation: compileall OK, 106 tests pass, offscreen verified\""
+}

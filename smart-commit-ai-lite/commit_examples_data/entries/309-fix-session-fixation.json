@@ -1,0 +1,13 @@
+{
+  "title": "Fix: Session fixation vulnerability",
+  "original_text": "Fixed session fixation vulnerability in authentication. Implemented session regeneration on login. Added secure session token generation. Implemented session binding to user agent. Added session expiration enforcement. Result: session fixation vulnerability fixed.",
+  "expected_subject": "fix(security): fix session fixation vulnerability",
+  "expected_body_lines": [
+    "- Implement session regeneration on login",
+    "- Add secure session token generation",
+    "- Implement session binding to user agent",
+    "- Add session expiration enforcement",
+    "- Validation: session fixation vulnerability fixed"
+  ],
+  "expected_command": "git commit -m \"fix(security): fix session fixation vulnerability\""
+}

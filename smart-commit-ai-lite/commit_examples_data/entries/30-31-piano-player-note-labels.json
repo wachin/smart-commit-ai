@@ -1,0 +1,14 @@
+{
+  "title": "31. Piano Player: Note Labels",
+  "original_text": "We kept the Pianola work moving and finished the note-label modes. In [widgets.py]..., `PianoKeyboard` now supports note-name display modes: `never`, `minimal`, `active`, `always`... I also added note-name generation (`C4`, `A#3`, etc.)... In [app.py]..., the `Piano Player` dialog now has a `Labels` selector... I added coverage in: [test_widgets.py], [test_app_playlist.py]... I also updated [Roadmap.md]... and refreshed the user guides... Verification is clean: ... 164 tests OK...",
+  "expected_subject": "feat(ui): add configurable note labels to Piano keyboards",
+  "expected_body_lines": [
+    "- Support never/minimal/active/always display modes in PianoKeyboard",
+    "- Implement note-name generation (e.g., C4, A#3) for all keys",
+    "- Add Labels selector to PianolaDialog with status bar feedback",
+    "- Update user guides (EN/ES) and Roadmap.md with new label docs",
+    "- Add tests for label sets, formatting, and UI wiring",
+    "- Validation: compileall OK, 164 tests pass"
+  ],
+  "expected_command": "git commit -m \"feat(ui): add configurable note labels to Piano keyboards\" \\\n  -m \"- Support never/minimal/active/always display modes in PianoKeyboard\" \\\n  -m \"- Implement note-name generation (e.g., C4, A#3) for all keys\" \\\n  -m \"- Add Labels selector to PianolaDialog with status bar feedback\" \\\n  -m \"- Update user guides (EN/ES) and Roadmap.md with new label docs\" \\\n  -m \"- Add tests for label sets, formatting, and UI wiring\" \\\n  -m \"- Validation: compileall OK, 164 tests pass\""
+}

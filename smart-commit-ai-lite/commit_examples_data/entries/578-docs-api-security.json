@@ -1,0 +1,13 @@
+{
+  "title": "Docs: Add API security best practices",
+  "original_text": "Added API security best practices guide. Documented security headers. Added authentication patterns. Implemented authorization examples. Added security testing. Result: security guide complete.",
+  "expected_subject": "docs(api): add API security best practices",
+  "expected_body_lines": [
+    "- Document security headers",
+    "- Add authentication patterns",
+    "- Implement authorization examples",
+    "- Add security testing",
+    "- Validation: security guide complete"
+  ],
+  "expected_command": "git commit -m \"docs(api): add API security best practices\""
+}
