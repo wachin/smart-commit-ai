@@ -2,6 +2,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
+from smart_commit_ai.config import load_api_key, save_api_key
 from smart_commit_ai.commit_message import (
     MAX_BODY_LINE_LENGTH,
     MAX_HEADER_LENGTH,
@@ -80,6 +81,17 @@ class ExampleStoreTests(unittest.TestCase):
             self.assertEqual(entries[0].expected_subject, message.subject)
 
 
+class ConfigTests(unittest.TestCase):
+    def test_saves_and_loads_local_api_key(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / ".env.local"
+
+            saved_path = save_api_key('abc-123_"key"', path)
+
+            self.assertEqual(saved_path, path)
+            self.assertEqual(load_api_key(path, include_environment=False), 'abc-123_"key"')
+            self.assertIn("GEMINI_API_KEY=", path.read_text(encoding="utf-8"))
+
+
 if __name__ == "__main__":
     unittest.main()
-

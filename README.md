@@ -20,7 +20,14 @@ Use **Copy** to copy the generated `git commit` command.
 - `local`: use the built-in offline generator.
 
 Gemini uses the REST `generateContent` API with `gemini-3.5-flash` by default.
-You can paste the key in the app, or export one before launching:
+When you paste a Gemini key in the app, Smart Commit AI saves it locally in:
+
+```text
+.env.local
+```
+
+That file is ignored by `.gitignore`, so it will not be added to normal commits
+or pushed to GitHub. You can also export a key before launching:
 
 ```bash
 export GEMINI_API_KEY="your-key"

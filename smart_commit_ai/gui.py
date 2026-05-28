@@ -6,6 +6,7 @@ import threading
 import tkinter as tk
 from tkinter import messagebox, ttk
 
+from .config import LOCAL_ENV_PATH, load_api_key, save_api_key
 from .service import SmartCommitService
 
 
@@ -38,7 +39,7 @@ class SmartCommitApp(tk.Tk):
         provider_box.grid(row=0, column=1, sticky="w")
 
         ttk.Label(header, text="Gemini API key").grid(row=0, column=2, padx=(20, 8), sticky="e")
-        self.api_key = tk.StringVar()
+        self.api_key = tk.StringVar(value=load_api_key())
         self.api_key_entry = ttk.Entry(header, textvariable=self.api_key, show="*", width=38)
         self.api_key_entry.grid(row=0, column=3, sticky="ew")
 
@@ -111,13 +112,22 @@ class SmartCommitApp(tk.Tk):
         provider = self.provider.get()
         api_key = self.api_key.get().strip() or None
         save = self.save_examples.get()
+        key_saved = False
+        if api_key:
+            try:
+                save_api_key(api_key)
+                key_saved = True
+            except OSError as exc:
+                messagebox.showerror("Smart Commit AI", f"Could not save API key to {LOCAL_ENV_PATH}: {exc}")
+                return
+
         self.set_status("Generating commit message...")
         self.create_button.configure(state=tk.DISABLED)
         self.update_idletasks()
 
         worker = threading.Thread(
             target=self._generate_in_background,
-            args=(original, provider, api_key, save),
+            args=(original, provider, api_key, save, key_saved),
             daemon=True,
         )
         worker.start()
@@ -128,6 +138,7 @@ class SmartCommitApp(tk.Tk):
         provider: str,
         api_key: str | None,
         save: bool,
+        key_saved: bool,
     ) -> None:
         try:
             result = self.service.generate(
@@ -140,18 +151,19 @@ class SmartCommitApp(tk.Tk):
             self.after(0, lambda message=str(exc): self._generation_failed(message))
             return
 
-        self.after(0, lambda: self._generation_finished(result))
+        self.after(0, lambda: self._generation_finished(result, key_saved))
 
-    def _generation_finished(self, result) -> None:
+    def _generation_finished(self, result, key_saved: bool) -> None:
         self.create_button.configure(state=tk.NORMAL)
         self.output_text.delete("1.0", tk.END)
         self.output_text.insert("1.0", result.command)
+        key_note = f" API key saved to {LOCAL_ENV_PATH}." if key_saved else ""
         if result.warning:
-            self.set_status(result.warning)
+            self.set_status(result.warning + key_note)
         elif result.saved_path:
-            self.set_status(f"Generated with {result.message.source}; saved {result.saved_path}")
+            self.set_status(f"Generated with {result.message.source}; saved {result.saved_path}.{key_note}")
         else:
-            self.set_status(f"Generated with {result.message.source}")
+            self.set_status(f"Generated with {result.message.source}.{key_note}")
 
     def _generation_failed(self, message: str) -> None:
         self.create_button.configure(state=tk.NORMAL)
