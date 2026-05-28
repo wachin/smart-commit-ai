@@ -43,6 +43,8 @@ def normalize_input_text(text: str) -> str:
 
 def detect_type(text: str) -> str:
     lower = text.lower()
+    if is_api_key_persistence_summary(lower):
+        return "feat"
     if "wrk" in lower and ("recognizes" in lower or "detect" in lower or "support" in lower):
         return "feat"
 
@@ -127,6 +129,9 @@ def looks_like_tests_only(lower: str) -> bool:
 
 def detect_scope(text: str, commit_type: str) -> str:
     lower = text.lower()
+    if is_api_key_persistence_summary(lower):
+        return "config"
+
     scopes = [
         (
             "parser",
@@ -152,7 +157,20 @@ def detect_scope(text: str, commit_type: str) -> str:
         ("test", ["test", "coverage", "unittest", "pytest"]),
         ("docs", ["readme", "documentation", "docs", "roadmap", "guide"]),
         ("db", ["database", "postgres", "mysql", "sqlite", "redis", "mongodb"]),
-        ("config", ["config", "settings", "preferences", "environment variables"]),
+        (
+            "config",
+            [
+                "config",
+                "settings",
+                "preferences",
+                "environment variables",
+                ".env",
+                "api key",
+                "secret",
+                "permissions",
+                "gitignore",
+            ],
+        ),
     ]
 
     scores = {
@@ -173,6 +191,8 @@ def detect_scope(text: str, commit_type: str) -> str:
 
 def build_subject_phrase(text: str, commit_type: str, scope: str) -> str:
     lower = text.lower()
+    if is_api_key_persistence_summary(lower):
+        return "persist Gemini API key"
     if "cakewalk" in lower and "wrk" in lower:
         return "detect Cakewalk WRK files"
     if "wrk" in lower and ("parser" in lower or "loader" in lower):
@@ -265,6 +285,9 @@ def clean_subject_object(value: str) -> str:
 
 
 def build_body_lines(text: str, commit_type: str, scope: str) -> list[str]:
+    if is_api_key_persistence_summary(text.lower()):
+        return api_key_persistence_body_lines(text)
+
     if "cakewalk" in text.lower() and "wrk" in text.lower():
         return wrk_body_lines(text)
 
@@ -296,6 +319,33 @@ def wrk_body_lines(text: str) -> list[str]:
         lines.append("- Add WRK-like header test coverage")
     if "roadmap" in lower:
         lines.append("- Update Roadmap.md to mark WRK skeleton item complete")
+    validation = extract_validation(text)
+    if validation:
+        lines.append(f"- Validation: {validation}")
+    return unique_limited_body(lines)
+
+
+def is_api_key_persistence_summary(lower: str) -> bool:
+    return (
+        ("gemini" in lower or "gemini_api_key" in lower)
+        and ("api key" in lower or "gemini_api_key" in lower)
+        and (".env.local" in lower or "saved locally" in lower or "save" in lower)
+    )
+
+
+def api_key_persistence_body_lines(text: str) -> list[str]:
+    lower = text.lower()
+    lines = [
+        "- Save GEMINI_API_KEY to ignored .env.local",
+        "- Load saved Gemini key when the app window opens",
+        "- Wire GUI to persist keys before commit generation",
+    ]
+    if "600" in lower or "permissions" in lower or "perms" in lower:
+        lines.append("- Set .env.local permissions to 600 when possible")
+    if ".gitignore" in lower or "ignored" in lower:
+        lines.append("- Add .env.local ignore coverage to prevent key commits")
+    if "readme" in lower:
+        lines.append("- Document local key storage and ignore behavior")
     validation = extract_validation(text)
     if validation:
         lines.append(f"- Validation: {validation}")
@@ -408,11 +458,17 @@ def extract_validation(text: str) -> str | None:
     if all_match and not any("tests pass" in part for part in parts):
         parts.append(f"all {all_match.group(1)} tests pass")
 
+    tests_pass_match = re.search(r"tests?\s+pass(?:ed)?:\s*(\d+)\s+tests?\s+OK", text, re.I)
+    if tests_pass_match and not any(tests_pass_match.group(1) in part for part in parts):
+        parts.append(f"{tests_pass_match.group(1)} tests pass")
+
     single_match = re.search(r"(\d+)\s+tests?\s+OK", text, re.I)
     if single_match and not any(single_match.group(1) in part for part in parts):
         parts.append(f"{single_match.group(1)} tests pass")
 
-    if "compileall" in lower and ("passed" in lower or "clean" in lower or "ok" in lower):
+    if ("compileall" in lower or "compile check" in lower) and (
+        "passed" in lower or "passes" in lower or "clean" in lower or "ok" in lower
+    ):
         parts.append("compileall OK")
 
     if "git diff --check" in lower and ("passed" in lower or "clean" in lower):

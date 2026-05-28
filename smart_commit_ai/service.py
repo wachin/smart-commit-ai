@@ -48,7 +48,7 @@ class SmartCommitService:
                 message = self.local.generate(original_text)
 
         saved_path = None
-        if save:
+        if save and message.source == "gemini":
             path = self.store.save(
                 original_text,
                 message,
@@ -63,4 +63,3 @@ class SmartCommitService:
             saved_path=saved_path,
             warning=warning,
         )
-

@@ -17,6 +17,10 @@ class SmartCommitApp(tk.Tk):
         self.geometry("1120x720")
         self.minsize(900, 580)
         self.service = service or SmartCommitService()
+        self.last_generation_source = ""
+        self.last_generation_model = None
+        self.last_generated_command = ""
+        self.last_original_text = ""
         self._build_ui()
 
     def _build_ui(self) -> None:
@@ -151,17 +155,23 @@ class SmartCommitApp(tk.Tk):
             self.after(0, lambda message=str(exc): self._generation_failed(message))
             return
 
-        self.after(0, lambda: self._generation_finished(result, key_saved))
+        self.after(0, lambda: self._generation_finished(result, key_saved, original))
 
-    def _generation_finished(self, result, key_saved: bool) -> None:
+    def _generation_finished(self, result, key_saved: bool, original: str) -> None:
         self.create_button.configure(state=tk.NORMAL)
         self.output_text.delete("1.0", tk.END)
         self.output_text.insert("1.0", result.command)
+        self.last_generation_source = result.message.source
+        self.last_generation_model = result.message.model
+        self.last_generated_command = result.command
+        self.last_original_text = original
         key_note = f" API key saved to {LOCAL_ENV_PATH}." if key_saved else ""
         if result.warning:
             self.set_status(result.warning + key_note)
         elif result.saved_path:
             self.set_status(f"Generated with {result.message.source}; saved {result.saved_path}.{key_note}")
+        elif result.message.source != "gemini" and self.save_examples.get():
+            self.set_status(f"Generated with {result.message.source}; not saved. Only Gemini outputs are saved.{key_note}")
         else:
             self.set_status(f"Generated with {result.message.source}.{key_note}")
 
@@ -185,13 +195,19 @@ class SmartCommitApp(tk.Tk):
         if not original or not output:
             messagebox.showwarning("Smart Commit AI", "Input and output are required.")
             return
+        if self.last_generation_source != "gemini":
+            messagebox.showwarning("Smart Commit AI", "Only Gemini-generated commits can be saved.")
+            return
+        if output != self.last_generated_command or original != self.last_original_text:
+            messagebox.showwarning("Smart Commit AI", "Only the unchanged Gemini-generated result can be saved.")
+            return
         from .commit_message import parse_git_commit_command
 
         message = parse_git_commit_command(output)
         if message is None:
             messagebox.showerror("Smart Commit AI", "Output must be a git commit command.")
             return
-        path = self.service.store.save(original, message, source="manual")
+        path = self.service.store.save(original, message, source="gemini", model=self.last_generation_model)
         self.set_status(f"Saved {path}")
 
     def set_status(self, value: str) -> None:

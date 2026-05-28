@@ -58,6 +58,11 @@ Each saved JSON entry contains:
 Those examples are also used as few-shot context for Gemini and as retrieval
 data for future local training work.
 
+Only unchanged Gemini-generated commit messages are saved as training examples.
+Local fallback output can be copied and used, but it is not written to
+`commit_examples_data/entries`. The manual **Save Example** button follows the
+same rule.
+
 ## Verify
 
 ```bash
